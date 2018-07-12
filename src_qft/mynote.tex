@@ -1,0 +1,313 @@
+\documentclass{article}
+%\documentclass[12pt]{article}
+%\pagestyle{empty}          s       % <======= surpress page numbers
+\newcommand{\bld}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\utilde}[1]{\mbox{$#1$}\hspace{-.8em}\raisebox{-1ex}{$\sim$}}
+\newcommand{\leftdef}[0]{\,\mbox{$\stackrel{\leftarrow}{=}$}\,}
+\newcommand{\rightdef}[0]{\,\mbox{$\stackrel{\rightarrow}{=}$}\,}
+\newcommand{\bra}[0]{<\!}
+\newcommand{\braketend}[0]{\,|\,}
+\newcommand{\braend}[0]{|\,}
+\newcommand{\ketend}[0]{\,|}
+\newcommand{\ket}[0]{\!>}
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{\scriptsize{#1}}\hfil
+\crcr
+\raise0.2ex\hbox{\large$\bigcirc$}}}
+\newcommand{\normord}[1]{%
+  {:\mathrel{\mspace{1mu}#1\mspace{1mu}}:}%
+}
+\newcommand{\normalprod}[1]{%
+  {:\mathrel{\mspace{1mu}#1\mspace{1mu}}:}%
+}
+
+
+%--------------------------   Source Directories ---------------
+\newcommand{\srcdirectory}[0]{../src}
+\newcommand{\mfdirectory}[0]{../src/mfonts}
+\newcommand{\qftsrcdirectory}[0]{./}
+
+
+%\oddsidemargin 10pt
+%\evensidemargin 10pt
+\setlength{\textheight}{42\baselineskip}
+%\textheight 600pt
+\topmargin -5mm
+\footskip 25mm
+ \renewcommand\footnoterule{
+ %\vspace*{-3pt}%
+ \vspace*{9pt}%
+     \hrule width 2in height 0.4pt
+     \vspace*{2.6pt}}
+%\marginparsep 5cm
+%\marginparwidth5cm
+
+\newcounter{exercise}
+
+\newcounter{problem}
+\newcounter{refprob}
+%080219 Problems are numbered by a new counter "problem".
+%       One additional counter "refprob" is defined to refer
+%       to a previous problem. Find an example in
+%       set07/sec02F_3dim_x.tex
+%\oddsidemargin10pt
+\newcounter{exple}
+\newcounter{refexple}
+%100104 Examples are numbered by a new counter "exple".
+%       One additional counter "refexple" is defined to refer
+%       to a previous example. 
+
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{cancel}
+\usepackage{comment}
+%\usepackage{multicol}
+%\setlength{\columnseprule}{1pt}
+%\usepackage{vwcol}
+\usepackage{amsmath}
+\usepackage{arydshln}  %dashed line in a matrix
+
+\usepackage{feynmp}%%%{feynmp}
+
+\usepackage{color}
+\newcommand{\bl}[0]{\color{blue}}
+\newcommand{\re}[0]{\color{red}}
+\newcommand{\gr}[0]{\color{green}}
+\newcommand{\cy}[0]{\color{cyan}}
+\newcommand{\ma}[0]{\color{magenta}}
+\newcommand{\ye}[0]{\color{yellow}}
+
+\include{hugenholtz}  % macros for hugenholtz diagrams
+
+\usepackage{slashed}
+
+\usepackage[vcentermath]{youngtab}
+
+
+\begin{document}
+
+\begin{titlepage} 
+\vspace*{3cm}
+\vspace*{2cm}
+\noindent
+\begin{center}
+{\Huge \bf Notes on Relativistic Quantum Field Theories}   \\
+-- For supplements to LEPS Theoretical Base Set --
+\vspace{1cm}
+{\large Year 2017}
+\vspace{1cm}
+\\
+{\Large 
+Schin Dat\'e}
+\end{center}
+\end{titlepage} 
+
+\setcounter{section}{-1}
+\setcounter{page}{0}
+%\setcounter{page}{-2}
+
+\tableofcontents   %<<<<<<<<<<<<<<<<<<<<<<<
+%\includegraphics[width=5cm,clip]{page-0.pdf}
+%\includegraphics[scale=0.5,bb=0 0 200 200,clip]{page-0.pdf}
+
+%\setcounter{page}{-1}
+\setcounter{footnote}{0}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{problem}{0}
+
+\newpage % to keep a space for the contents
+
+
+\vspace*{-18mm}
+%========================================  section 0
+\setcounter{section}{-1}
+\setcounter{page}{1}
+\section{Notations}
+\input{../src/Notations}
+
+%-------------------------------------------------------- comment block start
+\begin{comment}
+%========================================  section 1
+\section{Kinematics}
+\label{sec:kinematics}
+\input{../src/2bodysystem}
+\input{../src/2to2kinema}
+
+\subsection{3 body final states}
+\subsubsection{$\gamma N \rightarrow K^+ K^- N$}
+\subsubsection{Dalitz Plot}
+\vspace{1cm}
+
+\subsection{Invariant Phase Volume}
+\input{../src/InvariantPhaseVolume}
+\subsection{Cross Section}
+\input{../src/cross_section}
+
+%========================================  section 2
+\section{Scattering amplitudes}
+\label{sec:ScattAmp}
+\input{../src/unitarity}
+
+\subsection{Potential scattering and scattering length}
+\input{../src/analyticity}
+\input{../src/crossing}
+\subsection{Dispersion relations}
+%-------------------------------------------------------- comment block end
+\end{comment}
+%==============================================
+\section{Introduction to Relativistic Quantum Field Theory}
+\subsection{Starting from Quantum Mechanics}
+\subsubsection{Quantum Mechanics}
+\input{QM}
+\subsubsection{$N$-body quantum mechanics}
+\input{NbodyQM}
+\subsubsection{Schr\"odinger field theory}
+\input{SchroedingerFT}
+\subsection{Canonical quantizaton}
+\input{\qftsrcdirectory/canonicalquantization.tex}
+\subsection{Noethers Theorem}
+\input{\qftsrcdirectory/Noether}
+\subsection{Interacting Fields (1/2)}
+\input{\qftsrcdirectory/InteractingFields}
+
+%========================================  section 3.5
+\subsection{Scalar Fields}
+Irreducible representations of the Loerentz group solely 
+determines forms of free field equations.
+Irreducible representations are classified by
+spins of particles.
+\subsubsection{Real Scalar Free Field}
+Spinless and neutral.
+\input{\qftsrcdirectory/realscalar.tex}
+\subsubsection{Complex Scalar Free Field}
+Spinless and charged.
+\input{\qftsrcdirectory/complexscalar.tex}
+\subsubsection{Internal Symmetry}
+\input{\qftsrcdirectory/scalarmultiplet}
+\subsubsection{Scalar Yukawa Theory - A Toy Model -}
+\input{\qftsrcdirectory/scalarYukawa}
+
+%========================================  section 3.6
+\subsection{Interacting Fields (2/2)}
+\input{\qftsrcdirectory/InteractingFields2}
+
+
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+\newpage
+\subsection{Dirac Fields}
+Massive Spin 1/2.
+\subsubsection{Classical Free Field}
+\begin{equation}
+{\cal L} = i \bar{\psi}(x) \slashed{\partial} \psi(x) - m \bar{\psi}(x) \psi(x)
+\end{equation}
+where $\slashed{\partial} = \gamma^\mu \partial_\mu$ and
+$\bar{\psi}(x) = \psi^\dagger (x) \gamma^0$.
+\begin{equation}
+%\slashed{\partial} = 0
+\left(i \slashed{\partial} + m \right) \psi(x) = 0\,,
+\hspace{3mm}
+\bar{\psi}(x) \left(i \stackrel{\leftarrow}{\slashed{\partial}} + m \right)  = 0
+\end{equation}
+\subsubsection{Quantized Free Field}
+\begin{equation}
+\psi(x) 
+=
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{s = \pm 1}
+\left[
+c(\bld{p}, s) u(\bld{p}, s) e^{-ipx}
++
+d^\dagger(\bld{p}, s) v(\bld{p}, s) e^{ipx}
+\right]
+\end{equation}
+\begin{equation}
+\{ c(\bld{p}, s), c^\dagger(\bld{p}', s') \}
+=
+\{ d(\bld{p}, s), d^\dagger(\bld{p}', s') \}
+=
+2p^0 \delta_{ss'}
+\delta^3(\bld{p} - \bld{p}')
+\end{equation}
+\begin{equation}
+\begin{array}{l}
+(\slashed{p} - m) u(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{u}(\bld{p}, s)(\slashed{p} - m)  = 0\,,
+\\
+(\slashed{p} + m) v(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{v}(\bld{p}, s)(\slashed{p} + m)  = 0\,,
+\end{array}
+\end{equation}
+
+Propagetor
+\begin{eqnarray}
+S_F(q) &=& i \int d^4x e^{iqx}
+\bra 0 \braend T[\psi(x) \bar{\psi}(0)]
+\ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-1}{\slashed{q} - m + i \epsilon}
+=
+- \frac{\slashed{q} + m}{ q^2 - m^2 + i \epsilon}
+\end{eqnarray}
+
+\begin{comment}
+\subsubsection{Majorana Field}
+Massless, spin1/2, selfconjugate.
+\begin{equation}
+i \slashed{\partial} \psi(x) = 0\,,
+\hspace{3mm}
+\bar{\psi}(x) i \stackrel{\leftarrow}{\slashed{\partial}}   = 0
+\end{equation}
+\end{comment}
+\subsubsection{Dirac Yukawa Theory}
+
+\newpage
+\subsection{Massive Vector  Fields}
+Spin 1.  
+\begin{equation}
+\left( \Box + m^2 \right) \varphi^\mu(x) = 0
+\end{equation}
+\subsection{Local Gauge Symmetries}
+U(1), color SU(3), ...
+\subsubsection{Photon Field}
+Gauge bosons with unviolated symmetries. Electromagnetic field, gluons.
+\begin{equation}
+\Box A^\mu(x) = 0
+\end{equation}
+\subsection{spin~3/2 Field}
+$\Delta$
+\subsection{Renormalization}
+
+%-------------------------------------------------------- comment block start
+\begin{comment}
+%========================================  section x
+\newpage
+\setcounter{section}{10}
+\section{interference terms}
+\section{$\gamma p \rightarrow \phi X$}
+\section{Sasha PRC72}
+\section{$\gamma p \rightarrow K \Lambda$}
+%-------------------------------------------------------- comment block end
+\end{comment}
+
+\newpage
+%===============================<<<<<<<<<<<<<<<<<<<<<
+\begin{thebibliography}{9}
+\bibitem{ref:Donnachie} S. Donnachie, G. Dosch, P. Landshoff and O. Nachtmann, 
+	{\it Pomeron Physics and QCD}, Cambridge Monographs, 2002.
+\bibitem{ref:Collins} P. D. B. Collins,
+	{\it Regge theory and high energy physics}, Cambridge Monographs, 1977.
+\bibitem{ref:Itzykson-Zuber} Claude Itzykson and Jean-Bernard Zuber,
+	{\it Qantum Field Theory}, McGraw-Hill, 1980.
+\bibitem{ref:NIsh.1-2} K. Nishijima, {\it "Fields and Particles}, Benjamin, 1969, p.9-14.
+\end{thebibliography}
+
+\end{document}
+

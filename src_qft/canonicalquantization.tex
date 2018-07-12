@@ -1,0 +1,69 @@
+${\cal L}$agrangian density ($dim = E^4$) is given as a functional of field $\varphi(x)$
+and its space time derivatives
+\begin{equation}
+	{\cal L} = {\cal L}[\varphi(x), \partial^\mu\varphi(x)]
+\end{equation}
+Euler-Lagrange Eq.
+\begin{equation}
+ \frac{ \partial {\cal L}}{ \partial {\varphi}(x) } - 
+\partial_\mu \frac{ \partial {\cal L}}{ \partial (\partial_\mu {\varphi}(x) )} = 0
+ \;\;
+ \label{eqn:EulerLagrange}
+\end{equation}
+Canonical momentum field
+\begin{equation}
+\pi(x) = \frac{ \partial {\cal L}}{ \partial \dot{\varphi}(x) }
+\label{eqn:conjmomentum}
+\end{equation}
+where $\dot{\varphi}(x) = \partial_0 \varphi(x) = \partial^0 \varphi(x)$.\\
+${\cal H}$amiltonian density
+\begin{equation}
+{\cal H} = \pi(x) \dot{\varphi}(x) -  {\cal L}\;\;.
+\label{eqn:Hamiltoniandensity}
+\end{equation}
+By solving Eq. (\ref{eqn:conjmomentum}) for $\dot\varphi(x)$,
+${\cal H}$ is a function solely of $\pi(x), \varphi(x)$ and $ \partial_i \varphi(x)$.
+In the classical field theory, temporal developments of $\varphi(x)$ and $\pi(x)$
+are given by Hamiltonian $H = \int \mbox{d}^3\bld{x} \; {\cal H}$
+through the canonical equation of motion
+\begin{equation}
+\dot{\varphi}(x) = -i [\varphi(x), H ]\;, \; \; \; \; \; \dot{\pi}(x) = -i [\pi(x), H ]
+\label{eqn:canonicalEOM}
+\end{equation}
+where $-i[\cdots]$ is the Poisson braket.
+The Euler equation (\ref{eqn:EulerLagrange}) and 
+the canonical equation (\ref{eqn:canonicalEOM})
+are equivalent.
+
+\bigskip
+
+Following the canonical quantization method, 
+fields $\varphi(x)$ and $\pi(x')$ at a time 
+$x^0 = x'^0 = t_0$ (which is called the time of quantization)
+are postulated to satisfy an equal time commutation relation
+\begin{eqnarray}
+&&\;\;\;\;\;\;[ \varphi(x), \pi(x')] = i \delta^3 (\bld{x} - \bld{x'} )\;,
+\label{eqn:cancomm}
+\\
+&&\left[ \varphi(x), \varphi(x') \right] = 0\;,\;\;\;\;\left[ \pi(x), \pi(x') \right] = 0
+\nonumber
+\end{eqnarray}
+Assuming the existence of the Hamiltonian and using this equal time
+commutation relation, it is shown that
+the Euler equation (\ref{eqn:EulerLagrange}) and
+the Heisenberg equation (\ref{eqn:canonicalEOM})
+are equivalent in the level of quantum theory.
+\cite{ref:NIsh.1-2}
+Here, we shold read $[\cdots]$ in Eq. (\ref{eqn:canonicalEOM}) as
+commutation relation.
+In that case, using EOM of fields, it is shown that
+the commutation relation (\ref{eqn:cancomm}) holds at
+arbitrary time once it is set.\cite{ref:NIsh.1-2}
+In this sense, the quantization time is arbitral when
+the canonical quantization method works in usual manner.
+Formal solution of $\varphi(x)$ for the Heisenberg Eq. (\ref{eqn:canonicalEOM})
+is written as 
+\begin{equation}
+\varphi(x) = e^{iH(t-t_0)} \varphi(\bld{x}, t_0) e^{-iH(t-t_0)} 
+\label{eqn:timeevophi}
+\end{equation}

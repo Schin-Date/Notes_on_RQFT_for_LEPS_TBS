@@ -1,0 +1,122 @@
+{\cal L}agrangian density ($dim = E^4$) is given as a functional of field $\varphi(x)$
+and its space time derivatives
+\begin{equation}
+	{\cal L} = {\cal L}[\varphi(x), \partial^\mu\varphi(x)]
+\end{equation}
+Euler-Lagrange Eq.
+\begin{equation}
+ \frac{ \partial {\cal L}}{ \partial {\varphi}(x) } - 
+\partial_\mu \frac{ \partial {\cal L}}{ \partial (\partial_\mu {\varphi}(x) )} = 0
+ \;\;
+ \label{eqn:EulerLagrange}
+\end{equation}
+Canonical momentum field
+\begin{equation}
+\pi(x) = \frac{ \partial {\cal L}}{ \partial \dot{\varphi}(x) }
+\label{eqn:conjmomentum}
+\end{equation}
+where $\dot{\varphi}(x) = \partial_0 \varphi(x) = \partial^0 \varphi(x)$.\\
+${\cal H}$amiltonian density
+\begin{equation}
+{\cal H} = \pi(x) \dot{\varphi}(x) -  {\cal L}
+\label{eqn:Hamiltoniandensity}
+\end{equation}
+By solving Eq. (\ref{eqn:conjmomentum}) for $\dot\varphi(x)$,
+${\cal H}$ is a function solely of $\pi(x), \varphi(x)$ and $ \partial_i \varphi(x)$.
+In the classical field theory, temporal developments of $\varphi(x)$ and $\pi(x)$
+are given by Hamiltonian $H = \int \mbox{d}^3\bld{x} \; {\cal H}$
+through the canonical equation of motion
+\begin{equation}
+\dot{\varphi}(x) = -i [\varphi(x), H ]\;, \; \; \; \; \; \dot{\pi}(x) = -i [\pi(x), H ]
+\label{eqn:canonicalEOM}
+\end{equation}
+where $-i[\cdots]$ is the Poisson braket.
+The Euler equation (\ref{eqn:EulerLagrange}) and 
+the canonical equation (\ref{eqn:canonicalEOM})
+are equivalent in the classical level.
+
+\bigskip
+
+Following the canonical quantization method, 
+fields $\varphi(x)$ and $\pi(x')$ 
+are postulated to satisfy equal time commutation relations
+at a time $x^0 = x'^0 = t_0$ (which is called the time of quantization):
+\begin{equation}
+\begin{array}{l}
+\hspace{8mm}
+[ \hat{\varphi}(t_0, \bld{x}), \hat{\pi}(t_0, \bld{x'})] = i \delta^3 (\bld{x} - \bld{x'} )\;,
+\\
+\left[ \hat{\varphi}(t_0, \bld{x}), \hat{\varphi}(t_0, \bld{x'}) \right] = 0\;,\;\;\;\;
+\left[ \hat{\pi}(t_0, \bld{x}), \hat{\pi}(t_0, \bld{x'}) \right] = 0
+\end{array}
+\label{eqn:eqtimecommrel}
+\end{equation}
+These relations define a set of field operators at time $x^0 = t_0$.
+If the Hamiltonian $\hat{H}$ is provided,
+time evolution of field operators as Heisenberg operators are given as
+\begin{equation}
+i \partial_t \, \hat{\varphi}_H(x) =  [\hat{\varphi}_H(x), \hat{H} ]\;, \; \; \; \; \; 
+i \partial_t \, \hat{\pi}_H(x) = [\hat{\pi}_H(x), \hat{H} ]\,,
+\label{eqn:HeisenbergEOM}
+\end{equation}
+where $[\cdots]$ denotes commutation relation.
+Formal solutions to these equations are
+written as 
+\begin{equation}
+\begin{array}{l}
+\hat{\varphi}_H(x) = e^{i\hat{H}(t-t_0)} \hat{\varphi}(t_0, \bld{x}) e^{-i\hat{H}(t-t_0)} \\
+\hat{\pi}_H(x) = e^{i\hat{H}(t-t_0)} \hat{\pi}(t_0, \bld{x}) e^{-i\hat{H}(t-t_0)} 
+\end{array}
+\label{eqn:Heisenbergformalsol}
+\end{equation}
+Substituting operators defined in 
+%(\ref{eqn:HeisenbergEOM})(\ref{eqn:eqtimecommrel}) in 
+Eq. (\ref{eqn:eqtimecommrel}) into
+%(\ref{eqn:HeisenbergEOM})
+Eq. (\ref{eqn:Heisenbergformalsol}),
+we obtain a set of Heisenberg field operators at arbitrary time. They satisfy
+equal time commutation relations at arbitrary time $t$:
+\begin{equation}
+\begin{array}{l}
+\hspace{8mm}
+[ \hat{\varphi}_H(t, \bld{x}), \hat{\pi}_H(t, \bld{x'})] = i \delta^3 (\bld{x} - \bld{x'} )\;,
+\\
+\left[ \hat{\varphi}_H(t, \bld{x}), \hat{\varphi}_H(t, \bld{x'}) \right] = 0\;,\;\;\;\;
+\left[ \hat{\pi}_H(t, \bld{x}), \hat{\pi}_H(t, \bld{x'}) \right] = 0
+\end{array}
+\label{eqn:eqtimecommrelHeisenberg}
+\end{equation}
+In a situation that the Hamiltonian can be constructed by
+Eq. (\ref{eqn:Hamiltoniandensity}) in the classical level,
+we may obtain $\hat{H}$ by replacing fields by these Heisenberg operator fields
+under certain care on the order of noncommuting operators.
+The time $t$ in $\hat{H} = \int d^3 \bld{x} {\cal H}(t, \bld{x})$ can be chosen arbitrary since
+$i \partial_t \hat{H} = [\hat{H}, \hat{H}] = 0$.
+It is then shown\cite{ref:NIsh.1-2} that the set of the Heisenberg equations (\ref{eqn:HeisenbergEOM})
+is equivalent with the set of Euler equation (\ref{eqn:EulerLagrange}) for the Heisenberg
+field $\hat{\varphi}_H(x)$ and the definition of $\hat{\pi}_H(x)$ given by Eq.(\ref{eqn:conjmomentum}).
+\footnote{
+In the derivation in \cite{ref:NIsh.1-2}, a formula
+\[
+\left[ F(A, B, \dots), \pi \right]
+=
+(\partial F/ \partial A) [A, \pi] + (\partial F/ \partial B) [B, \pi] + \dots
+\]
+is employed.
+} % footnote
+Namely, they are equivalent in the quantum level. 
+The validity of Eq. (\ref{eqn:eqtimecommrelHeisenberg}) shows 
+that once the equal time commutation relation is set, it is valid
+for arbitrary time
+\footnote{
+However, one may not equate time derivatives
+of the both hand sides since it is valid at fixed times. }
+, provided Hamiltonian exists.
+In this sense, the quantization time is arbitral when
+the canonical quantization method works in usual manner.
+
+In summary, field equation (\ref{eqn:EulerLagrange}) can be read as
+one for the Heisenberg field operator of which the operator nature is
+set by the equal time commutation relation (\ref{eqn:eqtimecommrel})
+at time $t_0$ that can be chosen arbitrary.
+

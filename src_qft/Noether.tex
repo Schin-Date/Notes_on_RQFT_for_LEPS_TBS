@@ -1,0 +1,429 @@
+For each degree of freedom of continuous transformation of fields against which
+the action remains invariant, there exist a conserved current $J^\mu (x)$.
+Particularly, let a infinitesimal transformation with $s$ parameters $\delta \alpha_\lambda$ be
+written as
+\begin{eqnarray}
+\begin{array}{l}
+x^\mu \mapsto x^{\mu '} = x^\mu + \delta x^\mu\,,
+\hspace{3mm}
+\delta x^\mu = \sum_{\lambda=1}^s X_\lambda^\mu \delta \alpha_\lambda
+\vspace{2mm}
+\\
+\varphi (x) \mapsto \varphi' (x')
+=
+\varphi(x) + \delta \varphi(x)\,,
+\hspace{3mm}
+\delta \varphi(x) =
+\sum_{\lambda=1}^s \Phi_{ \lambda} (x) \delta \alpha_\lambda
+\end{array}
+\label{eqn:Noeth_infsimtransf}
+\end{eqnarray}
+This transformation may be associated with a space-time transformation
+specified by $X_\lambda^\mu$ as shown in the first line in Eq. (\ref{eqn:Noeth_infsimtransf}).
+When the transformation is related only with  internal degree of freedom of the field , 
+one may set $X_\lambda^\mu = 0$.
+When the action ${\cal A}$ is invariant under this transformation,
+$s$ currents
+\begin{eqnarray}
+J_\lambda^\mu (x)
+&\leftdef&
+- \frac{\partial {\cal L}}{\partial (\partial_\mu \varphi)}
+\left(
+\Phi_{\lambda} (x) - \partial_\nu \varphi(x) X_\lambda^\nu 
+\right)
+-
+{\cal L}(x) 
+X_\lambda^\mu 
+\label{eqn:NoetherCurrentGeneral}
+\end{eqnarray}
+are all conserved ones. Namely,
+\begin{eqnarray}
+\partial_\mu J_\lambda^\mu (x) = 0\,,
+\hspace{3mm}
+\lambda = 1, \dots, s
+\end{eqnarray}
+hold and corresponding charges
+\begin{eqnarray}
+Q_\lambda = 
+\int d^3 \bld{x}
+J_\lambda^0 (x)
+\label{eqn:NoetherChargeGeneral}
+\end{eqnarray}
+are conserved.
+Eq. (\ref{eqn:NoetherCurrentGeneral}) defines the Noether currents
+and quantities $Q_\lambda$ in Eq. (\ref{eqn:NoetherChargeGeneral})
+are called Noether charges.
+
+%=====================================
+\subsubsection{Energy-Momentum tensor}
+Our action must be invariant under space-time translations.
+The infinitesimal transformation
+\begin{equation}
+x^\mu \mapsto x^{\mu '} = x^\mu + \delta a^\mu
+\end{equation}
+has 4 continuous parameters $\delta a^\mu$ and in our notation
+$X_\nu^\mu = \delta_\nu^\mu$. 
+The field is invariant
+\begin{equation}
+\varphi (x) 
+\mapsto
+\varphi' (x') 
+=
+\varphi (x) 
+\end{equation}
+and $\Phi_{\nu} = 0$.
+The Noether current (\ref{eqn:NoetherCurrentGeneral}) reads
+\begin{eqnarray}
+T^\mu_{\;\;\nu}
+=
+ \frac{\partial {\cal L}}{\partial (\partial_\mu \varphi)}
+\partial_\nu \varphi(x) 
+-
+{\cal L}(x) 
+g_\nu^\mu 
+\label{eqn:NoetrherEnergyMomentum}
+\end{eqnarray}
+
+\subsubsection{Angular Momentum tensor}
+Consider an infinitesimal spatial rotation
+\begin{equation}
+x^\mu \mapsto x^{\mu '} = x^\mu + \delta \omega^\mu_{\;\nu} x^\nu
+\end{equation}
+This transformation has 6 continuous parameters $\delta \omega^{\mu \nu} = -\delta \omega^{\nu \mu}$.
+$\delta x^\mu$ in Eq. (\ref{eqn:Noeth_infsimtransf}) is given as
+\begin{eqnarray}
+\delta x^\mu &=& \delta \omega^\mu_{\;\nu} x^\nu
+\nonumber\\
+&=&
+g^\mu_\xi g_{\nu \eta} \delta \omega^{\xi \eta} x^\nu
+\nonumber\\
+&=&
+\frac{1}{2}( g^\mu_\xi g_{\nu \eta} - g^\mu_\eta g_{\nu \xi} ) x^\nu \delta \omega^{\xi \eta}
+\nonumber\\
+&=&
+\frac{1}{2} (a_{\xi \eta})^\mu_{\;\nu} x^\nu \delta \omega^{\xi \eta}
+\end{eqnarray}
+where
+\begin{eqnarray}
+(a_{\xi \eta})^\mu_{\; \nu}
+=
+g^\mu_\xi g_{\nu \eta} - g^\mu_\eta g_{\nu \xi}
+\end{eqnarray}
+We have 
+\begin{eqnarray}
+X^\mu_{\;\;\xi \eta}
+=
+\frac{1}{2} (a_{\xi \eta})^\mu_{\;\nu} x^\nu
+\end{eqnarray}
+The field is transformed as
+\begin{eqnarray}
+\varphi_\alpha (x) 
+\mapsto
+\varphi_\alpha' (x') 
+=
+\delta \varphi_\alpha (x) 
+\,,
+\hspace{3mm}
+\delta \varphi_\alpha (x) 
+= 
+\frac{1}{2} (S_{\xi \eta})_\alpha^{\;\beta}
+\varphi_\beta (x) 
+\delta \omega^{\xi \eta}
+\end{eqnarray}
+where
+\begin{eqnarray}
+(S_{\mu \nu})_\alpha^{\;\beta}
+=
+\left\{
+\begin{array}{l}
+0
+\hspace{3mm}
+\cdots
+\mbox{scalar}
+\\
+(a_{\mu \nu})_\alpha^{\;\;\beta}
+\hspace{3mm}
+\cdots
+\mbox{vector}
+\\
+\frac{1}{4} [ \gamma_\mu, \gamma_\nu ]_{\alpha}^{\;\;\beta}
+\hspace{3mm}
+\cdots
+\mbox{Dirac spinor}
+\end{array}
+\right.
+\end{eqnarray}
+We have
+\begin{eqnarray}
+\Phi_{\alpha \xi \eta} = 
+\frac{1}{2} (S_{\xi \eta})_\alpha^{\;\beta}
+\varphi_\beta (x) 
+\end{eqnarray}
+The Noether current
+\begin{eqnarray}
+M^\mu_{\xi \eta}
+&\leftdef&
+2 J^\mu_{\;\xi \eta}
+\nonumber\\
+&=&
+-2 \frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}
+\left(
+\Phi_{\alpha \xi \eta} (x) - \partial_\nu \varphi_\alpha(x) X_{\;\xi \eta}^\nu 
+\right)
+-2
+{\cal L}(x) 
+X_{\;\xi \eta}^\mu 
+\nonumber\\
+&=&
+\left(
+ \frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}
+\partial_\nu \varphi_\alpha(x) 
+- 
+{\cal L} g^\mu_\nu
+\right)
+\cdot 2X^\nu_{\;\;\xi \eta}
+- 2  \frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}
+\Phi_{\alpha \xi \eta} (x)
+\nonumber\\
+&=&
+(a_{\xi \eta})^\nu_{\;\rho} x^\rho \cdot
+T^\mu_{\;\nu}
+-  \frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}
+(S_{\xi \eta})_\alpha^{\;\beta}
+\varphi_\beta (x) 
+\\
+&\rightdef&
+L^\mu_{(\xi \eta)} + S^\mu_{(\xi \eta)}
+\end{eqnarray}
+The last equation defines orbital and spin parts of the current.
+The total angular momentum vector is defined as
+\begin{eqnarray}
+J^{k} = \frac{1}{2} \epsilon^{kij} M^{ij}\,,
+\hspace{3mm}
+M_{\xi \eta} = \int d^3 \bld{x} M^0_{\xi \eta}
+\label{eqn:NoetherAngularMomentum}
+\end{eqnarray}
+
+%===================================================================
+\subsubsection{Electric Charge}
+For a complex field, gauge transformation of the first kind is defined as
+\begin{eqnarray}
+\varphi(x) \mapsto \varphi'_\alpha(x) = e^{ie \theta} \varphi(x)\,,
+\hspace{3mm}
+\varphi^*(x) \mapsto {\varphi^{*}}'(x)= e^{-ie \theta} \varphi^*(x)
+\end{eqnarray}
+This transformation consists a U(1). Considering infinitesimal $\theta$, 
+we read in Eq. (\ref{eqn:Noeth_infsimtransf}) that
+\begin{eqnarray}
+X^\mu = 0\,,
+\hspace{3mm}
+\Phi = i e \varphi\,,
+\hspace{3mm}
+\Phi^* = -i e \varphi^*\,,
+\end{eqnarray}
+Invariance of the ${\cal L}$agragian density leads
+\begin{equation}
+\partial_\mu J^\mu = 0
+\end{equation}
+for
+\begin{eqnarray}
+J^\mu = 
+ie \left(
+\varphi^*_{} \frac{\partial {\cal L}}{\partial (\partial_\mu \varphi^*_{})} 
+-\frac{\partial {\cal L}}{\partial (\partial_\mu \varphi_{})} \varphi_{}
+\right)
+\label{eqn:NoetherElectricCharge}
+\end{eqnarray}
+The corresponding charge is $Q = \int d^3 \bld{x} J^0$.
+
+%===================================================================
+\subsubsection{Internal Global Symmetries}
+We consider a internal global SU(n) symmetry. 
+The field $\varphi_a(x)$ is subject to a transformation
+\begin{eqnarray}
+\varphi_a(x)
+\mapsto
+\varphi'_a(x)
+=
+(e^{i \alpha_i G_i})_a^{\;b}
+\varphi_b(x)
+\label{eqn:LieGrTransfFields}
+\end{eqnarray}
+where $\alpha_i, (i = 1, \dots, n^2-1)$ are continuous real parameters, $G_i$ are matrix representations of
+generators. 
+Considering infinitesimal $\alpha_i$, we have in Eq. (\ref{eqn:Noeth_infsimtransf}) that
+\begin{equation}
+\Phi_{a i} = i (G_i)_a^{\;b} \varphi_b\,,
+\end{equation}
+The Noether current is given by
+\begin{eqnarray}
+J^\mu_i
+&=&
+-
+i
+\frac{\partial {\cal L}}{\partial (\partial_\mu \varphi_{a })}
+(G_i)_a^{\;b} \varphi_b
+\label{eqn:NoetherCurrGeneral}
+\end{eqnarray}
+and the corresponding $n^2 - 1$ charges are
+\begin{eqnarray}
+C_i
+=
+-i
+\int d^3 \bld{x}
+\frac{\partial {\cal L}}{\partial \dot{\varphi_{a }}}
+(G_i)_a^{\;b} \varphi_b
+\label{eqn:NoetherChrgGeneral}
+\end{eqnarray}
+Among $n^2-1$ generators $G_i$, only $n-1$ commutes to each other.
+Accordingly, $n-1$ charges among $n^2-1$ can be diagonalized at the same time.
+
+\bigskip
+
+\noindent
+■SU(2)\\
+The conserved (internal) vector is the isospin $\bld{I} = (C_1, C_2, C_3)$.
+\begin{eqnarray}
+\varphi_a \in
+\yng(1)&:&
+\hspace{3mm}
+G_i = \frac{1}{2} \sigma_i\,
+\hspace{3mm}
+{\scriptstyle \tiny
+\sigma_1 = \left[
+\begin{array}{cc}
+0&1 \\ 1&0
+\end{array}
+\right]\,,
+\sigma_2 = \left[
+\begin{array}{cc}
+\scriptstyle
+0&-i \\ i&0
+\end{array}
+\right]\,,
+\sigma_3 = \left[
+\begin{array}{cc}
+\scriptstyle
+1&0 \\ 0&-1
+\end{array}
+\right]
+} %scriptstyle, tiny
+\label{eqn:SU2GenFundamental}
+\\
+\varphi_a \in
+\yng(2)&:&
+\hspace{3mm}
+G_i = t_i\,,
+\hspace{3mm}
+(t_i)_{jk} = -i \epsilon_{ijk}
+\end{eqnarray}
+
+
+\noindent
+■SU(3)\\
+\hspace{15mm}$\varphi_a \in \yng(1):$
+\hspace{7mm}$G_i = \frac{1}{2} \lambda_i$
+\begin{eqnarray}
+\begin{array}{ccc}
+\lambda_1 =
+\left(
+\begin{array}{ccc}
+0&1&0\\
+1&0&0\\
+0&0&0\\
+\end{array}
+\right)
+&
+\lambda_2 =
+\left(
+\begin{array}{ccc}
+0&-i&0\\
+i&0&0\\
+0&0&0\\
+\end{array}
+\right)
+&
+\lambda_3 =
+\left(
+\begin{array}{ccc}
+1&0&0\\
+0&-1&0\\
+0&0&0\\
+\end{array}
+\right)
+\vspace{2mm}
+\\
+\lambda_4 =
+\left(
+\begin{array}{ccc}
+0&0&1\\
+0&0&0\\
+1&0&0\\
+\end{array}
+\right)
+&
+\lambda_5 =
+\left(
+\begin{array}{ccc}
+0&0&-i\\
+0&0&0\\
+i&0&0\\
+\end{array}
+\right)
+&
+\lambda_6 =
+\left(
+\begin{array}{ccc}
+0&0&0\\
+0&0&1\\
+0&1&0\\
+\end{array}
+\right)
+\vspace{2mm}
+\\
+\lambda_7 =
+\left(
+\begin{array}{ccc}
+0&0&0\\
+0&0&-i\\
+0&i&0\\
+\end{array}
+\right)
+&
+\lambda_8 =
+\frac{1}{\sqrt{3}}
+\left(
+\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&-2\\
+\end{array}
+\right)
+&
+\end{array}
+\end{eqnarray}
+\begin{eqnarray}
+%\hspace{15mm}
+\varphi_a \in \yng(2,1):
+\hspace{3mm}
+G_i = T_i\,,
+\hspace{3mm}
+(T_a)_{bc} = -i f_{abc}\mbox{(structure const.)}
+%\hspace{25mm}
+\end{eqnarray}
+\begin{eqnarray}
+\begin{array}{c}
+T_\pm = G_1 \pm iG_2\,,
+\hspace{3mm}
+V_\pm = G_4 \pm iG_5\,,
+\hspace{3mm}
+U_\pm = G_6 \pm iG_7\,,
+\\
+T_3 = G_3\,,
+\hspace{3mm}
+Y = \frac{2}{\sqrt{3}} G_8
+\end{array}
+\end{eqnarray}
+%===================================================================
+%===================================================================
+%===================================================================

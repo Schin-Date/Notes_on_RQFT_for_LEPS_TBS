@@ -1,0 +1,662 @@
+\noindent
+{\bf Majorana and Chiral representations}
+
+In the following, two more representations 
+%other than Dirac representation
+for Dirac matrices are given.\\
+%----------------------------------------------------------
+\noindent
+\underline{Majorna representation}\\
+\begin{eqnarray}
+\begin{array}{l}
+\gamma^0
+=
+\left[
+\begin{array}{cc}
+0 & \sigma_2 \\ \sigma_2 & 0
+\end{array}
+\right]
+= \sigma_1 \otimes \sigma_2
+\,,
+\hspace{5mm}
+\gamma^1
+=
+\left[
+\begin{array}{cc}
+i\sigma_3 & 0 \\  0 & i\sigma_3\,,
+\end{array}
+\right]
+=
+1 \otimes i\sigma_3
+\vspace{2mm}
+\\ %------------------------
+\gamma^2
+=
+\left[
+\begin{array}{cc}
+0 & -\sigma_2 \\ \sigma_2 & 0
+\end{array}
+\right]
+= -i\sigma_2 \otimes \sigma_2
+\,,
+\hspace{5mm}
+\gamma^3
+=
+\left[
+\begin{array}{cc}
+-i\sigma_1 & 0 \\  0 & -i\sigma_1
+\end{array}
+\right]
+=
+1 \otimes -i\sigma_1\,,
+\end{array}
+\end{eqnarray}
+and $\gamma_5 = \sigma_3 \otimes \sigma_2$.
+In this representation, we have $(\gamma^\mu)^* = - \gamma^\mu$ and
+the Dirac equation becomes real. The Dirac fields are given as linear combinations
+of real sollutions. This representation is related with the Dirac one by
+\begin{eqnarray}
+\gamma^\mu_{\mbox{\tiny Majorana}}
+= U \gamma^\mu_{\mbox{\tiny Dirac}} U^{\dagger}\,,
+\hspace{5mm}
+U = U^\dagger =
+\frac{1}{\sqrt{2}}
+\left[
+\begin{array}{cc}
+1 & \sigma_2 \\
+\sigma_2 & -1
+\end{array}
+\right]
+\end{eqnarray}\\
+
+%----------------------------------------------------------
+\noindent
+\underline{Chiral representation}\\
+\begin{eqnarray}
+\begin{array}{l}
+\gamma^0
+=
+\left[
+\begin{array}{cc}
+0 & -1 \\ -1 & 0
+\end{array}
+\right]
+= \sigma_1 \otimes -1
+\,,
+\hspace{5mm}
+\gamma^i
+=
+\left[
+\begin{array}{cc}
+0  & \sigma_i \\  -\sigma_i & 0\,,
+\end{array}
+\right]
+=
+i\sigma_2 \otimes \sigma_i
+\vspace{2mm}
+\\ %------------------------
+\gamma_5
+=
+\left[
+\begin{array}{cc}
+1 & 0 \\ 0 & -1
+\end{array}
+\right]
+= \sigma_3 \otimes 1
+\,,
+\hspace{5mm}
+\sigma_{0i}
+=
+\left[
+\begin{array}{cc}
+-i\sigma_i & 0 \\  0 & i\sigma_i
+\end{array}
+\right]
+=
+-i\sigma_3 \otimes \sigma_i\,,
+\vspace{2mm}
+\\ %------------------------
+\sigma_{ij}
+=
+\left[
+\begin{array}{cc}
+\epsilon_{ijk}\sigma_k & 0 \\  0 & \epsilon_{ijk}\sigma_k
+\end{array}
+\right]
+=
+\epsilon_{ijk} \otimes \sigma_k\,,
+\end{array}
+\end{eqnarray}
+In this representation, spatial rotators and Lorentz boosters, namely, proper Lorentz transformations
+take forms as diagonal in the $\left[\;\ddots\;\right]$ space so that $\varphi$ and $\chi$ fields
+are transformed independently. This representation is related with the Dirac one by
+\begin{eqnarray}
+\gamma^\mu_{\mbox{\tiny Chiral}}
+= U \gamma^\mu_{\mbox{\tiny Dirac}} U^{\dagger}\,,
+\hspace{5mm}
+U = 
+\frac{1}{\sqrt{2}}
+(1 - \gamma_5 \gamma^0)
+=
+\frac{1}{\sqrt{2}}
+\left[
+\begin{array}{cc}
+1 & 1 \\
+-1 & 1
+\end{array}
+\right]
+\end{eqnarray}\\
+
+\bigskip
+
+\bigskip
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\noindent
+{\bf Lorentz transformation property}
+
+Under a proper homogeneous Lorentz transformation
+\footnote{%--------------------------------------------------------
+\begin{eqnarray*}
+L_\mu^{\;\;\rho} L^\mu_{\;\;\sigma} = g^\rho_\sigma\,,
+\hspace{5mm}
+\end{eqnarray*}
+Denoting a matrix with its elements given by $L^\mu_{\;\;\nu}$ as $L$,
+we have
+\begin{eqnarray*}
+L_\mu^{\;\;\rho} = (L^{-1})^\rho_{\;\;\mu}
+\end{eqnarray*}
+}%-------------------------------------------------------- end of footnote
+\begin{equation}
+x^\mu \mapsto x^{\mu'} = L(\bld{\beta}, \bld{\theta})^\mu_{\;\nu}\; x^\nu\,,
+\end{equation}
+the Dirac field transforms as
+\begin{eqnarray}
+\psi(x) \mapsto \psi'(x') = S(L) \psi(x)\,,
+\hspace{5mm}
+S(L) = \exp[ -\frac{i}{4}\sigma_{\mu \nu} \omega^{\mu \nu}]\,,
+\end{eqnarray}
+where $\omega^{\nu \mu} = -\omega^{\mu \nu}$ and
+\begin{eqnarray}
+\omega^{0i} &=& \xi_i\,,
+\hspace{5mm}
+\bld{\xi} = \xi \bld{\beta}/\beta\,,
+\hspace{3mm}
+\xi = \frac{1}{2} \ln \frac{1+\beta}{1-\beta}
+\\
+\omega^{ij}
+&=&
+-\epsilon_{ijk} \theta_k
+\end{eqnarray}
+We may examine the properties under boosts and rotations separately by considering
+\begin{eqnarray}
+S_{boost}(L(\bld{\beta},\bld{0})) &=& \exp[
+-\frac{i}{2}\sigma_{0i}\xi_i ]
+\\
+&=&
+\cosh \frac{\xi}{2} - \frac{\bld{\beta}\cdot \bld{\alpha}}{\beta} \sinh \frac{\xi}{2}
+\end{eqnarray}
+and
+\begin{eqnarray}
+S_{rotation}(L(\bld{0},\bld{\theta}))&=& \exp[
+\frac{i}{2} \bld{\sigma}\cdot \bld{\theta} ]
+\\
+&=&
+\cos \frac{\theta}{2}
++ i \frac{\bld{\theta}\cdot\bld{\sigma}}{\theta} \sin \frac{\theta}{2}
+\end{eqnarray}
+where three components of
+\begin{eqnarray}
+\bld{\sigma}  \leftdef 
+\frac{1}{2} \epsilon^{\uparrow ij}\sigma_{ij}
+=
+\frac{i}{2} \epsilon^{\uparrow ij} \gamma^i \gamma^j
+=
+\gamma_5 \gamma^0 \bld{\gamma}
+\label{eqn:DiGenRotation}
+\end{eqnarray}
+are the spinor (fundamental) reperesentation of generators of the spatial rotation.
+They certainly satisfy $\{ \sigma^i, \sigma^j \}_+ = 2 \delta^{ij}$. Also,
+$S^\dagger_{boost}(L) = S_{boost}(L)$,
+$S^\dagger_{rotation}(L) = S^{-1}_{rotation}(L)$ and
+$\gamma^0 S^\dagger_{}(L) \gamma^0 = S^{-1}_{}(L)$.
+The covariance of the Dirac equation (\ref{eqn:DiracEqstandard}) is guaranteed by
+a relationship
+\begin{eqnarray}
+S^{-1}(L) \gamma^\mu S(L) = L^\mu_{\;\;\nu} \gamma^\nu
+\label{eqn:LorentzTransfgamma}
+\end{eqnarray}
+$S(L)$ has a property
+\begin{eqnarray}
+\gamma^0 S^\dagger(L) \gamma^0 = S^{-1}(L)\,,
+\end{eqnarray}
+so that
+\begin{eqnarray}
+\overline{\psi}(x) \mapsto {\overline{\psi}}'(x') = \psi^{*t} (x) S^\dagger(L) \gamma^0
+= \overline{\psi}(x) S^{-1}(L)
+\end{eqnarray}
+and $\overline{\psi} \psi$ is a Lorentz scalar.
+
+For later use, we write down a particular form of $S_{boost}$.
+For a Lorentz transformation
+\begin{eqnarray}
+L(-\bld{\beta}) = \left(
+\begin{array}{cc}
+\gamma &
+ \gamma \bld{\beta} \cdot
+\\
+\gamma  \bld{\beta} &
+1 + \hat{\bld{\beta}} (\gamma - 1) \hat{\bld{\beta}} \cdot
+\end{array}
+\right)\,,
+\end{eqnarray}
+which transforms $p^{(0)}= (m, \bld{0}) \mapsto p = L p^{(0)} = (E, \bld{p})$,
+we have
+\begin{eqnarray}
+\begin{array}{l}
+S_{boost}(L)
+=
+\frac{1}{\sqrt{2m(E + m)}}
+[ \slashed{p} \gamma^0 + m ]\,,
+\\
+S_{boost}^{-1}(L)
+=
+\frac{1}{\sqrt{2m(E + m)}}
+[ \gamma^0 \slashed{p}  + m ]\,,
+\end{array}
+\end{eqnarray}
+Since $L^{-1}$ corresponds to the change of the sign of the spacial momentum,
+we have $S_{boost}^{-1}(L) = S_{boost}(L^{-1})$.
+
+
+\bigskip
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\noindent
+{\bf The Dirac spinors}
+
+For a Lorentz transformation $L: p^{(0)} = (m, \bld{0}) \mapsto p$, we write
+$\psi^{(\pm)}(\bld{p}) = S(L) \psi^{(\pm)}(\bld{0})$.
+Eq. (\ref{eqn:LorentzTransfgamma}) reads
+\begin{eqnarray*}
+S^{-1}(L) \slashed{p} S(L)
+=
+p_\mu L^\mu_{\;\;\nu} \gamma^\nu
+=
+L_\mu^{\;\;\rho} L^\mu_{\;\;\nu} p^{(0)}_\rho \gamma^\nu
+=
+g^\rho_\nu p^{(0)}_\rho \gamma^\nu
+=
+m \gamma^0
+\end{eqnarray*}
+and we have
+\begin{eqnarray*}
+(\gamma^0 - 1) \psi^{(+)}(\bld{0}) = 0\,,
+\hspace{5mm}
+(\gamma^0 + 1) \psi^{(-)}(\bld{0}) = 0
+\end{eqnarray*}
+\bigskip
+Each of these equations have two linearly independent solutions
+for $\gamma_0^2 =1$, $\tr \gamma_0 = 0$ and rank$(\gamma_0) = 4$.
+Denoting normalized solutions as $u^{(\alpha)}(\bld{p})$ and $v^{(\alpha)}(\bld{p})$,
+$\alpha = 1, 2$ respectively for $\psi^{(+)}(\bld{p})$ and  $\psi^{(-)}(\bld{p})$,
+we write
+\begin{eqnarray}
+\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{\alpha = 1, 2} \left[
+b_\alpha(\bld{p}) u^{(\alpha)}(\bld{p}) e^{-ipx} + d_\alpha^*(\bld{p}) v^{(\alpha)}(\bld{p}) e^{ipx}
+\right]
+\end{eqnarray}
+Eq. (\ref{eqn:DiracEqMomentumamp}) reads
+\begin{eqnarray}
+(\slashed{p} - m) u^{(\alpha)}(\bld{p}) = 0\,,
+\hspace{5mm}
+(\slashed{p} + m) v^{(\alpha)}(\bld{p}) = 0
+\label{eqn:DiracEqDiracspinors}
+\end{eqnarray}
+For conjugate (adjoint) spinors defined in Eq. (\ref{eqn:DefConjDiracField}) we have
+\begin{eqnarray}
+\overline{u}^{(\alpha)}(\bld{p}) (\slashed{p} - m) = 0\,,
+\hspace{5mm}
+\overline{v}^{(\alpha)}(\bld{p}) (\slashed{p} + m) = 0
+\label{eqn:DiracEqConjspinors}
+\end{eqnarray}
+We choose their normalization
+\footnote{%-------------------------------------------------
+Izykson: $\{ b(\bld{p}),b^\dagger(\bld{p}') \}_+ = \frac{2E}{2m}\delta^3(\bld{p}-\bld{p}')$,
+$\bar{u}^\alpha u^\beta = \delta^{\alpha \beta}$,\\
+\hspace{20mm}$\psi(x) \sim \int d^3\bld{p}\frac{2m}{2E}[ b u e^{-ipx} \dots]$\\
+Hioki, Tong: $\{ b(\bld{p}),b^\dagger(\bld{p}') \}_+ = (2\pi)^3 2E\delta^3(\bld{p}-\bld{p}')$,
+$\bar{u}^\alpha u^\beta = 2m \delta^{\alpha \beta}$,\\
+\hspace{20mm}$\psi(x) = \int \frac{d^3\bld{p}}{(2\pi)^32E}[ b u e^{-ipx} \dots]$\\
+dim $\psi = E^{3/2}$
+}%-------------------------------------------end of footnote
+ as
+\begin{eqnarray}
+\begin{array}{c}
+\overline{u}^{(\alpha)}(\bld{p})
+u^{(\beta)}(\bld{p})
+= 2m \delta^{\alpha \beta}\,,
+\hspace{5mm}
+\overline{v}^{(\alpha)}(\bld{p})
+v^{(\beta)}(\bld{p})
+= -2m \delta^{\alpha \beta}\,,
+\\
+\overline{u}^{(\alpha)}(\bld{p})
+v^{(\beta)}(\bld{p})
+= 0\,,
+\hspace{5mm}
+\overline{v}^{(\alpha)}(\bld{p})
+u^{(\beta)}(\bld{p})
+= 0
+\end{array}
+\end{eqnarray}
+%------------------------------------------------------------------------------
+\underline{Energy state projection}
+\begin{eqnarray}
+\hat{\Omega}_+(\bld{p})
+=
+\frac{\slashed{p} + m}{2m}
+\,, \hspace{5mm}
+\hat{\Omega}_-(\bld{p})
+=
+\frac{- \slashed{p} + m}{2m}
+\end{eqnarray}
+%------------------------------------------------------------------------------
+\underline{Spin state projection}\\
+The spin states are defined in the rest frame of particle.
+Consider the generator of spatial rotation given in Eq. (\ref{eqn:DiGenRotation}).
+For $s^{(0)}= (0, \bld{s})$ with a spatial 3 vector $\bld{s}$, 
+with helps of Eq. (\ref{eqn:LorentzTransfgamma}) and a relation
+\begin{eqnarray}
+S^{-1}(L) \gamma_5 S^{}(L) = \det (L) \gamma_5\,,
+\end{eqnarray}
+we have 
+\begin{eqnarray}
+S^{-1}(L) \bld{\sigma} \cdot \bld{s} S^{}(L) 
+&=&
+S^{-1}(L) \gamma_5 \gamma^0 \bld{\gamma} \cdot \bld{s} S^{}(L) 
+\nonumber\\
+&=&
+\det (L) \gamma_5 L^0_{\;\;\mu} \gamma^\mu L^{i}_{\;\;\nu} \gamma^\nu s^i
+\nonumber\\
+&=&
+\det (L) \gamma_5 (p^{(0)}_\rho / m) L^\rho_{\;\;\mu} \gamma^\mu (- s^{(0)}_\sigma) L^{\sigma}_{\;\;\nu} \gamma^\nu 
+\nonumber\\
+&=&
+\det (L) \gamma_5  (L^{-1})^{\;\;\rho}_{\mu} (p^{(0)}_\rho / m) \gamma^\mu  
+(L^{-1})^{\;\;\sigma}_{\nu} \gamma^\nu (- s^{(0)}_\sigma)\,,
+\nonumber
+\end{eqnarray}
+where $p^{(0)}= (m, \bld{0})$.
+Then, for $L= L(\bld{\beta}): p = (E, \bld{p}) \mapsto p^{(0)}$,
+we have
+\begin{eqnarray}
+S^{-1}(L) \bld{\sigma} \cdot \bld{s} S^{}(L) 
+&=&
+- (1/m) \det (L) \gamma_5  p^{}_\mu  \gamma^\mu   \gamma^\nu  s^{}_\nu\,,
+\nonumber\\
+&=&
+\det (L) \frac{\gamma_5 \slashed{s} \slashed{p}}{m}\,,
+\end{eqnarray}
+where we have used a fact $\slashed{p} \slashed{s} = - \slashed{s} \slashed{p} $
+for $p\cdot s = 0$.
+Thus, we have for a proper Lorentz transformation that
+\begin{eqnarray}
+\frac{\gamma_5 \slashed{s} \slashed{p}}{m}
+u(\bld{p})
+=
+S^{-1}(L) \bld{\sigma} \cdot \bld{s} S^{}(L) S^{-1}(L) u(\bld{0})
+=
+S^{-1}(L) \bld{\sigma} \cdot \bld{s} u(\bld{0})
+\end{eqnarray}
+and similar relationship for $v$. We set two linearly independent spinors 
+in the rest frame as eigenstates of $\bld{\sigma}\cdot \bld{s}$ 
+for $\bld{s}^2 = 1$
+and write
+\begin{eqnarray}
+\begin{array}{l}
+\bld{\sigma}\cdot \bld{s}\; u(\bld{0}, \bld{s} ) = u(\bld{0}, \bld{s} )
+\\
+\bld{\sigma}\cdot \bld{s}\; u(\bld{0}, -\bld{s} ) = -u(\bld{0}, -\bld{s} )
+\\
+- \bld{\sigma}\cdot \bld{s}\; v(\bld{0}, \bld{s} ) =  v(\bld{0}, \bld{s} )
+\\
+- \bld{\sigma}\cdot \bld{s}\; v(\bld{0}, -\bld{s} ) =  - v(\bld{0}, -\bld{s} )
+\end{array}
+\end{eqnarray}
+Since $S^{-1}(L) u(\bld{0},\bld{s}) = u(\bld{p},\bld{s})$ and so on, we have
+a set of similar relations by replacing $\bld{0}$ by $\bld{p}$ and
+$\bld{\sigma}\cdot \bld{s}$ by $\gamma_5 \slashed{s} \slashed{p} / m$.
+Considering relationships $(\slashed{p}/m)u(\bld{p}) = u(\bld{p})$
+and $(-\slashed{p}/m)v(\bld{p}) = v(\bld{p})$, an operator matirx
+\begin{eqnarray}
+\hat{\Sigma}(s)
+ = 
+\frac{1 + \gamma_5 \slashed{s}}{2}
+%\,,\hspace{5mm}
+%s = L s^{(0)}\,,
+%\hspace{2mm}
+%s^{(0)} = (0, \bld{s})\,,
+ \end{eqnarray}
+projects out 
+spinstates along $\bld{s}$ as
+\begin{eqnarray}
+\begin{array}{l}
+\hat{\Sigma}(s) u(\bld{p}, \bld{s}) = u(\bld{p}, \bld{s})
+\\
+\hat{\Sigma}(s) u(\bld{p}, -\bld{s}) = 0
+\\
+\hat{\Sigma}(s) v(\bld{p}, \bld{s}) = v(\bld{p}, \bld{s})
+\\
+\hat{\Sigma}(s) v(\bld{p}, -\bld{s}) = 0
+\end{array}
+\end{eqnarray}
+In the Dirac representation,
+\begin{eqnarray}
+\bld{\sigma}
+&=&
+1 \otimes \bld{\sigma}_{Pauli}
+=
+\left[
+\begin{array}{cc}
+\bld{\sigma}_{Pauli} & 0 \\
+0 & \bld{\sigma}_{Pauli}
+\end{array}
+\right]
+\end{eqnarray}
+
+
+\bigskip
+
+For $p = Lp^{(0)}$, $p^{(0)} = (m, \bld{0})$,
+\begin{eqnarray}
+\hat{\Sigma}(s) u(\bld{p})
+=
+\hat{\Sigma}(s)
+S_{boost}(L)
+u(\bld{0})
+=
+\frac{1 + \gamma_5 \slashed{s}}{2}
+\frac{\slashed{p}\gamma^0 + m}{\sqrt{2m(E+m)}}
+\end{eqnarray}
+
+\noindent
+{\bf Lagrangian density}
+\begin{equation}
+{\cal L} = i \bar{\psi}(x) \slashed{\partial} \psi(x) - m \bar{\psi}(x) \psi(x)
+\end{equation}
+where $\slashed{\partial} = \gamma^\mu \partial_\mu$ and
+$\bar{\psi}(x) = \psi^\dagger (x) \gamma^0$.
+The Euler-Lagrange equation reads
+\begin{equation}
+%\slashed{\partial} = 0
+\left(i \slashed{\partial} + m \right) \psi(x) = 0\,,
+\hspace{3mm}
+\bar{\psi}(x) \left(i \stackrel{\leftarrow}{\slashed{\partial}} + m \right)  = 0
+\end{equation}
+
+\subsubsection{Quantized Free Field}
+%------------------------------------------------------------- comment out
+\begin{comment}
+\begin{equation}
+\psi(x) 
+=
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{s = \pm 1}
+\left[
+c(\bld{p}, s) u(\bld{p}, s) e^{-ipx}
++
+d^\dagger(\bld{p}, s) v(\bld{p}, s) e^{ipx}
+\right]
+\end{equation}
+\end{comment}
+%------------------------------------------------------------- comment out end
+\begin{eqnarray}
+\psi(x) 
+&=&
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{\alpha = 1,2}
+\left[
+c_\alpha(\bld{p}) u^{(\alpha)}(\bld{p}) e^{-ipx}
++
+d_\alpha^\dagger(\bld{p}, s) v^{(\alpha)}(\bld{p}) e^{ipx}
+\right]
+\nonumber\\
+\end{eqnarray}
+\begin{eqnarray}
+\begin{array}{l}
+\{ c_\alpha(\bld{p}), c^\dagger_\beta(\bld{p}') \}_+
+=
+2 p^0 \delta_{\alpha \beta}
+\delta^3(\bld{p}-\bld{p}')\,,
+\hspace{3mm}
+\{ d_\alpha(\bld{p}), d^\dagger_\beta(\bld{p}') \}_+
+=
+2 p^0 \delta_{\alpha \beta}
+\delta^3(\bld{p}-\bld{p}')
+\vspace{2mm}
+\\
+\{ c_\alpha(\bld{p}), c_\beta(\bld{p}') \}_+
+=
+\{ d_\alpha(\bld{p}), d_\beta(\bld{p}') \}_+
+=
+\{ c_\alpha(\bld{p}), d^\dagger_\beta(\bld{p}') \}_+
+=
+\dots
+= 0
+\end{array}
+\end{eqnarray}
+\begin{eqnarray}
+\pi(x) =
+\frac{\partial {\cal L}}{\partial \dot{\psi}}
+=
+i \overline{\psi} \gamma^0
+= i \psi^\dagger
+\end{eqnarray}
+\begin{eqnarray}
+\{
+\psi_\xi (t, \bld{x}), \pi_\eta(t, \bld{y}) \}
+=
+\{
+\psi_\xi (t, \bld{x}), i\psi^\dagger_\eta(t, \bld{y}) \}
+=
+i \delta_{\xi \eta }
+\delta^3(\bld{x} - \bld{y})
+\end{eqnarray}
+\begin{eqnarray}
+\{ \psi_\xi(t, \bld{x}), \psi_\eta^\dagger(t, \bld{y}) \}_+
+&=&
+\int \frac{d^3 \bld{p} d^3 \bld{p}'}{(2\pi)^3 4 E E'}
+\sum_{\alpha, \beta} \left(
+\{ c_\alpha(\bld{p}), c^\dagger_\beta(\bld{p}') \}
+u^{(\alpha)}_\xi (\bld{p}) u^{(\beta) \dagger}_\eta (\bld{p}')
+\right.
+\nonumber\\
+&&
+\left.
++
+\{ d^\dagger_\alpha(\bld{p}), d_\beta(\bld{p}') \}
+v^{(\alpha)}_\xi (\bld{p}) v^{(\beta) \dagger}_\eta (\bld{p}')
+\right)
+\nonumber\\
+&=& \dots
+\nonumber\\
+&=& 
+\delta_{\xi \eta} \delta^3(\bld{x} - \bld{y})
+\end{eqnarray}
+%------------------------------------------------------------- comment out
+\begin{comment}
+\begin{equation}
+\{ c(\bld{p}, s), c^\dagger(\bld{p}', s') \}
+=
+\{ d(\bld{p}, s), d^\dagger(\bld{p}', s') \}
+=
+2p^0 \delta_{ss'}
+\delta^3(\bld{p} - \bld{p}')
+\end{equation}
+\begin{equation}
+\begin{array}{l}
+(\slashed{p} - m) u(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{u}(\bld{p}, s)(\slashed{p} - m)  = 0\,,
+\\
+(\slashed{p} + m) v(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{v}(\bld{p}, s)(\slashed{p} + m)  = 0\,,
+\end{array}
+\end{equation}
+\end{comment}
+%------------------------------------------------------------- comment out end
+
+\noindent
+\underline{Propagator}\\
+\begin{eqnarray}
+i S_{\xi \eta} &\equiv&
+\{
+\psi_\xi (x) , \overline{\psi}_\eta (y) \}
+\end{eqnarray}
+\begin{eqnarray}
+iS(x - y)
+&=& 
+\dots
+=
+(i \slashed{\partial}_x + m)
+\left[
+D(x-y) - D(y - x)
+\right]
+\end{eqnarray}
+
+\begin{eqnarray}
+S_F(x - y) &\leftdef&
+\bra 0 \braend T[ \psi(x) \overline{\psi}(y) \ketend 0 \ket
+\\
+&=&
+i \int \frac{d^4 p}{(2\pi)^4}
+\frac{e^{-ip(x-y)}}{\slashed{p} - m + i\epsilon}
+\end{eqnarray}
+%------------------------------------------------------------- comment out
+\begin{comment}
+\begin{eqnarray}
+S_F(q) &=& i \int d^4x e^{iqx}
+\bra 0 \braend T[\psi(x) \bar{\psi}(0)]
+\ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-1}{\slashed{q} - m + i \epsilon}
+=
+- \frac{\slashed{q} + m}{ q^2 - m^2 + i \epsilon}
+\end{eqnarray}
+\end{comment}
+%------------------------------------------------------------- comment out end
+
+%------------------------------------------------------------- comment out
+\begin{comment}
+\subsubsection{Majorana Field}
+Massless, spin1/2, selfconjugate.
+\begin{equation}
+i \slashed{\partial} \psi(x) = 0\,,
+\hspace{3mm}
+\bar{\psi}(x) i \stackrel{\leftarrow}{\slashed{\partial}}   = 0
+\end{equation}
+\end{comment}
+%------------------------------------------------------------- comment out end
+

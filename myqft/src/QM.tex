@@ -1,0 +1,181 @@
+\indent
+
+Observables are hermitian operators acting on a space of state vectors.
+Complete set of observables is a set of observables that commute with one another
+and for which there exists only one simultaneous eigenvector when the normalization is fixed.
+Set of all simultaneous eigenvectors of a complete set spans a Hilbert space
+\footnote{%--------------------------------------------------------------------- footnote >
+When an observable of the set has continuous eigenvalues,
+the space is not a Hilbert space in a mathematically rigorous sense.
+However, we may follow a physics convention to use the term
+including such cases.
+}%--------------------------------------------------------------------- footnote //
+ of
+state vectors associated with a quantum mechanical system under consideration. 
+Therefore, the set constitutes a complete bases of the Hilbert space.
+Different choices of a particular set of complete bases, namely, that of a complete set of observables
+define different representations of the Hilbert space.
+Suppose $\{ \hat{A}_1, \hat{A}_2, \dots \}$ is a complete set
+and $\ketend  a_1 a_2 \cdots \ket$ is a simultaneous eigenvector
+associated with a set of eigen values $\{ a_1, a_2, \cdots \}$.
+Then an arbitrary state vector $\ketend \Psi \ket$ can be expressed as
+\begin{eqnarray}
+\ketend \Psi \ket
+=
+\int \left[da_1\right] \left[da_2 \right] \cdots
+\bra a_1 a_2 \cdots \braketend \Psi \ket
+\ketend  a_1 a_2 \cdots \ket
+\label{eqn:completerepresentation}
+\end{eqnarray}
+where $\int \left[ da_i \right]$ denotes sum or integration over a variable $a_i$ with a measure
+chosen so that
+$\int \left[ da_i \right] \ketend a_i \ket \bra a_i \braend$ is the projection of
+a space spanned by $\ketend a_i \ket$.
+Factor $\bra a_1 a_2 \cdots \braketend \Psi \ket$ in Eq. (\ref{eqn:completerepresentation}) 
+is the wave function in the representation defined by the complete set.
+When we define another representation by a complete set $\{ B_1, B_2, \dots \}$ and
+its simultaneous eigenvectors $\ketend  b_1 b_2 \cdots \ket$,
+it follows from Eq. (\ref{eqn:completerepresentation}) that
+the wave function in the new representation is given as
+\begin{eqnarray}
+\bra b_1 b_2 \cdots \braketend \Psi \ket
+= 
+\int \left[da_1\right] \left[da_2 \right] \cdots
+\bra a_1 a_2 \cdots \braketend \Psi \ket
+\bra b_1 b_2 \cdots \braketend  a_1 a_2 \cdots \ket
+\label{eqn:changeofrepresentation}
+\end{eqnarray}
+
+In quantum mechanics, canonically conjugate variables $\hat{A}$ and $\hat{B}$
+satisfy a commutation relation instead of  corresponding  Poisson bracket in
+classical mechanics. 
+
+
+For a system composed of one particle, cartesian components $(\hat{x}_1, \hat{x}_2, \hat{x}_3) \equiv \hat{\bld{x}}$
+of particle position are observables. 
+
+Eigenvector of a physical quantity $\hat{A}$ ($=\hat{A}^\dagger$ ) associated with 
+an eigenvalue a ($= a^*$) is called eigenstate $\ketend a \ket$;
+$\hat{A} \ketend a \ket = a \ketend a \ket$.
+Physical quantities 
+
+To a system composed of one particle, 
+there associate coordinates of the position $\hat{\bld{x}}$ that are
+physical quantities.
+
+
+%To a particle, there associates a physical quantity called position $\hat{\bld{x}}$.
+
+\bigskip
+
+%Operators acting in a Hilbert space. Physical quantities are hermitian operators.
+%Born's probability interpretation is employed.\\
+\begin{eqnarray}
+\mbox{Schr\"odinger eq.} \hspace{24mm} 
+&\hspace{-5mm}&
+\hspace{-20mm}
+i \partial_t \Psi(t, \bld{x}) = {H} \Psi(t, \bld{x}) \,,
+%i \partilal_t \Psi (t, \bld{x}) = H \Psi (t, \bld{x})
+\hspace{3mm}
+H = - \frac{\bld{\partial}^2}{2m} + V(\bld{x}) = H^\dagger
+\label{eqn:SchroedingerEq}
+\\
+\mbox{Eigenstates of } H \hspace{22mm} 
+&\hspace{-5mm}&
+\hspace{-20mm}
+H \varphi_l (\bld{x} ) = \epsilon_l \varphi_l (\bld{x} )\,,
+\hspace{3mm}
+\{ \varphi_l (\bld{x} ) \} \mbox{: orthogonal, complete}
+\label{eqn:energyEigenSt}
+\\
+\mbox{Solution of the Schr\"odinger eq.}
+&\hspace{-5mm}&
+\Psi(t, \bld{x})
+=
+\sum_l \Psi_l e^{-i \epsilon_l t} \varphi_l (\bld{x})
+\label{eqn:Psiexpansion}
+\end{eqnarray}
+%-------------------------------------------------------------------
+%
+Bras and kets
+\begin{equation}
+\Psi(t, \bld{x}) = \bra \bld{x} \braend \Psi(t) \ket\,,
+\hspace{5mm}
+\varphi_l(\bld{x})  = \bra \bld{x} \braend \epsilon_l \ket\,, 
+\label{eqn:coordrepbraket}
+\end{equation}
+\begin{equation*}
+\hspace{21mm}
+i \partial_t  \ketend \Psi(t) \ket = \hat{H} \ketend \Psi(t) \ket\,,
+\hspace{5mm}
+\hat{H} = \frac{\hat{\bld{p}}^2}{2 m} + V(\bld{x}) = \hat{H}^\dagger
+\hspace{20mm}
+\bra \ref{eqn:SchroedingerEq} \ket
+\end{equation*}
+\begin{equation*}
+\hspace{13mm}
+\hat{H} 
+\ketend \epsilon_l \ket
+= 
+\epsilon_l \ketend \epsilon_l \ket\,,
+\hspace{3mm}
+\bra \epsilon_l \ketend \epsilon_{l'} \ket = 0 \mbox{ if } l\neq l'\,,
+\hspace{3mm}
+\sum_l \ketend \epsilon_{l} \ket \bra \epsilon_{l} \braend = 1
+\hspace{10mm}
+\bra \ref{eqn:energyEigenSt} \ket
+\end{equation*}
+\begin{equation*}
+\hspace{32mm}
+\ketend \Psi(t) \ket =
+\sum_l \bra \epsilon_l \braend   \Psi(0) \ket
+e^{-i \epsilon_l t} \ketend \epsilon_l \ket
+\hspace{30mm}
+\bra \ref{eqn:Psiexpansion} \ket
+\end{equation*}
+%-------------------------------------------------------------------
+%
+1st quantization
+\begin{equation}
+[\hat{x}_i, \hat{p}_j] = i \delta_{ij}
+\end{equation}
+Eigen states
+\begin{equation}
+\begin{array}{l}
+\hat{\bld{x}} \ketend \bld{x} \ket = \bld{x} \ketend \bld{x} \ket
+\\
+\hat{\bld{p}} \ketend \bld{p} \ket = \bld{p} \ketend \bld{p} \ket
+\end{array}
+\end{equation}
+Conventional ("half relativistic") normalization
+\begin{equation}
+\bra \bld{x} \braend \bld{x}' \ket = \delta^3(\bld{x}-\bld{x}')\,,
+\hspace{5mm}
+\int \ketend \bld{x} \ket d^3 \bld{x} \bra \bld{x} \braend = 1
+\end{equation}
+\begin{equation}
+\bra \bld{p} \braend \bld{p}' \ket = 2E \delta^3(\bld{p}-\bld{p}')\,,
+\hspace{5mm}
+\int \ketend \bld{p} \ket \frac{d^3 \bld{p}}{2E} \bra \bld{p} \braend = 1
+\label{eqn:norm_p_state_rel}
+\end{equation}
+Coordinate representation of the momentum operator
+\begin{equation}
+\bra \bld{x} \braend \hat{\bld{p}}
+=
+\frac{1}{i} \bld{\partial} \bra \bld{x} \braend
+\end{equation}
+and of the momentum eigenstate
+\begin{equation}
+\bra \bld{x} \braend \bld{p} \ket
+=
+\sqrt{\frac{2E}{(2\pi)^3}}\, e^{i \bld{p} \cdot \bld{x}}
+\end{equation}
+Requirement for the normalization factor is understood by employing
+the first equation of (\ref{eqn:norm_p_state_rel}) in the $l.h.s$ of
+$\nolinebreak{\bra \bld{p} \braend \bld{p}' \ket}= $
+$\nolinebreak{\int \bra \bld{p} \braend \bld{x} \ket d^3\bld{x} \bra \bld{x} \ketend \bld{p}' \ket}$
+and remembering a formula
+\[
+\int {d^3 \bld{x}}\, e^{\pm i \bld{p} \cdot \bld{x}}= (2\pi)^3 \delta^3 (\bld{p})
+\]

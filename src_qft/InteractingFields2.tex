@@ -1,0 +1,254 @@
+Provided with ${\cal H}_{int}$ in terms of quantized fields in the interaction picture, 
+we write 
+%we write Eq. (\ref{eqn:SmatrixPertSer}) as
+\begin{eqnarray}
+\bra f \braend S -1 \ketend i \ket
+&=&
+ -i \int d^4 x' \, \bra f \braend {\cal H}_{int}(x') \ketend i \ket
+\nonumber\\
+&&+
+\frac{(-i)^2}{2}
+\int d^4 x_1' d^4 x_2'
+\;\bra f \braend T[ {\cal H}_{int}(x_1') {\cal H}_{int}(x_2')] \ketend i \ket
++ \cdots
+\nonumber\\
+\label{eqn:SmatrixPertSerCov}
+\end{eqnarray}
+To proceed beyond the second term requires some further preparations
+that we describe in the following.
+
+\subsubsection{Propagators of scalar fields}
+Let's take a real scalar field in Eqs (\ref{eqn:cancomm_RS}, \ref{eqn:RS_fieldexpansion}).
+We have
+\begin{eqnarray}
+\bra 0 \braend \phi(x) \phi(y) \ketend 0 \ket
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\bra 0 \braend a(\bld{k}) a^\dagger(\bld{k}') \ketend 0 \ket
+e^{-i(kx - k'y)}
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+e^{-ik(x - y)}
+\rightdef
+D(x-y)
+\end{eqnarray}
+\begin{eqnarray}
+[\phi(x), \phi(y)]
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\left(
+[a(\bld{k}), a^\dagger(\bld{k}')]e^{-i(kx - k'y)}
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{35mm}
++
+[a^\dagger(\bld{k}), a(\bld{k}')]e^{i(kx - k'y)}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+\left(
+e^{-ik(x - y)} - e^{ik(x - y)}
+\right)
+\nonumber\\
+&=&
+D(x-y) - D(y-x)
+\label{eqn:scfieldcommrel}
+\end{eqnarray}
+When $x-y$ is spacelike, there exists a Lorentz frame where $x^0 = y^0$.
+Then the $r.h.s.$ of Eq. (\ref{eqn:scfieldcommrel}) vanishes. 
+The whole expression is Lorentz invariant and it must vanish for all $(x-y)^2 < 0$.
+Nevertheless, $D(x-y)$ itself does not vanish even $x-y$ is spacelike.
+
+The Feynman propagator is defined as
+\begin{eqnarray}
+\bra 0 \braend T[\phi(x) \phi(y)] \ketend 0 \ket
+&=&
+\theta(x^0 - y^0) D(x-y)
++
+\theta(y^0 - x^0) D(y-x)
+\label{eqn:scFeynPropbyD}
+\\
+&=&
+i \int \frac{d^4 p}{(2\pi)^4}
+\frac{e^{-ip (x-y)}}{p^2 - m^2 + i\epsilon}
+\label{eqn:scFeynmanProp}
+\label{eqn:FeynmanPropDefSc}
+\\
+&\rightdef&
+\Delta_F(x-y)
+=
+\Delta_F(y-x)
+\nonumber
+\end{eqnarray}
+{\it Proof of Eq.(\ref{eqn:scFeynmanProp}) $\Leftrightarrow$ Eq. (\ref{eqn:scFeynPropbyD})}\\
+%\begin{proof}
+\begin{eqnarray}
+\frac{1}{p^2 - m^2 + i\epsilon}
+=
+\frac{1}{2 E_{\bld{p}}} \left(
+\frac{1}{p^0 - E_{\bld{p}} + i\epsilon}
+-
+\frac{1}{p^0 + E_{\bld{p}} - i\epsilon}
+\right)
+\,,
+\end{eqnarray}
+\begin{eqnarray}
+\Delta_F(x-y)
+&=&
+i \int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} e^{i\bld{p}\cdot (\bld{x} - \bld{y})}
+\nonumber\\
+&&
+\times \int \frac{d p^0}{2\pi} e^{- ip^0 (x^0 - y^0)}
+\left(
+\frac{1}{p^0 - E_{\bld{p}} + i\epsilon}
+-
+\frac{1}{p^0 + E_{\bld{p}} - i\epsilon}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} e^{i\bld{p}\cdot (\bld{x} - \bld{y})}
+\frac{-1}{2\pi i} \left(
+\theta(x^0 - y^0) (-2\pi i e^{-i E_{\bld{p}}(x^0 - y^0)})
+\right.
+\nonumber\\
+&&
+\left.
+-
+\theta(y^0 - x^0) (+2\pi i e^{i E_{\bld{p}}(x^0 - y^0)}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} 
+\left(
+\theta(x^0 - y^0) e^{-ip(x-y)}
++
+\theta(y^0 - x^0) e^{i p(x-y)}
+\right)
+\nonumber\\
+&=&
+\theta(x^0 - y^0) D(x-y)
++
+\theta(y^0 - x^0) D(y-x)
+\nonumber\\
+&& 
+\hspace{65mm}
+\blacksquare
+\end{eqnarray}
+%\end{proof}
+From the first line to the second, we have performed integrations in a complex $p^0$ plane.
+Contour of the integration should go through the real axis from $- \infty$ to $\infty$ and
+turn lower (upper) half plane (anti) clockwise when $x^0 - y^0 > (<)\, 0$. A factor
+$\pm 2\pi i$ appears as a result of the residue calculus.
+
+For the complex scalar field prescribed in Eqs. (\ref{eqn:CompScFourier}, \ref{eqn:complscalarcancomm}),
+we find 
+\begin{eqnarray}
+\begin{array}{l}
+\bra 0 \braend \varphi(x) \varphi(y) \ketend 0 \ket = 
+\bra 0 \braend \varphi^\dagger(x) \varphi^\dagger(y) \ketend 0 \ket = 0\,,
+\vspace{2mm}
+\\
+\bra 0 \braend T[\varphi^\dagger(x) \varphi(y)] \ketend 0 \ket 
+= 
+\bra 0 \braend T[\varphi(x) \varphi^\dagger(y)] \ketend 0 \ket 
+= 
+\Delta_F(x-y)
+\end{array}
+\label{eqn:CplxScProp}
+\end{eqnarray}
+
+\subsubsection{Prescription for time ordered products}
+Since the second and higher order terms in Eq. (\ref{eqn:SmatrixPertSer})
+are written in terms of time ordered products of $H_I$'s and
+each $H_I$ is given in terms of a normal product of fields like
+one in the first line of Eq. (\ref{eqn:scYHIterms}), 
+we need a way to deal with time ordered products 
+of fields. A technique to do this is provided by Wick's theorem, 
+which we have described in Appendix \ref{sec:App_Wick}.
+With the Feynman propagator defined in Eq. (\ref{eqn:FeynmanPropDefSc}),
+Wick's theorem (\ref{eqn:WickTheorem}) for the real scalar field reads
+\begin{eqnarray}
+T[\phi_1 \phi_2 \cdots ]
+&=&
+\normalprod{\phi_1 \phi_2 \cdots }
+\nonumber\\
+&+&
+\sum_{i < j}  
+\normalprod{
+\acontraction[1ex]{\cdots}{\phi}{{}_i\cdots}{\phi}
+\cdots \phi_i \cdots \phi_j \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\sum_{i < j, k<l}  
+\normalprod{
+\acontraction[1ex]{\cdots}{\phi}{{}_i\cdots \phi_k \cdots}{\Phi}
+\acontraction[2ex]{\cdots \phi_i \cdots }{\phi}{{}_k\cdots \Phi_j \cdots}{\phi}
+\cdots \phi_i \cdots \phi_k \cdots  \phi_j \cdots \phi_l \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\cdots  \mbox{ (all possible contracts)}
+\nonumber\\
+&=&
+\normalprod{\phi_1 \phi_2 \cdots }
+\nonumber\\
+&+&
+\sum_{i < j}  
+\Delta_F(x_i - x_j)
+\normalprod{
+\cdots \xout{\phi_i} \cdots \xout{\phi_j} \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\sum_{i < j, k<l}  
+\Delta_F(x_i - x_j)
+\Delta_F(x_k - x_l)
+%\hspace{50mm}
+\normalprod{
+\cdots \xout{\phi_i} \cdots \xout{\phi_k} \cdots  \xout{\phi_j} \cdots \xout{\phi_l} \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\cdots
+\nonumber\\
+\label{eqn:WickTheoremRealSc}
+\end{eqnarray}
+where $\phi_i$ stands for $\phi(x_i)$.
+For the complex scalar field, we have a similar formula as the above but
+contracts are taken only among $\varphi$ and $\varphi^\dagger$ since
+ones among the same kind disappears as it can be read from Eq.  (\ref{eqn:CplxScProp}).
+Let us examine an example in which normal products of complex scalar fields 
+are involved inside a time ordered product:
+\begin{eqnarray}
+T[\normalprod{\varphi_1^\dagger \varphi_2} \normalprod{\varphi_3^\dagger \varphi_4}]
+&=&
+\normalprod{\varphi_1^\dagger \varphi_2 \varphi_3^\dagger \varphi_4}
++
+\acontraction[1ex]{:\!}{\varphi}{_1^\dagger \varphi_2 \!:\, : \!\varphi_3^\dagger}{\varphi}
+:\!\varphi_1^\dagger \varphi_2 \!:\, : \!\varphi_3^\dagger \varphi_4 \!:
++
+\acontraction[1ex]{:\!\varphi_1^\dagger}{\varphi}{_2 \!:\, : \!}{\varphi}
+:\!\varphi_1^\dagger \varphi_2 \!:\, : \!\varphi_3^\dagger \varphi_4 \!:
+\nonumber\\
+&& +
+\acontraction[1ex]{:\!\varphi_1^\dagger}{\varphi}{_2 \!:\, : \!}{\varphi}
+\acontraction[2ex]{:\!}{\varphi}{_1^\dagger \varphi_2 \!:\, : \!\varphi_3^\dagger}{\varphi}
+:\!\varphi_1^\dagger \varphi_2 \!:\, : \!\varphi_3^\dagger \varphi_4 \!:
+\nonumber\\
+&=&
+\normalprod{\varphi_1^\dagger \varphi_2 \varphi_3^\dagger \varphi_4}
++
+\Delta_F(x_1 - x_4) \normalprod{\varphi_2 \varphi_3^\dagger}
++
+\Delta_F(x_2 - x_3) \normalprod{\varphi_1^\dagger \varphi_4}
+\nonumber\\
+&& +
+\Delta_F(x_1 - x_4) \Delta_F(x_2 - x_3)
+\end{eqnarray}
+
+

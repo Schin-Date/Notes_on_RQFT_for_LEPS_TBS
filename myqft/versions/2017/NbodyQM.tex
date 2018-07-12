@@ -1,0 +1,284 @@
+Schr\"odinger eq.
+\begin{equation}
+\begin{array}{l}
+i \partial_t
+\Psi^{(N)}(t; \bld{x}_1, \dots \bld{x}_N) = H^{(N)} \Psi^{(N)}(t; \bld{x}_1, \dots \bld{x}_N)\,,
+\vspace{2mm}
+\\
+\displaystyle
+H^{(N)} = \sum_i^N H_i\,,
+\hspace{3mm}
+H_i = - \frac{\bld{\partial}^2}{2m} + V(\bld{x}_i)
+\hspace{5mm}
+\mbox{(for simplicity)}
+\end{array}
+\end{equation}
+\begin{equation}
+H_i \varphi_l^{(i)} (\bld{x} ) = \epsilon_l \varphi_l^{(i)} (\bld{x} )\,,
+\hspace{5mm}
+i = 1, \dots, N
+\end{equation}
+\begin{equation}
+\begin{array}{l}
+\Psi^{(N)}(t; \bld{x}_1, \dots \bld{x}_N)
+=
+\hspace{50mm}
+\\
+\hspace{10mm}
+%{\stackrel{\displaystyle \sum}{\scriptstyle \epsilon_l^{(1)} + \dots + \epsilon_l^{(n)} = E^{(n)} } }
+{\mathop{\displaystyle \sum}_{\scriptstyle  l_1, \dots, l_N} }
+\Psi^{(N)}(l_1,\dots, l_N)
+e^{-i E^{(N)} t}
+\left\{
+\varphi_{l_1}^{(1)} (\bld{x}_1 ) \cdots \varphi_{l_N}^{(N)} (\bld{x}_N )
+\right\}_P\,,
+\end{array}
+\end{equation}
+where $E^{(N)} = \epsilon_{l_1} + \dots + \epsilon_{l_N}$ and
+$\{\cdots \}_P$ denotes symmetrization  for systems of identical bosons
+and antisymmetrization for identical fermions.
+Thus $\Psi^{(N)}$ is defined in the direct product of $N$ Hilbert space.
+
+\bigskip
+\noindent
+{\bf ■Theorem of bosonic creation and annihilation operators}\cite{ref:Takahashi_bussei1}\\
+If an operator $\hat{a}$ and its hermite conjugate $\hat{a}^\dagger$ satisfy
+\begin{equation}
+[\hat{a}, \hat{a}^\dagger] = 1\,,
+\label{eqn:boson_commutation_relation}
+\end{equation}
+then
+\begin{enumerate}
+\item Eigenvalues of an operator $\hat{N} \equiv \hat{a}^\dagger \hat{a}$ is
+nonnegative integers $\{0,1,\dots,\infty\}$ and we can call it number operator.
+\item Vaccum state $\ketend 0 \ket$ with respect to the dynamical freedom described by $\hat{a}$
+and $\hat{a}^\dagger$ can be defined as the eigenstate of
+$\hat{N}$ belonging to its eigenvalue 0.
+\item
+If we normalize the vacuum state by $\bra 0 \braend 0 \ket = 1$, then the eigenstate
+of $\hat{N}$ belonging to an eigenvalue $n$ is given below and 
+it constitutes an orthonormal set.
+\begin{equation}
+\ketend n \ket = \frac{1}{\sqrt{n!}} (\hat{a}^\dagger )^n \ketend  0 \ket \,,
+\hspace{3mm}
+\bra n \braend m \ket = \delta_{nm}
+\label{eqn:nbosonstate}
+\end{equation}
+{\it Proof}
+
+We will make use of useful relationships
+\begin{eqnarray*}
+\left[ab, c\right] &=& a\left[b,c\right] + \left[a, c\right] b
+\nonumber\\
+\mbox{and}\hspace{3mm}
+\left[a, bc\right] &=& \left[ a, b \right] c + b\left[ a,c \right] 
+\end{eqnarray*}
+which hold regardless the type of operators $a$, $b$ and $c$.
+For a bosonic operator $\hat{a}$ satisfying  Eq. (\ref{eqn:boson_commutation_relation}),
+we have
+\begin{eqnarray*}
+\left[ \hat{a}, \hat{a}^{\dagger n} \right]
+= n \hat{a}^{\dagger n - 1}
+\end{eqnarray*}
+so that
+\begin{eqnarray}
+\left[ \hat{a}^{\dagger} \hat{a}, \hat{a}^{\dagger n} \right]
+= n \hat{a}^{\dagger n }
+\label{eqn:nbosonnumber}
+\end{eqnarray}
+and
+\begin{eqnarray*}
+( \hat{a}^{\dagger} \hat{a} )(\hat{a}^{\dagger})^n \ketend 0 \ket
+ =
+ \left[ \hat{a}^{\dagger} \hat{a}, \hat{a}^{\dagger n} \right]\ketend 0 \ket
+= n \hat{a}^{\dagger n } \ketend 0 \ket\,.
+\end{eqnarray*}
+This proves that $\ketend n \ket$ in Eq. (\ref{eqn:nbosonstate}) is an eigenstate of $\hat{N}$
+belonging to an eigenvalue $n$:
+\begin{eqnarray*}
+\hat{N} \ketend n \ket = n \ketend n \ket
+\end{eqnarray*}
+Next, we compute
+\begin{eqnarray}
+\hat{a}^m \hat{a}^{\dagger n} \ketend 0 \ket
+&=&
+\hat{a}^{m-1} \left[ \hat{a}, \hat{a}^{\dagger n} \right] \ketend 0 \ket
+\nonumber\\
+&=&
+n \hat{a}^{m-1} \hat{a}^{\dagger n-1} \ketend 0 \ket
+\nonumber\\
+&=&
+n \hat{a}^{m-2} \left[ \hat{a}, \hat{a}^{\dagger n-1} \right] \ketend 0 \ket
+\nonumber\\
+&=&
+n (n-1 )\hat{a}^{m-2} \hat{a}^{\dagger n-2} \ketend 0 \ket
+\nonumber\\
+&=&
+\dots
+\nonumber\\
+&=&
+\left\{
+\begin{array}{l}
+n (n-1) \cdots (n-m+1) \hat{a}^{\dagger n - m} \ketend 0 \ket \hspace{2mm}(m < n)
+\\
+n!\ketend 0 \ket \hspace{2mm}(m = n)
+\\
+n! \hat{a}^{m- n} \ketend 0 \ket \hspace{2mm}(m > n)
+\end{array}
+\right.
+\nonumber
+\end{eqnarray}
+and we obtain
+\begin{eqnarray*}
+\bra 0 \braend \hat{a}^m \hat{a}^{\dagger n} \ketend 0 \ket
+= 
+n!  \delta_{n,m}
+\end{eqnarray*}
+that shows $\ketend n \ket$ are orthonormal. 
+\end{enumerate}
+
+
+
+
+\bigskip
+\noindent
+{\bf ■Theorem of fermionic creation and annihilation operators}\cite{ref:Takahashi_bussei1}\\\
+If an operator $\hat{c}$ and its hermite conjugate $\hat{c}^\dagger$ satisfy
+\begin{equation}
+\{\hat{c}, \hat{c}^\dagger\} = 1
+\hspace{3mm}
+\mbox{and}
+\hspace{3mm}
+\{\hat{c}, \hat{c} \} = 0\,,
+\end{equation}
+then
+\begin{enumerate}
+\item Eigenvalues of an operator $\hat{N} \equiv \hat{c}^\dagger \hat{c}$ is
+0 or 1 and we can call it number operator.
+\item Vaccum state $\ketend 0 \ket$ with respect to the dynamical freedom described by $\hat{c}$
+and $\hat{c}^\dagger$ can be defined as the eigenstate of
+$\hat{N}$ belonging to its eigenvalue 0.
+\item
+If we normalize the vacuum state by $\bra 0 \braend 0 \ket = 1$, then the eigenstates
+of $\hat{N}$ are $\ketend 0 \ket$ and $\ketend 1 \ket = c^\dagger \ketend 0 \ket$.
+\end{enumerate}
+
+\bigskip
+Suppose now we have a set of $\hat{a}_l$  and $\hat{a}_l^\dagger$ for $l = 1, 2, \dots, \infty$
+corresponding to energy eigenvalues $\epsilon_1, \epsilon_2,\dots$.
+We assume that we can have a set of operators such that each pair of $\hat{a}_l$  and $\hat{a}_l^\dagger$
+satisfies the condition of creation-annihilation operators mentioned above and they are independent
+for different suffices:
+\begin{equation}
+\begin{array}{l}
+[\hat{a}_l, \hat{a}^\dagger_m] = \delta_{lm}
+\\
+\left[ \hat{a}_l, \hat{a}_m \right] 
+= [\hat{a}^\dagger_l, \hat{a}^\dagger_m] = 0
+\end{array}
+\label{eqn:Nbodycreanncomm}
+\end{equation}
+Having with these operators, we define
+\begin{equation}
+\hat{\varphi}(\bld{x}) = \sum_l \hat{a}_l \varphi_l (\bld{x})\,,
+\label{eqn:SchrFieldprimitive}
+\end{equation}
+where $\varphi_l (\bld{x})$ is eigenvector of $H = -\bld{\partial}^2/2m + V(\bld{x})$ belonging
+to the $l$th eigenvalue $\epsilon_l$.
+Assign $\hat{a}_l^\dagger$ as operator to create a particle in the $l$th energy eigenstate:
+\begin{equation}
+\ketend \epsilon_l \ket = \hat{a}_l^\dagger \ketend 0 \ket
+\end{equation}
+Then we find
+\begin{eqnarray}
+\bra 0 \braend \hat{\varphi}(\bld{x}) \ketend \epsilon_l \ket
+&=&
+\sum_{l'} \varphi_{l'} (\bld{x}) 
+\bra 0 \braend \hat{a}_{l'} \hat{a}_l^\dagger \ketend 0 \ket
+\nonumber\\
+&=&
+\sum_{l'} \varphi_{l'} (\bld{x}) 
+\bra 0 \braend [\hat{a}_{l'}, \hat{a}_l^\dagger] \ketend 0 \ket
+\nonumber\\
+&=&
+\varphi_{l} (\bld{x}) \,,
+\end{eqnarray}
+where we have used relationships $\hat{a} \ketend 0 \ket = \bra 0 \braend \hat{a}^\dagger= 0$.
+Comparing this result with the second equation in Eq. (\ref{eqn:coordrepbraket}), we may write
+\begin{equation}
+\bra \bld{x} \braend = \bra 0 \braend \hat{\varphi}(\bld{x})
+\end{equation}
+If we denote by $\hat{a}^\dagger_{\bld{x}}$ the creation operator 
+that creates a a particle at a position $\bld{x}$, we can write
+\begin{equation}
+\hat{a}^\dagger_{\bld{x}} = \hat{\varphi}^\dagger(\bld{x})
+\end{equation}
+The operator $\hat{\varphi}(\bld{x})$ defined in Eq. (\ref{eqn:SchrFieldprimitive})
+is a primitive form of field operators discussed later.
+ 
+ N particle states can be constructed as
+ \begin{equation}
+ \ketend \epsilon_{l_1}, \dots, \epsilon_{l_N} \ket
+ =
+ \hat{a}_{l_1}^\dagger \dots  \hat{a}_{l_N}^\dagger \ketend 0 \ket
+ \label{eqn:NpartEnergystate}
+ \end{equation}
+ and
+ \begin{equation}
+\bra \bld{x}_1, \dots  \bld{x}_N \braend
+= \bra 0 \braend
+\hat{\varphi}(\bld{x}_1) \dots \hat{\varphi}(\bld{x}_N)
+\label{eqn:NpartCoordstate}
+\end{equation}
+We read
+\begin{equation}
+\Psi^{(N)}(t; \bld{x}_1, \dots, \bld{x}_N)
+= \bra \bld{x}_1, \dots  \bld{x}_N \braend \Psi^{(N)}(t) \ket
+\end{equation}
+and 
+\begin{equation}
+\ketend \Psi^{(N)}(t) \ket
+=
+{\mathop{\displaystyle \sum}_{\scriptstyle {l_1},  \dots, {l_N} } }
+\Psi^{(N)}(l_1,\dots, l_N)
+e^{-i E^{(N)} t}
+\ketend
+\epsilon_{l_1}, \dots, \epsilon_{l_N} >
+\end{equation}
+When $N$ particles are identical bosons,
+these expressions in Eq. (\ref{eqn:NpartEnergystate}) and (\ref{eqn:NpartCoordstate})
+are redundant because all operators in them are commuting with each other
+and the order of variables in these bra and ket have no meaning.
+Suppose we have $n_1$ particle in state of energy $\epsilon_1$, $n_2$ in $\epsilon_2$ 
+and so on, we may write the $l.h.s.$ of Eq. (\ref{eqn:NpartEnergystate}) as
+$\ketend n_1, n_2, \dots \ket$. This notation is commonly used in condensed matter
+and nuclear physics.
+
+Basis $\ketend \bld{x}_1, \dots  \bld{x}_N \ket$ or 
+$\ketend \epsilon_{l_1}, \dots, \epsilon_{l_N} \ket$ 
+span N-particle Hilbert space. Set of all N-particle
+Hilbert space spanned by $\ketend \bld{x}_1, \bld{x}_2, \dots   \ket$
+is called the Fock space.
+A state vector $\ketend \Psi \ket$ of the Fock space can be
+expanded as
+\begin{equation}
+\ketend \Psi \ket =
+\sum_N \int \prod_i^N d^3 \bld{x}_i \ketend \bld{x}_1, \dots,  \bld{x}_N \ket
+\bra \bld{x}_1, \dots,  \bld{x}_N \braend \Psi \ket
+\end{equation}
+
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+\begin{comment}
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\begin{equation}
+\ketend p_1, p_2, \dots, p_n \ket
+= \{a^\dagger(p_1) a^\dagger(p_2) \dots a^\dagger(p_n)\}
+\ketend 0 \ket
+\end{equation}
+\end{comment}

@@ -1,0 +1,205 @@
+To proceed beyond the second term in Eq. (\ref{eqn:SmatrixPertSer}) requires some
+further preparations.
+
+\subsubsection{Propagator}
+Let's take a real scalar field.
+\begin{eqnarray}
+\bra 0 \braend \varphi(x) \varphi(y) \ketend 0 \ket
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\bra 0 \braend a(\bld{k}) a^\dagger(\bld{k}') \ketend 0 \ket
+e^{-i(kx - k'y)}
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+e^{-ik(x - y)}
+\rightdef
+D(x-y)
+\end{eqnarray}
+\begin{eqnarray}
+[\varphi(x), \varphi(y)]
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\left(
+[a(\bld{k}), a^\dagger(\bld{k}')]e^{-i(kx - k'y)}
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{35mm}
++
+[a\dagger(\bld{k}), a(\bld{k}')]e^{i(kx - k'y)}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+\left(
+e^{-ik(x - y)} - e^{ik(x - y)}
+\right)
+\nonumber\\
+&=&
+D(x-y) - D(y-x)
+\label{eqn:scfieldcommrel}
+\end{eqnarray}
+When $x-y$ is spacelike, there exists a Lorentz frame where $x^0 - y^0$.
+Then the $r.h.s.$ of Eq. (\ref{eqn:scfieldcommrel}) vanishes. 
+The whole expression is Lorentz invariant and it must vanish for all $(x-y)^2 < 0$.
+Nevertheless, $D(x-y)$ itself does not vanish even $x-y$ is spacelike.
+
+The Feynman propagator is defined as
+\begin{eqnarray}
+\bra 0 \braend T[\varphi(x) \varphi(y)] \ketend 0 \ket
+&=&
+\theta(x^0 - y^0) D(x-y)
++
+\theta(y^0 - x^0) D(y-x)
+\label{eqn:scFeynPropbyD}
+\\
+&=&
+i \int \frac{d^4 p}{(2\pi)^4}
+\frac{e^{-ip (x-y)}}{p^2 - m^2 + i\epsilon}
+\label{eqn:scFeynmanProp}
+\\
+&\rightdef&
+\Delta_F(x-y)
+\nonumber
+\end{eqnarray}
+{\it Proof of Eq.(\ref{eqn:scFeynmanProp}) $\Leftrightarrow$ Eq. (\ref{eqn:scFeynPropbyD})}\\
+%\begin{proof}
+\begin{eqnarray}
+\frac{1}{p^2 - m^2 + i\epsilon}
+=
+\frac{1}{2 E_{\bld{p}}} \left(
+\frac{1}{p^0 - E_{\bld{p}} + i\epsilon}
+-
+\frac{1}{p^0 + E_{\bld{p}} - i\epsilon}
+\right)
+\,,
+\end{eqnarray}
+\begin{eqnarray}
+\Delta_F(x-y)
+&=&
+i \int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} e^{i\bld{p}\cdot (\bld{x} - \bld{y})}
+\nonumber\\
+&&
+\times \int \frac{d p^0}{2\pi} e^{- ip^0 (x^0 - y^0)}
+\left(
+\frac{1}{p^0 - E_{\bld{p}} + i\epsilon}
+-
+\frac{1}{p^0 + E_{\bld{p}} - i\epsilon}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} e^{i\bld{p}\cdot (\bld{x} - \bld{y})}
+\frac{-1}{2\pi i} \left(
+\theta(x^0 - y^0) (-2\pi i e^{-i E_{\bld{p}}(x^0 - y^0)})
+\right.
+\nonumber\\
+&&
+\left.
+-
+\theta(y^0 - x^0) (+2\pi i e^{i E_{\bld{p}}(x^0 - y^0)}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} 
+\left(
+\theta(x^0 - y^0) e^{-ip(x-y)}
++
+\theta(y^0 - x^0) e^{i p(x-y)}
+\right)
+\nonumber\\
+&=&
+\theta(x^0 - y^0) D(x-y)
++
+\theta(y^0 - x^0) D(y-x)
+\nonumber\\
+&& 
+\hspace{65mm}
+\blacksquare
+\end{eqnarray}
+%\end{proof}
+
+
+\subsubsection{T product}
+We decompose a real scalar field as 
+\begin{eqnarray}
+\varphi(x) = \varphi^{(+)}(x) + \varphi^{(-)}(x)
+\end{eqnarray}
+where $\varphi^{(+)}$ ($\varphi^{(-)}$) is the term which contain
+annihilation (creation) operator in Eq. (\ref{eqn:scYfields}).
+If $x^0 > y^0$,
+\begin{eqnarray}
+T[ \varphi(x) \varphi(y)]
+&=& (\varphi^{(+)}(x) + \varphi^{(-)}(x))(\varphi^{(+)}(y) + \varphi^{(-)}(y))
+\nonumber\\
+&=&
+\varphi^{(+)}(x) \varphi^{(+)}(y)
++
+( [\varphi^{(+)}(x), \varphi^{(-)}(y)] 
++ \varphi^{(-)}(y) \varphi^{(+)}(x) )
+\nonumber\\
+&&
++
+\varphi^{(-)}(x) \varphi^{(+)}(y)
++
+\varphi^{(-)}(x) \varphi^{(-)}(y)
+\nonumber\\
+&=&
+\normalprod{\varphi(x) \varphi(y)} + D(x-y)
+\nonumber
+\end{eqnarray}
+and if $y^0 > x^0$,
+\begin{eqnarray}
+T[ \varphi(x) \varphi(y)]
+=
+\normalprod{\varphi(x) \varphi(y)} + D(y-x)
+\nonumber
+\end{eqnarray}
+Then, for arbitrary $x^0$ and $y^0$,
+\begin{eqnarray}
+T[ \varphi(x) \varphi(y)]
+=
+\normalprod{\varphi(x) \varphi(y)} + \Delta_F(x-y)
+\end{eqnarray}
+A similar evaluation shows for a complex scalar field that
+\begin{eqnarray}
+T[ \varphi(x) \varphi^\dagger(y)]
+=
+\normalprod{\varphi(x) \varphi^\dagger(y)} + \Delta_F(x-y)
+\end{eqnarray}
+
+\noindent
+$\bullet$Wick's theorem\\
+\begin{eqnarray}
+&&T[\varphi_1(x_1) \varphi_2(x_2) \varphi_3(x_3) \varphi_4(x_4) \dots]
+\nonumber\\
+&=& \normalprod{\varphi_1 \varphi_2 \varphi_3 \varphi_4 \dots}
+\nonumber\\
+&+&
+\sum_{k<l} \Delta_F(x_k - x_l)
+%%\normalprod{
+%%\contraction[1ex]{\dots}{\varphi_k}{\dots}{\varphi_l}
+%%%\contraction[1ex]{\dots}{\varphi}{{}_k \dots}{\varphi}
+%%%{\varphi_1\dots}{\xout{\varphi_k}}{\dots}{\xout{\varphi_l}} \dots
+%%{\varphi_1\dots}{\varphi_k}{\dots}{\varphi_l} \dots
+%%}%end normalprod
+%\contraction[1ex]{\dots}{\varphi}{{}_k \dots}{\varphi}
+%\nomathglue{%
+\normalprod{
+%\acontraction[1ex]{\dots}{\varphi_k\hphantom{\varphi_k}}{}{\dots\varphi_l}
+\acontraction[1ex]{\dots}{\varphi_k\hphantom{\varphi_k}}{}{\dots\varphi_l}
+{\varphi_1\dots}{\varphi_k}{\dots}{\varphi_l} \dots
+%{\varphi_1\dots}{\xout{\varphi_k}}{\dots}{\xout{\varphi_l}} \dots
+}%end normalprod
+%}%end of nomathglue
+\nonumber\\
+&+&
+\sum_{k<l} \sum_{m<n} \Delta_F(x_k - x_l) \Delta_F(x_m - x_n)
+\normalprod{\dots \xout{\varphi_k} \dots \xout{\varphi_m} \dots \xout{\varphi_l} \dots
+\xout{\varphi_n} \dots}
+\nonumber\\
+&+& \cdots
+\end{eqnarray}
+
+

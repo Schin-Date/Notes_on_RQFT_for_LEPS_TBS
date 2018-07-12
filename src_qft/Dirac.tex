@@ -1,0 +1,552 @@
+\noindent
+massive, charged, spin 1/2
+%Spinors belong to the fundamental representation of the Poincar\'e Group SL(2,C).
+\subsubsection{Classical Free Field}
+\noindent
+{\bf Dirac equation}
+
+The Dirac equation is written as
+\begin{eqnarray}
+i \partial_t \psi (x) = 
+\left(
+\frac{1}{i} \bld{\alpha} \cdot \bld{\partial} + \beta m \right) \psi(x)
+\end{eqnarray}
+Solution $\psi(x)$ of this equation satisfies the Klein-Gordon equation
+\footnote{
+The Dirac equation is not the unique form which is
+the first order in time derivative and the solution satisfies the K-G eq.
+The Duffin-Kemmer equation satisfies these requirements
+\cite{ref:Itzykson-Zuber}.
+ } % end of footnote
+if and only if
+\begin{eqnarray}
+\{ \alpha_i, \alpha_j \}_+ = 2\delta_{ij}\,,
+\hspace{3mm}
+\{ \alpha_i, \beta \}_+ = 0\,,
+\hspace{3mm}
+\beta^2 = 1
+\label{eqn:Dialphbetacond}
+\end{eqnarray}
+They must be traceless:
+\begin{eqnarray}
+\tr \alpha_i &=& \tr \beta^2 \alpha_i = \tr \beta \alpha_i \beta = - \tr \alpha_i = 0
+\nonumber\\
+\tr \beta &=& \tr \alpha_i^2 \beta  = \tr \alpha_i \beta \alpha_i  = - \tr \beta = 0
+\nonumber
+\end{eqnarray}
+The minimum dimension of $\alpha$'s and $\beta$ as matrices to satisfy the conditions 
+(\ref{eqn:Dialphbetacond}) is 4. 
+Introduce $\gamma$ matrices by
+\begin{eqnarray}
+\gamma^0 = \beta\,,
+\hspace{3mm}
+\gamma^i = \beta \alpha_i\
+\end{eqnarray}
+In terms of $\gamma$ matrices, Eq. (\ref{eqn:Dialphbetacond}) reads
+\begin{equation}
+\{ \gamma^\mu, \gamma^\nu \}_+ = 2 g^{\mu \nu}
+\end{equation}
+This is the Clifford algebra. This means $(\gamma^0)^2 = 1$ and $(\gamma^i)^2 = -1$ for $i = 1,2,3$.
+$\gamma^0$ is obviously traceless and $\gamma^i$'s are also for
+\begin{eqnarray}
+\tr \gamma^i = \tr \beta \alpha_i = \tr \alpha_i \beta = -\tr \beta \alpha_i = 0\,.
+\end{eqnarray}
+The Dirac equation is then written as
+\begin{eqnarray}
+\left( i\slashed{\partial} - m \right) \psi(x) = 0
+\label{eqn:DiracEqstandard}
+\end{eqnarray}
+where $\slashed{a} \leftdef \gamma_\mu a^\mu = \gamma \cdot a$ and
+$\slashed{\partial} = \gamma^0 \partial_0 + \gamma^i \partial_i = \gamma^0 \partial_0 + \bld{\gamma}\cdot \bld{\partial}$.
+
+We may choose $\alpha_i$'s and $\beta$ as hermitian matrices.
+In that case we have
+\begin{eqnarray}
+\gamma^{0\dagger} = \gamma^0
+\hspace{2mm}
+\mbox{and}
+\hspace{2mm}
+\gamma^{i\dagger} = - \gamma^i
+\hspace{3mm}
+\mbox{i.e.}
+%\hspace{3mm}
+%\Longleftrightarrow
+\hspace{3mm}
+{\gamma^\mu}^\dagger = \gamma^0 \gamma^\mu \gamma^0
+\label{eqn:hermitealphabeta}
+\end{eqnarray}
+Define the conjugate Dirac field by
+\begin{equation}
+\overline{\psi} = \psi^{*t} \gamma^0
+\label{eqn:DefConjDiracField}
+\end{equation}
+Taking complex conjugate and transpose of Eq. (\ref{eqn:DiracEqstandard}), we obtain
+\begin{eqnarray}
+0 &=&  
+\psi^{*t}(x) 
+\left( -i \stackrel{\leftarrow}{\partial} \cdot \gamma^\dagger - m \right) 
+\nonumber\\
+&=&
+\psi^{*t}(x) (\gamma^0)^2
+\left( -i \stackrel{\leftarrow}{\partial} \cdot \gamma^\dagger - m \right) 
+\nonumber\\
+&=&
+\overline{\psi}(x)
+\left( -i \stackrel{\leftarrow}{\partial} \cdot \gamma^0\gamma^\dagger \gamma^0 - m \right) \gamma^0
+\nonumber\\
+&=&
+- \overline{\psi}(x)
+\left( i \stackrel{\leftarrow}{\partial} \cdot \gamma  + m \right) \gamma^0
+\nonumber
+\end{eqnarray}
+Thus, the conjugate Dirac field satisfies
+\begin{eqnarray}
+\overline{\psi}(x)
+\left( i \stackrel{\leftarrow}{\slashed{\partial}}  + m \right)
+= 0
+\label{eqn:DiracEqConjstandard}
+\end{eqnarray}
+This equation is equivalent with Eq. (\ref{eqn:DiracEqstandard}) in the classical level
+provided we choose $\gamma$'s in such a way that Eq. (\ref{eqn:hermitealphabeta}) holds.
+
+\bigskip
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\noindent
+{\bf Dirac matrices}
+
+The number of linearly independent $4 \times 4$ complex matrices
+in the world of Dirac matrices $\gamma^\mu$ is 16.
+We count them as
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+\Gamma^S
+=
+1
+\\
+\Gamma^V_\mu
+=
+\gamma_\mu
+\\
+\Gamma^T_{\mu \nu}
+=
+\sigma_{\mu \nu} \leftdef
+\frac{i}{2}
+[ \gamma_\mu, \gamma_\nu]
+\\
+\Gamma^A_{\mu}
+=
+\gamma_5 \gamma_\mu
+\\
+\Gamma^P
+=
+\gamma_5
+\end{array}
+\right.
+\end{eqnarray}
+where $\gamma_5$ is defined as
+\begin{eqnarray}
+\gamma_5 \equiv \gamma^5 \leftdef
+i \gamma^0 \gamma^1 \gamma^2 \gamma^3
+=
+- \frac{i}{4!}
+\epsilon_{\mu \nu \rho \sigma}
+\gamma^\mu \gamma^\nu \gamma^\rho \gamma^\sigma
+\end{eqnarray}
+This matrix satisfies
+\begin{eqnarray}
+\{
+\gamma_5, \gamma_\mu 
+\}_+ = 0\,,
+\hspace{3mm}
+(\gamma_5)^2 = 1\,,
+\hspace{3mm}
+\gamma_5^\dagger = \gamma_5
+\end{eqnarray}
+$\sigma_{\mu \nu}$ has a property $\sigma_{\mu \nu}^\dagger = \gamma^0 \sigma_{\mu \nu} \gamma^0$.
+
+\bigskip
+
+Pauli matrices are written as
+\footnote{
+They were already given in Eq. (\ref{eqn:SU2GenFundamental}).
+}
+\begin{eqnarray}
+\sigma_1 =
+\left(
+\begin{array}{cc}
+0 & 1 \\ 1 & 0
+\end{array}
+\right)\,,
+\hspace{3mm}
+\sigma_2 =
+\left(
+\begin{array}{cc}
+0 & -i \\ i & 0
+\end{array}
+\right)\,,
+\hspace{3mm}
+\sigma_3 =
+\left(
+\begin{array}{cc}
+1 &  0\\ 0 & -1
+\end{array}
+\right)
+\end{eqnarray}
+They satisfy relationships
+\begin{eqnarray}
+\{
+\sigma_i, \sigma_j \}_+ = 2 \delta_{ij}\,,
+\hspace{3mm}
+\sigma_i \sigma_j = i\epsilon_{ijk} \sigma_k + \delta_{ij}
+\end{eqnarray}
+A set of Dirac matrices shown below is the one called Dirac representation.
+For other frequently used expressions, refer to Appendix \ref{sec:App_Dirac}.
+%----------------------------------------------------------------------------
+\begin{eqnarray}
+\gamma^0
+=
+\left[
+\begin{array}{cc}
+1 & 0 \\ 0 & -1
+\end{array}
+\right]
+= \sigma_3 \otimes 1
+\,,
+\hspace{5mm}
+\gamma^i
+=
+\left[
+\begin{array}{cc}
+0 & \sigma_i \\ -\sigma_i & 0
+\end{array}
+\right]
+=
+i\sigma_2 \otimes \sigma_i
+\end{eqnarray}
+Elements of $\left[\;\ddots\;\right]$ are $2 \times 2$ matrices.
+Expressions with the direct product makes calculations more transparent. 
+For instance,
+\begin{eqnarray}
+\begin{array}{l}
+\alpha_i = \beta \gamma^i = \gamma^0 \gamma^i
+= (\sigma_3 \otimes 1)(i\sigma_2 \otimes \sigma_i)
+= -i \sigma_2 \sigma_3 \otimes \sigma_i
+= \sigma_1 \otimes \sigma_i
+\\
+\hspace{35mm}
+=
+\left[
+\begin{array}{cc}
+0 & \sigma_i
+\\
+\sigma_i & 0
+\end{array}
+\right]
+\end{array}
+\end{eqnarray}
+Other matrices are similarly obtained as
+\begin{eqnarray}
+\gamma_5
+=
+\left[
+\begin{array}{cc}
+0 & 1 \\ 1 & 0
+\end{array}
+\right]
+= \sigma_1 \otimes 1\,,
+\hspace{3mm}
+\sigma_{0 i} = -i  \sigma_1 \otimes \sigma_i\,,
+\hspace{3mm}
+\sigma_{i j} = \epsilon_{ijk} \otimes \sigma_k
+\end{eqnarray}
+When we write the Dirac field as composed of two component 
+large and small components,
+\begin{eqnarray}
+\psi =
+\left[
+\begin{array}{c}
+\varphi \\ \chi
+\end{array}
+\right]\,
+\end{eqnarray}
+the Dirac equation for these components reads
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+i \partial_t \varphi(x)
+=
+m \varphi(x) + \frac{1}{i} \bld{\sigma} \cdot \bld{\partial} \chi(x)
+\vspace{2mm}
+\\
+i \partial_t \chi(x)
+=
+-m \chi(x) + \frac{1}{i} \bld{\sigma} \cdot \bld{\partial} \varphi(x)
+\end{array}
+\right.
+\end{eqnarray}
+\\
+
+
+
+\bigskip
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\noindent
+{\bf The Dirac spinors}
+
+We write solutions of the Dirac equation (\ref{eqn:DiracEqstandard}) as
+\begin{eqnarray}
+\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+ \left[
+\psi^{(+)}(\bld{p}) e^{-ipx} + \psi^{(-)}(\bld{p}) e^{ipx}
+\right]\,,
+\end{eqnarray}
+where $p^0 = \sqrt{\bld{p}^2 + m^2}$.
+The Dirac equation demands
+\footnote{
+%------------------------------------------------
+As  a solution of the K-G eq., we can write
+\begin{eqnarray*}
+\psi(x) &=& \int \frac{d^4 p}{\sqrt{(2\pi)^3}}
+\delta(p^2 - m^2) 
+ \left[
+ \theta(p^0) +  \theta(-p^0) \right]
+ \psi(p) e^{-ipx}
+\\
+&=&
+\int \frac{d^4 p}{\sqrt{(2\pi)^3}}
+\delta(p^2 - m^2)  
+{\large \mbox{[}}
+\underbrace{\psi(p)\theta(p^0)}_{\psi^{+}}  e^{-ipx} + 
+\underbrace{\psi(-p)\theta(p^0)}_{\psi^{-}}  e^{ipx}
+{\large \mbox{]}}
+\\
+&=&
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}2p^0}
+\left[
+\psi^{+}(\bld{p})  e^{-ipx} + \psi^{-}(\bld{p})  e^{ipx}
+\right]
+\end{eqnarray*}
+The Dirac eq. (\ref{eqn:DiracEqstandard}) requires
+\begin{eqnarray*}
+\left. (\slashed{p} - m) \psi(p) \right|_{p^2 = m^2} = 0\,,
+\end{eqnarray*}
+from which Eq. (\ref{eqn:DiracEqMomentumamp}) follows.
+}%---------------------------------- end of footnote
+\begin{eqnarray}
+(\slashed{p} - m) \psi^{(+)}(\bld{p}) = 0\,,
+\hspace{5mm}
+(\slashed{p} + m) \psi^{(-)}(\bld{p}) = 0
+\label{eqn:DiracEqMomentumamp}
+\end{eqnarray}
+For $\bld{p} = \bld{0}$, we have
+\begin{eqnarray*}
+(\gamma^0 - 1) \psi^{(+)}(\bld{0}) = 0\,,
+\hspace{5mm}
+(\gamma^0 + 1) \psi^{(-)}(\bld{0}) = 0
+\end{eqnarray*}
+\bigskip
+Each of these equations have two linearly independent solutions
+which we write $u^{(r)}(\bld{p})$ for $\psi^{(+)}(\bld{p})$ and
+$v^{(r)}(\bld{p})$ for $\psi^{(-)}(\bld{p})$ respectively for 
+$r = 1, 2$.
+We write
+\begin{eqnarray}
+\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{r = 1, 2} \left[
+b_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ipx} + d_r^*(\bld{p}) v^{(r)}(\bld{p}) e^{ipx}
+\right]
+\label{eqn:DiracFieldClExpand}
+\end{eqnarray}
+Eq. (\ref{eqn:DiracEqMomentumamp}) reads
+\begin{eqnarray}
+(\slashed{p} - m) u^{(r)}(\bld{p}) = 0\,,
+\hspace{5mm}
+(\slashed{p} + m) v^{(r)}(\bld{p}) = 0
+\label{eqn:DiracEqDiracspinors}
+\end{eqnarray}
+For conjugate (adjoint) spinors defined in Eq. (\ref{eqn:DefConjDiracField}) we have
+\begin{eqnarray}
+\overline{u}^{(r)}(\bld{p}) (\slashed{p} - m) = 0\,,
+\hspace{5mm}
+\overline{v}^{(r)}(\bld{p}) (\slashed{p} + m) = 0
+\label{eqn:DiracEqConjspinors}
+\end{eqnarray}
+We choose their normalization
+ as
+\begin{eqnarray}
+\begin{array}{c}
+\overline{u}^{(r)}(\bld{p})
+u^{(s)}(\bld{p})
+= 2m \delta^{rs}\,,
+\hspace{5mm}
+\overline{v}^{(r)}(\bld{p})
+v^{(s)}(\bld{p})
+= -2m \delta^{rs}\,,
+\\
+\overline{u}^{(r)}(\bld{p})
+v^{(s)}(\bld{p})
+= 0\,,
+\hspace{5mm}
+\overline{v}^{(r)}(\bld{p})
+u^{(s)}(\bld{p})
+= 0
+\end{array}
+\end{eqnarray}
+%------------------------------------------------------------------------------
+
+\noindent
+{\bf Lagrangian density}
+\begin{equation}
+{\cal L} =  \bar{\psi}(x) \left(
+i \slashed{\partial}  - m \right)
+ \psi(x)
+\end{equation}
+where $\slashed{\partial} = \gamma^\mu \partial_\mu$ and
+$\bar{\psi}(x) = \psi^\dagger (x) \gamma^0$.
+\begin{eqnarray}
+\pi(x) =
+\frac{\partial {\cal L}}{\partial \dot{\psi}}
+=
+i \overline{\psi} \gamma^0
+= i \psi^\dagger
+\end{eqnarray}
+The Euler-Lagrange equation reads
+%\begin{equation}
+%%\slashed{\partial} = 0
+%\left(i \slashed{\partial} + m \right) \psi(x) = 0\,,
+%\hspace{3mm}
+%\bar{\psi}(x) \left(i \stackrel{\leftarrow}{\slashed{\partial}} + m \right)  = 0
+%\end{equation}
+Eqs. (\ref{eqn:DiracEqstandard}, \ref{eqn:DiracEqConjstandard}).\\
+(*A comment on $\pi_{\overline{\psi}}$ and independent $\psi$ and $\overline{\psi}$ treatment.)
+(*Conserved Dirac charge)
+
+\subsubsection{Quantized Free Field}
+Canonical quantization requires
+\begin{eqnarray}
+\{
+\psi_\alpha (t, \bld{x}), \pi_\beta(t, \bld{y}) \}
+=
+i \delta_{\alpha \beta }
+\delta^3(\bld{x} - \bld{y})
+\end{eqnarray}
+Writing a quantized free Dirac field
+corresponding to Eq. (\ref{eqn:DiracFieldClExpand}) as
+\begin{eqnarray}
+\psi(x) 
+&=&
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{r = 1,2}
+\left[
+c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ipx}
++
+d_r^\dagger(\bld{p}) v^{(r)}(\bld{p}) e^{ipx}
+\right]
+\,,
+\nonumber\\
+\label{eqn:DiracFieldExpand}
+\end{eqnarray}
+creation and annihilation operators satisfy
+\begin{eqnarray}
+\begin{array}{l}
+\{ c_r(\bld{p}), c^\dagger_s(\bld{p}') \}_+
+=
+2 p^0 \delta_{rs}
+\delta^3(\bld{p}-\bld{p}')\,,
+\hspace{3mm}
+\{ d_r(\bld{p}), d^\dagger_s(\bld{p}') \}_+
+=
+2 p^0 \delta_{rs}
+\delta^3(\bld{p}-\bld{p}')
+\vspace{2mm}
+\\
+\{ c_r(\bld{p}), c_s(\bld{p}') \}_+
+=
+\{ d_r(\bld{p}), d_s(\bld{p}') \}_+
+=
+\{ c_r(\bld{p}), d^\dagger_s(\bld{p}') \}_+
+=
+\dots
+= 0
+\end{array}
+\end{eqnarray}
+%-----------------------------------------
+%------------------------------------------------------------- comment out
+\begin{comment}
+\begin{equation}
+\{ c(\bld{p}, s), c^\dagger(\bld{p}', s') \}
+=
+\{ d(\bld{p}, s), d^\dagger(\bld{p}', s') \}
+=
+2p^0 \delta_{ss'}
+\delta^3(\bld{p} - \bld{p}')
+\end{equation}
+\begin{equation}
+\begin{array}{l}
+(\slashed{p} - m) u(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{u}(\bld{p}, s)(\slashed{p} - m)  = 0\,,
+\\
+(\slashed{p} + m) v(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{v}(\bld{p}, s)(\slashed{p} + m)  = 0\,,
+\end{array}
+\end{equation}
+\end{comment}
+%------------------------------------------------------------- comment out end
+
+\bigskip
+
+\noindent
+\underline{Propagator}\\
+\begin{eqnarray}
+i S_{\xi \eta} &\equiv&
+\{
+\psi_\xi (x) , \overline{\psi}_\eta (y) \}
+\end{eqnarray}
+\begin{eqnarray}
+iS(x - y)
+&=& 
+%\dots
+%=
+(i \slashed{\partial}_x + m)
+\left[
+D(x-y) - D(y - x)
+\right]
+\end{eqnarray}
+
+\begin{eqnarray}
+S_F(x - y) &\leftdef&
+\bra 0 \braend T[ \psi(x) \overline{\psi}(y) \ketend 0 \ket
+=
+i \int \frac{d^4 p}{(2\pi)^4}
+\frac{e^{-ip(x-y)}}{\slashed{p} - m + i\epsilon}
+\end{eqnarray}
+%------------------------------------------------------------- comment out
+\begin{comment}
+\begin{eqnarray}
+S_F(q) &=& i \int d^4x e^{iqx}
+\bra 0 \braend T[\psi(x) \bar{\psi}(0)]
+\ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-1}{\slashed{q} - m + i \epsilon}
+=
+- \frac{\slashed{q} + m}{ q^2 - m^2 + i \epsilon}
+\end{eqnarray}
+\end{comment}
+%------------------------------------------------------------- comment out end
+
+%------------------------------------------------------------- comment out
+\begin{comment}
+\subsubsection{Majorana Field}
+Massless, spin1/2, selfconjugate.
+\begin{equation}
+i \slashed{\partial} \psi(x) = 0\,,
+\hspace{3mm}
+\bar{\psi}(x) i \stackrel{\leftarrow}{\slashed{\partial}}   = 0
+\end{equation}
+\end{comment}
+%------------------------------------------------------------- comment out end
+

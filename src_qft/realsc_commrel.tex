@@ -1,0 +1,89 @@
+\verb/-----------.-----------.-----------.-----------.-----------/\\
+\vspace{-3mm}
+{\small
+\begin{center}
+Addendum: Proof of (\ref{eqn:cancomm_eqtime_RS}) $\Leftrightarrow$ (\ref{eqn:cancomm_RS})
+\end{center}
+Proof of the necessity of Eq. (\ref{eqn:cancomm_RS}) is straightforward,
+We show the sufficiency
+of Eq. (\ref{eqn:cancomm_eqtime_RS}) in the following.
+We may write Eqs. (\ref{eqn:RS_fieldexpansion}) and (\ref{eqn:RS_pifieldexpansion})
+as
+\begin{equation}
+\begin{array}{l}
+\displaystyle
+\varphi(x) = \int \frac{d^3\bld{k}}{\sqrt{(2\pi)^3}} Q_{\bld{k}} (t) e^{i \bld{k} \cdot \bld{x}}\,,
+\\
+\displaystyle
+\pi_{}(x)  = \int \frac{d^3\bld{k}}{\sqrt{(2\pi)^3}} P_{\bld{k}} (t) e^{- i \bld{k} \cdot \bld{x}}\,,
+\end{array}
+\end{equation}
+with
+\begin{equation}
+Q_{\bld{k}}(t)
+=
+\frac{1}{2k^0} \left[
+a(\bld{k}) e^{-i k^0 t} + a^\dagger(-\bld{k}) e^{i k^0 t} \right]
+\label{eqn:RSC_Qk_def}
+\end{equation}
+\begin{equation}
+P_{\bld{k}}(t)
+=
+\frac{i}{2} \left[
+a^\dagger(\bld{k}) e^{i k^0 t} - a(-\bld{k}) e^{- i k^0 t} \right]
+\label{eqn:RSC_Pk_def}
+\end{equation}
+Relationships $Q^\dagger_{\bld{k}} = Q_{-\bld{k}}$ and
+$P^\dagger_{\bld{k}} = P_{-\bld{k}}$ ensure 
+that $\varphi$ and $\pi$ are real.
+From the linear independence of Fourier components, we have
+\begin{equation}
+\begin{array}{l}
+0 = [\varphi(t, \bld{x}), \varphi(t, \bld{y})]
+\;\Longleftrightarrow\;
+[Q_{\bld{k}}(t), Q_{\bld{k'}}(t)] = 0\,,
+\vspace{2mm}
+\\
+0 = [\pi(t, \bld{x}), \pi(t, \bld{y})]
+\;\Longleftrightarrow\;
+[P_{\bld{k}}(t), P_{\bld{k'}}(t)] = 0\,,
+\end{array}
+\label{eqn:RSC_QQcomm}
+\end{equation}
+and
+\begin{eqnarray}
+i\delta^3(\bld{x} - \bld{y})
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3}
+i \delta^3 (\bld{k} - \bld{k}')
+e^{i \bld{k} \cdot \bld{x} - i \bld{k}' \bld{y}}
+\nonumber\\
+&=&
+[\varphi(t, \bld{x}), \pi(t, \bld{y}) ]
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3} [Q_{\bld{k}}, P_{\bld{k}'}]
+e^{i \bld{k} \cdot \bld{x} - i \bld{k}' \cdot \bld{y}}
+\nonumber\\
+&\Longleftrightarrow&    
+\nonumber\\
+\left[ Q_{\bld{k}}, P_{\bld{k}'} \right] &=& i \delta^3 (\bld{k} - \bld{k}')
+\label{eqn:RSC_QPcomm}
+\end{eqnarray}
+Eqs. (\ref{eqn:RSC_Qk_def}) and (\ref{eqn:RSC_Pk_def})
+reads,
+\begin{equation}
+a(\bld{k}) = \left( k^0 Q_{\bld{k}} (t) + i P_{\bld{k}}^\dagger (t) \right)
+e^{i k^0 t}\,,
+\label{eqn:RSC_a_by_QP} 
+\end{equation}
+\begin{equation}
+a^\dagger(\bld{k}) = \left( k^0 Q_{\bld{k}}^\dagger (t) - i P_{\bld{k}} (t) \right)
+e^{- i k^0 t}\,,
+\label{eqn:RSC_a_by_QP} 
+\end{equation}
+and Eq. (\ref{eqn:cancomm_RS}) follows
+from Eqs. (\ref{eqn:RSC_QQcomm}) and (\ref{eqn:RSC_QPcomm}).
+}\\
+\verb/-----------.-----------.-----------.-----------.-----------/\\
+

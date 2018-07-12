@@ -1,0 +1,493 @@
+We write our field as
+\begin{eqnarray}
+\varphi(x) = a(x) + b^\dagger(x)\,,
+\end{eqnarray}
+where $a(x)$ includes an annihilation operator and $b^\dagger(x)$ includes a creation operator.
+Particularly, we write
+\begin{eqnarray}
+a(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} a(\bld{k}) e^{- ikx}\,,
+\hspace{5mm}
+b^\dagger(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} b^\dagger(\bld{k}) e^{ikx}
+\end{eqnarray}
+Usual notation of hermite conjugates is applied to these objects and, for instance, 
+meanings to write $\varphi^\dagger(x)$ and $b(x)$ are obvious.
+The creation and annihilation operators satisfy,
+\begin{eqnarray}
+\begin{array}{c}
+[a(\bld{k}), a^\dagger(\bld{k}')] = [b(\bld{k}), b^\dagger(\bld{k}')] = 2k^0 \delta^3(\bld{k}-\bld{k}')
+\\
+\mbox{all other }[\cdots] \mbox{ among }a, a^\dagger, b, b^\dagger \mbox{ are } 0.
+\end{array}
+\end{eqnarray}
+$[\cdots]$ denotes the (anti-) commutator when we are considering
+a boson (fermion) field. Fields of different kinds are assumed to be commuting to each other.
+We introduce a signature factor $s_f$ which reads $+1$ for bosons and $-1$ for fermions.
+In the following, we abbreviate different arguments by suffices. For instance, 
+$\varphi(x_1)$ is denoted by $\varphi_1$. $a_1$ can mean both $a(x_1)$ and $a(\bld{k}_1)$.
+Also, we will write $\Phi$ to represent either of $\varphi$ and $\varphi^\dagger$.
+
+%======================================================================
+\subsection{Normal ordered product}
+Denoted by $\normalprod{\cdots}$.
+All creation operators stack to the left and all annihilation operators stack to the right.
+When the field is fermionic, an exchange of neighboring operators produce a $s_f$.
+For instance, 
+\begin{eqnarray}
+\normalprod{a_1 a^\dagger_1 b^\dagger_2 b_2} = s_f^{2} a^\dagger_1 b^\dagger_2 a_1 b_2,
+\end{eqnarray}
+where suffices stand for different arguments of $x$ or $\bld{k}$.
+Another example reads,
+\begin{eqnarray}
+\normalprod{\varphi_1 \varphi_2 \varphi_3 \varphi_4}
+&=&
+a_1^\dagger a_2^\dagger a_3^\dagger a_4^\dagger 
++ s_f^3 a_2^\dagger a_3^\dagger a_4^\dagger  a_1 + \dots
+\nonumber\\
+&&
++ s_f^4 a_3^\dagger a_4^\dagger  a_1  a_2 
++ s_f^3 a_2^\dagger a_4^\dagger  a_1  a_3 + 
+\dots
+\nonumber\\
+&& {\small ( 2^4\mbox{ terms})}
+\label{eqn:normalprod4fields}
+\end{eqnarray}
+%Here $\normalprod{\cdots}$ pretends to be a linear operation but it is not.
+It is important to note that $\bra 0 \braend \normalprod{\cdots} \ketend 0 \ket = 0$.
+A relationship
+\begin{eqnarray}
+\normalprod{a_1 a_2^\dagger}
+= s_f a_2^\dagger a_1 
+= a_1 a_2^\dagger - [a_1, a_2^\dagger]
+\end{eqnarray}
+remind us a caution 
+for wrong manipulations such as follows.
+Assuming the linearity of $\normalprod{\cdots}$ and a relationship 
+$\normalprod{\mbox{\it c-number}\,} = $ {\it c-number},
+we might write
+\begin{eqnarray}
+\mbox{\bf Wrong!}
+\hspace{5mm}
+\normalprod{\normalprod{a_1 a_2^\dagger}} = \normalprod{a_1 a_2^\dagger - [a_1, a_2^\dagger]}
+= \normalprod{a_1 a_2^\dagger} + \mbox{\it c-number}
+\end{eqnarray}
+which contradicts with the idempotency $\normalprod{\normalprod{abc\dots}} = \normalprod{abc\dots}$.
+We made it wrong when we replace a symbol $[a_1, a_2^\dagger]$ by a {\it c-number}.
+The $\normalprod{\cdots}$ is an operation on symbols and one can not replace them
+by using mathematical equations. In fact, we have
+\begin{eqnarray}
+\normalprod{[a_1, a_2^\dagger]} = \normalprod{ a_1 a_2^\dagger - s_f a_2^\dagger a_1 } = 0
+\end{eqnarray}
+and thus recover the idempotency by keeping expressions in symbols.
+The same caution is applied to relationships
+\begin{eqnarray}
+\normalprod{\normalprod{\Phi_1 \Phi_2 \cdots}\normalprod{\Phi_a \Phi_b \cdots}}
+= \normalprod{\Phi_1 \Phi_2 \cdots \Phi_a \Phi_b \cdots }\,,
+\hspace{3mm}
+\mbox{etc.}
+\end{eqnarray}
+where each $\Phi$ stands for a $\varphi$ or $\varphi^\dagger$.
+The following is a frequently used relationship:
+\begin{eqnarray}
+\normalprod{\Phi_1 \Phi_2} = \Phi_1 \Phi_2 -
+\bra 0 \braend \Phi_1 \Phi_2 \ketend 0 \ket\,.
+\end{eqnarray}
+%======================================================================
+\subsection{Time ordered product}
+Denoted by $T[\cdots]$.
+This is also an idempotent manipulation on a series of symbols 
+and a caution as one in the normal ordered product is necessary.
+In this product, a product of fields are ordered in such a way that
+a field on the left has the time variable larger than the right one.
+\begin{eqnarray}
+T[\Phi_a \Phi_b \cdots] = s_f(1,2,\cdots;a,b,\cdots) \Phi_1 \Phi_2 \cdots
+\end{eqnarray}
+where $\Phi_l$ denotes one of $\varphi(x_l)$ or $\varphi^\dagger(x_l)$,
+$t_1 > t_2 > \cdots$ and 
+$s_f(1,2,\cdots;a,b,\cdots)$ = +1 (-1) when $\Phi$ is fermionic and
+a permutation $(a,b,\cdots) \to (1, 2, \cdots)$ is even (odd).
+When $\Phi$ is bosonic, one can omit $s_f$.
+In more general form, we write the definition of T-product as
+\begin{eqnarray}
+T[\Phi_1 \Phi_2 \cdots] =
+\sum_{P} \theta(t_{P_1} > t_{P_2} > \cdots) 
+s_f(P_1, P_2, \cdots; 1, 2, \cdots)
+\Phi_{P_1} \Phi_{P_2} \cdots 
+\end{eqnarray}
+where the sum is taken over all permutations of $(1, 2, \dots) \to (P_1,P_2, \dots)$.
+Particularly, 
+\begin{eqnarray}
+T[\varphi_1 \varphi_2] &=&
+\theta(t_1 > t_2) \varphi_1 \varphi_2 + \theta(t_2 > t_1) s_f \varphi_2 \varphi_1
+\nonumber\\
+&=&
+\theta(t_1 > t_2) \left\{ 
+(a_1 + b_1^\dagger)(a_2 + b_2^\dagger) \right\}
++
+\theta(t_2 > t_1) s_f  \left\{ 
+(a_2 + b_2^\dagger) (a_1 + b_1^\dagger) \right\}
+\nonumber\\
+&=&
+\theta(t_1 > t_2) \left\{ 
+a_1 a_2 + [a_1, \underline{b_2^\dagger] + s_f   b_2^\dagger  a_1} + b_1^\dagger (a_2 + b_2^\dagger)
+\right\}
++ 
+\theta(t_2 > t_1) s_f  \left\{  1 \leftrightarrow 2 \right\}
+\nonumber\\
+&=&
+\theta(t_1 > t_2) \left\{ 
+\normalprod{\varphi_1 \varphi_2} + [a_1, b_2^\dagger]
+\right\}
++ 
+\theta(t_2 > t_1) s_f  \left\{  1 \leftrightarrow 2 \right\}
+\nonumber\\
+&=&
+\normalprod{\varphi_1 \varphi_2}
++
+\theta(t_1 > t_2) [a_1, b_2^\dagger]
++ 
+\theta(t_2 > t_1) s_f  [a_2, b_1^\dagger]
+\nonumber\\
+&=&
+\normalprod{\varphi_1 \varphi_2}
++
+\bra 0 \braend
+T[\varphi_1 \varphi_2]
+\ketend 0 \ket
+\nonumber
+\end{eqnarray}
+In deriving the last line, we have employed the expression in the first line.
+Though this result itself is useless since $\bra 0 \braend
+T[\varphi_1 \varphi_2]
+\ketend 0 \ket = 0$
+for complex scalar fields, remember that the T-product is a manipulation on symbols.
+This means the above equation can be generalized to arbitrary field to write
+\begin{eqnarray}
+T[\Phi_1 \Phi_2] &=&
+\normalprod{\Phi_1 \Phi_2}
++
+\bra 0 \braend
+T[\Phi_1 \Phi_2]
+\ketend 0 \ket
+\label{eqn:Tprodphiphi}
+\end{eqnarray}
+and we can substitute either $\varphi$ or $\varphi^\dagger$ to each of $\Phi$
+to write, for instance,
+\begin{eqnarray*}
+T[\varphi_1^\dagger \varphi_2] &=&
+\normalprod{\varphi_1^\dagger \varphi_2}
++
+\bra 0 \braend
+T[\varphi_1^\dagger \varphi_2]
+\ketend 0 \ket
+\end{eqnarray*}
+which relates a T-product to the propagator of complex scalar fields.
+
+%======================================================================
+\subsection{Wick's theorem}
+We write Eq. (\ref{eqn:Tprodphiphi}) as
+\begin{eqnarray}
+T[\Phi_1 \Phi_2] &=&
+\normalprod{\Phi_1 \Phi_2}
++
+\acontraction[1ex]{}{\Phi}{{}_1}{\Phi}
+\Phi_1 \Phi_2
+\end{eqnarray}
+and call the last term a contract of fields.
+Wick's theorem gives a way to express a T-product of more than two
+fields in terms of contracts and normal ordered products:
+\begin{eqnarray}
+T[\Phi_1 \Phi_2 \cdots ]
+&=&
+\normalprod{\Phi_1 \Phi_2 \cdots }
+\nonumber\\
+&+&
+\sum_{i < j}  s_f(i,j,1,2,\cdots; 1, 2, \cdots)
+%\normalprod{\cdots  \Phi_i \cdots \Phi_j \cdots}
+\normalprod{
+\acontraction[1ex]{\cdots}{\Phi}{{}_i\cdots}{\Phi}
+\cdots \Phi_i \cdots \Phi_j \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\sum_{i < j, k<l}  s_f(i,j, k, l, 1,2,\cdots; 1, 2, \cdots)
+\normalprod{
+\acontraction[1ex]{\cdots}{\Phi}{{}_i\cdots \Phi_k \cdots}{\Phi}
+\acontraction[2ex]{\cdots \Phi_i \cdots }{\Phi}{{}_k\cdots \Phi_j \cdots}{\Phi}
+\cdots \Phi_i \cdots \Phi_k \cdots  \Phi_j \cdots \Phi_l \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\cdots  \mbox{ (all possible contracts)}
+\nonumber\\
+&=&
+\normalprod{\Phi_1 \Phi_2 \cdots }
+\nonumber\\
+&+&
+\sum_{i < j}  s_f(i,j,1,2,\cdots; 1, 2, \cdots)
+\bra 0 \braend T[\Phi_i \Phi_j] \ketend 0 \ket
+\normalprod{
+\cdots \xout{\Phi_i} \cdots \xout{\Phi_j} \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\sum_{i < j, k<l}  s_f(i,j, k, l, 1,2,\cdots; 1, 2, \cdots)
+\nonumber\\
+&&
+\hspace{10mm}
+\bra 0 \braend T[\Phi_i \Phi_j] \ketend 0 \ket
+\bra 0 \braend T[\Phi_k \Phi_l] \ketend 0 \ket
+%\hspace{50mm}
+\normalprod{
+\cdots \xout{\Phi_i} \cdots \xout{\Phi_k} \cdots  \xout{\Phi_j} \cdots \xout{\Phi_l} \cdots
+}%end normalprod
+\nonumber\\
+&+&
+\cdots
+\nonumber\\
+\end{eqnarray}
+Each of $\Phi$ can be either $\varphi$ or $\varphi^\dagger$.
+Since contracts appear to compensate the difference between T-product and
+normal ordered product, no contracts should be taken among fields inside a normal orderd
+product.
+For instance, 
+\begin{eqnarray}
+T[\normalprod{\Phi_1 \Phi_2} \normalprod{\Phi_3 \Phi_4} ]
+&=&
+\normalprod{\Phi_1 \Phi_2 \Phi_3 \Phi_4}
++
+s_f \normalprod{
+\acontraction[1ex]{}{\Phi}{{}_1 \Phi_2}{\Phi}
+\Phi_1 \Phi_2 \Phi_3 \Phi_4}
++
+s_f^2 
+\normalprod{
+\acontraction[1ex]{}{\Phi}{{}_1 \Phi_2 \Phi_3}{\Phi}
+\Phi_1 \Phi_2 \Phi_3 \Phi_4}
+\nonumber\\
+&&+
+\normalprod{\acontraction[1ex]{\Phi_1 }{\Phi}{{}_2}{\Phi}\Phi_1 \Phi_2 \Phi_3 \Phi_4}
++
+s_f
+\normalprod{\acontraction[1ex]{\Phi_1 }{\Phi}{{}_2 \Phi_3}{\Phi}\Phi_1 \Phi_2 \Phi_3 \Phi_4}
+\nonumber\\
+&&
++
+s_f
+\normalprod{
+\acontraction[1ex]{}{\Phi}{{}_1 \Phi_2}{\Phi}
+\acontraction[2ex]{\Phi_1}{\Phi}{{}_2 \Phi_3}{\Phi}
+\Phi_1 \Phi_2 \Phi_3 \Phi_4}
++
+\normalprod{\acontraction[1ex]{}{}{}{}
+\acontraction[2ex]{}{\Phi}{{}_1 \Phi_2 \Phi_3}{\Phi}
+\acontraction[1ex]{\Phi_1}{\Phi}{{}_2}{\Phi}
+\Phi_1 \Phi_2 \Phi_3 \Phi_4}
+\end{eqnarray}
+
+
+%====================================================================
+\newpage
+
+\subsubsection{Propagator}
+Let's take a real scalar field.
+\begin{eqnarray}
+\bra 0 \braend \varphi(x) \varphi(y) \ketend 0 \ket
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\bra 0 \braend a(\bld{k}) a^\dagger(\bld{k}') \ketend 0 \ket
+e^{-i(kx - k'y)}
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+e^{-ik(x - y)}
+\rightdef
+D(x-y)
+\end{eqnarray}
+\begin{eqnarray}
+[\varphi(x), \varphi(y)]
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\left(
+[a(\bld{k}), a^\dagger(\bld{k}')]e^{-i(kx - k'y)}
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{35mm}
++
+[a\dagger(\bld{k}), a(\bld{k}')]e^{i(kx - k'y)}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+\left(
+e^{-ik(x - y)} - e^{ik(x - y)}
+\right)
+\nonumber\\
+&=&
+D(x-y) - D(y-x)
+\label{eqn:scfieldcommrel}
+\end{eqnarray}
+When $x-y$ is spacelike, there exists a Lorentz frame where $x^0 - y^0$.
+Then the $r.h.s.$ of Eq. (\ref{eqn:scfieldcommrel}) vanishes. 
+The whole expression is Lorentz invariant and it must vanish for all $(x-y)^2 < 0$.
+Nevertheless, $D(x-y)$ itself does not vanish even $x-y$ is spacelike.
+
+The Feynman propagator is defined as
+\begin{eqnarray}
+\bra 0 \braend T[\varphi(x) \varphi(y)] \ketend 0 \ket
+&=&
+\theta(x^0 - y^0) D(x-y)
++
+\theta(y^0 - x^0) D(y-x)
+\label{eqn:scFeynPropbyD}
+\\
+&=&
+i \int \frac{d^4 p}{(2\pi)^4}
+\frac{e^{-ip (x-y)}}{p^2 - m^2 + i\epsilon}
+\label{eqn:scFeynmanProp}
+\\
+&\rightdef&
+\Delta_F(x-y)
+\nonumber
+\end{eqnarray}
+{\it Proof of Eq.(\ref{eqn:scFeynmanProp}) $\Leftrightarrow$ Eq. (\ref{eqn:scFeynPropbyD})}\\
+%\begin{proof}
+\begin{eqnarray}
+\frac{1}{p^2 - m^2 + i\epsilon}
+=
+\frac{1}{2 E_{\bld{p}}} \left(
+\frac{1}{p^0 - E_{\bld{p}} + i\epsilon}
+-
+\frac{1}{p^0 + E_{\bld{p}} - i\epsilon}
+\right)
+\,,
+\end{eqnarray}
+\begin{eqnarray}
+\Delta_F(x-y)
+&=&
+i \int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} e^{i\bld{p}\cdot (\bld{x} - \bld{y})}
+\nonumber\\
+&&
+\times \int \frac{d p^0}{2\pi} e^{- ip^0 (x^0 - y^0)}
+\left(
+\frac{1}{p^0 - E_{\bld{p}} + i\epsilon}
+-
+\frac{1}{p^0 + E_{\bld{p}} - i\epsilon}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} e^{i\bld{p}\cdot (\bld{x} - \bld{y})}
+\frac{-1}{2\pi i} \left(
+\theta(x^0 - y^0) (-2\pi i e^{-i E_{\bld{p}}(x^0 - y^0)})
+\right.
+\nonumber\\
+&&
+\left.
+-
+\theta(y^0 - x^0) (+2\pi i e^{i E_{\bld{p}}(x^0 - y^0)}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 E_{\bld{p}}} 
+\left(
+\theta(x^0 - y^0) e^{-ip(x-y)}
++
+\theta(y^0 - x^0) e^{i p(x-y)}
+\right)
+\nonumber\\
+&=&
+\theta(x^0 - y^0) D(x-y)
++
+\theta(y^0 - x^0) D(y-x)
+\nonumber\\
+&& 
+\hspace{65mm}
+\blacksquare
+\end{eqnarray}
+%\end{proof}
+
+
+\subsubsection{T product}
+We decompose a real scalar field as 
+\begin{eqnarray}
+\varphi(x) = \varphi^{(+)}(x) + \varphi^{(-)}(x)
+\end{eqnarray}
+where $\varphi^{(+)}$ ($\varphi^{(-)}$) is the term which contain
+annihilation (creation) operator in Eq. (\ref{eqn:scYfields}).
+If $x^0 > y^0$,
+\begin{eqnarray}
+T[ \varphi(x) \varphi(y)]
+&=& (\varphi^{(+)}(x) + \varphi^{(-)}(x))(\varphi^{(+)}(y) + \varphi^{(-)}(y))
+\nonumber\\
+&=&
+\varphi^{(+)}(x) \varphi^{(+)}(y)
++
+( [\varphi^{(+)}(x), \varphi^{(-)}(y)] 
++ \varphi^{(-)}(y) \varphi^{(+)}(x) )
+\nonumber\\
+&&
++
+\varphi^{(-)}(x) \varphi^{(+)}(y)
++
+\varphi^{(-)}(x) \varphi^{(-)}(y)
+\nonumber\\
+&=&
+\normalprod{\varphi(x) \varphi(y)} + D(x-y)
+\nonumber
+\end{eqnarray}
+and if $y^0 > x^0$,
+\begin{eqnarray}
+T[ \varphi(x) \varphi(y)]
+=
+\normalprod{\varphi(x) \varphi(y)} + D(y-x)
+\nonumber
+\end{eqnarray}
+Then, for arbitrary $x^0$ and $y^0$,
+\begin{eqnarray}
+T[ \varphi(x) \varphi(y)]
+=
+\normalprod{\varphi(x) \varphi(y)} + \Delta_F(x-y)
+\end{eqnarray}
+A similar evaluation shows for a complex scalar field that
+\begin{eqnarray}
+T[ \varphi(x) \varphi^\dagger(y)]
+=
+\normalprod{\varphi(x) \varphi^\dagger(y)} + \Delta_F(x-y)
+\end{eqnarray}
+
+\noindent
+$\bullet$Wick's theorem\\
+\begin{eqnarray}
+&&T[\varphi_1(x_1) \varphi_2(x_2) \varphi_3(x_3) \varphi_4(x_4) \dots]
+\nonumber\\
+&=& \normalprod{\varphi_1 \varphi_2 \varphi_3 \varphi_4 \dots}
+\nonumber\\
+&+&
+\sum_{k<l} \Delta_F(x_k - x_l)
+\normalprod{
+%%\contraction[1ex]{\dots}{\varphi_k}{\dots}{\varphi_l}
+%%%\contraction[1ex]{\dots}{\varphi}{{}_k \dots}{\varphi}
+%%%
+{\varphi_1\dots}{\xout{\varphi_k}}{\dots}{\xout{\varphi_l}} \dots
+%%{\varphi_1\dots}{\varphi_k}{\dots}{\varphi_l} \dots
+%%
+}%end normalprod
+%\contraction[1ex]{\dots}{\varphi}{{}_k \dots}{\varphi}
+%\nomathglue{%
+%%\normalprod{
+%%%\acontraction[1ex]{\dots}{\varphi_k\hphantom{\varphi_k}}{}{\dots\varphi_l}
+%%\acontraction[1ex]{\dots}{\varphi_k\hphantom{\varphi_k}}{}{\dots\varphi_l}
+%%{\varphi_1\dots}{\varphi_k}{\dots}{\varphi_l} \dots
+%%%{\varphi_1\dots}{\xout{\varphi_k}}{\dots}{\xout{\varphi_l}} \dots
+%%}%end normalprod
+%%%}%end of nomathglue
+\nonumber\\
+&+&
+\sum_{k<l} \sum_{m<n} \Delta_F(x_k - x_l) \Delta_F(x_m - x_n)
+\normalprod{\dots \xout{\varphi_k} \dots \xout{\varphi_m} \dots \xout{\varphi_l} \dots
+\xout{\varphi_n} \dots}
+\nonumber\\
+&+& \cdots
+\end{eqnarray}
+

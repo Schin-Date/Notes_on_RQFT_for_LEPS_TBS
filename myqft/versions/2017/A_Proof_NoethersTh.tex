@@ -1,0 +1,317 @@
+First we define the Lie derivative.
+Given ${\cal L}[\varphi_\alpha(x), \partial^\mu\varphi_\alpha(x)]$,
+write an
+infinitesimal space-time transformation with $s$ infinitesimal parameters $\delta \omega_j$ as
+\begin{equation}
+\begin{array}{l}
+x^\mu \mapsto x^{\mu '} = x^\mu + \delta x^\mu\,,
+\hspace{3mm}
+\delta x^\mu = \sum_{j=1}^s X_j^\mu \delta \omega_j
+\\
+\varphi_\alpha (x) \mapsto \varphi_\alpha' (x')
+=
+\varphi_\alpha(x) + \delta \varphi_\alpha(x)\,,
+\hspace{3mm}
+\delta \varphi_\alpha(x) =
+\sum_{j=1}^s \Phi_{\alpha j} (x) \delta \omega_j
+\end{array}
+\label{eqn:APNoeth_infsimtransf}
+\end{equation}
+$\delta \varphi_\alpha(x)$ contains change of 
+the functional form and one due to the change in coordinates.
+Define the Lie derivative as the change of functional form:
+\begin{eqnarray}
+\bar{\delta} \varphi_\alpha (x)
+&\leftdef&
+\varphi_\alpha'(x) - \varphi_\alpha(x)
+\nonumber\\
+&=&
+\varphi_\alpha'(x) - \{ \varphi_\alpha'(x') - \delta \varphi_\alpha(x) \}
+\nonumber\\
+&=&
+\delta \varphi_\alpha(x) - \{ \varphi_\alpha'(x') - \varphi_\alpha'(x) \}
+\nonumber\\
+&=&
+\delta \varphi_\alpha(x) -  \partial_\mu \varphi_\alpha'(x)\cdot \delta x^\mu + {\cal O}(\delta^2)
+\nonumber\\
+&=&
+\delta \varphi_\alpha(x) -  \partial_\mu \varphi_\alpha(x)\cdot \delta x^\mu + {\cal O}(\delta^2)
+\label{eqn:relLieanddelta}
+\\
+&=&
+\sum_{j = 1}^s \left(
+\Phi_{\alpha j} (x) - \partial_\mu \varphi_\alpha(x) X_j^\mu \right)
+\delta \omega_j
++ {\cal O}(\delta^2)
+\end{eqnarray}
+$\bar{\delta}$ commutes with $\partial^\mu$.
+On the other hand, $\delta \varphi_{\alpha : \mu} = \delta \partial_\mu \varphi_\alpha$
+differs from $\partial_\mu \delta \varphi_\alpha$.
+The former one appears in
+\[
+\varphi_{\alpha : \mu}' (x') = \varphi_{\alpha : \mu} (x) + \delta \varphi_{\alpha : \mu} (x)
+\]
+and the equality between
+\begin{eqnarray*}
+\bar{\delta} \varphi_{\alpha : \mu} (x)
+&=&
+\varphi_{\alpha : \mu}' (x) - \varphi_{\alpha : \mu} (x)
+\\
+&=&
+\delta \varphi_{\alpha : \mu} (x)
+-
+ \partial_\nu \varphi_{\alpha:\mu}(x)\cdot \delta x^\nu + {\cal O}(\delta^2)
+\end{eqnarray*}
+and
+\begin{equation*}
+\partial_\mu \bar{\delta} \varphi_{\alpha}
+=
+\partial_\mu \delta \varphi_\alpha(x) -  \partial_\mu \varphi_{\alpha: \nu} (x)\cdot \delta x^\nu 
+ -  \varphi_{\alpha: \nu} (x)\cdot \partial_\mu \delta x^\nu 
++ {\cal O}(\delta^2)
+\end{equation*}
+leads to
+\begin{equation}
+\delta \partial_\mu \varphi_{\alpha} (x)
+=
+\partial_\mu \delta \varphi_\alpha(x)
+ -  \varphi_{\alpha: \nu} (x)\cdot \partial_\mu \delta x^\nu 
+\end{equation}
+
+Variation of the action
+\begin{equation}
+{\cal A} = \int d^4 x {\cal L}(x)
+\end{equation}
+reads
+\begin{eqnarray*}
+\delta {\cal A}
+&=&
+\delta \int_\Omega {\cal L} [\varphi_\alpha(x), \partial^\mu\varphi_\alpha(x)] d^4 x
+\\
+&=&
+\int_{\Omega'} {\cal L} [\varphi_\alpha'(x'), \varphi_{\alpha:\mu}'(x')] d^4 x'
+-
+\int_{\Omega} {\cal L} [\varphi_\alpha(x), \varphi_{\alpha:\mu}(x)] d^4 x
+\end{eqnarray*}
+First we consider Jacobian.
+For the transformation in Eq. (\ref{eqn:APNoeth_infsimtransf}), we have
+\[
+\partial_\nu x^{\mu '} = \delta_\nu^\mu + \partial_\nu \delta x^\mu
+\]
+and
+\begin{equation}
+d^4 x' = \frac{\partial(x_0', x_1',x_2',x_3')}{\partial(x_0, x_1,x_2,x_3)} d^4x
+=
+(1 + \partial_\mu \delta x^\mu) d^4 x 
++ {\cal O} (\delta^2)
+\end{equation}
+to write
+\begin{equation}
+\delta d^4 x 
+= d^4 x' - d^4 x = \partial_\mu \delta x^\mu \cdot d^4 x 
+\end{equation}
+Then we write, up to the first order in $\delta$,
+\begin{eqnarray}
+\delta {\cal A} 
+&=&
+\int_{\Omega'}
+ {\cal L}' (x') (1 + \delta) d^4 x
+-
+\int_{\Omega} {\cal L}(x)  d^4 x
+\nonumber\\
+&=&
+\int_{\Omega} \left[ 
+{\cal L}' (x') - {\cal L}(x)  \right] d^4 x
++
+\int_{\Omega} 
+{\cal L}' (x')
+\delta d^4 x
+\nonumber\\
+&=&
+\int_{\Omega}
+\delta {\cal L} (x)
+d^4 x
++
+\int_{\Omega} 
+{\cal L}' (x')
+%\delta d^4 x
+\partial_\mu \delta x^\mu \cdot d^4 x 
+\nonumber\\
+&=&
+\int_{\Omega} 
+d^4 x
+\left(
+\delta {\cal L} (x)
++
+{\cal L} (x)
+\partial_\mu \delta x^\mu 
+\right)
+\label{eqn:deltaAction}
+\end{eqnarray}
+From Eq. (\ref{eqn:relLieanddelta}),
+\begin{eqnarray}
+\delta {\cal L} (x)
+&\leftdef&
+{\cal L}' (x') - {\cal L}(x)  
+\nonumber\\
+&=&
+\bar{\delta}{\cal L} (x) + \partial_\mu {\cal L}(x)\cdot \delta x^\mu
+\label{eqn:deltaLagrangiandens}
+\end{eqnarray}
+Now,
+\begin{eqnarray*}
+\bar{\delta} {\cal L} (x)
+&=&
+{\cal L}' (x) - {\cal L}(x)  
+\nonumber\\
+&=&
+\frac{\partial {\cal L}}{\partial \varphi_\alpha} \bar{\delta} \varphi_\alpha
++
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}} \bar{\delta} \varphi_{\alpha : \mu}
+\nonumber\\
+&=&
+\frac{\partial {\cal L}}{\partial \varphi_\alpha} \bar{\delta} \varphi_\alpha
++
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}} \partial_\mu \bar{\delta} \varphi_{\alpha}
+\nonumber\\
+&=&
+\left(
+\frac{\partial {\cal L}}{\partial \varphi_\alpha} 
+- 
+\partial_\mu \frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}} 
+\right)
+\bar{\delta} \varphi_\alpha
++
+\partial_\mu \left(
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}  \bar{\delta} \varphi_{\alpha}
+\right)
+\\
+&=&
+\left[ {\cal L} \right]_{\varphi_\alpha}
+\bar{\delta} \varphi_\alpha
++
+\partial_\mu \left(
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}  \bar{\delta} \varphi_{\alpha}
+\right) \,,
+\end{eqnarray*}
+where we have defined
+\begin{equation*}
+\left[ {\cal L} \right]_{\varphi_\alpha}
+\leftdef
+\frac{\partial {\cal L}}{\partial \varphi_\alpha} 
+- 
+\partial_\mu \frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}} 
+\,,
+\end{equation*}
+which disappears when the Euler-Lagrange equation is satisfied.
+Going back to Eq. (\ref{eqn:deltaLagrangiandens}),
+\begin{eqnarray*}
+\delta {\cal L}
+&=&
+\left[ {\cal L} \right]_{\varphi_\alpha}
+\bar{\delta} \varphi_\alpha
++
+\partial_\mu \left(
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}  \bar{\delta} \varphi_{\alpha}
+\right)
++
+ \partial_\mu {\cal L}(x)\cdot \delta x^\mu
+\end{eqnarray*}
+Putting into Eq. (\ref{eqn:deltaAction}),
+\begin{eqnarray}
+\delta {\cal A}
+&=&
+\int_{\Omega} 
+d^4 x
+\left\{
+\left[ {\cal L} \right]_{\varphi_\alpha}
+\bar{\delta} \varphi_\alpha
++
+\partial_\mu \left(
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}  \bar{\delta} \varphi_{\alpha}
++
+{\cal L}(x) \delta x^\mu
+\right)
+\right\}
+\label{eqn:deltaAintermed}
+\end{eqnarray}
+Since $\Omega$ is arbitrary, we have
+for fields satisfying the Euler-Lagrange equation that
+\begin{equation}
+0
+=
+\partial_\mu \left(
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}  \bar{\delta} \varphi_{\alpha}
++
+{\cal L}(x) \delta x^\mu
+\right)
+\equiv
+\partial_\mu
+\Theta^\mu(x)
+\end{equation}
+Noether current
+\begin{eqnarray*}
+\Theta^\mu(x)
+&\leftdef&
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}  \bar{\delta} \varphi_{\alpha}
++
+{\cal L}(x) \delta x^\mu
+\nonumber\\
+&=&
+\sum_{j = 1}^s 
+\left[
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}
+\left(
+\Phi_{\alpha j} (x) - \partial_\nu \varphi_\alpha(x) X_j^\nu 
+\right)
++
+{\cal L}(x) 
+X_j^\mu 
+\right]
+\delta \omega_j
+\nonumber\\
+&\equiv&
+\sum_{j = 1}^s 
+\Theta_j^\mu (x)
+\delta \omega_j
+\end{eqnarray*}
+\begin{eqnarray}
+\Theta_j^\mu (x)
+&\leftdef&
+\frac{\partial {\cal L}}{\partial \varphi_{\alpha : \mu}}
+\left(
+\Phi_{\alpha j} (x) - \partial_\nu \varphi_\alpha(x) X_j^\nu 
+\right)
++
+{\cal L}(x) 
+X_j^\mu 
+\label{eqn:NoetherCurrentform}
+\end{eqnarray}
+Eq. (\ref{eqn:deltaAintermed}) reads,
+\begin{eqnarray*}
+\frac{\delta {\cal A}}{\delta \omega_j}
+&=&
+\int_\Omega d^4 x
+\partial_\mu
+\Theta^\mu_j (x)
+\end{eqnarray*}
+Invariance of the ${\cal A}$ction leads
+to an equation of  conservation Noether currents:
+\begin{eqnarray}
+\partial_\mu
+\Theta^\mu_j (x)
+=0
+\label{eqn:NoetherCurrentConsv}
+\end{eqnarray}
+Noether charges
+\begin{eqnarray}
+C_j =
+\int
+\Theta_j^0 (x)
+d^4 x\,,
+\hspace{5mm}
+\mbox{for }
+j = 1, \dots, s
+\label{eqn:NoetherCharge}
+\end{eqnarray}
+

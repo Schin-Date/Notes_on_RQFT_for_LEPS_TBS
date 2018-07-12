@@ -1,0 +1,109 @@
+Polarization vectors $\epsilon_\mu^{(\lambda)} (\bld{p})$
+for a free Klein-Goldon vector field 
+%without any constraint
+are chosen as 4 linearly independent basis:
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+g^{\mu \nu }{\epsilon_\mu^{(\lambda)}}^*   \epsilon_\nu^{(\lambda')}
+=
+g^{\lambda \lambda'}
+\hspace{5mm}
+\mbox{(orthonormal)}
+\vspace{2mm}
+\\
+g_{\lambda \lambda'} \epsilon_\mu^{(\lambda)} {\epsilon_\nu^{(\lambda')}}^* 
+= g_{\mu \nu}
+\hspace{5mm}
+\mbox{(complete)}
+\end{array}
+\right.
+\label{eqn:APolOrthComp}
+\end{eqnarray}
+An obvious choice is $\epsilon^{(\lambda)\mu} = \epsilon^{(\lambda)*\mu} = e^{(\lambda)\mu}$
+where
+\begin{eqnarray}
+e^{(0)\mu} =
+\left(
+\begin{array}{c}
+1\\ \bld{0}
+\end{array}
+\right)^\mu
+\,,
+\hspace{2mm}
+e^{(i)\mu} =
+\left(
+\begin{array}{c}
+0\\ \bld{e}^{(i)}
+\end{array}
+\right)^\mu
+\,
+i = 1, 2, 3
+\label{eqn:APolBasis}
+\end{eqnarray}
+and $\bld{e}^{(i)}$ are 3 orthnormal spacial vectors.
+The choice of $\bld{e}^{(i)}$ may depend on the direction of
+the momentum $\bld{p}$.
+In particular, we may choose $\bld{e}^{(3)} = \hat{\bld{p}} \equiv \bld{p} / |\bld{p}|$  and
+$\bld{e}_2 = \hat{\bld{p}} \times \bld{e}_1$ with
+$\bld{e}_1$ being an arbitrary chosen spacial unit vector perpendicular 
+to $\hat{\bld{p}}$. Regarding with the choice of transverse polarization basis,
+it is also common to employ
+\begin{eqnarray}
+e^{(\pm)} = \frac{1}{\sqrt{2}} 
+\left(
+e^{(1)} \pm i e^{(2)}
+\right)
+\label{eqn:APolCircPol}
+\end{eqnarray}
+to represent the two circular polarizations.
+The problem of indefinite norm of the massless Klein-Gordon field
+is avoided by suppressing excitations in the time direction in terms of
+subsidiary conditions, which usually take a form of gauge conditions.
+In a consistent scheme, the longitudinal excitation is also dropped 
+and only transverse modes, which satisfy $p \cdot \epsilon^{(T)} = 0$,
+ are survived as physical excitations.
+
+In cases of massive fields,
+excitations of time components are excluded from
+dynamical degrees of freedom by virtue of
+the Lorentz condition, which is the unique Lorentz invariant
+restriction on the field. It is therefore essential to have
+polarization vectors which satisfy
+$\epsilon^{(\uparrow)} \cdot p = 0$.
+Since there exists a rest frame for each momentum 
+$p = (p^0, \bld{p}) = m (\gamma, \gamma \bld{\beta})$,
+we may write
+\begin{eqnarray}
+\epsilon^{(\lambda)\mu} (\bld{p}) 
+=
+\Lambda^\mu_{\;\;\nu} (\bld{\beta})\, e^{(\lambda) \mu}
+\,,
+\hspace{3mm}
+\Lambda^\mu_{\;\;\nu}
+=
+\left(
+\begin{array}{cc}
+\gamma & \gamma \bld{\beta} \cdot
+\\
+\gamma \bld{\beta} &
+1 + \hat{\bld{\beta}}(\gamma - 1) \hat{\bld{\beta}} \cdot
+\end{array}
+\right)
+\,,
+\label{eqn:ApolVecMassive}
+\end{eqnarray}
+for which
+we surely have above mentinoed relationship.
+Also, it is straightforward to confirm relationships in Eq. (\ref{eqn:APolOrthComp})
+and
+\begin{eqnarray}
+g_{ij} \epsilon^{(i)\mu} \epsilon^{(j)*\nu}
+&=&
+g^{\mu \nu} - g^{00} \epsilon^{(0)\mu} \epsilon^{(0)*\nu}
+\nonumber\\
+&=&
+g^{\mu \nu} -
+\frac{p^\mu p^\nu}{m^2}
+\label{eqn:APolMassSpatialComp}
+\end{eqnarray}

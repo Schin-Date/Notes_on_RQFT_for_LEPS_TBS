@@ -1,0 +1,776 @@
+\noindent
+neutral or charged Spin 1 particle
+$\left( \Box + m^2 \right) \varphi_\mu(x) = 0$
+
+
+\subsubsection{Lagrangian}
+For the complex field, terms which can appear in Lagrangian density are 
+$\varphi^*_\mu \varphi^\mu$, 
+$\partial_\mu \varphi^*_\nu \cdot \partial^\mu \varphi^\nu$, 
+$\partial_\mu \varphi^*_\nu \cdot \partial^\nu \varphi^\mu$
+and
+$\partial^\mu \varphi^*_\mu \cdot \partial_\nu \varphi^\mu$.
+We want Klein-Gordon equation as  the EOM.
+
+Proca (1936) proposed a Lagrangian density which leads to a positive definite Hamiltonian density:
+\begin{eqnarray}
+{\cal L}_{\mbox{\scriptsize Pr}} &=&
+-\frac{1}{2} F^*_{\mu\nu} F^{\mu\nu}
++ m^2 \varphi_\mu^* \varphi^\mu
+\label{eqn:ProcaLagdens}
+\\
+&&
+(
+=
+- \partial_\mu \varphi^*_\nu
+F^{\mu \nu}
+=
+- F^*_{\mu \nu}
+\partial^\mu \varphi^\nu
+)
+\nonumber
+\,,
+\end{eqnarray}
+where
+\begin{eqnarray}
+F_{\mu \nu} \equiv
+\partial_\mu \varphi_\nu
+-
+\partial_\nu \varphi_\mu
+\end{eqnarray}
+dim[$\varphi$] $=$ dim[$m$] $=$ $E$.
+For the case of real field, remove conjugation symbol ${}^*$ and divide each term by 2.
+\begin{eqnarray}
+\frac{\partial \mathcal{L}}
+{\partial (\partial_\mu \varphi_\nu^*)}
+=
+-F^{\mu \nu}
+\,,
+\hspace{5mm}
+\frac{\partial \mathcal{L}}
+{\partial (\partial_\mu \varphi_\nu)}
+=
+-F^{*\mu \nu}
+\end{eqnarray}
+Euler-Lagrange equation reads
+\begin{eqnarray}
+\partial_\mu F^{\mu \nu} = - m^2 \varphi^\nu
+\,,
+\hspace{5mm}
+\partial^\mu F^*_{\mu \nu} = - m^2 \varphi_\nu^*
+\label{eqn:massRealProcaEOM}
+\end{eqnarray}
+Taking divergence in both hand sides, we get the Lorentz condition
+\begin{eqnarray}
+\partial_\nu \varphi^\nu = 0\,,
+\hspace{5mm}
+\partial^\nu \varphi^*_\nu = 0
+\label{eqn:massVProcaCond}
+\end{eqnarray}
+when $m^2 \neq 0$.
+This condition suppresses irrelevant degrees of freedom in $\varphi_\mu$ and $\varphi^*_\mu$
+by one for each and these fields come to describe spin 1 fields correctly.
+Owing to this condition, field equations in Eq. (\ref{eqn:massRealProcaEOM})
+become a pair of Klein-Goldon equations.
+%$\partial_\mu F^{\mu \nu} = \square \varphi^\nu$ and 
+% $\partial^\mu F^*_{\mu \nu} = \square \varphi^*_\nu$ so that 
+Conjugate momenta are given as
+\begin{eqnarray}
+\varphi^*_\mu
+\longleftrightarrow
+\pi^\mu 
+ \equiv \frac{
+\partial {\cal L} }
+{\partial \dot{\varphi}_\mu^*}
+= F^{\mu 0}
+\,,
+\hspace{5mm}
+\varphi_\mu
+\longleftrightarrow
+\pi^{* \mu} 
+\equiv \frac{
+\partial {\cal L} }
+{\partial \dot{\varphi}_\mu}
+= F^{*\mu 0}
+\label{eqn:ProcaConjMom}
+\end{eqnarray}
+One observes that $\pi^0 = \pi^{*0} = 0$ as it was happen in the electromagnetism.
+In this case, however, one can make use of Eqs. (\ref{eqn:massRealProcaEOM}) and
+(\ref{eqn:ProcaConjMom}) to solve $\varphi^0$ and $\varphi^{*0}$ 
+in terms of other fields as
+\footnote{%------------------------------- footnote >>
+Time derivatives of fields are expressed in terms of $\pi$ and $\pi^*$ from
+Eq. (\ref{eqn:ProcaConjMom}) as
+\begin{eqnarray*}
+\partial_0 \varphi^i = - \pi^i - \partial_i \varphi^0
+\,,
+\hspace{5mm}
+\partial_0 \varphi^{*i} = - \pi^{*i} - \partial_i \varphi^{*0}
+\end{eqnarray*}
+The Hamiltonian density is then written as
+\begin{eqnarray*}
+\mathcal{H}
+&=&
+\pi^\mu \dot{\varphi}^*_\mu + \pi^*_\mu \dot{\varphi}^\mu - \mathcal{L}
+\nonumber\\
+&=&
+|\bld{\pi}|^2
++
+\frac{|\bld{\partial}\cdot \bld{\pi}|^2}{m^2}
++
+|\bld{\partial} \times \bld{\varphi}|^2
++
+m^2 |\bld{\varphi}|^2
++ 
+\mbox{total derivative}
+\end{eqnarray*}
+which is obviously positive definite.
+}%------------------------------- footnote //
+\begin{eqnarray}
+\varphi^0 
+=
+- \frac{\partial_\mu \pi^\mu}{m^2}
+\,,
+\hspace{5mm}
+\varphi^{*0 }
+=
+- \frac{\partial_\mu \pi^{*\mu}}{m^2}
+\end{eqnarray}
+
+For the Lagrangian density (\ref{eqn:ProcaLagdens}) can be written as
+\begin{eqnarray}
+{\cal L}_{\mbox{\scriptsize Pr}} &=&
+- \partial_\mu \varphi_\nu^* \cdot \partial^\mu \varphi^\nu
++ m^2 \varphi_\mu^* \varphi^\mu
+%\nonumber\\
+%&&
+- \varphi_\nu^*\partial^\nu 
+%\cancel{
+\partial_\mu \varphi^\mu
+%}
++ \partial_\mu \{ \varphi_\nu^*\partial^\nu  \varphi^\mu \}
+\,,
+\end{eqnarray}
+we can also employ
+\begin{eqnarray}
+\mathcal{L}_{\mbox{\scriptsize KG}}
+&=&
+- \partial_\mu \varphi_\nu^* \cdot \partial^\mu \varphi^\nu 
+ + m^2 |\varphi|^2
+\end{eqnarray}
+as our Lagrangian density
+together with the Lorentz condition (\ref{eqn:massVProcaCond})
+as a subsidiary condition.
+In this case, we have Klein-Gordon equations as EOM's and
+non-vanishing $\pi^0$ as we have already seen in the electromagnetism.
+
+In the following, however, we employ Stueckelberg's Lagrangian given by
+\begin{eqnarray}
+\mathcal{L}_{\mbox{\scriptsize St}}
+&=&
+\mathcal{L}_{\mbox{\scriptsize Pr}}
+- \frac{1}{\alpha}
+(\partial \cdot \varphi^*)
+(\partial \cdot \varphi)
+\end{eqnarray}
+which includes a "gauge fixing term"
+although the gauge invariance is already violated by 
+the mass term in $\mathcal{L}_{\mbox{\scriptsize Pr}}$.
+The involvement of this term is said \cite{ref:Hioki} necessary
+for the theory to be renormalizable.
+It reads
+\begin{eqnarray}
+\frac{\partial \mathcal{L}}
+{\partial (\partial_\mu \varphi_\nu^*)}
+=
+-F^{\mu \nu}
+- \frac{1}{\alpha}g^{\mu \nu}
+(\partial\cdot \varphi)
+\,
+\hspace{5mm}
+\frac{\partial \mathcal{L}}
+{\partial (\partial_\mu \varphi_\nu)}
+=
+-F^{*\mu \nu}
+- \frac{1}{\alpha}g^{\mu \nu}
+(\partial\cdot \varphi^*)
+\,.
+\nonumber\\
+\label{eqn:StueckelbergConjExpress}
+\end{eqnarray}
+Field equations become
+\footnote{%------------------------------- footnote >>
+Taking the divergence of the field equation (\ref{eqn:StueckelbergEOM}), we have
+\begin{eqnarray}
+\frac{1}{\alpha}
+\left[
+\square + \alpha m^2
+\right]
+(\partial\cdot \varphi)
+= 0
+\,,
+\hspace{5mm}
+\mbox{(c.c.)}
+\,.
+\label{eqn:StueckelScalarComp}
+\end{eqnarray}
+Namely, the field $(\partial\cdot \varphi)$ is a Klein-Gordon field
+with mass squared $\alpha m^2$.
+We assume $\alpha > 0$ in the following.
+
+It would be also noted that the field
+\begin{eqnarray}
+\varphi^T_\mu =
+\left(
+g_{\mu \nu}
++
+\frac{1}{\alpha m^2}\partial_\mu \partial_\nu
+\right)
+\varphi^\nu
+\end{eqnarray}
+extracts the component of spin 1 from a mixture $\varphi^\nu$
+composed of spin 1 and spin 0 components. This tansverse
+component satisfies $\partial \cdot \varphi^T = 0$ by virtue of
+Eq. (\ref{eqn:StueckelScalarComp}).
+}%------------------------------- footnote //
+\begin{eqnarray}
+\begin{array}{l}
+\displaystyle
+(\square + m^2) \varphi^\mu
++
+\left(
+\frac{1}{\alpha} -1 
+\right)
+\partial^\mu
+(\partial \cdot \varphi)
+=
+0
+\vspace{2mm}
+\\
+\displaystyle
+(\square + m^2) \varphi^{*\mu}
++
+\left(
+\frac{1}{\alpha} -1 
+\right)
+\partial^\mu
+(\partial \cdot \varphi^*)
+=
+0
+\end{array}
+\label{eqn:StueckelbergEOM}
+\end{eqnarray}
+and conjugate momenta are now written as
+\begin{eqnarray}
+\begin{array}{l}
+\displaystyle
+\varphi^*_\mu
+\longleftrightarrow
+\pi^\mu 
+ \equiv \frac{
+\partial {\cal L} }
+{\partial \dot{\varphi}_\mu^*}
+= F^{\mu 0}
+- \delta^{\mu 0}\frac{1}{\alpha}
+(\partial \cdot \varphi)
+\vspace{2mm}
+\\
+\displaystyle
+\varphi_\mu
+\longleftrightarrow
+\pi^{* \mu} 
+\equiv \frac{
+\partial {\cal L} }
+{\partial \dot{\varphi}_\mu}
+= F^{*\mu 0}
+- \delta^{\mu 0}\frac{1}{\alpha}
+(\partial \cdot \varphi^*)
+\end{array}
+\label{eqn:StueckelConjMom}
+\end{eqnarray}
+Though fields $\varphi^\mu$ and $\varphi^{*\mu}$ are independent of each other,
+expression for one is obvious from another and we omit to write expressions for the later 
+in the following.
+The solution to the Stueckelberg's field equation (\ref{eqn:StueckelbergEOM})
+is writen as
+\begin{eqnarray}
+\varphi_\mu(x)
+&=&
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\sum_{\lambda=0}^3
+\frac{1}{2p^0_{(\lambda)}}
+\left[
+a_\lambda (\bld{p})
+\,
+\tilde{\epsilon}_\mu^{(\lambda)} (\bld{p})
+e^{-i p_{(\lambda)} x}
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{30mm}
++
+b_\lambda^\dagger (\bld{p})
+\,
+\tilde{\epsilon}_\mu^{(\lambda)*} (\bld{p})
+e^{i p_{(\lambda)} x}
+\right]
+\nonumber\\
+&=&
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\left(
+\sum_{\lambda=1}^3
+\frac{1}{2p^0}
+\left[
+a_\lambda 
+\,
+\tilde{\epsilon}_\mu^{(\lambda)} 
+e^{-i p x}
++
+b_\lambda^\dagger 
+\,
+\tilde{\epsilon}_\mu^{(\lambda)*} 
+e^{i p x}
+\right]
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{23mm}
++
+\frac{1}{2p_\alpha^0}
+\left[
+a_0
+\,
+\tilde{\epsilon}_\mu^{(0)} 
+e^{-i p_\alpha x}
++
+b_0^\dagger 
+\,
+\tilde{\epsilon}_\mu^{(0)*} 
+e^{i p_\alpha x}
+\right]
+\right)
+\nonumber\\
+\label{eqn:MassVStueckSol}
+\end{eqnarray}
+where
+\begin{eqnarray}
+p_{(\lambda)}
+=
+\left\{
+\begin{array}{l}
+p
+\equiv
+(p^0, \bld{p})
+\,,
+\hspace{3mm}
+p^0
+\equiv
+\sqrt{\bld{p}^2 + m^2}
+\,,
+\hspace{3mm}
+p^2 = m^2
+\hspace{5mm}
+\mbox{for }
+\lambda = 1, 2, 3
+\\
+p_\alpha
+\equiv
+(p^0_\alpha, \bld{p})
+\,,
+\hspace{3mm}
+p^0_\alpha
+\equiv
+\sqrt{\bld{p}^2 + \alpha m^2}
+\,,
+\hspace{3mm}
+p^2_\alpha = \alpha m^2
+\hspace{5mm}
+\mbox{for }
+\lambda = 0
+\end{array}
+\right.
+\label{eqn:StuckelExpressMomenta}
+\end{eqnarray}
+and polarization vectors $\tilde{\epsilon}^{(\lambda)}$ are written as
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+\tilde{\epsilon}^{(0)}_\mu = p_{\alpha \mu} / m
+\vspace{2mm}
+\\
+\tilde{\epsilon}^{(i)}_\mu = \Lambda^\mu_{\;\;\nu} (\bld{\beta}) e^{(i)\mu}
+\,,
+\hspace{3mm}
+i = 1, 2, 3
+\end{array}
+\right.
+\label{eqn:StueckelPolVecs}
+\end{eqnarray}
+For notations of the second equation, we refer to Appendix \ref{sec:PolarizationVector}.
+
+\bigskip
+
+\verb/-----------.-----------.-----------.-----------.-----------/\\
+\vspace{-3mm}
+{\small
+\begin{center}
+Addendum: Solution of the Stueckelberg's field equation
+\end{center}
+Let us confirm that the expression (\ref{eqn:MassVStueckSol}) satisfies the field equation
+(\ref{eqn:StueckelbergEOM}). First, we prepare components:
+\begin{eqnarray}
+\partial \cdot \varphi
+&=&
+-i
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\sum_{\lambda=0}^3
+\frac{1}{2p^0_{(\lambda)}}
+\left[
+a_\lambda 
+\,
+(\tilde{\epsilon}^{(\lambda)} \cdot p_{(\lambda)})
+e^{-i p_{(\lambda)} x}
+%\right.
+%\nonumber\\
+%&&
+%\left.
+%\hspace{30mm}
+-
+b_\lambda^\dagger 
+\,
+(\tilde{\epsilon}^{(\lambda)*} \cdot p_{(\lambda)})
+e^{i p_{(\lambda)} x}
+\right]
+\nonumber\\
+&=&
+-i
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\left(
+\sum_{\lambda=1}^3
+\frac{1}{2p^0}
+\left[
+a_\lambda 
+\,
+(\tilde{\epsilon}^{(\lambda)} \cdot p)
+e^{-i p x}
+-
+b_\lambda^\dagger 
+\,
+(\tilde{\epsilon}^{(\lambda)*} \cdot p)
+e^{i p x}
+\right]
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{23mm}
++
+\frac{1}{2p_\alpha^0}
+\left[
+a_0
+\,
+(\tilde{\epsilon}^{(0)} \cdot p_{\alpha})
+e^{-i p_\alpha x}
+-
+b_0^\dagger 
+\,
+(\tilde{\epsilon}^{(0)*} \cdot p_{\alpha})
+e^{i p_\alpha x}
+\right]
+\right)
+\nonumber\\
+\label{eqn:MassVStueckDphi}
+\end{eqnarray}
+%---------------------------------------------------------
+\begin{eqnarray}
+\partial^\mu (\partial \cdot \varphi)
+&=&
+-
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\sum_{\lambda=0}^3
+\frac{p_{(\lambda)}^\mu}{2p^0_{(\lambda)}}
+\left[
+a_\lambda 
+\,
+(\tilde{\epsilon}^{(\lambda)} \cdot p_{(\lambda)})
+e^{-i p_{(\lambda)} x}
++
+b_\lambda^\dagger 
+\,
+(\tilde{\epsilon}^{(\lambda)*} \cdot p_{(\lambda)})
+e^{i p_{(\lambda)} x}
+\right]
+\nonumber\\
+\label{eqn:MassVStueckDmuDphi}
+\end{eqnarray}
+%---------------------------------------------------------
+\begin{eqnarray}
+\square (\partial \cdot \varphi)
+&=&
+i
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\sum_{\lambda=0}^3
+\frac{p_{(\lambda)}^2}{2p^0_{(\lambda)}}
+\left[
+a_\lambda 
+\,
+(\tilde{\epsilon}^{(\lambda)} \cdot p_{(\lambda)})
+e^{-i p_{(\lambda)} x}
+-
+b_\lambda^\dagger 
+\,
+(\tilde{\epsilon}^{(\lambda)*} \cdot p_{(\lambda)})
+e^{i p_{(\lambda)} x}
+\right]
+\nonumber\\
+&=&
+i
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\left(
+\sum_{\lambda=1}^3
+\frac{m^2}{2p^0}
+\left[
+a_\lambda 
+\,
+(\tilde{\epsilon}^{(\lambda)} \cdot p)
+e^{-i p x}
+-
+b_\lambda^\dagger 
+\,
+(\tilde{\epsilon}^{(\lambda)*} \cdot p)
+e^{i p x}
+\right]
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{23mm}
++
+\frac{\alpha m^2}{2p_\alpha^0}
+\left[
+a_0
+\,
+(\tilde{\epsilon}^{(0)} \cdot p_{\alpha})
+e^{-i p_\alpha x}
+-
+b_0^\dagger 
+\,
+(\tilde{\epsilon}^{(0)*} \cdot p_{\alpha})
+e^{i p_\alpha x}
+\right]
+\right)
+\nonumber\\
+\label{eqn:MassVStueckDalembDphi}
+\end{eqnarray}
+%---------------------------------------------------------
+Second, we evaluate the $l.h.s.$ of Eq. (\ref{eqn:StueckelbergEOM}):
+\begin{eqnarray}
+&&(\square + m^2) \varphi_\mu
++
+\left(
+\frac{1}{\alpha} -1 
+\right)
+\partial_\mu
+(\partial \cdot \varphi)
+\nonumber\\
+&&=
+-
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\sum_{\lambda=0}^3
+\frac{1}{2p^0_{(\lambda)}}
+\left[
+a_\lambda 
+\left\{
+( p_{(\lambda)}^2 - m^2) \tilde{\epsilon}^{(\lambda)}_\mu
++ 
+(\frac{1}{\alpha} - 1) p_{(\lambda)\mu}
+(\tilde{\epsilon}^{(\lambda)} \cdot p_{(\lambda)})
+\right\}
+e^{-i p_{(\lambda)} x}
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{33mm}
++
+b_\lambda^\dagger 
+\left\{
+( p_{(\lambda)}^2 - m^2) \tilde{\epsilon}^{(\lambda)*}_\mu
++ 
+(\frac{1}{\alpha} - 1) p_{(\lambda)\mu}
+(\tilde{\epsilon}^{(\lambda)*} \cdot p_{(\lambda)})
+\right\}
+e^{i p_{(\lambda)} x}
+\right]
+\nonumber\\
+&&=
+-
+\int
+\frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}}
+\left(
+\sum_{l=1}^3
+\frac{1}{2p^0}
+\left[
+a_l
+(\frac{1}{\alpha} - 1) p_\mu
+(\tilde{\epsilon}^{(l)} \cdot p)
+e^{-i p x}
++
+b_l^\dagger 
+(\frac{1}{\alpha} - 1) p_\mu
+(\tilde{\epsilon}^{(l)*} \cdot p)
+e^{i p x}
+\right]
+\right.
+\nonumber\\
+&&
+\hspace{27mm}
++
+\frac{1}{2p^0_\alpha}
+\left[
+a_0 (\alpha -1)
+\left\{
+m^2 
+\tilde{\epsilon}^{(0)} _\mu
+-
+\frac{1}{\alpha}
+p_{\alpha \mu}
+(\tilde{\epsilon}^{(0)} \cdot p_\alpha)
+\right\}
+e^{-i p_\alpha x}
+\right.
+\nonumber\\
+&&
+\left.
+\left.
+\hspace{35mm}
++
+b_0^\dagger (\alpha -1)
+\left\{
+m^2 
+\tilde{\epsilon}^{(0)*} _\mu
+-
+\frac{1}{\alpha}
+p_{\alpha \mu}
+(\tilde{\epsilon}^{(0)*} \cdot p_\alpha)
+\right\}
+e^{i p_\alpha x}
+\right]
+\right)
+\label{eqn:StueckelFeqLHS}
+\end{eqnarray}
+In the first line of the last expression, we have from Eq. (\ref{eqn:StueckelPolVecs}) that
+$(\tilde{\epsilon}^{(l)} \cdot p) = (\tilde{\epsilon}^{(l)*} \cdot p) = 0$
+and
+$(\tilde{\epsilon}^{(0)} \cdot p_\alpha) = (\tilde{\epsilon}^{(0)*} \cdot p_\alpha) =\alpha m$
+in the second and third lines 
+so that the last expression vanishes as the whole.
+Thus, we have shown that the expression (\ref{eqn:MassVStueckSol})
+together with Eqs. (\ref{eqn:StuckelExpressMomenta}, \ref{eqn:StueckelPolVecs})
+surely satisfies Stueckelberg's field equation (\ref{eqn:StueckelbergEOM}).
+}\\ %------------------------------------ small //
+\verb/-----------.-----------.-----------.-----------.-----------/\\
+
+We quantize the field (\ref{eqn:MassVStueckSol}) by requiring canonical
+commutation relations which reads
+\begin{eqnarray}
+\begin{array}{l}
+[a_\lambda (\bld{p}), a_{\lambda'}^\dagger (\bld{p}') ]
+=
+[b_{\lambda} (\bld{p}), b_{\lambda'}^\dagger (\bld{p}') ]
+=
+-g_{\lambda \lambda'}  \, 2 p^0_{(\lambda)} \,\delta^3(\bld{p} - \bld{p})
+\vspace{2mm}
+\\
+\mbox{others} = 0
+\end{array}
+\end{eqnarray}
+
+We are now at a position to compute the propagator.
+\begin{eqnarray}
+&&
+\left.
+\bra 0 \braend \varphi_\mu (x) \varphi^\dagger_\nu (y) \ketend 0 \ket
+\right|_{x^0 > y^0}
+\nonumber\\
+&&
+=
+\int
+\frac{d^3 \bld{p} d^3 \bld{p}' }{(2\pi)^3}
+\sum_{\lambda, \lambda' = 0}^3
+\frac{1}{4 p^0_{(\lambda)} p^0_{(\lambda')}}
+\bra 0 \braend 
+a_\lambda (\bld{p}) \tilde{\epsilon}_\mu^{(\lambda)} (\bld{p}) e^{-i p_{(\lambda)} x}
+\nonumber\\
+&&
+\hspace{35mm}
+a_{\lambda'}^\dagger (\bld{p}') \tilde{\epsilon}_\nu^{(\lambda')} (\bld{p}') e^{i p_{(\lambda')}' y}
+\ketend 0 \ket
+\nonumber\\
+&&
+=
+\int
+\frac{d^3 \bld{p} }{(2\pi)^3}
+\sum_{\lambda, \lambda' = 0}^3
+\frac{-g_{\lambda \lambda'}}{2  p^0_{(\lambda)}}
+ \tilde{\epsilon}_\mu^{(\lambda)} (\bld{p})
+\tilde{\epsilon}_\nu^{(\lambda')} (\bld{p})  e^{-i p_{(\lambda)}( x- y)}
+\nonumber\\
+&&
+=
+\int
+\frac{d^3 \bld{p} }{(2\pi)^3}
+\left(
+\frac{-1}{2 p^0}
+\left[
+g_{\mu \nu} - g_{00} \frac{p_\mu p_\nu}{m^2}
+\right] e^{- ip (x - y)}
+-
+g_{00}
+\frac{p_{\alpha \mu} p_{\alpha \nu} / m^2}{2 p^0_\alpha}
+e^{- p_\alpha (x-y)}
+\right)
+\nonumber\\
+\end{eqnarray}
+and
+\begin{eqnarray}
+D_F^{\mu \nu} (x-y)
+&\leftdef&
+\bra 0 \braend T\left[ \varphi_\mu (x) \varphi^\dagger_\nu (y)\right] \ketend 0 \ket
+\nonumber\\
+&=&
+-i
+\int
+\frac{d^4 p }{(2\pi)^4}
+\left(
+\frac{g_{\mu \nu} -  p_\mu p_\nu / m^2}{p^2 - m^2 + i\epsilon}
++
+\frac{p_\mu p_\nu / m^2}{p^2 - \alpha m^2 + i\epsilon}
+\right)
+e^{- ip (x - y)}
+\nonumber\\
+\end{eqnarray}
+
+
+\bigskip
+<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+\begin{comment}
+\\
+&&
+(= -\partial_mu \varphi_\nu^* \cdot \partial^\mu \varphi^\nu + m^2 \varphi_\mu^* \varphi^\mu
++ \partial_mu \varphi_\nu^* \cdot \partial^\nu \varphi^\mu)
+\nonumber
+\end{comment}

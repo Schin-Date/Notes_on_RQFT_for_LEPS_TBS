@@ -1,0 +1,157 @@
+\documentclass{article}
+%\documentclass[12pt]{article}
+\pagestyle{empty}           % <======= surpress page numbers
+\newcommand{\bld}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\utilde}[1]{\mbox{$#1$}\hspace{-.8em}\raisebox{-1ex}{$\sim$}}
+\newcommand{\leftdef}[0]{\,\mbox{$\stackrel{\leftarrow}{=}$}\,}
+\newcommand{\rightdef}[0]{\,\mbox{$\stackrel{\rightarrow}{=}$}\,}
+\newcommand{\bra}[0]{<\!}
+\newcommand{\braketend}[0]{\,|\,}
+\newcommand{\braend}[0]{|\,}
+\newcommand{\ketend}[0]{\,|}
+\newcommand{\ket}[0]{\!>}
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{\scriptsize{#1}}\hfil
+\crcr
+\raise0.2ex\hbox{\large$\bigcirc$}}}
+\newcommand{\normord}[1]{%
+  {:\mathrel{\mspace{1mu}#1\mspace{1mu}}:}%
+}
+\newcommand{\normalprod}[1]{%
+  {:\mathrel{\mspace{1mu}#1\mspace{1mu}}:}%
+}
+
+
+
+%\oddsidemargin 10pt
+%\evensidemargin 10pt
+\setlength{\textheight}{42\baselineskip}
+%\textheight 600pt
+\topmargin -5mm
+\footskip 25mm
+ \renewcommand\footnoterule{
+ %\vspace*{-3pt}%
+ \vspace*{9pt}%
+     \hrule width 2in height 0.4pt
+     \vspace*{2.6pt}}
+%\marginparsep 5cm
+%\marginparwidth5cm
+
+\newcounter{exercise}
+
+\newcounter{problem}
+\newcounter{refprob}
+%080219 Problems are numbered by a new counter "problem".
+%       One additional counter "refprob" is defined to refer
+%       to a previous problem. Find an example in
+%       set07/sec02F_3dim_x.tex
+%\oddsidemargin10pt
+\newcounter{exple}
+\newcounter{refexple}
+%100104 Examples are numbered by a new counter "exple".
+%       One additional counter "refexple" is defined to refer
+%       to a previous example. 
+
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{cancel}
+\usepackage{comment}
+%\usepackage{multicol}
+%\setlength{\columnseprule}{1pt}
+%\usepackage{vwcol}
+\usepackage{amsmath}
+\usepackage{arydshln}  %dashed line in a matrix
+
+\usepackage{feynmp}%%%{feynmp}
+
+\usepackage{color}
+\newcommand{\bl}[0]{\color{blue}}
+\newcommand{\re}[0]{\color{red}}
+\newcommand{\gr}[0]{\color{green}}
+\newcommand{\cy}[0]{\color{cyan}}
+\newcommand{\ma}[0]{\color{magenta}}
+\newcommand{\ye}[0]{\color{yellow}}
+
+%\include{hugenholtz}  % macros for hugenholtz diagrams
+
+\usepackage{slashed}
+
+\usepackage[vcentermath]{youngtab}
+
+
+\begin{document}
+\unitlength=1mm  %<<<---------------------------------------------- scale
+\parbox{40mm}
+{
+\begin{fmffile}{f1}
+	\begin{fmfgraph*}(40,20)
+			%\fmfleft{i1,i2}
+			\fmfbottom{i1,o1}
+			%\fmfleft{i2}
+			%\fmfright{o1,o2} 
+			%\fmfright{o2} 
+			\fmftop{i2,o2}
+			\fmf{fermion}{i1,v1,v2,o1}
+			\fmffreeze
+			%\fmf{phantom}{i2,i1}
+			%\fmf{phantom}{o2,o1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v2,o2}
+	\end{fmfgraph*}
+\end{fmffile}
+}
+\\
+\parbox{40mm}
+{
+\begin{fmffile}{f2}
+	\begin{fmfgraph*}(40,20)
+ \fmfbottom{i1,d1,o1}
+        \fmftop{i2,d2,o2}
+        \fmf{fermion}{i1,v1,v2,o1}
+        \fmf{fermion}{o2,v4,v3,i2}
+        \fmf{photon,tension=0}{v1,v3}
+        \fmf{photon,tension=0}{v2,v4}
+	\end{fmfgraph*}
+\end{fmffile}
+}
+\\
+\parbox{40mm}
+{
+\begin{fmffile}{f3}
+	\begin{fmfgraph*}(40,20)
+ \fmfbottom{i1,d1,o1}
+        \fmfright{o0,o2,o3}
+        \fmf{fermion}{i1,v1,o1}
+        \fmffreeze
+        \fmf{fermion}{o2,v2,o3}
+        \fmf{photon,tension=1.5}{v1,v2}	\end{fmfgraph*}
+\end{fmffile}
+}
+\\
+\parbox{40mm}
+{
+\begin{fmffile}{f4}
+	\begin{fmfgraph*}(40,20)
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2,o3,o4}
+    \fmf{fermion,label=$q$,tension=2}{i1,v1}
+    \fmf{fermion,label=$\bar{q}$,tension=2}{i2,v1}
+    \fmf{boson,label=$Z$,tension=2}{v1,v2}
+    \fmf{fermion,label=$\mu^-$}{v2,o4}
+    \fmf{phantom}{v2,o1}
+    \fmffreeze
+    \fmf{phantom}{v2,v3}
+    \fmf{phantom}{v2,v3,o1}
+    \fmffreeze
+    \fmf{fermion,label=$\mu^+$,label.side=right}{v2,o1}
+    \fmf{boson,label=$\gamma^*$,label.side=left}{v3,v4}
+    \fmf{fermion,label=$e^+$ (missed),label.side=left,label.dist=1}{v4,o2}
+    \fmf{fermion,label=$e^-$,label.side=left}{v4,o3}
+	\end{fmfgraph*}
+\end{fmffile}
+}
+\end{document}
+

@@ -1,0 +1,54 @@
+% NNbar2Pi2NNbar.mp -- do not edit, generated automatically by Smtrx2.tex
+input feynmp
+require_RCS_revision "1.30";
+beginchar(1, 40*2.84526pt#, 20*2.84526pt#, 0);
+"feynmf: 1";
+LaTeX_unitlength:=2.84526pt;
+subgraph (0, 0, w, h);
+vinit;
+pickup pencircle scaled thin;
+vleft (__i1, __i2);
+vright (__o1, __o2);
+vconnect ("fermion", __i2, __v1, __i1);
+vconnect ("fermion", __o1, __v2, __o2);
+vlabel ("N", __i2);
+vlabel ("$\overline {\mathrm N}$", __i1);
+vlabel ("N", __o1);
+vlabel ("$\overline {\mathrm N}$", __o2);
+vdotn (__v, 2);
+vconnect ("dashes,tension=2,label={\large \rm $\pi $},label.side=right", __v1, __v2);
+vfreeze;
+pair upvin,upvmid,upvout;
+upvin:=vloc(__i2);
+upvmid:=vloc(__v2);
+upvout:=vloc(__o2);
+path uppthin;
+uppthin:=vpath(__i2,__v2);
+path uppthout;
+uppthout:=vpath(__v2,__o2);
+pair dwvin,dwvmid,dwvout;
+dwvin:=vloc(__i1);
+dwvmid:=vloc(__v1);
+dwvout:=vloc(__o1);
+path dwpthin;
+dwpthin:=vpath(__i1,__v1);
+path dwpthout;
+dwpthout:=vpath(__v1,__o1);
+path updwpth;
+updwpth:=vpath(__v1,__v2);
+idraw ("phantom,label=$k$,label.side=left,label.dist=2mm", updwpth);
+style_def marrowa expr p = drawarrow subpath (1/4, 3/4) of p shifted 6 left withpen pencircle scaled 0.4; label.bot(btex $p_a$ etex, point 0.5 of p shifted 6 left); enddef; 
+vconnect ("marrowa", __i2, __v1);
+style_def marrowone expr p = drawarrow subpath (1/4, 3/4) of p shifted 6 down withpen pencircle scaled 0.4; label.bot(btex $p_1$ etex, point 0.5 of p shifted 9 right); enddef; 
+vconnect ("marrowone", __v2, __o2);
+style_def marrowb expr p = drawarrow subpath (1/4, 3/4) of p shifted 8 left withpen pencircle scaled 0.4; label.top(btex $p_b$ etex, point 0.5 of p shifted 9 left); enddef; 
+vconnect ("marrowb", __i1, __v1);
+style_def marrowtwo expr p = drawarrow subpath (1/4, 3/4) of p shifted 6 up withpen pencircle scaled 0.4; label.top(btex $p_2$ etex, point 0.5 of p shifted 9 right); enddef; 
+vconnect ("marrowtwo", __v2, __o1);
+vfreeze;
+vdraw;
+endsubgraph;
+endchar;
+% the end.
+end.
+endinput;

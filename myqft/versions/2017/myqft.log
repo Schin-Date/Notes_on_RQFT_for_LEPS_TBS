@@ -1,0 +1,2010 @@
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.9.28)  16 MAY 2018 11:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**myqft.tex
+(./myqft.tex
+pLaTeX2e <2016/09/08> (based on LaTeX2e <2016/03/31> patch level 3)
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2006/06/27 v1.6 Standard pLaTeX class
+\c@@paper=\count82
+(/usr/local/texlive/2016/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
+)
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 577.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count91
+)
+\c@exercise=\count92
+\c@problem=\count93
+\c@refprob=\count94
+\c@exple=\count95
+\c@refexple=\count96
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box41
+\UL@hyphenbox=\box42
+\UL@skip=\skip43
+\UL@hook=\toks17
+\UL@height=\dimen123
+\UL@pe=\count97
+\UL@pixel=\dimen124
+\ULC@box=\box43
+Package: ulem 2012/05/18
+\ULdepth=\dimen125
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/06/28 v2.15d AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen126
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen127
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count98
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count99
+\leftroot@=\count100
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count101
+\DOTSCASE@=\count102
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box44
+\strutbox@=\box45
+\big@size=\dimen128
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
+\dotsspace@=\muskip10
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
+\tag@help=\toks19
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
+\andhelp@=\toks20
+\eqnshift@=\dimen129
+\alignsep@=\dimen130
+\tagshift@=\dimen131
+\tagwidth@=\dimen132
+\totwidth@=\dimen133
+\lineht@=\dimen134
+\@envbody=\toks21
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2016/04/28 v1.73 
+\dashlinedash=\dimen135
+\dashlinegap=\dimen136
+\adl@box=\box46
+\adl@height=\dimen137
+\adl@heightsave=\dimen138
+\adl@depth=\dimen139
+\adl@depthsave=\dimen140
+\adl@finaldepth=\dimen141
+\adl@columns=\count110
+\adl@ncol=\count111
+\adl@currentcolumn=\count112
+\adl@currentcolumnsave=\count113
+\adl@totalheight=\count114
+\adl@totalheightsave=\count115
+\adl@dash=\count116
+\adl@gap=\count117
+\adl@cla=\count118
+\adl@clb=\count119
+\adl@everyvbox=\toks23
+\adl@LTpagetotal=\dimen142
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/feynmf/feynmp.sty
+Package: feynmp 1996/12/02 v1.08 LaTeX/MetaPost Feynman Diagram Package (ohl)
+\@outfmf=\write4
+\fmfbuf@=\toks24
+\c@fmfgraph=\count120
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvips.def on input line 147.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+\@input{hugenholtz.aux}
+\openout2 = `hugenholtz.aux'.
+
+No file hugenholtz.tex.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/carlisle/slashed.sty
+Package: slashed 1997/01/16 v0.01 Feynman Slashed Character Notation (DPC)
+)
+(./youngtab.sty
+Package: youngtab 1999/05/19 v1.1; Macros for Young-Tableaux
+\y@b@xdim=\dimen143
+\y@boxdim=\dimen144
+\y@linethick=\dimen145
+\y@interspace=\skip47
+\y@counter=\count121
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/simplewick/simplewick.sty
+Package: simplewick 2007/11/23 v1.2a
+
+Package: simplewick v1.2a (2007/11/23)
+\swb@xone=\box47
+\swb@xtwo=\box48
+\swb@xthree=\box49
+\swb@xfour=\box50
+\swdimen@ne=\dimen146
+\swdimentw@=\dimen147
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip48
+\enit@outerparindent=\dimen148
+\enit@toks=\toks25
+\enit@inbox=\box51
+\enitdp@description=\count122
+)
+\enitdp@todolist=\count123
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . )
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . )
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(./myqft.aux)
+\openout1 = `myqft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 111.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 111.
+ [1
+
+
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 126.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 126.
+ (./myqft.toc)
+\tf@toc=\write5
+\openout5 = `myqft.toc'.
+
+ [0] (../../../src/Notations.tex
+LaTeX Font Info:    Try loading font information for U+lasy on input line 3.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 15.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 15.
+
+Overfull \hbox (7.46114pt too wide) detected at line 81
+[]
+ []
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 82.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 82.
+
+LaTeX Warning: Citation `ref:Donnachie' on page 1 undefined on input line 82.
+
+
+LaTeX Warning: Citation `ref:Collins' on page 1 undefined on input line 82.
+
+[1]
+
+LaTeX Warning: Citation `ref:Peskin-Schroeder' on page 2 undefined on input lin
+e 145.
+
+) Excluding 'comment' comment.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 177.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 177.
+ (.//QM.tex [2]
+
+LaTeX Warning: Reference `eqn:SchroedingerEq' on page 3 undefined on input line
+ 43.
+
+
+Overfull \hbox (33.83037pt too wide) detected at line 44
+ \OML/cmm/m/it/10 i@[] \OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 ^^I(\OML/cmm/m/it/10 t
+\OT1/cmr/m/n/10 )  \OML/cmm/m/it/10 >\OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 j\OT
+1/cmr/m/n/10 ^^I(\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )  \OML/cmm/m/it/10 > ;  [] 
+\OT1/cmr/m/n/10 = [] + \OML/cmm/m/it/10 V\OT1/cmr/m/n/10 ([]) = []  \OML/cmm/m/
+it/10 <  []  >
+ []
+
+
+LaTeX Warning: Reference `eqn:energyEigenSt' on page 3 undefined on input line 
+56.
+
+
+Overfull \hbox (31.99155pt too wide) detected at line 57
+ [] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^O[]  >\OT1/cmr/m/n/10 = \OML/cmm/m/it/
+10 ^^O[] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^O[]  > ;  <  ^^O[] \OMS/cmsy/m/n/
+10 j\OML/cmm/m/it/10 ^^O[]  >\OT1/cmr/m/n/10 = 0[]\OML/cmm/m/it/10 l \OMS/cmsy/
+m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 l[] ;  []  \OMS/cmsy/m/n/10 j\OML/cm
+m/m/it/10 ^^O[]  ><  ^^O[]\OMS/cmsy/m/n/10 j  \OT1/cmr/m/n/10 = 1  \OML/cmm/m/i
+t/10 <  []  >
+ []
+
+
+LaTeX Warning: Reference `eqn:Psiexpansion' on page 3 undefined on input line 6
+4.
+
+
+Overfull \hbox (34.96045pt too wide) detected at line 65
+  \OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 ^^I(\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )  \O
+ML/cmm/m/it/10 >\OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 <  ^^O[]\OMS/cmsy/m/n/10 
+j \OT1/cmr/m/n/10 ^^I(0)  \OML/cmm/m/it/10 > e[] \OMS/cmsy/m/n/10 j\OML/cmm/m/i
+t/10 ^^O[]  > <  []  >
+ []
+
+
+LaTeX Warning: Reference `eqn:norm_p_state_rel' on page 3 undefined on input li
+ne 105.
+
+) (.//NbodyQM.tex [3]
+
+LaTeX Warning: Citation `ref:Takahashi_bussei1' on page 4 undefined on input li
+ne 44.
+
+
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 52--54
+[]\OT1/cmr/m/n/10 Eigenvalues of an op-er-a-tor $[] \OMS/cmsy/m/n/10 ^^Q [][]$ 
+\OT1/cmr/m/n/10 is non-neg-a-tive in-te-gers $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10
+ 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; [] ; \OMS/cmsy/m/n/10 
+1g$
+ []
+
+
+LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
+(Font)              using `JT1/mc/m/n' instead on input line 67.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
+(Font)              using `JY1/mc/m/n' instead on input line 67.
+
+
+LaTeX Warning: Reference `eqn:boson_commutation_relation' on page 4 undefined o
+n input line 77.
+
+
+LaTeX Warning: Reference `eqn:nbosonstate' on page 4 undefined on input line 96
+.
+
+[4]
+
+LaTeX Warning: Citation `ref:Takahashi_bussei1' on page 5 undefined on input li
+ne 145.
+
+[5]
+
+LaTeX Warning: Reference `eqn:coordrepbraket' on page 6 undefined on input line
+ 207.
+
+
+LaTeX Warning: Reference `eqn:SchrFieldprimitive' on page 6 undefined on input 
+line 216.
+
+
+LaTeX Warning: Reference `eqn:NpartEnergystate' on page 6 undefined on input li
+ne 249.
+
+
+LaTeX Warning: Reference `eqn:NpartCoordstate' on page 6 undefined on input lin
+e 249.
+
+
+LaTeX Warning: Reference `eqn:NpartEnergystate' on page 6 undefined on input li
+ne 253.
+
+Excluding 'comment' comment.) (.//SchroedingerFT.tex
+
+LaTeX Warning: Reference `eqn:SchrFieldprimitive' on page 6 undefined on input 
+line 1.
+
+[6]
+
+LaTeX Warning: Reference `eqn:SchroedingerEq' on page 7 undefined on input line
+ 11.
+
+
+LaTeX Warning: Reference `eqn:SchroedingerEq' on page 7 undefined on input line
+ 11.
+
+
+Overfull \hbox (16.06352pt too wide) detected at line 12
+ \OML/cmm/m/it/10 i@[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; []\OT1/cmr/m/n/10 
+) = \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; []\OT1/cmr/m/n/10 
+)  ([])
+ []
+
+
+LaTeX Warning: Reference `eqn:SchWaveOp' on page 7 undefined on input line 15.
+
+
+LaTeX Warning: Reference `eqn:Psiexpansion' on page 7 undefined on input line 1
+6.
+
+
+LaTeX Warning: Reference `eqn:SchFieldcommlutationRel' on page 7 undefined on i
+nput line 35.
+
+
+LaTeX Warning: Reference `eqn:Nbodycreanncomm' on page 7 undefined on input lin
+e 35.
+
+
+LaTeX Warning: Reference `eqn:SchroedingerEq' on page 7 undefined on input line
+ 37.
+
+
+LaTeX Warning: Reference `eqn:SchroedingerEq' on page 7 undefined on input line
+ 37.
+
+
+LaTeX Warning: Reference `eqn:SchFieldcommlutationRel' on page 7 undefined on i
+nput line 49.
+
+
+LaTeX Warning: Reference `eqn:SchroedingerFieldLagrangian' on page 7 undefined 
+on input line 64.
+
+
+LaTeX Warning: Reference `eqn:SchroedingerEq' on page 7 undefined on input line
+ 65.
+
+
+LaTeX Warning: Reference `eqn:SchroedingerEq' on page 7 undefined on input line
+ 65.
+
+
+LaTeX Warning: Reference `eqn:SchFieldCanonicalcommlutationRel' on page 7 undef
+ined on input line 66.
+
+Excluding 'comment' comment.) (.//canonicalquantization.tex [7]
+
+LaTeX Warning: Reference `eqn:conjmomentum' on page 8 undefined on input line 2
+4.
+
+
+LaTeX Warning: Reference `eqn:EulerLagrange' on page 8 undefined on input line 
+34.
+
+
+LaTeX Warning: Reference `eqn:canonicalEOM' on page 8 undefined on input line 3
+5.
+
+
+LaTeX Warning: Reference `eqn:eqtimecommrel' on page 8 undefined on input line 
+74.
+
+
+LaTeX Warning: Reference `eqn:Heisenbergformalsol' on page 8 undefined on input
+ line 76.
+
+
+LaTeX Warning: Reference `eqn:Hamiltoniandensity' on page 8 undefined on input 
+line 90.
+
+
+LaTeX Warning: Citation `ref:NIsh.1-2' on page 8 undefined on input line 95.
+
+
+LaTeX Warning: Reference `eqn:HeisenbergEOM' on page 8 undefined on input line 
+95.
+
+
+LaTeX Warning: Reference `eqn:EulerLagrange' on page 8 undefined on input line 
+96.
+
+
+LaTeX Warning: Reference `eqn:conjmomentum' on page 8 undefined on input line 9
+7.
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 106.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 106.
+
+LaTeX Warning: Citation `ref:NIsh.1-2' on page 8 undefined on input line 106.
+
+
+LaTeX Warning: Reference `eqn:eqtimecommrelHeisenberg' on page 8 undefined on i
+nput line 108.
+
+[8]
+
+LaTeX Warning: Reference `eqn:EulerLagrange' on page 9 undefined on input line 
+118.
+
+
+LaTeX Warning: Reference `eqn:eqtimecommrel' on page 9 undefined on input line 
+120.
+
+) (../../../src_qft/Noether.tex
+
+LaTeX Warning: Reference `eqn:Noeth_infsimtransf' on page 9 undefined on input 
+line 22.
+
+
+LaTeX Warning: Reference `eqn:NoetherCurrentGeneral' on page 9 undefined on inp
+ut line 53.
+
+
+LaTeX Warning: Reference `eqn:NoetherChargeGeneral' on page 9 undefined on inpu
+t line 54.
+
+[9]
+
+LaTeX Warning: Reference `eqn:NoetherCurrentGeneral' on page 10 undefined on in
+put line 75.
+
+
+LaTeX Warning: Reference `eqn:Noeth_infsimtransf' on page 10 undefined on input
+ line 93.
+
+[10]
+
+LaTeX Warning: Reference `eqn:Noeth_infsimtransf' on page 11 undefined on input
+ line 216.
+
+
+LaTeX Warning: Reference `eqn:Noeth_infsimtransf' on page 11 undefined on input
+ line 254.
+
+[11]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 292.
+
+
+Overfull \hbox (17.8591pt too wide) in alignment at lines 326--404
+ [][][] []
+ []
+
+) (.//InteractingFields.tex
+Overfull \hbox (7.66217pt too wide) in paragraph at lines 17--20
+\OT1/cmr/m/n/10 No ex-plicit $\OML/cmm/m/it/10 t$ \OT1/cmr/m/n/10 de-pen-dence 
+in $\OMS/cmsy/m/n/10 O[]$ \OT1/cmr/m/n/10 is as-sumed. For-mal so-lu-tion to th
+e Schr^^?odinger
+ []
+
+[12]
+
+LaTeX Warning: Reference `eqn:InteractionPicTime' on page 13 undefined on input
+ line 137.
+
+
+LaTeX Warning: Reference `eqn:SchrPicFormalSol' on page 13 undefined on input l
+ine 138.
+
+[13]
+
+LaTeX Warning: Citation `ref:Peskin-Schroeder' on page 14 undefined on input li
+ne 165.
+
+
+LaTeX Warning: Citation `ref:Itzykson-Zuber' on page 14 undefined on input line
+ 165.
+
+
+LaTeX Warning: Citation `ref:NIsh.1-2' on page 14 undefined on input line 165.
+
+
+LaTeX Warning: Citation `ref:Hioki' on page 14 undefined on input line 165.
+
+
+LaTeX Warning: Citation `ref:Tong' on page 14 undefined on input line 165.
+
+
+LaTeX Warning: Reference `eqn:timeEvolOpDef' on page 14 undefined on input line
+ 193.
+
+
+LaTeX Warning: Reference `eqn:DysonFormula' on page 14 undefined on input line 
+195.
+
+
+Overfull \hbox (51.11389pt too wide) in alignment at lines 209--227
+ [][][] []
+ []
+
+
+LaTeX Font Warning: Font shape `JT1/mc/bx/it' undefined
+(Font)              using `JT1/mc/bx/n' instead on input line 244.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/bx/it' undefined
+(Font)              using `JY1/mc/bx/n' instead on input line 244.
+
+
+LaTeX Warning: Reference `eqn:InteractionPicTime' on page 14 undefined on input
+ line 248.
+
+[14]
+
+LaTeX Warning: Reference `eqn:TimeDevPerturbSerTprod' on page 15 undefined on i
+nput line 263.
+
+
+LaTeX Warning: Reference `eqn:TimeDevOpPerturbSer' on page 15 undefined on inpu
+t line 263.
+
+
+LaTeX Warning: Reference `eqn:SmatrixDef' on page 15 undefined on input line 26
+4.
+
+
+LaTeX Warning: Reference `eqn:TimeDevPerturbSerTprod' on page 15 undefined on i
+nput line 266.
+
+) (.//realscalar.tex
+
+LaTeX Warning: Reference `eqn:Klein-Gordon' on page 15 undefined on input line 
+39.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 91.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 91.
+[15]
+
+LaTeX Warning: Reference `eqn:Hamiltoniandensity' on page 16 undefined on input
+ line 106.
+
+
+LaTeX Warning: Reference `eqn:HeisenbergEOM' on page 16 undefined on input line
+ 132.
+
+
+LaTeX Warning: Reference `eqn:HeisenbergEOM' on page 16 undefined on input line
+ 149.
+
+
+LaTeX Warning: Reference `eqn:Klein-Gordon' on page 16 undefined on input line 
+150.
+
+
+LaTeX Warning: Reference `eqn:KGclassicalsol' on page 16 undefined on input lin
+e 165.
+
+
+LaTeX Warning: Reference `eqn:KGclassicalpi' on page 16 undefined on input line
+ 165.
+
+
+LaTeX Warning: Reference `eqn:cancomm_eqtime_RS' on page 16 undefined on input 
+line 167.
+
+
+LaTeX Warning: Reference `eqn:cancomm_eqtime_RS' on page 16 undefined on input 
+line 169.
+
+[16] (.//realsc_commrel.tex
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
+
+
+LaTeX Warning: Reference `eqn:cancomm_eqtime_RS' on page 17 undefined on input 
+line 5.
+
+
+LaTeX Warning: Reference `eqn:cancomm_RS' on page 17 undefined on input line 5.
+
+
+
+LaTeX Warning: Reference `eqn:cancomm_RS' on page 17 undefined on input line 7.
+
+
+
+LaTeX Warning: Reference `eqn:cancomm_eqtime_RS' on page 17 undefined on input 
+line 9.
+
+
+LaTeX Warning: Reference `eqn:RS_fieldexpansion' on page 17 undefined on input 
+line 10.
+
+
+LaTeX Warning: Reference `eqn:RS_pifieldexpansion' on page 17 undefined on inpu
+t line 10.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 15.
+
+LaTeX Warning: Reference `eqn:RSC_Qk_def' on page 17 undefined on input line 73
+.
+
+
+LaTeX Warning: Reference `eqn:RSC_Pk_def' on page 17 undefined on input line 73
+.
+
+
+LaTeX Warning: Reference `eqn:cancomm_RS' on page 17 undefined on input line 85
+.
+
+
+LaTeX Warning: Reference `eqn:RSC_QQcomm' on page 17 undefined on input line 86
+.
+
+
+LaTeX Warning: Reference `eqn:RSC_QPcomm' on page 17 undefined on input line 86
+.
+
+)
+
+LaTeX Warning: Reference `eqn:RSCLagrangiandensity' on page 17 undefined on inp
+ut line 184.
+
+
+LaTeX Warning: Reference `eqn:cancomm_RS' on page 17 undefined on input line 18
+8.
+
+
+LaTeX Warning: Reference `eqn:Nbodycreanncomm' on page 17 undefined on input li
+ne 189.
+
+[17]
+
+LaTeX Warning: Reference `eqn:KG_Hamiltonian' on page 18 undefined on input lin
+e 210.
+
+
+LaTeX Warning: Reference `eqn:RS_fieldexpansion' on page 18 undefined on input 
+line 211.
+
+
+LaTeX Warning: Reference `eqn:RS_pifieldexpansion' on page 18 undefined on inpu
+t line 211.
+
+
+LaTeX Warning: Reference `eqn:KG_Hamiltonian_aadagg' on page 18 undefined on in
+put line 259.
+
+[18]
+Overfull \hbox (0.37729pt too wide) in alignment at lines 363--393
+ [][][] []
+ []
+
+[19]
+
+LaTeX Warning: Reference `eqn:Heisenbergformalsol' on page 20 undefined on inpu
+t line 446.
+
+
+LaTeX Warning: Reference `eqn:KGcommHanda' on page 20 undefined on input line 4
+66.
+
+[20]) (.//complexscalar.tex
+
+LaTeX Warning: Reference `eqn:NoetherElectricCharge' on page 21 undefined on in
+put line 81.
+
+[21]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 94.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 94.
+)
+(../../../src_qft/scalarmultiplet.tex
+
+LaTeX Warning: Reference `eqn:LieGrTransfFields' on page 22 undefined on input 
+line 9.
+
+
+LaTeX Warning: Reference `eqn:cmplscLagdens' on page 22 undefined on input line
+ 17.
+
+
+LaTeX Warning: Reference `eqn:NoetherCurrGeneral' on page 22 undefined on input
+ line 19.
+
+
+LaTeX Warning: Reference `eqn:NoetherChrgGeneral' on page 22 undefined on input
+ line 20.
+
+) (../../../src_qft/scalarYukawa.tex [22]
+
+LaTeX Warning: Reference `eqn:TimeDevPerturbSerTprod' on page 23 undefined on i
+nput line 26.
+
+Excluding 'comment' comment.
+
+LaTeX Warning: Reference `eqn:HamiltonianDecomposed' on page 23 undefined on in
+put line 88.
+
+
+LaTeX Warning: Reference `eqn:InteractionPicTime' on page 23 undefined on input
+ line 92.
+
+
+LaTeX Warning: Reference `eqn:sYfieldTimeEvo' on page 23 undefined on input lin
+e 106.
+
+
+LaTeX Warning: Reference `eqn:RS_fieldexpansion' on page 23 undefined on input 
+line 109.
+
+
+LaTeX Warning: Reference `eqn:CompScFourier' on page 23 undefined on input line
+ 109.
+
+[23]
+
+LaTeX Warning: Reference `eqn:cancomm_RS' on page 24 undefined on input line 13
+0.
+
+
+LaTeX Warning: Reference `eqn:complscalarcancomm' on page 24 undefined on input
+ line 131.
+
+
+LaTeX Warning: Reference `eqn:KG_Hamiltonian_aadagg' on page 24 undefined on in
+put line 133.
+
+
+LaTeX Warning: Reference `eqn:KGcomplex_FourMomentum' on page 24 undefined on i
+nput line 134.
+
+
+LaTeX Warning: Reference `eqn:KG_totalNumberOp' on page 24 undefined on input l
+ine 135.
+
+
+LaTeX Warning: Reference `eqn:sclYkwLagDens' on page 24 undefined on input line
+ 144.
+
+
+LaTeX Warning: Reference `eqn:sclYkwHamDens' on page 24 undefined on input line
+ 145.
+
+
+LaTeX Warning: Reference `eqn:sclYkwLagDens' on page 24 undefined on input line
+ 150.
+
+
+LaTeX Warning: Reference `eqn:KGcomplex_Charge' on page 24 undefined on input l
+ine 152.
+
+
+LaTeX Warning: Reference `eqn:TimeDevPerturbSerTprod' on page 24 undefined on i
+nput line 163.
+
+[24]
+
+LaTeX Warning: Reference `eqn:scYHIterms' on page 25 undefined on input line 23
+2.
+
+
+LaTeX Warning: Reference `eqn:scYHIterms' on page 25 undefined on input line 24
+0.
+
+
+LaTeX Warning: Reference `eqn:TimeDevPerturbSerTprod' on page 25 undefined on i
+nput line 242.
+
+
+LaTeX Warning: Reference `eqn:SmatrixPertSer' on page 25 undefined on input lin
+e 250.
+
+
+LaTeX Warning: Reference `eqn:scYHIterms' on page 25 undefined on input line 25
+1.
+
+
+LaTeX Warning: Reference `eqn:SmatrixPertSer' on page 25 undefined on input lin
+e 262.
+
+[25]
+
+LaTeX Warning: Reference `eqn:scYmesonDcyamp' on page 26 undefined on input lin
+e 282.
+
+
+LaTeX Warning: Reference `eqn:scYHIterms' on page 26 undefined on input line 28
+3.
+
+
+LaTeX Warning: Reference `eqn:scYmesonDcyamp' on page 26 undefined on input lin
+e 284.
+
+
+LaTeX Warning: Reference `eqn:Phi_nDef' on page 26 undefined on input line 340.
+
+
+
+LaTeX Warning: Reference `eqn:Smatrix_and_T' on page 26 undefined on input line
+ 340.
+
+
+LaTeX Warning: Reference `eqn:decaywidth2bdy' on page 26 undefined on input lin
+e 382.
+
+
+LaTeX Warning: Citation `ref:Donnachie' on page 26 undefined on input line 384.
+
+
+
+LaTeX Warning: Citation `ref:Collins' on page 26 undefined on input line 384.
+
+
+LaTeX Warning: Citation `ref:Itzykson-Zuber' on page 26 undefined on input line
+ 385.
+
+
+LaTeX Warning: Reference `eqn:scYmesonDcySmtrx' on page 26 undefined on input l
+ine 387.
+
+
+LaTeX Warning: Reference `eqn:decaywidth2bdy' on page 26 undefined on input lin
+e 388.
+
+[26]
+
+LaTeX Warning: Reference `eqn:SmatrixPertSer' on page 27 undefined on input lin
+e 394.
+
+) (../../../src_qft/InteractingFields2.tex
+Overfull \hbox (2.99364pt too wide) in alignment at lines 4--16
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:cancomm_RS' on page 27 undefined on input line 21
+.
+
+
+LaTeX Warning: Reference `eqn:RS_fieldexpansion' on page 27 undefined on input 
+line 21.
+
+
+LaTeX Warning: Reference `eqn:scfieldcommrel' on page 27 undefined on input lin
+e 62.
+
+
+LaTeX Warning: Reference `eqn:scFeynmanProp' on page 27 undefined on input line
+ 87.
+
+
+LaTeX Warning: Reference `eqn:scFeynPropbyD' on page 27 undefined on input line
+ 87.
+
+[27]
+Overfull \hbox (2.90356pt too wide) in alignment at lines 99--140
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:CompScFourier' on page 28 undefined on input line
+ 147.
+
+
+LaTeX Warning: Reference `eqn:complscalarcancomm' on page 28 undefined on input
+ line 147.
+
+
+LaTeX Warning: Reference `eqn:SmatrixPertSer' on page 28 undefined on input lin
+e 165.
+
+
+LaTeX Warning: Reference `eqn:scYHIterms' on page 28 undefined on input line 16
+8.
+
+
+LaTeX Warning: Reference `sec:App_Wick' on page 28 undefined on input line 171.
+
+
+
+LaTeX Warning: Reference `eqn:FeynmanPropDefSc' on page 28 undefined on input l
+ine 172.
+
+
+LaTeX Warning: Reference `eqn:WickTheorem' on page 28 undefined on input line 1
+73.
+
+
+Overfull \hbox (5.15302pt too wide) in alignment at lines 174--220
+ [][][] []
+ []
+
+[28]
+
+LaTeX Warning: Reference `eqn:CplxScProp' on page 29 undefined on input line 22
+4.
+
+
+Overfull \hbox (14.4453pt too wide) in alignment at lines 227--252
+ [][][] []
+ []
+
+) (../../../src_qft/ScYNNamp.tex
+
+LaTeX Warning: Reference `sec:ScYukawa' on page 29 undefined on input line 2.
+
+
+LaTeX Warning: Reference `eqn:SmatrixPertSerCov' on page 29 undefined on input 
+line 19.
+
+
+Overfull \hbox (9.83276pt too wide) in alignment at lines 53--126
+ [][][] []
+ []
+
+[29]
+
+LaTeX Warning: Reference `eqn:scYS2ndord' on page 30 undefined on input line 12
+7.
+
+
+LaTeX Warning: Reference `eqn:scFeynmanProp' on page 30 undefined on input line
+ 128.
+
+File: ../../../feynmf/01NNtoNNeq/NNtoNN.eps Graphic file (type eps)
+<../../../feynmf/01NNtoNNeq/NNtoNN.eps>
+Overfull \hbox (49.28938pt too wide) in alignment at lines 130--184
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:scYSelem' on page 30 undefined on input line 187.
+
+
+
+LaTeX Warning: Reference `eqn:scYSmtrxFeynmDiagNN' on page 30 undefined on inpu
+t line 194.
+
+
+LaTeX Warning: Reference `eqn:sclYkwLagDens' on page 30 undefined on input line
+ 199.
+
+
+LaTeX Warning: Reference `eqn:scYelchrg' on page 30 undefined on input line 200
+.
+
+
+LaTeX Warning: Reference `fig:scalarYNN2NNFeynm' on page 30 undefined on input 
+line 201.
+
+
+LaTeX Warning: Reference `eqn:scYSmtrxFeynmDiagNN' on page 30 undefined on inpu
+t line 202.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30]
+
+LaTeX Warning: Reference `fig:scalarYNN2NNFeynm' on page 31 undefined on input 
+line 217.
+
+
+LaTeX Warning: Reference `eqn:Smatrix_and_T' on page 31 undefined on input line
+ 230.
+
+
+LaTeX Warning: Reference `eqn:2to2cs' on page 31 undefined on input line 250.
+
+[31] Excluding 'comment' comment.
+
+LaTeX Warning: Reference `eqn:scYS2ndord' on page 32 undefined on input line 36
+5.
+
+File: ../../../feynmf/03NNbar2NNbar/Smtrx2trim.eps Graphic file (type eps)
+<../../../feynmf/03NNbar2NNbar/Smtrx2trim.eps>
+Overfull \hbox (48.40921pt too wide) in paragraph at lines 377--377
+[][] 
+ []
+
+
+LaTeX Warning: Reference `eqn:2to2cs' on page 32 undefined on input line 401.
+
+
+LaTeX Warning: Reference `eqn:scYNNbar' on page 32 undefined on input line 402.
+
+
+
+LaTeX Warning: Reference `eqn:scYSmtrxFeynmDiagNNbar' on page 32 undefined on i
+nput line 416.
+
+
+LaTeX Warning: Reference `eqn:scYSmtrxFeynmDiagNNbar' on page 32 undefined on i
+nput line 419.
+
+
+LaTeX Warning: Reference `eqn:scYS2ndord' on page 32 undefined on input line 42
+1.
+
+
+LaTeX Warning: Reference `eqn:scYfields' on page 32 undefined on input line 428
+.
+
+[32]
+
+LaTeX Warning: Reference `eqn:scYNNbarNNbarinit' on page 33 undefined on input 
+line 435.
+
+
+LaTeX Warning: Reference `eqn:scYS2ndord' on page 33 undefined on input line 43
+7.
+
+
+LaTeX Warning: Reference `eqn:scYS2ndord' on page 33 undefined on input line 54
+3.
+
+
+LaTeX Warning: Reference `eqn:NNbarSandwich' on page 33 undefined on input line
+ 618.
+
+
+LaTeX Warning: Reference `eqn:NNbarSandwFirst' on page 33 undefined on input li
+ne 619.
+
+
+Overfull \hbox (47.55243pt too wide) in alignment at lines 622--664
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:scYS2ndord' on page 33 undefined on input line 66
+5.
+
+
+LaTeX Warning: Reference `eqn:scFeynmanProp' on page 33 undefined on input line
+ 666.
+
+[33]
+
+LaTeX Warning: Reference `eqn:scYSmtrxFeynmDiagNNbar' on page 34 undefined on i
+nput line 712.
+
+
+LaTeX Warning: Reference `eqn:scYS2ndord' on page 34 undefined on input line 75
+1.
+
+
+LaTeX Warning: Reference `eqn:WickTwoNormals' on page 34 undefined on input lin
+e 756.
+
+
+LaTeX Warning: Reference `eqn:CplxScProp' on page 34 undefined on input line 80
+9.
+
+
+Overfull \hbox (115.05623pt too wide) in alignment at lines 810--854
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:scFeynmanProp' on page 34 undefined on input line
+ 856.
+
+File: ../../../feynmf/04NNbar2PiPi/Smtrx2trim.eps Graphic file (type eps)
+<../../../feynmf/04NNbar2PiPi/Smtrx2trim.eps>
+Overfull \hbox (48.40921pt too wide) in paragraph at lines 891--891
+[][] 
+ []
+
+
+Overfull \hbox (60.95523pt too wide) in alignment at lines 857--902
+ [][][] []
+ []
+
+[34]
+
+LaTeX Warning: Reference `eqn:scYAmpNNbarPiPi' on page 35 undefined on input li
+ne 904.
+
+
+LaTeX Warning: Reference `eqn:scYAmpNNbarPiPi' on page 35 undefined on input li
+ne 905.
+
+
+LaTeX Warning: Reference `eqn:scYNN2NNcs' on page 35 undefined on input line 90
+6.
+
+) [35] (.//Dirac.tex
+
+LaTeX Warning: Citation `ref:Itzykson-Zuber' on page 36 undefined on input line
+ 20.
+
+
+LaTeX Warning: Reference `eqn:Dialphbetacond' on page 36 undefined on input lin
+e 38.
+
+
+LaTeX Warning: Reference `eqn:Dialphbetacond' on page 36 undefined on input lin
+e 45.
+
+
+LaTeX Warning: Reference `eqn:DiracEqstandard' on page 36 undefined on input li
+ne 79.
+
+[36]
+
+LaTeX Warning: Reference `eqn:DiracEqstandard' on page 37 undefined on input li
+ne 104.
+
+
+LaTeX Warning: Reference `eqn:hermitealphabeta' on page 37 undefined on input l
+ine 105.
+
+
+LaTeX Warning: Reference `eqn:SU2GenFundamental' on page 37 undefined on input 
+line 174.
+
+[37]
+Overfull \hbox (18.4017pt too wide) in alignment at lines 293--336
+ [][][] []
+ []
+
+[38] [39]
+
+LaTeX Warning: Reference `eqn:DiracEqstandard' on page 40 undefined on input li
+ne 503.
+
+
+LaTeX Warning: Reference `eqn:DiracEqstandard' on page 40 undefined on input li
+ne 557.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 595.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 595.
+
+
+LaTeX Warning: Reference `eqn:DiracEqstandard' on page 40 undefined on input li
+ne 595.
+
+
+LaTeX Warning: Reference `eqn:DiracEqMomentumamp' on page 40 undefined on input
+ line 595.
+
+[40]
+
+LaTeX Warning: Reference `eqn:LorentzTransfgamma' on page 41 undefined on input
+ line 604.
+
+
+LaTeX Warning: Reference `eqn:DiracEqMomentumamp' on page 41 undefined on input
+ line 634.
+
+
+LaTeX Warning: Reference `eqn:DefConjDiracField' on page 41 undefined on input 
+line 641.
+
+
+LaTeX Warning: Reference `eqn:DiGenRotation' on page 41 undefined on input line
+ 692.
+
+
+LaTeX Warning: Reference `eqn:LorentzTransfgamma' on page 41 undefined on input
+ line 694.
+
+[41] [42]) [43] (../../../src_qft/DiracYukawa.tex
+Overfull \hbox (57.66992pt too wide) in alignment at lines 47--68
+ [][][] []
+ []
+
+[44]
+
+LaTeX Warning: Reference `eqn:DiracSpDecomp' on page 45 undefined on input line
+ 146.
+
+
+LaTeX Warning: Reference `eqn:DiracNNNNsand' on page 45 undefined on input line
+ 147.
+
+
+LaTeX Warning: Reference `eqn:DirNNNNsandIntermed' on page 45 undefined on inpu
+t line 191.
+
+
+Overfull \hbox (21.67104pt too wide) in alignment at lines 190--227
+ [][][] []
+ []
+
+[45]
+
+LaTeX Warning: Reference `eqn:DirNNNNsandIntermed' on page 46 undefined on inpu
+t line 256.
+
+
+Overfull \hbox (38.50894pt too wide) in alignment at lines 255--278
+ [][][] []
+ []
+
+File: ../../../feynmf/05DirNN2NN/Smtrx2.eps Graphic file (type eps)
+<../../../feynmf/05DirNN2NN/Smtrx2.eps>
+Overfull \hbox (117.22423pt too wide) in alignment at lines 281--378
+ [][][] []
+ []
+
+[46] [47]) (../../../src_qft/DirNNamps.tex
+Overfull \hbox (46.08775pt too wide) in alignment at lines 5--24
+ [][][] []
+ []
+
+) Excluding 'comment' comment. [48] (.//photon/photon.tex
+
+LaTeX Warning: Reference `eqn:FbyEB' on page 49 undefined on input line 79.
+
+
+LaTeX Warning: Reference `eqn:FdefinedbyA' on page 49 undefined on input line 8
+4.
+
+
+LaTeX Warning: Reference `eqn:inhomMxwF' on page 49 undefined on input line 95.
+
+
+
+LaTeX Warning: Reference `eqn:FdefinedbyA' on page 49 undefined on input line 9
+9.
+
+
+LaTeX Warning: Reference `eqn:inhomMxwF' on page 49 undefined on input line 101
+.
+
+
+LaTeX Warning: Reference `eqn:FdefinedbyA' on page 49 undefined on input line 1
+01.
+
+
+LaTeX Warning: Reference `eqn:inhomMxwF' on page 49 undefined on input line 102
+.
+
+[49]
+
+LaTeX Warning: Reference `eqn:MxwA' on page 50 undefined on input line 123.
+
+Excluding 'comment' comment.
+
+LaTeX Warning: Reference `eqn:FdefinedbyA' on page 50 undefined on input line 1
+31.
+
+
+LaTeX Warning: Reference `eqn:MxwA' on page 50 undefined on input line 139.
+
+
+LaTeX Warning: Reference `eqn:MxwA' on page 50 undefined on input line 151.
+
+
+LaTeX Warning: Reference `eqn:LagdenMx' on page 50 undefined on input line 153.
+
+
+
+LaTeX Warning: Reference `eqn:LagdenMx' on page 50 undefined on input line 162.
+
+
+[50]
+
+LaTeX Warning: Reference `eqn:LF2expressbyEB' on page 51 undefined on input lin
+e 196.
+
+
+LaTeX Warning: Reference `eqn:LF2expressbyEB' on page 51 undefined on input lin
+e 207.
+
+
+LaTeX Warning: Reference `eqn:LF2expressMx' on page 51 undefined on input line 
+214.
+
+
+LaTeX Warning: Reference `eqn:LF2expressMx' on page 51 undefined on input line 
+222.
+
+
+LaTeX Warning: Reference `eqn:MxwA' on page 51 undefined on input line 267.
+
+
+LaTeX Warning: Reference `eqn:LF2expressbyA' on page 51 undefined on input line
+ 269.
+
+[51] Excluding 'comment' comment. [52]
+
+LaTeX Warning: Reference `eqn:CoulmbLinA' on page 53 undefined on input line 46
+3.
+
+
+LaTeX Warning: Reference `eqn:F2HamiltDensA' on page 53 undefined on input line
+ 465.
+
+
+LaTeX Warning: Reference `eqn:CoulmbA0' on page 53 undefined on input line 481.
+
+
+
+LaTeX Warning: Reference `eqn:HdensCoul' on page 53 undefined on input line 526
+.
+
+
+LaTeX Warning: Reference `eqn:CoulmbGaugeCond' on page 53 undefined on input li
+ne 530.
+
+
+LaTeX Warning: Reference `eqn:CoulmbEOMj' on page 53 undefined on input line 54
+5.
+
+
+LaTeX Warning: Reference `eqn:CoulmbEOMrho' on page 53 undefined on input line 
+565.
+
+
+LaTeX Warning: Citation `ref:Jackson' on page 53 undefined on input line 571.
+
+
+LaTeX Warning: Reference `eqn:CoulmbA0' on page 53 undefined on input line 579.
+
+
+
+LaTeX Warning: Reference `eqn:CoulmbGaugeCond' on page 53 undefined on input li
+ne 581.
+
+[53]
+
+LaTeX Warning: Reference `eqn:CoulmbGaugeCond' on page 54 undefined on input li
+ne 640.
+
+
+LaTeX Warning: Citation `ref:Lifshitz' on page 54 undefined on input line 678.
+
+[54]
+
+LaTeX Warning: Reference `eqn:CoulmbProjection' on page 55 undefined on input l
+ine 685.
+
+
+LaTeX Warning: Reference `eqn:CoulPhoAApol' on page 55 undefined on input line 
+720.
+
+
+LaTeX Warning: Reference `eqn:CoulmbCanonicalAPi' on page 55 undefined on input
+ line 721.
+
+
+LaTeX Warning: Reference `eqn:CoulmbCanonicalAA' on page 55 undefined on input 
+line 721.
+
+
+LaTeX Warning: Reference `eqn:HdensCoul' on page 55 undefined on input line 739
+.
+
+
+LaTeX Warning: Reference `eqn:HamiltCoul' on page 55 undefined on input line 91
+3.
+
+
+LaTeX Warning: Reference `eqn:FeynPropCoulgauge' on page 55 undefined on input 
+line 969.
+
+
+Overfull \hbox (40.35199pt too wide) in alignment at lines 970--990
+ [][][] []
+ []
+
+[55]
+
+LaTeX Warning: Reference `eqn:LorentzLagmultip' on page 56 undefined on input l
+ine 997.
+
+[56] Excluding 'comment' comment.
+
+LaTeX Warning: Reference `eqn:LorQFermiLag' on page 57 undefined on input line 
+1147.
+
+
+LaTeX Warning: Reference `eqn:LortzCanonQcond' on page 57 undefined on input li
+ne 1183.
+
+
+LaTeX Warning: Reference `eqn:LorentzCond' on page 57 undefined on input line 1
+230.
+
+
+LaTeX Warning: Reference `eqn:LortzCanonQcond' on page 57 undefined on input li
+ne 1232.
+
+[57]
+
+LaTeX Warning: Reference `eqn:LorentzCond' on page 58 undefined on input line 1
+236.
+
+
+LaTeX Warning: Reference `eqn:phopolvecstandardchoice' on page 58 undefined on 
+input line 1255.
+
+
+LaTeX Warning: Reference `eqn:GuptaBleulerCond' on page 58 undefined on input l
+ine 1256.
+
+
+LaTeX Warning: Reference `eqn:creanncommLorGauge' on page 58 undefined on input
+ line 1261.
+
+
+LaTeX Warning: Reference `eqn:GuptaBlCondonannopbase' on page 58 undefined on i
+nput line 1272.
+
+
+LaTeX Warning: Reference `eqn:GuptaBlCondonannopbase' on page 58 undefined on i
+nput line 1330.
+
+
+LaTeX Warning: Reference `eqn:photonFieldExpansionLorentz' on page 58 undefined
+ on input line 1335.
+
+
+LaTeX Warning: Reference `eqn:creanncommLorGauge' on page 58 undefined on input
+ line 1335.
+
+[58]
+
+LaTeX Warning: Command \i invalid in math mode on input line 1346.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 1357.
+
+
+LaTeX Warning: Reference `eqn:LagdensQED' on page 59 undefined on input line 14
+31.
+
+
+LaTeX Warning: Reference `eqn:LagdensQED' on page 59 undefined on input line 14
+35.
+
+
+LaTeX Warning: Reference `eqn:QEDcovDeriv' on page 59 undefined on input line 1
+437.
+
+
+LaTeX Warning: Reference `eqn:photonProp' on page 59 undefined on input line 14
+40.
+
+) (.//photon/ampMoller.tex [59]
+
+LaTeX Warning: Reference `sec:DiracYukawa' on page 60 undefined on input line 2
+0.
+
+
+LaTeX Warning: Reference `eqn:DirNNNNsandIntermed' on page 60 undefined on inpu
+t line 138.
+
+
+LaTeX Warning: Reference `eqn:DirNNNNabbamp' on page 60 undefined on input line
+ 139.
+
+
+LaTeX Warning: Reference `eqn:Mollerambabbr' on page 60 undefined on input line
+ 141.
+
+
+Overfull \hbox (38.50894pt too wide) in alignment at lines 140--163
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `sec:DiracYukawa' on page 60 undefined on input line 1
+64.
+
+
+LaTeX Warning: Reference `eqn:SmatrixMoller1' on page 60 undefined on input lin
+e 165.
+
+
+LaTeX Warning: Reference `eqn:photonPropalpha' on page 60 undefined on input li
+ne 166.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 175.
+
+File: ../../../feynmf/06Moller/Smtrx2.eps Graphic file (type eps)
+<../../../feynmf/06Moller/Smtrx2.eps>
+Overfull \hbox (4.68144pt too wide) in alignment at lines 170--200
+ [][][] []
+ []
+
+[60]
+Overfull \hbox (9.28143pt too wide) in alignment at lines 202--219
+ [][][] []
+ []
+
+File: ../../../feynmf/07epemAnnihilation/Smtrx2.eps Graphic file (type eps)
+<../../../feynmf/07epemAnnihilation/Smtrx2.eps>
+File: ../../../feynmf/08Bhabha/Smtrx2.eps Graphic file (type eps)
+
+<../../../feynmf/08Bhabha/Smtrx2.eps> [61]) [62]
+(.//massiveVector/MassVecFree.tex
+
+LaTeX Warning: Reference `eqn:massRealProcaEOM' on page 63 undefined on input l
+ine 73.
+
+
+LaTeX Warning: Reference `eqn:massRealProcaEOM' on page 63 undefined on input l
+ine 98.
+
+
+LaTeX Warning: Reference `eqn:ProcaConjMom' on page 63 undefined on input line 
+99.
+
+
+LaTeX Warning: Reference `eqn:ProcaConjMom' on page 63 undefined on input line 
+128.
+
+[63]
+
+LaTeX Warning: Reference `eqn:ProcaLagdens' on page 64 undefined on input line 
+140.
+
+
+LaTeX Warning: Reference `eqn:massVProcaCond' on page 64 undefined on input lin
+e 162.
+
+
+LaTeX Warning: Citation `ref:Hioki' on page 64 undefined on input line 179.
+
+
+Overfull \hbox (2.88885pt too wide) in alignment at lines 182--200
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:StueckelbergEOM' on page 64 undefined on input li
+ne 235.
+
+
+LaTeX Warning: Reference `eqn:StueckelScalarComp' on page 64 undefined on input
+ line 235.
+
+[64]
+
+LaTeX Warning: Reference `eqn:StueckelbergEOM' on page 65 undefined on input li
+ne 294.
+
+
+LaTeX Warning: Reference `sec:PolarizationVector' on page 65 undefined on input
+ line 413.
+
+
+LaTeX Warning: Reference `eqn:MassVStueckSol' on page 65 undefined on input lin
+e 423.
+
+
+LaTeX Warning: Reference `eqn:StueckelbergEOM' on page 65 undefined on input li
+ne 424.
+
+
+Overfull \hbox (6.50296pt too wide) in alignment at lines 425--489
+ [][][] []
+ []
+
+
+Overfull \hbox (20.9394pt too wide) in alignment at lines 491--512
+ [][][] []
+ []
+
+
+Overfull \hbox (13.50298pt too wide) in alignment at lines 514--573
+ [][][] []
+ []
+
+[65]
+
+LaTeX Warning: Reference `eqn:StueckelbergEOM' on page 66 undefined on input li
+ne 575.
+
+
+Overfull \hbox (28.89021pt too wide) in alignment at lines 576--671
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:StueckelPolVecs' on page 66 undefined on input li
+ne 672.
+
+
+LaTeX Warning: Reference `eqn:MassVStueckSol' on page 66 undefined on input lin
+e 678.
+
+
+LaTeX Warning: Reference `eqn:StuckelExpressMomenta' on page 66 undefined on in
+put line 679.
+
+
+LaTeX Warning: Reference `eqn:StueckelPolVecs' on page 66 undefined on input li
+ne 679.
+
+
+LaTeX Warning: Reference `eqn:StueckelbergEOM' on page 66 undefined on input li
+ne 680.
+
+
+LaTeX Warning: Reference `eqn:MassVStueckSol' on page 66 undefined on input lin
+e 684.
+
+
+Overfull \hbox (10.13272pt too wide) in alignment at lines 700--744
+ [][][] []
+ []
+
+
+Overfull \hbox (5.3964pt too wide) in alignment at lines 746--762
+ [][][] []
+ []
+
+[66] Excluding 'comment' comment.) [67] (.//DerivativeCoup.tex
+
+LaTeX Warning: Reference `eqn:SmatrixPertSerCov' on page 68 undefined on input 
+line 4.
+
+
+LaTeX Warning: Reference `eqn:SmatrixPertSer' on page 68 undefined on input lin
+e 7.
+
+
+LaTeX Warning: Reference `eqn:defHintI' on page 68 undefined on input line 7.
+
+
+LaTeX Warning: Citation `ref:NIsh.' on page 68 undefined on input line 30.
+
+
+LaTeX Warning: Reference `eqn:SmatrixPertSerCov' on page 68 undefined on input 
+line 70.
+
+
+LaTeX Warning: Reference `sec:InteractingFields2' on page 68 undefined on input
+ line 99.
+
+[68]
+Overfull \hbox (10.09418pt too wide) in alignment at lines 201--280
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:DerivCoupTprod' on page 69 undefined on input lin
+e 286.
+
+
+LaTeX Warning: Reference `eqn:TProdDef' on page 69 undefined on input line 289.
+
+
+[69]
+
+LaTeX Warning: Reference `eqn:DerivCoupTprod' on page 70 undefined on input lin
+e 312.
+
+
+LaTeX Warning: Reference `eqn:DerivCoupSingleDeriv' on page 70 undefined on inp
+ut line 313.
+
+
+LaTeX Warning: Reference `sec:DiracYukawa' on page 70 undefined on input line 3
+22.
+
+
+LaTeX Warning: Reference `eqn:IniFinNNtoNN' on page 70 undefined on input line 
+328.
+
+
+Overfull \hbox (63.22643pt too wide) in alignment at lines 330--359
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:DiracNNNNsand' on page 70 undefined on input line
+ 361.
+
+
+LaTeX Warning: Reference `eqn:DirNNNNsandIntermed' on page 70 undefined on inpu
+t line 365.
+
+
+LaTeX Warning: Reference `eqn:DirNNNNabbamp' on page 70 undefined on input line
+ 365.
+
+
+LaTeX Warning: Reference `eqn:FeynmanPropDefSc' on page 70 undefined on input l
+ine 395.
+
+
+Overfull \hbox (25.57529pt too wide) in alignment at lines 397--421
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:DirYukS2Feynm' on page 70 undefined on input line
+ 422.
+
+
+LaTeX Warning: Reference `eqn:DirYukT2Feynm' on page 70 undefined on input line
+ 422.
+
+
+LaTeX Warning: Reference `eqn:MollerS2' on page 70 undefined on input line 423.
+
+
+
+LaTeX Warning: Reference `eqn:MollerT2' on page 70 undefined on input line 423.
+
+
+) [70] (.//RaritaSchwinger.tex) Excluding 'comment' comment. [71]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 342.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 342.
+
+(./A_Proof_NoethersTh.tex
+
+LaTeX Warning: Reference `eqn:APNoeth_infsimtransf' on page 72 undefined on inp
+ut line 97.
+
+[72]
+
+LaTeX Warning: Reference `eqn:relLieanddelta' on page 73 undefined on input lin
+e 151.
+
+
+LaTeX Warning: Reference `eqn:deltaLagrangiandens' on page 73 undefined on inpu
+t line 207.
+
+
+LaTeX Warning: Reference `eqn:deltaAction' on page 73 undefined on input line 2
+20.
+
+[73]
+
+LaTeX Warning: Reference `eqn:deltaAintermed' on page 74 undefined on input lin
+e 290.
+
+) (./symmetries.tex) (.//A_Wickbck.tex [74]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 51.
+
+[75]
+Overfull \hbox (9.36542pt too wide) in paragraph at lines 103--110
+\OT1/cmr/m/n/10 where $^^H[]$ de-notes one of $\OML/cmm/m/it/10 '\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$ or $\OML/cmm/m/it/10 '[]\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$, $\OML/cmm/m/it/10 t[] > t[] > [] $ 
+\OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \
+OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; []  \OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 a; b;
+ [] \OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (56.66873pt too wide) in alignment at lines 118--157
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eqn:Tprodphiphi' on page 76 undefined on input line 1
+87.
+
+[76]
+Overfull \hbox (49.29825pt too wide) in alignment at lines 198--247
+ [][][] []
+ []
+
+[77]
+
+LaTeX Warning: Reference `eqn:scfieldcommrel' on page 78 undefined on input lin
+e 332.
+
+
+LaTeX Warning: Reference `eqn:scFeynmanProp' on page 78 undefined on input line
+ 354.
+
+
+LaTeX Warning: Reference `eqn:scFeynPropbyD' on page 78 undefined on input line
+ 354.
+
+
+Overfull \hbox (2.90356pt too wide) in alignment at lines 366--407
+ [][][] []
+ []
+
+[78]
+
+LaTeX Warning: Reference `eqn:scYfields' on page 79 undefined on input line 417
+.
+
+) (../../../src_qft/A_Dirac.tex
+Overfull \hbox (18.4017pt too wide) in alignment at lines 10--53
+ [][][] []
+ []
+
+[79] [80]
+
+LaTeX Warning: Reference `eqn:DiracEqstandard' on page 81 undefined on input li
+ne 222.
+
+
+LaTeX Warning: Reference `eqn:LorentzTransfgamma' on page 81 undefined on input
+ line 305.
+
+
+LaTeX Warning: Reference `eqn:DiGenRotation' on page 81 undefined on input line
+ 322.
+
+
+LaTeX Warning: Reference `eqn:LorentzTransfgamma' on page 81 undefined on input
+ line 324.
+
+[81] [82] Excluding 'comment' comment. Excluding 'comment' comment.
+Excluding 'comment' comment. Excluding 'comment' comment.) (.//A_PolVec.tex
+[83]
+
+LaTeX Warning: Reference `eqn:APolOrthComp' on page 84 undefined on input line 
+98.
+
+) [84]
+Underfull \hbox (badness 1052) in paragraph at lines 374--376
+[]\OT1/cmr/m/n/10 Claude Itzyk-son and Jean-Bernard Zu-ber, \OT1/cmr/m/it/10 Qa
+n-tum Field The-ory\OT1/cmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
+[]\OT1/cmr/m/n/10 D. Tong, \OT1/cmr/m/it/10 "Qun-tum Field The-ory"\OT1/cmr/m/n
+/10 , Uni-ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
+\OT1/cmr/m/n/10 sity of Cam-bridge Part III Math-e-mat-i-cal Tri-pos,
+ []
+
+[85] (./myqft.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3268 strings out of 493682
+ 44047 string characters out of 6149641
+ 115139 words of memory out of 5000000
+ 6629 multiletter control sequences out of 15000+600000
+ 29476 words of font info for 118 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 30i,19n,26p,329b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on myqft.dvi (87 pages, 385196 bytes).

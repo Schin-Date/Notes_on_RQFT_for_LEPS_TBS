@@ -1,0 +1,246 @@
+\subsubsection{The Interaction Picture}
+●Schr\"odinger Picture\\
+For a given Hamiltonian $H$,
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+i \partial_t 
+\ketend \Psi \ket_S
+=
+H \ketend \Psi \ket_S
+\vspace{2mm}
+\\
+i \partial_t 
+{\cal O}_S = 0
+\end{array}
+\right.
+\end{eqnarray}
+No explicit $t$ dependence in ${\cal O}_S$ is assumed.
+Formal solution to the Schr\"odinger equation is written as
+\begin{eqnarray}
+\ketend \Psi \ket_S = e^{-iHt} \ketend \Psi_0 \ket_S
+\label{eqn:SchrPicFormalSol}
+\end{eqnarray}
+Expectation value of ${\cal O}_S$ in a state $\ketend \Psi \ket_S$ is given as
+\begin{equation}
+{}_S\!\bra \Psi \braend {\cal O}_S \ketend \Psi \ket_S
+\end{equation}
+
+\bigskip
+
+\noindent
+●Heisenberg Picture\\
+Related to the Schr\"odinger picture by
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+\ketend \Psi \ket_H
+=
+e^{iHt}
+\ketend \Psi \ket_S
+\vspace{2mm}
+\\
+{\cal O}_H = 
+e^{iHt} {\cal O}_S e^{-iHt}
+\end{array}
+\right.
+\end{eqnarray}
+so that
+\begin{equation}
+{}_H\!\bra \Psi \braend {\cal O}_H \ketend \Psi \ket_H
+=
+{}_S\!\bra \Psi \braend {\cal O}_S \ketend \Psi \ket_S
+\end{equation}
+They evolve in time as
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+i \partial_t 
+\ketend \Psi \ket_H
+=
+0
+\vspace{2mm}
+\\
+i \partial_t 
+{\cal O}_H = 
+[ {\cal O}_H, H]
+\end{array}
+\right.
+\end{eqnarray}
+
+\bigskip
+
+\noindent
+●The Interaction Picture
+\begin{eqnarray}
+H = H_0 + H_{int}
+\label{eqn:HamiltonianDecomposed}
+\end{eqnarray}
+Related to the Schr\"odinger picture by
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+\ketend \Psi \ket_I
+=
+e^{iH_0 t}
+\ketend \Psi \ket_S
+\vspace{2mm}
+\\
+{\cal O}_I = 
+e^{iH_0 t} {\cal O}_S e^{-iH_0 t}
+\end{array}
+\right.
+\end{eqnarray}
+so that
+\begin{equation}
+{}_I\!\bra \Psi \braend {\cal O}_I \ketend \Psi \ket_I
+=
+{}_S\!\bra \Psi \braend {\cal O}_S \ketend \Psi \ket_S
+\end{equation}
+The interaction Hamiltonian in this picture is time dependent;
+\begin{eqnarray}
+H_I \leftdef (H_{int})_I = 
+e^{iH_0 t} H_{int} e^{-iH_0 t}
+\label{eqn:defHintI}
+\end{eqnarray}
+$\ketend \Psi \ket_I$ and ${\cal O}_I$ 
+evolve in time as
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+i \partial_t 
+\ketend \Psi \ket_I
+=
+e^{i H_0 t} (-H_0 + H) \ketend \Psi \ket_S
+\vspace{2mm}
+\\
+\hspace{15mm}
+=
+e^{i H_0 t} H_{int} e^{-i H_0 t}e^{i H_0 t} \ketend \Psi \ket_S
+\vspace{2mm}
+\\
+\hspace{15mm}
+=
+H_I \ketend \Psi \ket_I
+\vspace{2mm}
+\\
+i \partial_t 
+{\cal O}_I = 
+[ {\cal O}_I, H_0]
+\end{array}
+\right.
+\label{eqn:InteractionPicTime}
+\end{eqnarray}
+
+%=====================================================
+\subsubsection{Dyson's Formula}
+Formal solution of Eq. (\ref{eqn:InteractionPicTime}) 
+can not be written in the form like one in Eq. (\ref{eqn:SchrPicFormalSol})
+since $H_I$ is time dependent.
+Writing the solution as
+\begin{eqnarray}
+\begin{array}{l}
+\ketend \Psi(t) \ket_I
+=
+U(t,t_0)
+\ketend \Psi(t_0) \ket_I
+\vspace{2mm}
+\\
+U(t,t) = 1
+\hspace{3mm} \mbox{and}
+\hspace{3mm}
+ U(t_3,t_2) U(t_2,t_1) = U(t_3,t_1) \,,
+\end{array}
+\label{eqn:timeEvolOpDef}
+\end{eqnarray}
+the time evolution unitary operator $U(t,t_0)$ is given as
+\begin{eqnarray}
+U(t, t_0) =
+T exp \left(
+-i \int_{t_0}^t H_I (t') dt'
+\right)\,,
+\label{eqn:DysonFormula}
+\end{eqnarray}
+where $T$ stands for time ordered product 
+\cite{ref:Peskin-Schroeder, ref:Itzykson-Zuber, ref:NIsh.1-2, ref:Hioki, ref:Tong}
+\begin{eqnarray}
+T[ {\cal O}_2(t')  {\cal O}_1 (t) ]=
+\theta(t' - t) {\cal O}_2(t')  {\cal O}_1 (t) +
+\theta(t - t'){\cal O}_1(t)  {\cal O}_2 (t') \,.
+\label{eqn:TProdDef}
+\end{eqnarray}
+In fact, for $t > t_0$
+\begin{eqnarray}
+i\partial_t U(t, t_0)
+&=&
+T \left[
+H_I(t) 
+ exp \left(
+-i \int_{t_0}^t H_I (t') dt'
+\right)
+\right]
+\nonumber\\
+&=&
+H_I(t) 
+T exp \left(
+-i \int_{t_0}^t H_I (t') dt'
+\right)
+\nonumber\\
+&=&
+H_I(t) 
+U(t, t_0)
+\end{eqnarray}
+and the conditions for $U(t, t_0)$ in Eq. (\ref{eqn:timeEvolOpDef})
+is obviously satisfied.
+We may write Eq. (\ref{eqn:DysonFormula}) in a form of series as
+\begin{eqnarray}
+U(t, t_0) &=&
+1 -i \int_{t_0}^t H_I (t') dt'
+\nonumber\\
+&&+
+\frac{(-i)^2}{2}
+\int_{t_0}^t dt'
+\int_{t_0}^t dt''
+\;T[ H_I (t') H_I (t'')]
++ \cdots
+\label{eqn:TimeDevPerturbSerTprod}
+\end{eqnarray}
+
+%=====================================================
+\subsubsection{The S-matrix}
+Dealing with the scattering, we {\bf \textit{assume}} that initial and final states are
+eigenstates of $H_0$. To be more concrete, let ${\cal O}_0$ be a complete set of
+observables that includes $H_0$ and no one of them depends on $t$ in an explicit manner.
+In the interaction picture, observables in ${\cal O}_0$ are constant as operators. [See Eq.
+(\ref{eqn:InteractionPicTime}).] What we have assumed is that the initial and final states
+are eigenstates of ${\cal O}_0$.
+
+The scattering process takes place as follows. At $t_1 \to -\infty$, the system is in the initial
+state $\ketend i \ket$, the system evolves in time by $U(t_2, t_1)$ under the effect of
+$H_I$, then, at $t_2 \to \infty$, the system turns in to the scattered state.
+The amplitude to find a final state $\ketend f \ket$ in the scattered state is 
+\begin{eqnarray}
+\lim_{\stackrel{\scriptstyle t_1 \to -\infty}{t_2 \to \infty}}
+\bra f \braend U(t_2, t_1) \ketend i \ket
+\rightdef
+\bra f \braend S \ketend i \ket
+\label{eqn:SmatrixDef}
+\end{eqnarray}
+This is the definition of the S-matrix. Obviously, $S$ is unitary.
+Substituting Eq. (\ref{eqn:TimeDevPerturbSerTprod}) 
+in Eq. (\ref{eqn:SmatrixDef}), we 
+may consider the operator $S$ as given in the form of a perturbation series
+and write
+\begin{eqnarray}
+ S -1 
+&=&
+ -i \int_{-\infty}^\infty H_I (t') dt'
+\nonumber\\
+&&+
+\frac{(-i)^2}{2}
+\int_{-\infty}^\infty dt'
+ dt''
+\;T[ H_I (t') H_I (t'')]
++ \cdots
+\label{eqn:SmatrixPertSer}
+\end{eqnarray}

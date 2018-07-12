@@ -1,0 +1,145 @@
+%\setcounter{subsection}{-1}
+%\subsection{Notations}
+$\blacksquare$
+metric of 4-vector space:
+\begin{equation*}
+   g = 
+ \left( \begin{array}{cccc}
+       1 & 0&0&0\\
+       0 & -1&0&0\\
+       0 & 0&-1&0\\
+       0 & 0&0&-1\\
+              \end{array} \right)\hspace{10mm}({\mbox{\small "Bjorken-Drell metric"}})
+\label{eqn:metric}
+\end{equation*}
+The square of a 4-vector $\underline{p} = (p^0, \bld{p}) = (p^0, p^1, p^2, p^3)$ is
+\[ \underline{p}^2 = \underline{p}^T g\, \underline{p} = (p^0)^2 - (p^1)^2 - (p^2)^2 - (p^3)^2 = (p^0)^2 - \bld{p}^2\,, \]
+where a superscript $T$ denotes the transpose. An underline on a quantity (e.g. $\underline{p}$) indicates a 
+%contravariant 
+4-vector but it is frequently suppressed.
+% and $\underline{p}$ is written just as $p$, when there is no possibility of confusions.
+When components of a 4-vector are given, they are contravariant components by default.
+The contravariant components of a 4-vector $\underline{p}$ are denoted as $p^{\mu}$ with
+upper suffixes. To make sure that components are contravariant, we often denote a 4-vector
+itself as $p^{\mu}$. For given contravariant components, covariant components are obtained
+as
+\[ p_{\mu} = g_{\mu \nu} p^\nu \,,\]
+where $g_{\mu \nu}$ is the ($\mu \nu$) element of $g$.
+Thus, for the $\underline{p}$ given in the above, we write $p_{\mu} = (p^0, -\bld{p})$.
+The square of a 4-vector $\underline{p}$ is now also written as
+\[ \underline{p}^2 = p_{\mu} p^{\mu} \,,\]
+where same suffixes $\mu$ in lower and upper positions must be summed over $\mu \in [0,3]$.
+
+\bigskip
+
+\bigskip
+
+
+\noindent
+$\blacksquare$ Energy-momentum of a particle of the mass $m$ is written as
+\begin{equation*}
+	p^\mu \;\leftdef
+         \left( \begin{array}{c} E/ c \\ 
+          \bld{p}  \end{array} \right)  
+          =
+	mc
+         \left( \begin{array}{c} \gamma \\ 
+          \gamma\bld{\beta}  \end{array} \right)  
+          = m u^\mu \,,
+\label{eqn:enmomvec}
+\end{equation*}
+where $\gamma \equiv 1 /\sqrt{1 - \bld{\beta}^2}$ denotes the Lorentz factor of motion of the particle,
+$\bld{\beta}$ stands for the velocity nomalized by one of the light, $c$,
+and $u^\mu$ is the four-velocity.
+
+\bigskip
+
+\bigskip
+
+
+\noindent
+$\blacksquare$ Natural unit ($c = \hbar = 1$) is employed throughout our discussions.
+E.g. for the energy-momentum given in the above, we write
+\[ E = \sqrt{\bld{p}^2 + m^2} 
+\hspace{3mm}
+\mbox{and}
+\hspace{3mm}
+\underline{p}^2 = m^2 \,.
+\]
+
+\noindent
+$\blacksquare$
+Nomalization of states\\
+\begin{equation*}
+\begin{array}{l}
+\mbox{Energy-momentum eigenstate:}\hspace{3mm}
+ \bra p \braketend p' \ket = 2 E \delta^3 ( \bld{p} - \bld{p}' )$,\hspace{2mm}$E = \sqrt{m^2 + \bld{p}^2}\\
+\mbox{Completeness:}\hspace{3mm}
+{\displaystyle   \int \frac{d^3 \bld{p}}{2E}} \ketend p \ket \bra p \braend = 1\,.
+\end{array}
+\label{eqn:statenormalization}
+\end{equation*}
+Many authors including ones of Refs. \cite{ref:Donnachie} and \cite{ref:Collins} 
+put a factor $(2\pi)^3$ in the front of $\delta$ function and in the denominator 
+of the integration volume element. It is just a matter of convention.
+Note that
+\begin{equation*}
+Dim[ \ketend p \ket ] = [E] ^{-1}
+\end{equation*}
+
+\noindent
+$\blacksquare$
+Levi-Civita symbols\\
+These are totally antisymmetric tensor densities.\\
+
+\noindent
+3 dimensional
+\begin{eqnarray*}
+\epsilon_{ijk}
+=
+\left\{
+\begin{array}{l}
+\raisebox{-.3\height}{${\stackrel{\displaystyle+}{-}}$} \;1
+\hspace{5mm}
+(i, j, k) =
+\raisebox{-.3\height}{$\stackrel{\mbox{even}}{\mbox{odd}}$} \,\;\mbox{permutation of } (1,2,3)
+\vspace{2mm}
+\\
+0
+\hspace{5mm}
+\mbox{otherwise}
+\end{array}
+\right.
+\label{eqn:LeviCivita3dim}
+\end{eqnarray*}
+For the purpose of applying the Einstein's contraction rule to 3 vector suffices,
+we may use symbols like $\epsilon^{ijk}$, $\epsilon_{ij}^{\;\;\;k}$ and so on.
+All these symbols are equivalent with $\epsilon_{ijk}$.
+%Eq. (\ref{eqn:LeviCivita3dim}).
+The vertical positions of indexes have no meaning.\\
+
+\noindent
+4 dimensional
+\begin{eqnarray*}
+\epsilon^{\mu\nu\rho\sigma}
+=
+\left\{
+\begin{array}{l}
++ 1
+\hspace{5mm}
+(\mu, \nu, \rho, \sigma, ) = \mbox{even parmutation of } (0, 1, 2, 3)
+\\
+- 1
+\hspace{5mm}
+(\mu, \nu, \rho, \sigma, ) = \mbox{odd parmutation of } (0, 1, 2, 3)
+\\
+0
+\hspace{5mm}
+\mbox{otherwise}
+\end{array}
+\right.
+\end{eqnarray*}
+Symbols with covariant suffices are defined with the metric tensor 
+in such a way like $\epsilon_\mu^{\;\;\nu\rho\sigma} = g_{\mu \tau} \epsilon^{\tau \nu\rho\sigma}$.
+Therefore, we have $\epsilon_{\mu\nu\rho\sigma} = - \epsilon^{\mu\nu\rho\sigma}$.
+This notation follows \cite{ref:Peskin-Schroeder}.

@@ -1,0 +1,251 @@
+\documentclass{article}
+%\documentclass[12pt]{article}
+\pagestyle{empty}           % <======= surpress page numbers
+\newcommand{\bld}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\utilde}[1]{\mbox{$#1$}\hspace{-.8em}\raisebox{-1ex}{$\sim$}}
+\newcommand{\leftdef}[0]{\,\mbox{$\stackrel{\leftarrow}{=}$}\,}
+\newcommand{\rightdef}[0]{\,\mbox{$\stackrel{\rightarrow}{=}$}\,}
+\newcommand{\bra}[0]{<\!}
+\newcommand{\braketend}[0]{\,|\,}
+\newcommand{\braend}[0]{|\,}
+\newcommand{\ketend}[0]{\,|}
+\newcommand{\ket}[0]{\!>}
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{\scriptsize{#1}}\hfil
+\crcr
+\raise0.2ex\hbox{\large$\bigcirc$}}}
+\newcommand{\normord}[1]{%
+  {:\mathrel{\mspace{1mu}#1\mspace{1mu}}:}%
+}
+\newcommand{\normalprod}[1]{%
+  {:\mathrel{\mspace{1mu}#1\mspace{1mu}}:}%
+}
+
+
+
+%\oddsidemargin 10pt
+%\evensidemargin 10pt
+\setlength{\textheight}{42\baselineskip}
+%\textheight 600pt
+\topmargin -5mm
+\footskip 25mm
+ \renewcommand\footnoterule{
+ %\vspace*{-3pt}%
+ \vspace*{9pt}%
+     \hrule width 2in height 0.4pt
+     \vspace*{2.6pt}}
+%\marginparsep 5cm
+%\marginparwidth5cm
+
+\newcounter{exercise}
+
+\newcounter{problem}
+\newcounter{refprob}
+%080219 Problems are numbered by a new counter "problem".
+%       One additional counter "refprob" is defined to refer
+%       to a previous problem. Find an example in
+%       set07/sec02F_3dim_x.tex
+%\oddsidemargin10pt
+\newcounter{exple}
+\newcounter{refexple}
+%100104 Examples are numbered by a new counter "exple".
+%       One additional counter "refexple" is defined to refer
+%       to a previous example. 
+
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{cancel}
+\usepackage{comment}
+%\usepackage{multicol}
+%\setlength{\columnseprule}{1pt}
+%\usepackage{vwcol}
+\usepackage{amsmath}
+\usepackage{arydshln}  %dashed line in a matrix
+
+\usepackage{feynmp}%%%{feynmp}
+
+\usepackage{color}
+\newcommand{\bl}[0]{\color{blue}}
+\newcommand{\re}[0]{\color{red}}
+\newcommand{\gr}[0]{\color{green}}
+\newcommand{\cy}[0]{\color{cyan}}
+\newcommand{\ma}[0]{\color{magenta}}
+\newcommand{\ye}[0]{\color{yellow}}
+
+\include{hugenholtz}  % macros for hugenholtz diagrams
+
+\usepackage{slashed}
+
+\usepackage[vcentermath]{youngtab}
+
+
+\begin{document}
+\unitlength=1mm  %<<<---------------------------------------------- scale
+\parbox{40mm}
+{
+\begin{fmffile}{NNbyPi1}
+	\begin{fmfgraph*}(40,20)
+			%\fmfpen{thick}
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2} 
+			%\fmfv{label=$p_b$, label.angle=90}{i1}
+			\fmflabel{N}{i1}
+			%OK \fmfiv{d.sh=circle,d.f=1,d.si=2thin}{c}
+			%OK \fmfiv{l=pa,l.angle=120,label.distance=.2w}{c}
+			\fmflabel{N}{i2}
+			%\fmfv{label=$p_a$, label.angle=270}{i2}
+			\fmflabel{N}{o1}
+			\fmflabel{N}{o2}
+			%\fmf{fermion,label=$p_b$, label.side=left, tension=2}{i1,v1}
+			%\fmf{fermion, tension=2,label=$p_b$,label.dist=5mm}{i1,v1}
+			\fmf{fermion, tension=2}{i1,v1}
+			%\fmf{fermion,tension=2,label=none, label.side=left}{v1,o1}
+			\fmf{fermion,tension=2}{v1,o1}
+			%NG \fmfcmd{draw v1--o1 withpen pencircle scaled 1bp;}
+			\fmf{fermion,tension=2}{i2,v2}
+			%label.bot(btex $p_a$ etex,
+			%NG \fmfcmd{label.bot("p_a",1/2[i2,v2])}
+			\fmf{fermion,tension=2}{v2,o2}
+			\fmf{dashes}{v1,v2}
+			%\fmflabel{$-ig(2\pi)^4 \delta^4(\sum_{in} p_{in})$}{v1}
+			%\fmflabel{$-ig(2\pi)^4 \delta^4(\sum_{in} p_{in})$}{v2}
+			%
+			%\fmfposition
+			\fmffreeze
+			\fmfipair{ain,avp}
+			\fmfiset{ain}{vloc(__i2)}
+			\fmfiset{avp}{vloc(__v2)}
+			\fmfipath{pa}
+			\fmfiset{pa}{vpath(__i2,__v2)}
+			\fmfiv{d.shape=circle,d.size=0mm,label=$p_a$,label.angle=-45,label.dist=2.5mm}{ain}
+			%NG \fmfcmd{label.bot("a",1/2pa)}
+			%\fmfcmd{draw ain--avp}
+			%\fmfipath{p}
+			%\fmfiset{p}{vpath(__i2,__v2)}
+			%NG \fmfcmd{label.bot("a",1/2[__i2,__v2])}
+			%\fmflabel{left=0.5,label=$p_a$,label.side=left,label.dist=-0.05w}{i1}			
+			%\fmflabel{left=0.5,label=$p_a$}{i1}			
+	\end{fmfgraph*}
+\end{fmffile}
+}
+\hspace{3mm}
+$+$
+\hspace{3mm}
+\parbox{40mm}
+{
+\begin{fmffile}{NNbyPi2}
+	\begin{fmfgraph*}(40,20)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2} 
+			\fmflabel{$p_b$}{i1}
+			\fmflabel{$p_a$}{i2}
+			\fmflabel{$p_1$}{o1}
+			\fmflabel{$p_2$}{o2}
+			\fmf{fermion,tension=2}{i1,v1,o1}
+			\fmf{fermion,tension=2}{i2,v2,o2}
+			\fmf{dashes}{v1,v2}
+	\end{fmfgraph*}
+\end{fmffile}
+}
+
+\newpage
+
+
+\begin{eqnarray}
+\bra f \braend S - 1 \ketend i \ket
+&=&
+\frac{(-i g)^2}{2 (2\pi)^6} \int \frac{d^4 k}{(2\pi)^4} 
+\frac{i}{k^2 - m^2 + i\epsilon}
+\int d^4 x_1 d^4 x_2
+\left\{
+e^{i(p_1 + k - p_a)x_1}e^{i(p_2 - k - p_b)}
+\right.
+\nonumber\\
+&&
++
+e^{i(p_2 + k - p_a)x_1}e^{i(p_1 - k - p_b)}
++
+e^{i(p_1 + k - p_b)x_1}e^{i(p_2 - k - p_1)}
+\nonumber\\
+&&
+\left.
++
+e^{i(p_2 + k - p_b)x_1}e^{i(p_1 - k - p_a)}
+\right\}
+\nonumber\\
+&=&
+\frac{i(-i g)^2}{(2\pi)^6} \int 
+\frac{(2\pi)^4 d^4 k}{k^2 - m^2 + i\epsilon}
+\left\{
+\delta^4(p_1 + k - p_a)\delta^4(p_2 - k - p_b)
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{35mm}
++
+\delta^4(p_2 + k - p_a)\delta^4(p_1 - k - p_b)
+\right\}
+\nonumber\\
+&=&
+\frac{i(-i g)^2}{(2\pi)^6} 
+\left\{
+\frac{1}{(p_1 - p_a)^2 - m^2}
++
+\frac{1}{(p_2 - p_a)^2 - m^2}
+\right\}
+\nonumber\\
+&&
+\times (2\pi)^4 \delta^4(p_1 + p_2 - p_a - p_b)
+\nonumber\\
+&=&
+\nonumber\\
+&&
+\unitlength=1mm  %<<<---------------------------------------------- scale
+\parbox{40mm}
+{
+\begin{fmffile}{eqNNbyPi1}
+	\begin{fmfgraph*}(40,20)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2} 
+			%\fmfv{label=$p_b$, label.angle=90}{i1}
+			\fmflabel{$p_b$}{i1}
+			\fmflabel{$p_a$}{i2}
+			%\fmfv{label=$p_a$, label.angle=270}{i2}
+			\fmflabel{$p_2$}{o1}
+			\fmflabel{$p_1$}{o2}
+			\fmf{fermion,tension=2}{i1,v1,o1}
+			\fmf{fermion,tension=2}{i2,v2,o2}
+			\fmf{dashes}{v1,v2}
+			%\fmflabel{$-ig(2\pi)^4 \delta^4(\sum_{in} p_{in})$}{v1}
+			%\fmflabel{$-ig(2\pi)^4 \delta^4(\sum_{in} p_{in})$}{v2}
+	\end{fmfgraph*}
+\end{fmffile}
+}
+\hspace{3mm}
++
+\hspace{3mm}
+\parbox{40mm}
+{
+\begin{fmffile}{eqNNbyPi2}
+	\begin{fmfgraph*}(40,20)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2} 
+			\fmflabel{$p_b$}{i1}
+			\fmflabel{$p_a$}{i2}
+			\fmflabel{$p_1$}{o1}
+			\fmflabel{$p_2$}{o2}
+			\fmf{fermion,tension=2}{i1,v1,o1}
+			\fmf{fermion,tension=2}{i2,v2,o2}
+			\fmf{dashes}{v1,v2}
+	\end{fmfgraph*}
+\end{fmffile}
+}
+\end{eqnarray}
+
+
+\end{document}
+

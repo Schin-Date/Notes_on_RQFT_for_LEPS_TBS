@@ -1,0 +1,423 @@
+
+\indent
+
+So far, we are evaluating S-matrix elements making use of Dyson's formula (\ref{eqn:SmatrixPertSerCov})
+where interaction Hamiltonian density in the interaction picture is denoted just as $\mathcal{H}_{int}$.
+This is however a shorthand for $(\mathcal{H}_{int})_I$ 
+if we faithfully follow notations used in Eqs. (\ref{eqn:SmatrixPertSer}) and (\ref{eqn:defHintI}).
+This shorthand had been allowed since $(\mathcal{H}_{int})_I$ 
+could be obtained just by replacing Heisenberg operator fields involved in $\mathcal{H}_{int} = -\mathcal{L}_{int}$
+by ones in the interaction picture.
+However, this blessed situation relies on a fact that
+we have been considering only $\mathcal{L}_{int}$
+that does not involve derivatives of fields.
+Let us consider
+ a theory with field $\varphi (x)$ described by
+$\mathcal{L} = \mathcal{L}_0 (\varphi, \dot{\varphi}) + \mathcal{L}_{int}$, where
+we omit spatial derivatives of $\varphi$ included in $\mathcal{L}$.
+When $\mathcal{L}_{int}$ does not involve $\dot{\varphi}$, 
+the conjugate momentum is given by
+$\pi = \partial \mathcal{L}_0 / \partial \dot{\varphi}$ and the Hamiltonian density reads
+$\mathcal{H} = \pi \dot{\varphi} - \mathcal{L} = \mathcal{H}_0 - \mathcal{L}_{int}$, where
+$\mathcal{H}_0 = \dot{\varphi} \partial \mathcal{L}_0 / \partial \dot{\varphi} - \mathcal{L}_0$.
+Thus we may write $\mathcal{H}_{int} = -\mathcal{L}_{int} (\varphi)$ and
+understand that $(\mathcal{H}_{int})_I =  -\mathcal{L}_{int} (\varphi_I)$.
+This is the situation we have been engaged so far.
+For derivative couplings at play, we have $\mathcal{L}_{int} = \mathcal{L}_{int} (\varphi, \dot{\varphi})$
+and it turns out
+\footnote{%------------------------------- footnote >>
+See addendum 1 below which follows ref. \cite{ref:NIsh.}.
+}%------------------------------- footnote \\
+that
+$(\mathcal{H}_{int})_I = -\mathcal{L}_{int} (\varphi_I, \dot{\varphi}_I)
++ (1/2)\left( \partial \mathcal{L}_{int} / \partial \dot{\varphi}_I \right)^2$ 
+for systems with $\partial \mathcal{L}_0 / \partial \dot{\varphi} = \dot{\varphi}$
+and $\mathcal{L}_{int}$ depending only linearly on $\dot{\varphi}$.
+The appearance of the second term in $(\mathcal{H}_{int})_I$ is rather messy.
+
+
+There is another problem caused by the presence of derivative couplings.
+In evaluating S-matrix, we will meet vacuum expectation value of
+the T-product of derivatives of fields. 
+It turns out
+\footnote{%------------------------------- footnote >>
+See addendum 2 below.
+}%------------------------------- footnote \\
+ that
+\begin{eqnarray}
+\bra 0 \braend T\left[
+\partial_\mu \varphi(x) \partial_\nu \varphi(y) \right]
+\ketend 0 \ket
+&=&
+\partial_{x^\mu}
+\partial_{y^\nu}
+\bra 0 \braend T\left[
+\varphi(x) \varphi(y) \right]
+\ketend 0 \ket
+\nonumber\\
+&&
+-
+i \delta_{\mu 0} \delta_{\nu 0}
+\delta^4(x - y)
+\label{eqn:DerivCoupTprod}
+\end{eqnarray}
+The second term in the $r.h.s$ is, again, rather messy.
+It turns out, however, that the above mentioned two problems cancel each other
+%and the result is a quite simple prescription.
+resulting in a  simple prescription.
+Namely, we may keep to write 
+$\mathcal{H}_{int} = -\mathcal{L}_{int}(\varphi_I, \partial_\mu \varphi_I)$ 
+in Eq. (\ref{eqn:SmatrixPertSerCov})
+with a compensation that we must replace T products by
+T${}^*$ products defined by
+\begin{eqnarray}
+T^*\left[
+\partial_\mu \varphi(x) \partial_\nu \varphi(y) \right]
+&\equiv&
+\partial_{x^\mu}
+\partial_{y^\nu}
+T\left[
+\varphi(x) \varphi(y) \right]
+\end{eqnarray}
+
+\bigskip
+
+\verb/-----------.-----------.-----------.-----------.-----------/\\
+\vspace{-3mm}
+{\small
+\begin{center}
+Addendum1. Effect of derivative couplings on the form of $(\mathcal{H}_{int})_I$
+\end{center}
+
+Field operators $\varphi_I (x)$ in the interaction picture follow free field equations 
+corresponding to a Lagrangian density $\mathcal{L}_{0}(\varphi_I (x), \dot{\varphi_I} (x))$.
+The momentum field conjugate to $\varphi_I (x)$ is given as
+$\pi_I (x) = \partial \mathcal{L}_0 / \partial \dot{\varphi_I} (x)$
+and the free Hamiltonian density in this picture
+$(\mathcal{H}_0)_I = \pi_I \dot{\varphi_I} -  \mathcal{L}_{0}(\varphi_I (x), \dot{\varphi_I} (x))$
+govern the time evolution of $\varphi_I (x)$.
+As we have discussed in \ref{sec:InteractingFields2},
+operators in the interaction picture $\mathcal{O}_I$ are related with
+ones in the Heisenberg picture, $\mathcal{O}_H$, by an unitary time evolution 
+operator $U$ as $\mathcal{O}_I = U \mathcal{O}_H U^{-1}$.
+%\begin{eqnarray}
+%\mathcal{O}_I = U \mathcal{O}_H U^{-1}
+%\end{eqnarray}
+
+Writing the full Lagrangian density as 
+$\mathcal{L} = \mathcal{L}_0 + \mathcal{L}_{int} (\varphi (x), \dot{\varphi} (x))$,
+the conjugate momentum is given by
+$\pi = \partial \mathcal{L}_0 / \partial \dot{\varphi} + \partial \mathcal{L}_{int} / \partial \dot{\varphi}$.
+The second term contributes when derivative couplings are involved in $\mathcal{L}_{int}$.
+For simplicity, we consider the case 
+such like as the scalar field
+where
+$\partial \mathcal{L}_0 / \partial \dot{\varphi} = \dot{\varphi}$
+so that $\pi = \dot{\varphi} + \partial \mathcal{L}_{int} / \partial \dot{\varphi}$
+and $\pi_I = \dot{\varphi}_I$.
+The full Hamiltonian density is defined by
+$\mathcal{H} = \pi \dot{\varphi} - \mathcal{L}(\varphi (x), \dot{\varphi} (x))$
+and it is written in terms of Heisenberg fields.
+Converting $\mathcal{H}$ into the interaction picture as
+$\mathcal{H}_{I} = U \mathcal{H} U^{-1}$,
+one meets an object 
+$U^{-1} \dot{\varphi} U \rightdef (\dot{\varphi})_I$
+ which is different from
+$\dot{\varphi}_I = \partial_0 ({\varphi}_I)$. 
+We write
+\begin{eqnarray}
+(\dot{\varphi})_I
+&=&
+\pi_I - U \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}} (\varphi , \dot{\varphi} ) U^{-1}
+\nonumber\\
+&=&
+\dot{\varphi}_I -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
+(\varphi_I , (\dot{\varphi})_I ) 
+\nonumber\\
+&=&
+\dot{\varphi}_I -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
+(\varphi_I , \dot{\varphi}_I ) 
++
+\Delta_2
+\end{eqnarray}
+where $\Delta_2$ represents terms of the second and higher orders of $\mathcal{L}_{int}$
+and it appears only when $\mathcal{L}_{int}$ involves quadratic and higher orders of $\dot{\varphi}$.
+The second term in $\mathcal{H}$ is converted as
+\begin{eqnarray}
+&&\mathcal{L} (\varphi_I , 
+\dot{\varphi}_I -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
++
+\Delta_2
+ )
+\nonumber\\
+&&=
+\mathcal{L} (\varphi_I , \dot{\varphi}_I)
++
+\frac{\partial \mathcal{L}}
+{\partial \dot{\varphi}_{I \alpha} }
+\left\{
+ -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
++
+\Delta_2
+\right\}_\alpha
+ \nonumber\\
+&& \hspace{10mm}
++
+\frac{1}{2}
+\frac{\partial^2 \mathcal{L}}
+{\partial \dot{\varphi}_{I \alpha} \partial \dot{\varphi}_{I \beta}}
+\left\{
+ -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
++
+\Delta_2
+\right\}_\alpha
+\left\{
+ -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
++
+\Delta_2
+\right\}_\beta
+\label{eqn:DerCoupFullLagIntPic1}
+\end{eqnarray}
+where an extra suffix $\alpha$ or $\beta$ is added on the field to
+correspond to cases of fields with multiple components. With our assumption
+on the form of $\mathcal{L}_0$, we have
+\begin{eqnarray}
+\frac{\partial \mathcal{L}}
+{\partial \dot{\varphi}_{I \alpha}}
+=
+\pi_I +
+\frac{\partial \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I \alpha}}
+\,,
+\hspace{5mm}
+\frac{\partial^2 \mathcal{L}}
+{\partial \dot{\varphi}_{I \alpha} \partial \dot{\varphi}_{I \beta}}
+=
+\delta^{\alpha \beta} + 
+\frac{\partial^2 \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I \alpha} \partial \dot{\varphi}_{I \beta}}
+\end{eqnarray}
+Then we write, 
+\begin{eqnarray}
+\mathcal{H}_I 
+&=&
+\pi_I (\dot{\varphi})_I -
+\mathcal{L} (\varphi_I , (\dot{\varphi})_I )
+\nonumber\\
+&=&
+\pi_I
+\left\{
+\dot{\varphi}_I
+-
+\frac{\partial \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I }}
++
+\Delta_2
+\right\}
+- \mathcal{L} (\varphi_I , \dot{\varphi}_I)
+-
+\left\{
+\pi_I +
+\frac{\partial \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I }}
+\right\}_\alpha
+\left\{
+ -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
++
+\Delta_2
+\right\}_\alpha
+\nonumber\\
+&&
+- \frac{1}{2}
+\left\{
+ -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
++
+\Delta_2
+\right\}^2
+-
+\frac{\partial^2 \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I}^2  } \times
+\mathcal{O}(\mathcal{L}_{int}^2)
+\nonumber\\
+&=&
+\pi_I \dot{\varphi}_I
+- \mathcal{L} (\varphi_I , \dot{\varphi}_I)
+-
+\frac{\partial \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I \alpha}}
+\left\{
+ -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
++
+\Delta_2
+\right\}_\alpha
+\nonumber\\
+&&
+- \frac{1}{2}
+\left\{
+ -  \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
+ +
+\Delta_2
+\right\}^2
+-
+\frac{\partial^2 \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I}^2  } \times
+\mathcal{O}(\mathcal{L}_{int}^2)
+\nonumber\\
+&=&
+(\mathcal{H}_0)_I  - \mathcal{L}_{int} (\varphi_I , \dot{\varphi}_I)
++\frac{1}{2} \left(
+ \frac{\partial \mathcal{L}_{int}}{\partial \dot{\varphi}_I} 
+ \right)^2
+ - 
+ \left\{
+ \frac{(\Delta_2)^2}{2}
+ +
+\frac{\partial^2 \mathcal{L}_{int}}
+{\partial \dot{\varphi}_{I}^2  } \times
+\mathcal{O}(\mathcal{L}_{int}^2)
+\right\}
+ \nonumber\\
+\end{eqnarray}
+Thus, we confirm a statement on the form of $(\mathcal{H}_{int})_I$ as it is mentioned in the text.
+
+
+\vspace{7mm}
+\begin{center}
+Addendum2. Derivation of Eq. (\ref{eqn:DerivCoupTprod})
+\end{center}
+%\\
+From the definition of T product in Eq. (\ref{eqn:TProdDef}), we have
+\begin{eqnarray}
+\partial_{x^\mu} T[\varphi(x) \varphi(y)]
+=
+T[\partial_{\mu} \varphi(x) \cdot \varphi(y)]
++
+\delta(x^0 - y^0) [\varphi(x), \varphi(y)]
+\label{eqn:DerivCoupSingleDeriv}
+\end{eqnarray}
+The second term in the $r.h.s.$ vanishes in the scheme of canonical quantization.
+Thus, single derivative does not make any trouble. However,
+\begin{eqnarray}
+\partial_{y^\nu} T[\partial_{\mu} \varphi(x) \cdot \varphi(y)]
+&=&
+T[\partial_{\mu} \varphi(x)  \partial_{\nu} \varphi(y)]
++
+\delta_{\nu 0} \delta(x^0 - y^0) [\varphi(y), \partial_{\mu} \varphi(x)]
+\nonumber\\
+&=&
+T[\partial_{\mu} \varphi(x)  \partial_{\nu} \varphi(y)]
++
+i \delta_{\mu 0}\delta_{\nu 0} \delta^4(x - y) 
+\end{eqnarray}
+and we obtain Eq. (\ref{eqn:DerivCoupTprod})
+by substituting the relationship (\ref{eqn:DerivCoupSingleDeriv})
+in the $l.h.s$ and
+taking vacuum expectation values of the both hand sides.
+} %------------------------------------ small //
+\\
+\verb/-----------.-----------.-----------.-----------.-----------/\\
+
+\bigskip
+
+Let us consider the Dirac Yukawa theory discussed in \ref{sec:DiracYukawa}
+with a derivative coupling 
+$\mathcal{L}_{int} = -g  \overline{\psi} \mathcal{O}^\mu \psi \partial_\mu \phi$,
+where $\mathcal{O}^\mu$ denotes a Dirac matrix such as $\gamma^\mu$ for
+vector current and $\gamma^5 \gamma^\mu$ for pseudo vector current.
+For $NN \to NN$ scattering amplitude, we set the same initial and final states as
+in Eq. (\ref{eqn:IniFinNNtoNN}).
+The second order S-matrix reads
+\begin{eqnarray}
+S^{(2)}_{fi}
+&=&
+\frac{(-ig)^2}{2} \int d^4 x_{1'} d^4 x_{2'}
+\bra N_2 N_1 \braend
+T^*[
+\normalprod{ \overline{\psi}_{1'} \mathcal{O}^\mu \psi_{1'} \partial_{x_{1'}^\mu}\phi_{1'}}
+\normalprod{ \overline{\psi}_{2'} \mathcal{O}^\nu \psi_{2'} \partial_{x_{2'}^\nu}\phi_{2'}}
+]
+\ketend N_a N_b \ket
+\nonumber\\
+&=&
+\frac{(-ig)^2}{2} \int d^4 x_{1'} d^4 x_{2'}
+\bra 0 \braend T^*[
+\partial_{x_{1'}^\mu}\phi_{1'}
+\partial_{x_{2'}^\nu}\phi_{2'}
+]
+\ketend 0 \ket
+\nonumber\\
+&&
+\hspace{30mm}
+\bra N_2 N_1 \braend
+T[
+\normalprod{ \overline{\psi}_{1'} \mathcal{O}^\mu \psi_{1'} } 
+\normalprod{ \overline{\psi}_{2'} \mathcal{O}^\nu \psi_{2'} }
+]
+\ketend N_a N_b \ket
+\nonumber\\
+%\label{eqn:DiracNNNNS2formula}
+\end{eqnarray}
+The last factor in the second equation is 
+nothing but one in Eq. (\ref{eqn:DiracNNNNsand})
+with addional Dirac matrices $\mathcal{O}^\mu$ and $\mathcal{O}^\nu$ 
+between bilinear forms of Dirac spinors and the computation of this factor
+goes along quite similar way as that through 
+Eq. (\ref{eqn:DirNNNNsandIntermed}) to (\ref{eqn:DirNNNNabbamp}).
+For the factor of the vacuum expectation value, we write
+\begin{eqnarray}
+\bra 0 \braend T^*[
+\partial_{1'\mu}\phi_{1'}
+\partial_{2'\nu}\phi_{2'}
+]
+\ketend 0 \ket
+&=&
+\bra 0 \braend 
+\partial_{1'\mu}
+\partial_{2'\nu}
+T[
+\phi_{1'}
+\phi_{2'}
+]
+\ketend 0 \ket
+\nonumber\\
+&=&
+\partial_{1'\mu}
+\partial_{2'\nu}
+\Delta_F(1' - 2')
+\nonumber\\
+&=&
+i \int
+\frac{d^4 k}{(2\pi)^4}
+\frac{k_\mu k_\nu}{k^2 - \mu^2 + i\epsilon}
+e^{- ik (x_{1'} - x_{2'})}
+\nonumber\\
+\end{eqnarray}
+where we have used Eq. (\ref{eqn:FeynmanPropDefSc}).
+Combining them, we would write
+\begin{eqnarray}
+T^{(2)}_{fi}
+&=&
+\frac{(-ig)^2}{(2\pi)^6}
+\int d^4 k
+\frac{k_\mu k_\nu}{k^2 - \mu^2 + i\epsilon}
+\left\{
+\delta^4(p_1 - p_a - k)
+\left[
+\bar{u}^{(1)} \mathcal{O}^\mu u^{(a)} \right]
+\left[ \bar{u}^{(2)} \mathcal{O}^\nu u^{(b)} \right]
+\right.
+\nonumber\\
+&&
+\hspace{35mm}
+-
+\left.
+\delta^4(p_2 - p_a - k)
+\left[
+\bar{u}^{(2)} \mathcal{O}^\mu u^{(a)} \right]
+\left[
+ \bar{u}^{(1)} \mathcal{O}^\nu u^{(b)} \right]
+\right\}
+\nonumber\\
+\end{eqnarray}
+Take your time to compare this formula with Eqs. (\ref{eqn:DirYukS2Feynm}, \ref{eqn:DirYukT2Feynm}).
+ and also with Eqs. (\ref{eqn:MollerS2}, \ref{eqn:MollerT2}).

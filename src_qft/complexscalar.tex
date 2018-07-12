@@ -1,0 +1,108 @@
+\begin{equation}
+{\cal L} = \partial_\mu \varphi^\dagger(x)\cdot \partial^\mu \varphi(x)
+- m^2 \varphi^\dagger(x)\varphi(x)
+\label{eqn:cmplscLagdens}
+\end{equation}
+\begin{equation}
+\left( \Box + m^2 \right) \varphi(x) = 0\,,
+\hspace{5mm}
+\left( \Box + m^2 \right) \varphi^\dagger(x) = 0\,,
+%\hspace{5mm}
+%\varphi(x)^* = \varphi(x)
+\end{equation}
+%Classical solution:
+%\begin{equation}
+%\varphi_{cl}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}} \left[
+%a(\bld{k}) e^{-i k \cdot x} + b^*(\bld{k})e^{i k \cdot x} \right]
+%\end{equation}
+%where $k^0 = + \sqrt{\bld{k}^2 + m^2}$. 
+%Solution
+\begin{equation}
+\begin{array}{l}
+\displaystyle
+\varphi_{}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} \left[
+a(\bld{k}) e^{-i k \cdot x} + b^\dagger(\bld{k})e^{i k \cdot x} \right]
+\\
+\displaystyle
+\varphi^\dagger_{}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} \left[
+b(\bld{k})e^{- i k \cdot x}  + a^\dagger (\bld{k}) e^{i k \cdot x} \right]
+\end{array}
+\label{eqn:CompScFourier}
+\end{equation}
+Canonical quantization
+\begin{equation}
+\begin{array}{c}
+[ a(\bld{k}), a^\dagger(\bld{k}')] = 
+[ b(\bld{k}), b^\dagger(\bld{k}')] = 
+2k^0\delta^3 (\bld{k} - \bld{k'} )\;,
+\vspace{3mm}
+\\
+\mbox{other commutators} = 0
+\label{eqn:complscalarcancomm}
+\end{array}
+\end{equation}
+Four momentum
+\begin{equation}
+\hat{P}^\mu = \int \frac{d^3 \bld{k}}{2k^0} k^\mu \left(
+a^\dagger(\bld{k}) a(\bld{k}) + b^\dagger(\bld{k}) b(\bld{k})
+\right)
+\label{eqn:KGcomplex_FourMomentum}
+\end{equation}
+$\hat{P}^0$ is the Hamiltonian.
+Vacuum state is defined as $a(\bld{p}) \ketend 0 \ket = b(\bld{p}) \ketend 0 \ket =0$.
+There are two kinds of single particle states $a^\dagger(\bld{p}) \ketend 0 \ket$ and
+$b^\dagger(\bld{p}) \ketend 0 \ket$ both an eigenstate of $\hat{P}^\mu$.
+So far, $a$ and $b$ are just particles independent of each other and having
+the common mass $m$. Let us examine the electric charge given from
+Eq. (\ref{eqn:NoetherElectricCharge}). We find
+\begin{equation}
+\hat{Q} = e \int \frac{d^3 \bld{k}}{2k^0}  \left(
+a^\dagger(\bld{k}) a(\bld{k}) - b^\dagger(\bld{k}) b(\bld{k})
+\right)
+\label{eqn:KGcomplex_Charge}
+\end{equation}
+Thus they carry opposite electric charges.
+
+We consider now inversion symmetries $U = P, C, T$. 
+The vacuum is invariant under these inversions.
+\begin{itemize}
+\item
+Space inversion:
+$(\bld{x}, t) \mapsto (-\bld{x}, t)$ 
+\begin{eqnarray}
+P a(\bld{k}) P^{-1} = \pm a(-\bld{k})\,,
+\hspace{3mm}
+P b(\bld{k}) P^{-1} = \pm b(-\bld{k})\,,
+\end{eqnarray}
+$+$ for scalar and $-$ for pseudoscalar.
+\item
+Charge conjugation
+\begin{eqnarray}
+C a(\bld{k}) C^{-1} = \pm b(\bld{k})\,,
+\hspace{3mm}
+C b(\bld{k}) C^{-1} = \pm a(\bld{k})\,,
+\end{eqnarray}
+\item
+Time reversal: $(\bld{x}, t) \mapsto (\bld{x}, -t)$ 
+\begin{eqnarray}
+T a(\bld{k}) T^{-1} = \pm a(-\bld{k})\,,
+\hspace{3mm}
+C b(\bld{k}) C^{-1} = \pm b(-\bld{k})\,,
+\end{eqnarray}
+and $T$ is antilinear so that
+\begin{eqnarray}
+T \varphi(\bld{x}, t) T^{-1} = \pm \varphi(\bld{x}, -t)
+\end{eqnarray}
+The sign is fixed through the invariance of interactions 
+with other kind of fields which have definite signatures
+under the $T$ transformation. Usually, $+$ for scalar and
+$-$ for pseudoscalar.
+\end{itemize}
+
+\bigskip
+
+
+
+
+%Propagator $ = \Delta_F(q)$
+

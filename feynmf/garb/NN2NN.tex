@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{feynmp}
+
+\begin{document}
+\unitlength=1mm  %<<<---------------------------------------------- scale
+\begin{fmffile}{fig0c}
+%------------------------------------------
+	%\fmfframe(1,7)(1,7){
+		\begin{fmfgraph}(110,62)
+			%----------------External Lines --------------
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}  %<<------------------------- Do not put any space between elements, e.g. {o1, o2} will make a problem
+			%
+			\fmf{fermion}{i1,v1,o1}
+			\fmf{fermion}{i2,v2,o2}
+			\fmf{photon}{v1,v2}
+		\end{fmfgraph}
+	%} fmfframe
+
+\end{fmffile}
+\end{document}
+

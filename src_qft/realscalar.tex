@@ -1,0 +1,300 @@
+\begin{eqnarray}
+{\cal L} &=& \frac{1}{2} 
+\left( \underline{\partial} \varphi(\underline{x}) \right)^2
+-\frac{1}{2} m^2 \varphi^2(\underline{x})
+\nonumber\\
+&=& \frac{1}{2} 
+\partial_\mu \varphi(\underline{x})\cdot \partial^\mu \varphi(\underline{x})
+-\frac{1}{2} m^2 \varphi^2(\underline{x})
+\label{eqn:RSCLagrangiandensity}
+\end{eqnarray}
+where a dot in the last equation indicates the former derivative acting only on the first $\varphi$.
+We frequently omit this dot.
+Under a Lorentz transformation $\underline{x} \mapsto \underline{x}' = L\underline{x}$,
+the field $\varphi(\underline{x})$ transforms as
+\begin{equation}
+\varphi(x) \mapsto \varphi'(x') = \varphi(x)\,.
+\end{equation}
+Here and hereafter, we omitt underlines on Lorentz vectors.
+\begin{equation}
+\begin{array}{c}
+\displaystyle
+\frac{\partial {\cal L}}{\partial(\partial_\mu \varphi)} = \partial^\mu \varphi
+\\
+\displaystyle
+\pi(x) = \frac{ \partial {\cal L}}{ \partial \dot{\varphi}(x) } = \dot{\varphi}
+%\pi_{}(x) = \partial_0 \varphi_{cl}(x)
+%=
+%\int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}} (- i k^0 ) \left[
+%a(\bld{k}) e^{-i k \cdot x} - b^\dagger(\bld{k})e^{i k \cdot x} \right]
+\end{array}
+\end{equation}
+Euler-Lagrange equation
+\begin{equation}
+\left( \Box + m^2 \right) \varphi_{}(x) = 0
+\hspace{10mm}
+\mbox{Klein-Gordon}
+\label{eqn:Klein-Gordon}
+\end{equation}
+where $\Box \leftdef \partial^2 = \partial_\mu \partial^\mu = \partial_0^2 - \bld{\partial}^2$.
+Classical solution of the field equation (\ref{eqn:Klein-Gordon}) is written as
+\footnote{%------------------------------- footnote >>
+The following consideration lays behind:
+\begin{eqnarray*}
+\varphi(x)
+&=&
+\frac{1}{\sqrt{(2\pi)^3}}
+\int 
+d^4 k
+\delta(k^2 - m^2)
+\left[
+\theta(k^0) + \theta(-k^0)
+\right]
+\tilde{\varphi} (k)
+e^{-i k \cdot x}
+\nonumber\\
+&=&
+\frac{1}{\sqrt{(2\pi)^3}}
+\int 
+d^4 k
+\delta(k^2 - m^2)
+\left[
+\theta(k^0)
+\tilde{\varphi} (k)
+e^{-i k \cdot x}
+ + \theta(k^0)
+\tilde{\varphi} (-k)
+e^{i k \cdot x}
+\right]
+\nonumber\\
+&=&
+\int 
+\frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2 k^0}
+\left[
+\tilde{\varphi} (k)
+e^{-i k \cdot x}
+ + 
+\tilde{\varphi} (-k)
+e^{i k \cdot x}
+\right]
+\nonumber\\
+&\rightdef&
+\int 
+\frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2 k^0}
+\left[
+a (\bld{k})
+e^{-i k \cdot x}
+ +
+ a^*(\bld{k}) 
+e^{i k \cdot x}
+\right]
+\end{eqnarray*}
+}%------------------------------- footnote //
+\begin{equation}
+\varphi_{cl}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} \left[
+a(\bld{k}) e^{-i k \cdot x} + a^*(\bld{k})e^{i k \cdot x} \right]
+\label{eqn:KGclassicalsol}
+\end{equation}
+where $k^0 = + \sqrt{\bld{k}^2 + m^2}$. 
+Canonical momentum field reads,
+\begin{equation}
+\pi_{cl}(x) = \partial_0 \varphi_{cl}(x)
+=
+\int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0}  \left[
+- i k^0 a(\bld{k}) e^{-i k \cdot x} + i k^0 a^*(\bld{k})e^{i k \cdot x} \right]
+\label{eqn:KGclassicalpi}
+\end{equation}
+
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Canonical quantization
+\begin{equation}
+\begin{array}{c}
+[ \varphi(t,\bld{x}), \pi(t, \bld{y})] = i \delta^3 (\bld{x} - \bld{y} )\,,
+\vspace{2mm}
+\\
+\left[ \varphi(t,\bld{x}), \varphi(t,\bld{y}) \right] = 0\,,
+\;\;\;\;\left[ \pi(t,\bld{x}), \pi(t,\bld{y}) \right] = 0\,.
+\end{array}
+\label{eqn:cancomm_eqtime_RS}
+\end{equation}
+This is equivalent with requiring 
+\begin{equation}
+\begin{array}{c}
+[ a(\bld{k}), a^\dagger(\bld{k}')] = 2k^0 \delta^3 (\bld{k} - \bld{k'} )\;,
+\vspace{2mm}
+\\
+\left[ a(\bld{k}), a(\bld{k}') \right] = 0\;,\;\;\;\;\left[ a^\dagger(\bld{k}), a^\dagger(\bld{k}') \right] = 0
+\end{array}
+\label{eqn:cancomm_RS}
+\end{equation}
+and writing
+\begin{equation}
+\varphi_{}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} \left[
+a(\bld{k}) e^{-i k \cdot x} + a^\dagger(\bld{k})e^{i k \cdot x} \right]
+\label{eqn:RS_fieldexpansion}
+\end{equation}
+\begin{equation}
+\pi_{}(x) 
+=
+\frac{-i}{2}
+\int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}}  \left[
+a(\bld{k}) e^{-i k \cdot x} - a^\dagger(\bld{k})e^{i k \cdot x} \right]\,,
+\label{eqn:RS_pifieldexpansion}
+\end{equation}
+They have the same form as Eqs. (\ref{eqn:KGclassicalsol}) and (\ref{eqn:KGclassicalpi})
+but now the coefficients $a(\bld{k})$ and $a^\dagger(\bld{k})$ are
+quantum operators.
+
+%\bigskip
+%
+%\begin{equation}
+%\varphi_{}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} \left[
+%a(\bld{k}) e^{-i k \cdot x} + a^\dagger(\bld{k})e^{i k \cdot x} \right]\,,
+%\label{eqn:RS_fieldexpansion}
+%\end{equation}
+%\begin{equation}
+%\pi_{}(x) 
+%=
+%\frac{-i}{2}
+%\int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}}  \left[
+%a(\bld{k}) e^{-i k \cdot x} - a^\dagger(\bld{k})e^{i k \cdot x} \right]\,,
+%\label{eqn:RS_pifieldexpansion}
+%\end{equation}
+%\begin{eqnarray}
+%&&\;\;\;\;\;\;[ a(\bld{k}), a^\dagger(\bld{k}')] = 2k^0 \delta^3 (\bld{k} - \bld{k'} )\;,
+%\label{eqn:cancomm_RS}
+%\\
+%&&\left[ a(\bld{k}), a(\bld{k}') \right] = 0\;,\;\;\;\;\left[ a^\dagger(\bld{k}), a^\dagger(\bld{k}') \right] = 0
+%\nonumber
+%\label{eqn:realSccreannCommRel}
+%\end{eqnarray}
+%
+\input{\qftsrcdirectory/realsc_commrel}
+%=================================
+\noindent
+Notice that $dim [\varphi] = E^1$ as can be seen from Eq. (\ref{eqn:RSCLagrangiandensity})
+and $dim [\pi] = E^2$. Thus they are physical quantities  quite different from
+those in the case of the Schr\"odinger field theory.
+Nevertheless, operators $a$ and $a^\dagger$ satisfy conditions to be 
+annihilation and creation operators. We define the vacuum state by
+\begin{equation}
+a(\bld{k}) \ketend 0 \ket = 0
+\end{equation}
+Hamiltonian density in the classical level is obtained from Eq. (\ref{eqn:Hamiltoniandensity}) as
+\begin{eqnarray}
+{\cal H} &=& \pi(x) \dot{\varphi}(x) - \frac{1}{2} \left\{
+\left( \dot{\varphi}(x) \right)^2 - 
+\left( \bld{\partial} \varphi(x) \right)^2 \right\}
++ \frac{1}{2} m^2 \varphi^2(x)
+\nonumber\\
+&=&
+\frac{1}{2} \left\{
+\pi^2 (x) + \left( \bld{\partial} \varphi(x) \right)^2 + m^2 \varphi^2(x)
+\right\}
+\label{eqn:KGHamiltoniandens}
+\end{eqnarray}
+To get the quantum level Hamiltonian,
+we substitute Eqs (\ref{eqn:RS_fieldexpansion}) and (\ref{eqn:RS_pifieldexpansion})
+into Eq. (\ref{eqn:KGHamiltoniandens}). However, since ${\cal H}$ is quadratic
+in operators, we need to specify the ordering of them and write
+\begin{equation}
+\hat{H} = \int d^3 \bld{x} \hat{{\cal H}}(x)\,,
+\hspace{3mm}
+\hat{{\cal H}}(x) = 
+\normord{ \frac{1}{2} \left\{
+\pi^2 (x) + \left( \bld{\partial} \varphi(x) \right)^2 + m^2 \varphi^2(x)
+\right\}
+}\,,
+\label{eqn:KG_Hamiltonian}
+\end{equation}
+where $\normord{\dots}$ denotes the normal order product \cite{ref:Peskin-Schroeder}-\cite{ref:Tong}.
+As the result, we obtain an expression
+\begin{equation}
+\hat{H} = \int \frac{d^3 \bld{k}}{2k^0} k^0 a^\dagger(\bld{k}) a(\bld{k})
+\label{eqn:KG_Hamiltonian_aadagg}
+\end{equation}
+This form indicates that our Hamiltonian is diagonalized.
+To see this let us define a single particle state 
+$\ketend \bld{p} \ket = a^\dagger(\bld{p}) \ketend 0 \ket$.
+\footnote{
+This state is normalized as
+\[
+\bra p \braend p' \ket
+= \bra 0 \braend [a(p), a^\dagger(p')] \ketend 0 \ket
+= 2 k^0 \delta^3 (\bld{p} - \bld{p}')
+\]
+}
+We see from Eq. (\ref{eqn:cancomm_RS}) that
+$\hat{H} \ketend \bld{p} \ket = E \ketend \bld{p} \ket$ with
+$E = \sqrt{\bld{p}^2 + m^2}$.
+Thus, our field acquires the particle interpretation
+through the canonical quantization.
+
+The total number operator is defined as
+\begin{equation}
+\hat{N} = \int \frac{d^3 \bld{k}}{2k^0} a^\dagger(\bld{k}) a(\bld{k})
+\label{eqn:KG_totalNumberOp}
+\end{equation}
+It holds that
+\begin{equation}
+\begin{array}{l}
+\displaystyle
+\hat{N} a(\bld{k}) = 
+\int \frac{d^3 \bld{k}'}{2k^{0'}} \left\{
+a(\bld{k}) a^\dagger(\bld{k}') - 2 k^0 \delta^3(\bld{k} - \bld{k}') \right\} a(\bld{k}')
+= a(\bld{k}) (\hat{N} - 1)\,,
+\\
+\hat{N} a^\dagger(\bld{k}) 
+= a^\dagger(\bld{k}) (\hat{N} + 1)
+\end{array}
+\end{equation}
+
+Hamiltonian in Eq. (\ref{eqn:KG_Hamiltonian_aadagg}) coinsides with
+one derived (with a care on the operator orderings) from Eq. (\ref{eqn:NoetrherEnergyMomentum})
+as $\int d^3\bld{x} T^{00}(x)$.
+Other components of $T^{0 \mu}$ give an expression for the momentum as
+\begin{eqnarray}
+\hat{\bld{P}} =
+\int \frac{d^3 \bld{k}}{2k^0} \bld{k} a^\dagger(\bld{k}) a(\bld{k})
+\end{eqnarray}
+We certainly have $\hat{\bld{P}} \ketend \bld{p} \ket = \bld{p}\ketend \bld{p} \ket$.
+We omit here to write expressions for angular momenta corresponding to
+Eq. (\ref{eqn:NoetherAngularMomentum}).
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< below is commented out
+\begin{comment}
+\noindent
+%\begin{equation}
+%\left( \Box + m^2 \right) \varphi(x) = 0
+%\end{equation}
+Propagator
+\begin{equation}
+\left( \Box + m^2 \right) \Delta_F(x) = \delta^4(x) 
+\end{equation}
+\begin{eqnarray}
+\Delta_F(q) 
+&=&
+i \int d^4x e^{iqx} 
+\bra 0 \braend \mbox{T}\varphi(x) \varphi(0) 
+\ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-1}{q^2 - m^2 + i\epsilon}\,,
+\end{eqnarray}
+where $\epsilon$ is infinitesimal positive number.
+T-product
+\begin{equation}
+T[\varphi(x) \varphi(y)] =
+\theta(x^0 - y^0)\varphi(x) \varphi(y)
++
+\theta(y^0 - x^0)\varphi(y) \varphi(x)
+\end{equation}
+One will find
+\[
+\left( \Box + m^2 \right) T[\varphi(x) \varphi(0)] = -i \delta^4(x)
+\]
+\begin{equation}
+\Delta_F(x) = \int \frac{d^4 q}{(2\pi)^4} e^{-iqx} \Delta_F(q)
+\end{equation}
+\end{comment}

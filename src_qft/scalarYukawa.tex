@@ -1,0 +1,396 @@
+Let us consider a toy model composed of scalar fields:
+\begin{eqnarray}
+{\cal L} 
+&=&
+\partial_\mu \psi^* \partial^\mu \psi
++
+\frac{1}{2} (\partial_\mu \phi)^2 
+-
+M^2 \psi^*  \psi
+-
+\frac{1}{2} m^2 \phi^2
+-
+g \psi^*  \psi \phi
+\label{eqn:sclYkwLagDens}
+\end{eqnarray}
+$\psi$ is a mock nucleon complex scalar field with the mass $M$ 
+and $\phi$ is a mock pion real scalar field with the mass $m$.
+The first parts of $\cal L$ except for the last term compose free $\cal L$agrangians
+${\cal L}_N$ and ${\cal L}_\pi$ for nucleon and pion fields, respectively.
+The last term is the interaction $\cal L$agrangian in which
+nucleons and pions interact each other with a coupling constant $g$.
+The coupling $g$ has the dimension of energy and the dimensionless
+parameter is $g / E$, where E is the energy scale of the process of interest.
+This means that the interaction term ${\cal L}_{int} = - g \psi^* \psi \phi$ is
+relevant at low energies. The relativistic nature gets important at $E \gg M, m$
+and we may choose $g \ll M, m$ so that the perturbation series (\ref{eqn:TimeDevPerturbSerTprod})
+converges.
+
+Each fields are quantized through equal-time commutation relations at time,
+say, 0. One may write down field equations but they are not solvable due to
+the presence of ${\cal L}_{int}$. Remember they describe time evolution of
+field operators in the Heisenberg picture. In the interaction picture, however,
+we may let fields obey free field equations. 
+%-------------------------------------------------------------------- comment block starts
+\begin{comment}
+Field equations read
+\begin{eqnarray}
+\begin{array}{l}
+(\Box + m^2) \phi = - g\psi^* \psi\,,
+\vspace{2mm}
+\\
+(\Box + M^2) \psi = -g\psi \phi\,,
+\vspace{2mm}
+\\
+(\Box + M^2) \psi^* = -g\psi^* \phi
+\end{array}
+\end{eqnarray}
+\end{comment}
+%-------------------------------------------------------------------- comment block ends
+In practice, 
+conjugate fields are given by
+\begin{eqnarray}
+%\begin{array}{l}
+\pi_\phi = \frac{\partial {\cal L}}{\partial(\dot{\phi})} = \dot{\phi}
+\,,\hspace{3mm}
+%\\
+\pi_\psi = \frac{\partial {\cal L}}{\partial(\dot{\psi})} = \dot{\psi^*}
+\,,\hspace{3mm}
+%\\
+\pi_{\psi^*} = \frac{\partial {\cal L}}{\partial(\dot{\psi^*})} = \dot{\psi}
+\,,
+%\end{array}
+\end{eqnarray}
+and classical Hamiltonian density is written as
+\begin{eqnarray}
+{\cal H} 
+&=&
+\pi_\phi \dot{\phi} +\pi_\psi \dot{\psi} + \pi_{\psi^*} \dot{\psi^*} - {\cal L}
+\nonumber\\
+&=&
+\frac{1}{2} \left\{
+\pi_\phi^2 + (\bld{\partial}\phi)^2 + m^2 \phi^2
+\right\}
++
+\left\{
+\pi_\psi \pi_{\psi^*}
++ \bld{\partial} \psi^* \cdot \bld{\partial} \psi
++ M^2 \psi^* \psi \right\}
+\nonumber\\
+&&+ g \psi^* \psi \phi
+\label{eqn:sclYkwHamDens}
+\end{eqnarray} 
+The first two terms are ${\cal H}_\pi$ and ${\cal H}_N$ corresponding to
+${\cal L}_\pi$ and ${\cal L}_N$, respectively, and we assign them  as
+the free ${\cal H}$amiltonian ${\cal H}_0 = {\cal H}_\pi + {\cal H}_N$.
+Writing ${\cal H}_{int} = g\psi^*\psi \phi$, 
+we have a decomposition ${\cal H} = {\cal H}_{0}  + {\cal H}_{int}$,
+which corresponds to Eq. (\ref{eqn:HamiltonianDecomposed}).
+After substituting quantized fields (at the fixed time) into these expressions
+(and taking the normal ordering), we obtain ${\cal H}$amiltonian operators.
+The time evolutions of fields in the interaction picture are given from
+Eq. (\ref{eqn:InteractionPicTime}) as
+\begin{eqnarray}
+\begin{array}{l}
+i \partial_t \phi_I = [\phi_I, H_0] = [\phi_I, H_\pi]\,,
+\vspace{2mm}
+\\
+i \partial_t \psi_I = [\psi_I, H_0] = [\psi_I, H_N]\,,
+\vspace{2mm}
+\\
+i \partial_t \psi^\dagger_I = [\psi^\dagger_I, H_0] = [\psi^\dagger_I, H_N]\,,
+\end{array}
+\label{eqn:sYfieldTimeEvo}
+\end{eqnarray}
+where we added an suffix $I$ to indicate quantities in the interaction picture.
+We already know that Eqs. (\ref{eqn:sYfieldTimeEvo}) are equivalent to
+free field equations all given as the Klein-Gordon equation with masses of
+each fields. Therefore, the fields $\phi_I$, $\psi_I$ and $\psi^\dagger_I$ have
+Fourier expanded forms as in Eqs. (\ref{eqn:RS_fieldexpansion}) and (\ref{eqn:CompScFourier}).
+To be specific, we write
+\begin{eqnarray}
+\begin{array}{l}
+\displaystyle
+\phi_{I}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2k^0} \left[
+a(\bld{k}) e^{-i k \cdot x} + a^\dagger(\bld{k})e^{i k \cdot x} \right]
+\vspace{2mm}
+\\
+\displaystyle
+\psi_{I}(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}2p^0} \left[
+b(\bld{p}) e^{-i p \cdot x} + c^\dagger(\bld{p})e^{i p \cdot x} \right]
+\vspace{2mm}
+\\
+\displaystyle
+\psi^\dagger_{I}(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}2p^0} \left[
+c(\bld{p})e^{- i p \cdot x}  + b^\dagger (\bld{p}) e^{i p \cdot x} \right]
+\end{array}
+\label{eqn:scYfields}
+\end{eqnarray}
+Operators $a$, $b$ and $c$ and their conjugates satisfy
+commutation relations given in Eqs. (\ref{eqn:cancomm_RS}) and 
+(\ref{eqn:complscalarcancomm}) and they establishes the particle interpretations.
+Parts of the free ${\cal H}$amiltonian ${\cal H}_\pi$ and ${\cal H}_N$ are now
+described by these operators as in Eq. (\ref{eqn:KG_Hamiltonian_aadagg}) and 
+the time component of Eq. (\ref{eqn:KGcomplex_FourMomentum}).
+We may define number operator $\hat{N}_\pi$ as in Eq. (\ref{eqn:KG_totalNumberOp})
+and ones for nucleons as
+\begin{eqnarray}
+\hat{N}_N = \int \frac{d^3 \bld{p}}{2p^0} b^\dagger(\bld{p}) b(\bld{p})\,,
+\hspace{3mm}
+\hat{N}_{\bar{N}} = \int \frac{d^3 \bld{p}}{2p^0} c^\dagger(\bld{p}) c(\bld{p})\,,
+\end{eqnarray}
+where we have assigned $b^\dagger$ and $c^\dagger$ as creation operators
+for a nucleon ($N$) and an anti-nucleon ($\bar{N})$, respectively.
+In the interaction picture, ${\cal L}_{int}$ term in Eq.(\ref{eqn:sclYkwLagDens})
+[or ${\cal H}_{int}$ term in Eq. (\ref{eqn:sclYkwHamDens})] contains creation and
+annihilation operators in each field and they may change number of
+particles. In practice, the number operators we have just defined do not commute 
+with $H_I$, therefore neither with $H$ and do not conserve.
+Though numbers of particles are not conserved, the total electric charge would 
+be conserved since the ${\cal L}$agrangian (\ref{eqn:sclYkwLagDens}) is invariant
+under constant phase change of the field $\psi$ and its conjugate for $\psi^*$.
+According to the Noether's theorem and Eq. (\ref{eqn:KGcomplex_Charge}), 
+the charge
+\begin{eqnarray}
+Q = e \int \frac{d^3 \bld{p}}{2p^0}
+\left(
+b^\dagger({\bld{p}}) b({\bld{p}}) - c^\dagger({\bld{p}}) c({\bld{p}})
+\right)
+\label{eqn:scYelchrg}
+\end{eqnarray}
+commutes with $H$ and conserved.
+
+Keeping the formula (\ref{eqn:TimeDevPerturbSerTprod}) in mind,
+let us examine particular expression of $H_I$:
+\begin{eqnarray}
+H_I(t) 
+&=&
+g \int d^3 \bld{x} 
+\normord{ \psi_I^\dagger(x) \psi_I(x) \phi_I(x)}
+\nonumber\\
+&=&
+\frac{g}{\sqrt{(2\pi)^9}} 
+\int
+\frac{d^3 \bld{p}}{2p^0}
+\frac{d^3 \bld{p}'}{2{p^0}'}
+\frac{d^3 \bld{k}}{2k^0}
+\int 
+d^3 \bld{x} 
+:
+[ e^{-ipx} c(\bld{p}) + e^{ipx} b^\dagger(\bld{p}) ]
+\nonumber\\
+&&
+\hspace{7mm}
+[ e^{-ip'x} b(\bld{p}') + e^{ip'x} c^\dagger(\bld{p}') ]
+[ e^{-ikx} a(\bld{k}) + e^{ikx} a^\dagger(\bld{k}) ]
+:
+\nonumber\\
+&=&
+\frac{g}{\sqrt{(2\pi)^3}} 
+\int
+\frac{d^3 \bld{p}}{2p^0}
+\frac{d^3 \bld{p}'}{2{p^0}'}
+\frac{d^3 \bld{k}}{2k^0}
+\nonumber\\
+&&
+[c(\bld{p})b(\bld{p}')a(\bld{k})\delta^3(\bld{p}+\bld{p}'+\bld{k})
+e^{-i (p + p' + k_+)^0 t}
+\nonumber\\
+&&
++b^\dagger(\bld{p}) c^\dagger(\bld{p}') a^\dagger(\bld{k}) \delta^3(\bld{p}+\bld{p}'+\bld{k})
+e^{i (p + p' + k_+)^0 t}
+\nonumber\\
+&&
++b^\dagger(\bld{p}) c^\dagger (\bld{p}')a(\bld{k})\delta^3(\bld{p}+\bld{p}'-\bld{k})
+e^{i (p + p' - k_+)^0 t}
+\nonumber\\
+&&
++c^\dagger(\bld{p})c(\bld{p}')a(\bld{k})\delta^3(\bld{p}-\bld{p}'-\bld{k})
+e^{i (p - p' - k_-)^0 t}
+\nonumber\\
+&&
++b^\dagger(\bld{p})b(\bld{p}')a(\bld{k})\delta^3(\bld{p}-\bld{p}'-\bld{k})
+e^{i (p - p' - k_-)^0 t}
+\nonumber\\
+&&
++a^\dagger(\bld{k})c(\bld{p})b(\bld{p}')\delta^3(\bld{p}+\bld{p}'-\bld{k})
+e^{-i (p + p' - k_-)^0 t}
+\nonumber\\
+&&
++a^\dagger(\bld{k})c^\dagger(\bld{p}')c(\bld{p})\delta^3(\bld{p}-\bld{p}'-\bld{k})
+e^{-i (p - p' - k_-)^0 t}
+\nonumber\\
+&&
++a^\dagger(\bld{k})b^\dagger(\bld{p})b(\bld{p}')\delta^3(-\bld{p}+\bld{p}'-\bld{k})
+e^{i (p - p' + k_-)^0 t}]
+\label{eqn:scYHIterms}
+\end{eqnarray}
+where $k_\pm^0 = \sqrt{(\bld{p} \pm \bld{p}')^2 + m^2}$.
+At this stage, we may already have some insights about the interaction.
+Our ${\cal L}_{int}$ is a product of three field operators and each of them
+involve two terms with annihilation and creation operators. This is why there
+are $2^3 = 8$ terms in Eq. (\ref{eqn:scYHIterms}). Among them, the last
+6 terms show possible processes. For instance, the third term corresponds
+a process in which a particle $a$ (pion) disappears and particles $b$ and $c$
+(nucleon and anti-nuclen) emerges. So this term corresponds to the pair creation
+of $N\bar{N}$ by $\pi$. One can confirm the momentum is conserved in the process.
+The energy is not conserved yet and there are exponential factors instead.
+Later, we will see these exponentials turn into delta functions corresponding to
+the energy conservation for each processes in the evaluation the scattering matrix.
+The first two terms in Eq. (\ref{eqn:scYHIterms}) will not contribute to scattering matrices
+since they violate the energy conservation.
+The second and higher order terms in Eq. (\ref{eqn:TimeDevPerturbSerTprod}) will be
+involved in the later discussion with introducing some techniques to expand time ordered
+products.
+\\
+
+\noindent
+●Meson Decay\\
+Consider a process $\pi \rightarrow N\bar{N}$. This process is involved in the lowest
+order term in Eq. (\ref{eqn:SmatrixPertSer}) through the third term in
+Eq. (\ref{eqn:scYHIterms}). We write Initial and final states as
+\begin{eqnarray}
+\begin{array}{l}
+\ketend i \ket = a^\dagger (\bld{k}) \ketend 0 \ket
+\rightdef \ketend \pi(\bld{k}) \ket\,,
+\vspace{2mm}
+\\
+\ketend f \ket = b^\dagger (\bld{p}_N) c^\dagger (\bld{p}_{\bar{N}})\ketend 0 \ket
+\rightdef \ketend N(\bld{p}_N) \bar{N}(\bld{p}_{\bar{N}}) \ket
+\end{array}
+\end{eqnarray}
+From Eq. (\ref{eqn:SmatrixPertSer}), we read to the leading (first) order in $g$ that
+\begin{eqnarray}
+\bra f \braend S^{(1)} \ketend i \ket
+&=&
+-ig \int d^4 x  
+\bra N(\bld{p}_N) \bar{N}(\bld{p}_{\bar{N}}) \braend
+\normalprod{ \psi^\dagger(x) \psi(x) \phi(x)}
+\ketend \pi(\bld{k}) \ket
+\nonumber\\
+&=&
+-ig \int d^4 x  
+\bra 0 \braend b(\bld{p}_N) c(\bld{p}_{\bar{N}})
+\normalprod{ \psi^\dagger(x) \psi(x) \phi(x)}
+ a^\dagger(\bld{k}) \ketend 0 \ket
+ \label{eqn:scYmesonDcyamp}
+\end{eqnarray}
+Here we omitted indeces $I$ on fields under understanding that we are in the interaction picture.
+In expanding fields as $\psi^\dagger \sim c + b^\dagger$, 
+$\psi \sim b + c^\dagger$ and $\phi \sim a + a^\dagger$,
+we find only a term $\sim b^\dagger c^\dagger a$
+contributes in Eq. (\ref{eqn:scYmesonDcyamp}).
+This corresponds to the third term in $H_I$ in Eq. (\ref{eqn:scYHIterms}).
+We proceed from Eq. (\ref{eqn:scYmesonDcyamp}):
+\begin{eqnarray}
+\bra f \braend S^{(1)} \ketend i \ket
+&=&
+\frac{-ig}{\sqrt{(2\pi)^9}} 
+\int
+\frac{d^3 \bld{p}}{2p^0}
+\frac{d^3 \bld{p}'}{2{p^0}'}
+\frac{d^3 \bld{k}'}{2{k^0}'}
+\int 
+d^4 x\;
+e^{i(p + p' - k') x}
+\nonumber\\
+&&
+\hspace{10mm}
+\bra 0 \braend b(\bld{p}_N) c(\bld{p}_{\bar{N}})
+[b^\dagger(\bld{p}) c^\dagger (\bld{p}')a(\bld{k}')]
+ a^\dagger(\bld{k}) \ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-ig}{\sqrt{(2\pi)^9}} 
+\int
+\frac{d^3 \bld{p}}{2p^0}
+\frac{d^3 \bld{p}'}{2{p^0}'}
+\frac{d^3 \bld{k}'}{2{k^0}'}
+(2\pi)^4 \delta^4(p + p' - k')
+\nonumber\\
+&&
+\hspace{10mm}
+\bra 0 \braend b(\bld{p}_N) c(\bld{p}_{\bar{N}})
+[b^\dagger(\bld{p}) c^\dagger (\bld{p}')a(\bld{k}')]
+ a^\dagger(\bld{k}) \ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-ig}{\sqrt{(2\pi)^9}} 
+\int
+\frac{d^3 \bld{p}}{2p^0}
+\frac{d^3 \bld{p}'}{2{p^0}'}
+(2\pi)^4 \delta^4(p + p' - k)
+\nonumber\\
+&&
+\hspace{20mm}
+\bra 0 \braend b(\bld{p}_N) c(\bld{p}_{\bar{N}})
+b^\dagger(\bld{p}) c^\dagger (\bld{p}')
+ \ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-ig}{\sqrt{(2\pi)^9}} 
+(2\pi)^4 \delta^4(p_N + p_{\bar{N}} - k)
+ \label{eqn:scYmesonDcySmtrx}
+\end{eqnarray}
+
+Reaction rate is defined in the same way as that for scatterting as
+\begin{eqnarray}
+R_{fi} = \int d\Phi_f | \bra f \braend T \ketend i \ket |^2\,,
+\end{eqnarray}
+where $\Phi_f$ and $T$ are defined in Eqs. (\ref{eqn:Phi_nDef}) and (\ref{eqn:Smatrix_and_T})
+respectively
+\footnote{
+A note on dimensions: $dim[ d\Phi_f (\bra f \braend )^2] = 1/E^4$,
+$dim [T] = E^4$ and $dim [\ketend i \ket]^2 = 1/E^{2k}$ for an initial state
+composed of $k$ particles. In total, $dim[R] = E^{4 - 2k}$. 
+$k = 2$ and $dim[R] = E^0$ for scatterings. $k = 1$ and $dim[R] = E^2$
+for particle decays.
+} % end of footnote
+.
+For decays of a particle with the mass $M$ into $n$ particles, differential decay width 
+is defined as
+\begin{eqnarray}
+d \Gamma = \frac{(2\pi)^3}{2M} dR_{fi}
+=
+\frac{(2\pi)^3}{2M} 
+\prod_i^n \frac{d^3\bld{p}_i}{2p_i^0} (2\pi)^4 \delta^4(P_f - P_i) 
+ | \bra f \braend T \ketend i \ket |^2
+\end{eqnarray}
+In particular, for two particle decays,
+\begin{eqnarray}
+d \Gamma_2 
+&=&
+\frac{(2\pi)^3}{2M} 
+\frac{d^3\bld{p}_1}{2p_1^0} 
+d^4 p_2 \delta(p_2^2 - m_2^2)
+(2\pi)^4 \delta^4(P_f - P_i) 
+ | \bra f \braend T \ketend i \ket |^2
+\nonumber\\
+&=&
+\frac{(2\pi)^7}{2M} 
+\frac{P_1^{*2} dP_1^* d \Omega_1^*}{2p_1^{*0}} 
+\delta(M^2 + m_1^2  - m_2^2 - 2 M p_1^{*0})
+|T_{fi}|^2
+\nonumber\\
+&=&
+\frac{(2\pi)^9}{32\pi^2M^2} 
+P_1^{*}  d \Omega_1^*
+|T_{fi}|^2
+\label{eqn:decaywidth2bdy}
+\end{eqnarray}
+We note that $dim |T_{fi}|^2 = E^2$.
+The way of writing the coefficient in Eq. (\ref{eqn:decaywidth2bdy}) is chosen
+so that it is clear that a factor $(2\pi)^9$ is absorbed in the state normalizations
+in notations of some authors including \cite{ref:Donnachie}, \cite{ref:Collins} and
+\cite{ref:Itzykson-Zuber}.
+
+Let's come back to our toy model. From Eq. (\ref{eqn:scYmesonDcySmtrx}),
+we have $T_{fi} = g / \sqrt{(2\pi)^9}$. Substituting this in Eq. (\ref{eqn:decaywidth2bdy}),
+we obtain
+\begin{eqnarray}
+\Gamma_2^{(1)} = 
+\frac{g^2}{16\pi m^2} \lambda^{1/2}(m^2, M^2, M^2)
+\end{eqnarray}
+where a superscript $(1)$ indicates the order of perturbation expansion in Eq.  (\ref{eqn:SmatrixPertSer}).
+
+
