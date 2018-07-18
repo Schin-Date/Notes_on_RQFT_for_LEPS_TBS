@@ -1,3 +1,3 @@
 # RQFT
-A text on relativistic quantum field theory for graduate students in experimental hadron physics.
+Private notes on relativistic quantum field theory.
 
