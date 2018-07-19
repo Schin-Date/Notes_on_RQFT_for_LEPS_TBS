@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.9.28)  18 JUL 2018 17:35
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.9.28)  19 JUL 2018 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -372,14 +372,7 @@ LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 292.
 
-) (./versions/2017/InteractingFields.tex [16]
-Overfull \hbox (2.62822pt too wide) in paragraph at lines 17--20
-\OT1/cmr/m/n/12 No ex-plicit $\OML/cmm/m/it/12 t$ \OT1/cmr/m/n/12 de-pen-dence 
-in $\OMS/cmsy/m/n/12 O[]$ \OT1/cmr/m/n/12 is as-sumed. For-mal so-lu-tion to th
-e Schr^^?odinger
- []
-
-[17]
+) (./versions/2017/InteractingFields.tex [16] [17]
 Overfull \hbox (41.97049pt too wide) in alignment at lines 209--227
  [][][] []
  []
@@ -393,13 +386,13 @@ LaTeX Font Warning: Font shape `JT1/mc/bx/it' undefined
 LaTeX Font Warning: Font shape `JY1/mc/bx/it' undefined
 (Font)              using `JY1/mc/bx/n' instead on input line 244.
 
-) (./src/realscalar.tex [19]
+) [19] (./src/realscalar.tex
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 91.
- [20] (./versions/2017/realsc_commrel.tex [21])
-[22] [23] [24] [25]) (./versions/2017/complexscalar.tex [26]
+ [20] [21] (./versions/2017/realsc_commrel.tex
+[22]) [23] [24] [25] [26]) (./versions/2017/complexscalar.tex [27]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 94.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
@@ -408,32 +401,31 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 94.
 )
-(../src_qft/scalarmultiplet.tex [27]) (../src_qft/scalarYukawa.tex
-Excluding 'comment' comment. [28] [29] [30]
+(../src_qft/scalarmultiplet.tex) (../src_qft/scalarYukawa.tex [28]
+Excluding 'comment' comment. [29] [30] [31]
 
-LaTeX Warning: Reference `eqn:Phi_nDef' on page 31 undefined on input line 340.
+LaTeX Warning: Reference `eqn:Phi_nDef' on page 32 undefined on input line 340.
 
 
 
-LaTeX Warning: Reference `eqn:Smatrix_and_T' on page 31 undefined on input line
+LaTeX Warning: Reference `eqn:Smatrix_and_T' on page 32 undefined on input line
  340.
 
-[31]) (../src_qft/InteractingFields2.tex [32] [33]
+[32]) (../src_qft/InteractingFields2.tex [33] [34]
 
-LaTeX Warning: Reference `sec:App_Wick' on page 34 undefined on input line 171.
+LaTeX Warning: Reference `sec:App_Wick' on page 35 undefined on input line 171.
 
 
 
-LaTeX Warning: Reference `eqn:WickTheorem' on page 34 undefined on input line 1
+LaTeX Warning: Reference `eqn:WickTheorem' on page 35 undefined on input line 1
 73.
 
-[34]) (../src_qft/ScYNNamp.tex
+) (../src_qft/ScYNNamp.tex [35]
 
-LaTeX Warning: Reference `sec:ScYukawa' on page 35 undefined on input line 2.
+LaTeX Warning: Reference `sec:ScYukawa' on page 36 undefined on input line 2.
 
-[35]
 File: ../feynmf/01NNtoNNeq/NNtoNN.eps Graphic file (type eps)
- <../feynmf/01NNtoNNeq/NNtoNN.eps>
+<../feynmf/01NNtoNNeq/NNtoNN.eps>
 Overfull \hbox (30.77214pt too wide) in alignment at lines 130--184
  [][][] []
  []
@@ -625,12 +617,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3208 strings out of 493682
- 44103 string characters out of 6149641
- 112260 words of memory out of 5000000
- 6582 multiletter control sequences out of 15000+600000
+ 3209 strings out of 493682
+ 44124 string characters out of 6149641
+ 112271 words of memory out of 5000000
+ 6583 multiletter control sequences out of 15000+600000
  31812 words of font info for 129 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,19n,26p,230b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on myqft.dvi (98 pages, 396984 bytes).
+Output written on myqft.dvi (98 pages, 398404 bytes).

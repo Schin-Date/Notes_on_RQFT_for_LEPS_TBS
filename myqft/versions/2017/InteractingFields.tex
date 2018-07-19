@@ -15,7 +15,7 @@ i \partial_t
 \end{array}
 \right.
 \end{eqnarray}
-No explicit $t$ dependence in ${\cal O}_S$ is assumed.
+It is assumed that ${\cal O}_S$ does not depend on $t$ explicitly.
 Formal solution to the Schr\"odinger equation is written as
 \begin{eqnarray}
 \ketend \Psi \ket_S = e^{-iHt} \ketend \Psi_0 \ket_S
@@ -263,10 +263,12 @@ This is the definition of the S-matrix. Obviously, $S$ is unitary.
 Substituting Eq. (\ref{eqn:TimeDevPerturbSerTprod}) or (\ref{eqn:TimeDevOpPerturbSer}) 
 in Eq. (\ref{eqn:SmatrixDef}), we 
 may consider the operator $S$ as given in the form of a perturbation series.
-When the expression of Eq.  (\ref{eqn:TimeDevPerturbSerTprod}) is used, it reads
+%When the expression of Eq.  (\ref{eqn:TimeDevPerturbSerTprod}) is used, it reads
+It reads
 \begin{eqnarray}
- S -1 
+ S 
 &=&
+1 
  -i \int_{-\infty}^\infty H_I (t') dt'
 \nonumber\\
 &&+
@@ -277,3 +279,30 @@ When the expression of Eq.  (\ref{eqn:TimeDevPerturbSerTprod}) is used, it reads
 + \cdots
 \label{eqn:SmatrixPertSer}
 \end{eqnarray}
+In the following discussions, it will be licit in most cases
+to write $H_I(t) = \int d^4x {\cal H}_{int}(x)$.
+If we adopt this expression, the $n$th order $S$ matrix reads
+\footnote{
+${\cal H}_{int}(x)$ denotes interaction Hamiltonian density
+and it should be transformed to the interaction picture according to 
+Eq. (\ref{eqn:defHintI}) before adopted in the formula.
+However, in most cases in the following discussions,
+this transformation is achieved just by replacing fields in
+${\cal H}_{int}(x)$ by ones in the interaction picture
+and we may use the same notation for the interaction Hamiltonian
+density in the interaction picture as one for the Heisenberg picture.
+%as advertised in the above, 
+An exception is a case when ${\cal H}_{int}(x)$ involves
+derivative couplings.
+}
+\begin{eqnarray}
+ S^{(n)} 
+&=&
+\frac{(-i)^n}{n!}
+\int dx_1' \cdots dx_n'
+\;T[ 
+{\cal H}_{int}(x_1') \cdots {\cal H}_{int}(x_n')
+]
+\label{eqn:nthorderSmatrix}
+\end{eqnarray}
+
