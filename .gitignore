@@ -1,0 +1,38 @@
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.log
+*.toc
+*.synctex.gz
+
+# feynmf/feynmp
+*.mf
+*.mp
+*.t[1-9]
+*.t[1-9][0-9]
+*.tfm
+
+# sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# pythontex
+*.pytxcode
+pythontex-files-*/
+
+# xmpincl
+*.xmpi
+
+
+# auto folder when using emacs and auctex
+./auto/*
+*.el
+
+# expex forward references with \gathertags
+*-tags.tex
+
+# standalone packages
+*.sta
+
+#Mac OS X
+*.DS_Store
