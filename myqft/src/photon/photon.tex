@@ -1,57 +1,48 @@
 \noindent
-massless vector, neutral\\
-Vectors belong to the adjoint representation of the Poincar\'e Group SL(2,C).
-%\subsubsection{Classical Electomagnetic Field}
 
-\subsubsection{Classical Theory}
-Maxwell's equations, the set of classical field equations of the electromagnetism,
-is written
- in a Lorentz covariant form as
-\begin{eqnarray}
-\partial_\nu F^{\nu \mu}(x) = \frac{1}{c} j^{\mu}(x)\,,
-\label{eqn:inhomMxwF}
-\end{eqnarray}
-where
-$j^\mu(x) = (c \rho, \bld{j})$ is the four charge current density
+\subsection{Classical Theory}
+Maxwell's equations,
+a set of classical field equations of the electromagnetism,
+in a vacuum, 
+are written 
 \footnote{%------------------------------- footnote >>
 We use the Heaviside-Lorentz Gauss unit system of the electrodynamics and
 write the light speed $c$ explicitly for a while.
 }%------------------------------------------ footnote //
-and the field strength tensor $F^{\mu \nu}$ is defined in terms of four electromagnetic potential
+in a Lorentz covariant form as
+\begin{eqnarray}
+\partial_\nu F^{\nu \mu}(x) = \frac{1}{c} j^{\mu}(x)\,,
+\label{eqn:inhomMxwF}
+\\
+\frac{1}{2}\epsilon^{\mu \rho \sigma \tau}
+\partial_\rho F_{\sigma \tau}(x) = 0
+\,,
+\label{eqn:homMxwF}
+\end{eqnarray}
+where
+$j^\mu(x) = (c \rho, \bld{j})$ is the four charge current density
+and
+$\epsilon^{\mu \rho \sigma \tau}$ is the Levi-Civita tensor in the 4 dimension
+with a choice of signature $\epsilon^{0123}$ = 1.
+The field strength tensor $F^{\mu \nu}$ is defined in terms of
+four electromagnetic potential
 $A^\mu(x) = (\phi, \bld{A})$ as
 \begin{eqnarray}
-F^{\mu \nu} = \partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu}\,.
+F^{\mu \nu} = \partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu}\,,
 \label{eqn:FdefinedbyA}
 \end{eqnarray}
-$F^{\mu \nu}$ is apparently an antisymmetric tensor.
-It is related with
+which is apparently an antisymmetric tensor.
+The field strength tensor is related with
 the electric and magnetic fields
 \footnote{%------------------------------- footnote >>
 In terms these fields, Maxwell's equations are written as
-\[
-\left\{
-\begin{array}{l}
-\bld{\partial}\cdot \bld{E} =  \rho 
-\hspace{30mm}\mbox{Coulomb}
-\\
-\bld{\partial}\cdot \bld{B} = 0
-\hspace{30mm}\mbox{Coulomb (magnetic)}
-\\
-\bld{\partial} \times \bld{B}  - \partial_0 \bld{E} = \frac{1}{c}\bld{j}
-\hspace{13.5mm}\mbox{Amp\`ere-Maxwell}
-\\
-\bld{\partial} \times \bld{E}  +  \partial_0 \bld{B} = \bld{0}
-\hspace{15.5mm}\mbox{Faraday}
-\\
-\end{array}
-\right.
-\]
 }%------------------------------------------ footnote //
- by
+as
 \begin{eqnarray}
 \left\{
 \begin{array}{l}
 F^{\uparrow 0} = \bld{E}\,,
+\vspace{2mm}
 \\
 F^{ij} =  \epsilon^{ijk} B_k
 \hspace{2mm}
@@ -80,24 +71,36 @@ In the first equation in Eq. (\ref{eqn:FbyEB}), an upper arrow as a
 superscript represents cartesian components of the spatial vector
 on the right hand side.
 \footnote{%------------------------------------------ footnote 
-This notation is especially convenient to express outer products of spatial vectors.}
-It follows from the definition (\ref{eqn:FdefinedbyA}) that a relationship
-\begin{eqnarray}
-\frac{1}{2}\epsilon^{\mu \rho \sigma \tau}
-\partial_\rho F_{\sigma \tau}(x) = 0
-\,,
-\label{eqn:homMxwF}
-\end{eqnarray}
-holds as an identity. This one is called the Bianchi identity
-and equivalent with homogeneous Maxwell's equations,
-that are Coulomb's law for magnetic field and Faraday's law.
-Remaining two laws, Coulomb's law for electric field and
-Amp\`ere-Maxwell's law are ivolved in Eq. (\ref{eqn:inhomMxwF}),
-which is inhomogeneous.
+This notation is convenient in dealing with
+calculus among spatial vectors.
+}
+With these correspondences, we may easily reproduce
+the familiar form of Maxwell's equations in a vacuum:
+\[
+\left\{
+\begin{array}{l}
+\bld{\partial}\cdot \bld{E} =  \rho 
+\hspace{30mm}\mbox{Coulomb}
+\\
+\bld{\partial} \times \bld{B}  - \partial_0 \bld{E} = \frac{1}{c}\bld{j}
+\hspace{13.5mm}\mbox{Amp\`ere-Maxwell}
+\\
+\bld{\partial} \times \bld{E}  +  \partial_0 \bld{B} = \bld{0}
+\hspace{15.5mm}\mbox{Faraday}
+\\
+\bld{\partial}\cdot \bld{B} = 0
+\hspace{30mm}\mbox{Coulomb (magnetic)}
+\\
+\end{array}
+\right.
+\]
 
-Since homogeneous Maxwell's equations are automatically satisfied by
-the definition (\ref{eqn:FdefinedbyA}),
-problems of electromagnetism reduce themselves to solving inhomogeneous
+It follows from the definition (\ref{eqn:FdefinedbyA}) that
+homogeneous Maxwell's equations (\ref{eqn:homMxwF})
+are satisfied automatically. The set of relationships becomes
+a mathematically obvious identity and it is called
+the Bianchi identity.
+Now, problems of electromagnetism reduce themselves to solving inhomogeneous
 equation (\ref{eqn:inhomMxwF}). Substituting Eq. (\ref{eqn:FdefinedbyA}) into
 Eq. (\ref{eqn:inhomMxwF}), we have
 \begin{eqnarray}
@@ -107,7 +110,7 @@ Eq. (\ref{eqn:inhomMxwF}), we have
 \end{eqnarray}
 Here and hereafter, we set $c = 1$ as usual.
 A famous problem (and the sake) of the electromagnetism is that
-the operator acting on $A^\nu$ in the right hand side
+the operator acting on $A_\nu$ in the left hand side
 is not invertible.
 \footnote{%------------------------------------------ footnote >>
 It is equivalent to say Green's function satisfying 
@@ -193,13 +196,14 @@ A_\mu
 \label{eqn:LF2expressMx}
 \end{eqnarray}
 In these expressions, $F^{\mu \nu}$ abbreviates its expression in terms of the field $A$.
-Eq. (\ref{eqn:LF2expressbyEB}) shows
+Eq. (\ref{eqn:LF2expressbyEB})
 \footnote{%------------------------------- footnote >>
+It may help for reading this equation to write
 \begin{eqnarray}
 \bld{B}^2 = \frac{1}{2} (F^{ij})^2 = \partial_i A_j F^{ij}
 \end{eqnarray}
 }%------------------------------- footnote //
- that ${\cal L}_{F^2}$
+ shows that ${\cal L}_{F^2}$
 has no kinetic term $\dot{A}_0$ so that canonical conjugate
 momontum $\Pi_0$ associated with $A_0$ is identically zero.
 This may cause a problem when one apply canonical quantization method.
@@ -586,7 +590,7 @@ freedom and we have 2 degree of freedom remaining. They will be identified as th
 polarization states of the photon.
 
 %=====================================================================
-\subsubsection{Quantization of Free Field}
+\subsection{Quantization of Free Field}
 %------------------------------------------------------------------------------------- Coulomb
 \noindent
 \underline{Coulomb gauge}\\
@@ -1366,7 +1370,7 @@ Physical results should not depend on the choice of the value of $\alpha$
 and one may choose it so that computations get simple.
 
 %=====================================================================
-\subsubsection{Interacting Photon Field}
+\subsection{Interacting Photon Field}
 Let us consider QED, namely photon field interacting with massive Dirac charge.
 Lagrangian density is written as
 \begin{eqnarray}
