@@ -1,3 +1,3 @@
 # RQFT
-Private notes on relativistic quantum field theory.
+A text on relativistic quantum field theory.
 
