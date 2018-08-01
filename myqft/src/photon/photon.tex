@@ -21,10 +21,10 @@ in a Lorentz covariant form as
 where
 $j^\mu(x) = (c \rho, \bld{j})$ is the four charge current density
 and
-$\epsilon^{\mu \rho \sigma \tau}$ is the Levi-Civita tensor in the 4 dimension
-with a choice of signature $\epsilon^{0123}$ = 1.
+$\epsilon^{\mu \rho \sigma \tau}$ is the Levi-Civita tensor in the 4 dimension.
+%with a choice of signature $\epsilon^{0123}$ = 1.
 The field strength tensor $F^{\mu \nu}$ is defined in terms of
-four electromagnetic potential
+the four electromagnetic potential
 $A^\mu(x) = (\phi, \bld{A})$ as
 \begin{eqnarray}
 F^{\mu \nu} = \partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu}\,,
@@ -33,9 +33,6 @@ F^{\mu \nu} = \partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu}\,,
 which is apparently an antisymmetric tensor.
 The field strength tensor is related with
 the electric and magnetic fields
-\footnote{%------------------------------- footnote >>
-In terms these fields, Maxwell's equations are written as
-}%------------------------------------------ footnote //
 as
 \begin{eqnarray}
 \left\{
@@ -67,8 +64,8 @@ E^3 &-B^2&B^1& 0
 \label{eqn:FcontentbyEandB} 
 \end{equation}
 In the first equation in Eq. (\ref{eqn:FbyEB}), an upper arrow as a
-superscript represents cartesian components of the spatial vector
-on the right hand side.
+superscript represents cartesian components of a spatial vector
+in the right hand side.
 \footnote{%------------------------------------------ footnote 
 This notation is convenient in dealing with
 calculus among spatial vectors.
@@ -95,12 +92,12 @@ the familiar form of Maxwell's equations in a vacuum:
 \]
 
 It follows from the definition (\ref{eqn:FdefinedbyA}) that
+the set of
 homogeneous Maxwell's equations (\ref{eqn:homMxwF})
-are satisfied automatically. The set of relationships becomes
-a mathematically obvious identity and it is called
-the Bianchi identity.
+is satisfied automatically and becomes an identity.
+This identity  is called the Bianchi identity.
 Now, problems of electromagnetism reduce themselves to solving inhomogeneous
-equation (\ref{eqn:inhomMxwF}). Substituting Eq. (\ref{eqn:FdefinedbyA}) into
+equations (\ref{eqn:inhomMxwF}). Substituting Eq. (\ref{eqn:FdefinedbyA}) into
 Eq. (\ref{eqn:inhomMxwF}), we have
 \begin{eqnarray}
 (\partial^2 g^{\mu \nu} - \partial^\mu \partial^\nu) A_\nu = j^\mu
@@ -130,15 +127,15 @@ A^\mu \mapsto A'{}^{\mu} = A^\mu + \partial^\mu \Lambda\,,
 where $\Lambda$ is an arbitrary second order differentiable function.
 \begin{comment}
 \end{comment}
-One can confirm the physically observable fields $F^{\mu \nu}$ in Eq. (\ref{eqn:FdefinedbyA}) 
+One can confirm that the physically observable fields $F^{\mu \nu}$ in Eq. (\ref{eqn:FdefinedbyA}) 
 are certainly invariant under this transformation. 
 This is why we are insisted (and allowed) to pick a representative of the field $A^\mu$
-among those connected by a gauge transformation
+among those connected by gauge transformations
 and, as a result, obtain two degrees of freedom corresponding to photon polarizations
-among four of a Lorentz vector $A^\mu$.
+from the  four of the Lorentz vector $A^\mu$.
 
 The Lagrangian density which
- reproduces Maxwell's equations (\ref{eqn:MxwA}) is written as
+ reproduces Maxwell's equations (\ref{eqn:MxwA}) may be written as
 %for $j^\mu = 0$ is written as
 \begin{eqnarray}
 %{\cal L} = -\frac{1}{4}F_{\mu \nu} F^{\mu \nu}
@@ -148,8 +145,10 @@ The Lagrangian density which
 \end{eqnarray}
 The first term is manifestly gauge invariant.
 The second term is not manifest but
-the gauge invariance of the action is guarantied by the current conservation
-law $\partial \cdot j = 0$ which is a consistency condition of the Maxwell equation
+the gauge invariance is guarantied in the level of action
+through the current conservation law
+%of the action is guarantied by the current conservation law 
+$\partial \cdot j = 0$, which is a consistency condition of the Maxwell equation
 (\ref{eqn:MxwA}).
 To fix a gauge, we impose condition(s) on the field $A_\mu$ and
 modify the first term of the Lagrangian density (\ref{eqn:LagdenMx})
@@ -157,8 +156,9 @@ accordingly. This modification is not accounted for as a change by
 a total derivative, which does not change the field equation.
 We need to modify the field equation itself to make it solvable.
 In the classical theory, this can be achieved as described below.
-In the quantum theory, however, condition(s) on the field should
-be treated carefully.
+In the quantum theory, however, 
+an special care is required to set condition(s) on the field.
+% should be treated carefully.
 
 Before discussing particular choices of a gauge, 
 we make notes on the Lagrangian density (\ref{eqn:LagdenMx}).
@@ -175,12 +175,12 @@ The first term has a few different expressions as follows:
 \left[
 (\partial_\mu A_\nu)^2 
 - \partial_\mu A_\nu \partial^\nu A^\mu
-\right]
+\right] \,,
 \label{eqn:LF2expressbyA}
 \\
 &=&
 \frac{1}{2}
-( \bld{E}^2 - \bld{B}^2 )
+( \bld{E}^2 - \bld{B}^2 ) \,,
 \label{eqn:LF2expressbyEB}
 \\
 &=&
@@ -191,47 +191,52 @@ A_\mu
 (\partial^2 g^{\mu \nu} - \partial^\mu \partial^\nu) A_\nu
 -
 \partial_\mu (A_\nu F^{\mu \nu})
-\right]
+\right] \,.
 \label{eqn:LF2expressMx}
 \end{eqnarray}
-In these expressions, $F^{\mu \nu}$ abbreviates its expression in terms of the field $A$.
-Eq. (\ref{eqn:LF2expressbyEB})
-\footnote{%------------------------------- footnote >>
-It may help for reading this equation to write
+The equivalence among these expressions
+can be checked in a straightforward manner.
+ \footnote{%------------------------------- footnote >>
+It may help for doing so to write
 \begin{eqnarray}
-\bld{B}^2 = \frac{1}{2} (F^{ij})^2 = \partial_i A_j F^{ij}
+\bld{B}^2 = \frac{1}{2} (F^{ij})^2 = \partial_i A_j F^{ij} \,.
 \end{eqnarray}
 }%------------------------------- footnote //
- shows that ${\cal L}_{F^2}$
-has no kinetic term $\dot{A}_0$ so that canonical conjugate
+In these expressions, $F^{\mu \nu}$ abbreviates its expression in terms of the field $A$.
+Eq. (\ref{eqn:LF2expressbyEB})
+shows through Eq. (\ref{eqn:FbyEB})
+that ${\cal L}_{F^2}$
+has no kinetic term proportional with $\dot{A}_0$ 
+so that canonical conjugate
 momontum $\Pi_0$ associated with $A_0$ is identically zero.
 This may cause a problem when one apply canonical quantization method.
-The canonical conjugate momentum $\Pi^{\uparrow}$ associated with $A_{\uparrow} = -\bld{A}$ is immediate
+The canonical conjugate momentum $\Pi^{\uparrow}$ associated with $A_{\uparrow} = -\bld{A}$ is 
+immediately obtained
 from Eq. (\ref{eqn:LF2expressbyEB}) as
 \begin{eqnarray}
 \bld{\Pi} = 
 - \frac{\partial {\cal L}}{\partial \dot{\bld{A}}}
 =
-\bld{E}
+\bld{E} \,.
 \end{eqnarray}
 Finally, Eq. (\ref{eqn:LF2expressMx}) shows explicitly that Maxwell's equations are
 deduced from ${\cal L}_{F^2}$ by requiring action to be unchanged by
 varying $A_\nu$.
 \footnote{%------------------------------- footnote >>
 In such a treatment, we adopt the variational principle considering ${\cal L}$ is 
-a functional of the field $A$.
-We mulst take variation of both of $A$ in places before and after differential operators. 
+a functional of the field $A$ solely and its derivatives are not independent variables.
+We must take variation of both of $A$ in places before and after differential operators. 
 For the form of Eq. (\ref{eqn:LF2expressMx}), we make use of partial integrations twice.
 }%------------------------------- footnote //
 
-Hamiltonian density is written as
+Hamiltonian density is written in a variety of expressions as
 \begin{eqnarray}
 {\cal H}_{F^2} 
 &=&
  \Pi^i \dot{A}_i - {\cal L}_{F^2}
 \nonumber\\
 &=&
-(F^{i0})^2 - \partial^i A^0 F^{i0} - \frac{1}{2}(\bld{E}^2 - \bld{B}^2)
+(F^{i0})^2 - \partial^i A^0 F^{i0} - \frac{1}{2}(\bld{E}^2 - \bld{B}^2) \,,
 \nonumber\\
 &=&
 \frac{1}{2} (\bld{E}^2 + \bld{B}^2) 
@@ -239,7 +244,7 @@ Hamiltonian density is written as
 + \partial_i
 \left\{
 A^0 E^i
-\right\}
+\right\} \,,
 \label{eqn:F2HamiltDensEB}
 \\
 &=&
@@ -249,7 +254,7 @@ A^0 E^i
 \right]
 +
 \frac{1}{2}
-\partial_i A_j F^{ij}
+\partial_i A_j F^{ij} \,.
 \label{eqn:F2HamiltDensA}
 \end{eqnarray}
 
@@ -257,7 +262,7 @@ A^0 E^i
 %------------------------------------------------------------------------------------- Lorentz
 \noindent
 \underline{Lorentz gauge}\\
-The gauge condition is given by
+The gauge condition is written as
 \begin{eqnarray}
 \partial_\mu A^\mu = 0 \,.
 \label{eqn:LorentzCond}
@@ -267,8 +272,8 @@ Since
 \partial_\mu F^{\mu \nu} = \partial^2 A^\nu - \partial_\nu (\partial_\mu A^\mu)
 \,,
 \end{eqnarray}
-the field equation (\ref{eqn:MxwA}) reduces to massless Klein-Gordon equation
-$\partial^2 A^\nu = j^\nu$.
+the field equation (\ref{eqn:MxwA}) reduces to the massless Klein-Gordon equation
+$\partial^2 A^\nu~=~j^\nu$ under this condition.
 Making use of an expression Eq. (\ref{eqn:LF2expressbyA}), Lagrangian density under 
 the Lorentz condition reads
 \begin{eqnarray}
@@ -291,12 +296,12 @@ A_\nu \partial^\nu
 \,,
 \label{eqn:LagF2Lorentz}
 \end{eqnarray}
-where we defined
+where we have defined a new Lagrangian density
 \begin{eqnarray}
 {\cal L}_{(\partial A)^2}
 =
 - \frac{1}{2}
-(\partial_\mu A_\nu)^2
+(\partial_\mu A_\nu)^2 \,,
 \label{eqn:LagdenDA2}
 \end{eqnarray}
 that leads to the massless Klein-Gordon equation.
@@ -317,14 +322,14 @@ A_\nu \partial_\mu F^{\mu \nu}
 +
 \eta A_\nu \partial^\nu \partial^\mu A_\mu
 \right]
-+ \mbox{total derivative}
++ \mbox{total derivative} \,,
 \nonumber\\
 &=&
 \frac{1}{2}
 \left[
 A_\nu \partial^2 A^\nu - (1 - \eta) A_\nu \partial^\mu \partial^\nu A_\mu
 \right]
-+ \mbox{total derivative}
++ \mbox{total derivative} \,,
 \label{eqn:LorentzLagmultip}
 \end{eqnarray}
 that induces
@@ -341,6 +346,7 @@ that induces
 \partial^\nu \partial^\mu A_\mu
 - j^\nu
 \end{eqnarray}
+for the full Lagrangian density ${\cal L} = {\cal L}_{Lor} - j^\mu A_\mu$.
 Euler-Lagrange equation for $\eta$ results in the Lorentz condition and
 field equations of the system is composed of that and the massless Klein-Gordon equation.
 
@@ -413,59 +419,54 @@ A^0 (x) = \frac{1}{4\pi} \int d^3 \bld{x}'
 The solution is unique under the boundary condition that $A^0$ and $\rho$ vanish at
 spatial infinity.
 Cancelling out terms with $\partial_0 A_0$ in the Lagrangian density ${\cal L}_{F^2}$,  
-we read
+we read from Eq. (\ref{eqn:LF2expressbyA}) that
 \begin{eqnarray}
 {\cal L}_{F^2}
 &=&
 -\frac{1}{2}
 \left[
--(\partial_i A_0)^2
-- 2 \partial_0 A^i \partial_i A_0
-- (\partial_\mu  A_i)^2 - 
-\partial_i A^j \partial_j A^i
+(\partial_\mu A_0)^2
+- (\partial_\mu  A_i)^2 
+- \partial_0 A_\nu \partial^\nu A_0
+- \partial_i A_\nu \partial^\nu A^i
 \right]
-\label{eqn:CoulmbLagden}
+\nonumber
 \\
 &=&
 -\frac{1}{2}
 \left[
-- (\partial_\mu  A_i)^2 
 -(\partial_i A_0)^2
-- \partial_i (A^j \partial_j A^i) + A^j \partial_j \partial_i A^i
+- (\partial_\mu  A_i)^2 
+- \partial_0 A^i \partial_i A_0
+- \partial_i A_\nu \partial^\nu A^i
 \right]
-\nonumber\\
-&&
-+ \partial_i( \partial_0 A^i  A_0) -  A_0 \partial_0 \partial_i A^i 
-\nonumber\\
+\nonumber
+\\
 &=&
 -\frac{1}{2}
 \left[
-A_0 \bld{\partial}^2 A_0  - \partial_i (A_0 \partial_i A_0)
+\left\{A_0 \bld{\partial}^2 A_0  - \partial_i (A_0 \partial_i A_0)\right\}
+-\left\{ A_i \partial^2 A^i + \partial_\mu(A_i \partial^\mu A_i)\right\}
 \right.
 \nonumber\\
 &&
 \hspace{5mm}
-- A_i \partial^2 A^i - \partial_\mu(A_i \partial^\mu A_i)
-\nonumber\\
-&&
-\hspace{5mm}
-+ 2 A^i \partial_i \partial_0 A_0
-- 2 \partial_0 (A^i \partial_i A_0)
-\nonumber\\
-&&
 \left.
-\hspace{10mm}
-- A_i \partial_i \partial_j A^j
-- \partial_i(A^j \partial_j A^i)
-\right]
++2\left\{
+A^i \partial_i \partial_0 A_0 - \partial_0(A^i \partial_i A_0)
+\right\}
++ \left\{
+A^i \partial_i \partial_j A^j - \partial_i (A^j \partial_j A^i)
+\right\}
+\right]\,.
+\nonumber
 \label{eqn:CoulmbLinA}
 \end{eqnarray}
-where we use abbreviations  $(a_i)^2 = a_i a_i = \bld{a}^2$ while
-$(a_\mu)^2 = a_\mu a^\mu = a^2$ so that
-$(\partial_\mu A_i)^2 = \partial^2 \bld{A}^2$.
-The second expression (\ref{eqn:CoulmbLinA}) has a form easy to take 
+where we have used abbreviations  $(a_i)^2 = a_i a_i = \bld{a}^2$ while
+$(a_\mu)^2 = a_\mu a^\mu = a^2$.
+The last expression in the above equation has a form easy to take 
 variations in $A$. 
-In the Hamiltonian density of a form obtained from Eq. (\ref{eqn:F2HamiltDensA}),
+In the Hamiltonian density of a form equivalent to Eq. (\ref{eqn:F2HamiltDensA}),
 \begin{eqnarray*}
 {\cal H}_{F^2} 
 &=&
@@ -479,7 +480,7 @@ In the Hamiltonian density of a form obtained from Eq. (\ref{eqn:F2HamiltDensA})
 A^0 \bld{\partial}^2 A^0
 -
 \frac{1}{2}
-\partial_i \left\{ A^0 \partial_i A^0 \right\}\,,
+\partial_i \left( A^0 \partial_i A^0 \right)\,,
 \end{eqnarray*}
 we may substitute the solution (\ref{eqn:CoulmbA0}) of 
 non-dynamical variable $A^0$ in the third term to write
@@ -496,7 +497,8 @@ non-dynamical variable $A^0$ in the third term to write
 A^0 \rho
 -
 \frac{1}{2}
-\partial_i \left\{ A^0 \partial_i A^0 \right\}
+\partial_i \left( A^0 \partial_i A^0 \right) \,.
+\nonumber
 \end{eqnarray}
 Adding the source term $j \cdot A = \rho A^0 - \bld{j} \cdot \bld{A}$, we obtain the
 full Hamiltonian density in the Coulomb gauge as
@@ -513,7 +515,7 @@ full Hamiltonian density in the Coulomb gauge as
 - \bld{j} \cdot \bld{A}
 -
 \frac{1}{2}
-\partial_i \left\{ A^0 \partial_i A^0 \right\}\,,
+\partial_i \left( A^0 \partial_i A^0 \right)\,,
 \label{eqn:HdensCoul}
 \end{eqnarray}
 where 
@@ -540,7 +542,7 @@ equivalent with writing
 \frac{\bld{\partial} \bld{\partial} \cdot}
 {\bld{\partial}^2}
 \right)
-\bld{A}
+\bld{A}\,.
 \label{eqn:CoulmbProjection}
 \end{eqnarray}
 From the current conservation law 
@@ -565,7 +567,9 @@ and
 \bld{j} -
 \bld{\partial} \partial_0 A^0
 \end{eqnarray}
-so that Eq. (\ref{eqn:CoulmbEOMrho}) can be written
+so that Eq. (\ref{eqn:CoulmbEOMj}) 
+%(\ref{eqn:CoulmbEOMrho}) 
+can be written
 \footnote{%------------------------------- footnote >>
 An expression of $\bld{j}_T$ and $\bld{j}_L = \bld{j} -\bld{j}_T$ in terms of integration is given in
 \cite{ref:Jackson}.
@@ -576,7 +580,7 @@ thus $\bld{j}_T = \bld{0}$ for the case of no source $j^\mu = 0$.
 \begin{eqnarray}
 \partial^2 \bld{A}
 =
-\bld{j}_T
+\bld{j}_T \,.
 \end{eqnarray}
 
 When there is no source current, we have $A^0 = 0$ from Eq. (\ref{eqn:CoulmbA0}) and
@@ -603,12 +607,13 @@ for which we write the solution as
 \left[
 %\bld{A}^{(+)}(\bld{k}) e^{-i k x} + \bld{A}^{(-)}(\bld{k}) e^{i k x} 
 \bld{a}^{}(\bld{k}) e^{-i k x} + \bld{a}^{\dagger}(\bld{k}) e^{i k x} 
-\right]
+\right] \,,
 \label{eqn:CoulPhoAA}
 \end{eqnarray}
 where $\omega = k^0 = |\bld{k}|$ and $\bld{a}^{\dagger}$ is
 complex (hermite) conjugate of $\bld{a}$ in the classical (quantum) level.
 \footnote{%------------------------------- footnote >>>>>>>>>>>>>>>
+Expressions below follow:
 \begin{eqnarray}
 \begin{array}{l}
 \dot{\bld{A}} =
@@ -642,7 +647,7 @@ i \bld{k} \times
 }%------------------------------- footnote //
 The gauge condition (\ref{eqn:CoulmbGaugeCond}) reads
 \begin{eqnarray}
-\bld{k} \cdot \bld{a}^{} (\bld{k}) = 0
+\bld{k} \cdot \bld{a}^{} (\bld{k}) = 0 \,.
 \label{eqn:CoulmbGCondMom}
 \end{eqnarray}
 Considering there are two independent dynamical degrees of freedom, we introduce
@@ -650,11 +655,13 @@ polarization 3 vectors $\bld{e}^{(\lambda)}$, $\lambda = 1, 2$ which satisfy
 the following three conditions:
 \begin{eqnarray}
 \begin{array}{l}
-\bld{k} \cdot \bld{e}^{(\lambda)} = 0
+\bld{k} \cdot \bld{e}^{(\lambda)} = 0\,,
+\vspace{1mm}
 \\
-{\bld{e}^{(\lambda)}}^* \cdot \bld{e}^{(\lambda')} = \delta^{\lambda \lambda'}
+{\bld{e}^{(\lambda)}}^* \cdot \bld{e}^{(\lambda')} = \delta^{\lambda \lambda'} \,,
+\vspace{1mm}
 \\
-\sum_\lambda \bld{e}^{(\lambda)} {\bld{e}^{(\lambda)}}^* \cdot = 1 - \hat{\bld{k}} \hat{\bld{k}} \cdot
+\sum_\lambda \bld{e}^{(\lambda)} {\bld{e}^{(\lambda)}}^* \cdot = 1 - \hat{\bld{k}} \hat{\bld{k}} \cdot \,.
 \end{array}
 \end{eqnarray}
 where we wrote $\bld{k} / |\bld{k}| = \hat{\bld{k}}$.
@@ -666,9 +673,10 @@ Decomposing $\bld{a}$ with these basis, we write
 a_\lambda (\bld{k}) \bld{e}^{(\lambda)} e^{-i k x} 
 + 
 a_\lambda^{\dagger}(\bld{k}) {\bld{e}^{(\lambda)}}^* e^{i k x} 
-\right]
+\right] \,.
 \label{eqn:CoulPhoAApol}
 \end{eqnarray}
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 In a coordinate system where the wave vector $\bld{k}$ lays in the direction of the
 3rd axix,
 one may choose $\bld{e}^{(1)}$ and $\bld{e}^{(2)}$ as unit vectors in directions of
