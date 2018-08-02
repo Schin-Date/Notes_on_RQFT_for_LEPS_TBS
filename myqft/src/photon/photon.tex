@@ -597,11 +597,12 @@ polarization states of the photon.
 %------------------------------------------------------------------------------------- Coulomb
 \noindent
 \underline{Coulomb gauge}\\
+
 The dynamical field equation for free field is
 \begin{eqnarray}
 \partial^2 \bld{A} = \bld{0}\,,
 \end{eqnarray}
-for which we write the solution as
+for which we may write the solution as
 \begin{eqnarray}
 \bld{A}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2\omega} 
 \left[
@@ -676,7 +677,6 @@ a_\lambda^{\dagger}(\bld{k}) {\bld{e}^{(\lambda)}}^* e^{i k x}
 \right] \,.
 \label{eqn:CoulPhoAApol}
 \end{eqnarray}
-%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 In a coordinate system where the wave vector $\bld{k}$ lays in the direction of the
 3rd axix,
 one may choose $\bld{e}^{(1)}$ and $\bld{e}^{(2)}$ as unit vectors in directions of
@@ -691,8 +691,8 @@ $\bld{e}^{(\pm)} = \mp i (1, \pm i , 0)/\sqrt{2}$.
 On applying the canonical quantization method,
 one needs to take constraints of the gauge condition on canonical
 variables $\bld{A}$ and $\bld{\Pi} = \bld{E}$ into account.
-SInce $\bld{\partial}\cdot \bld{A} = \bld{\partial}\cdot \bld{E} = 0$ shold
-be hold, these variables are restricted in a space projected by
+Since $\bld{\partial}\cdot \bld{A} = \bld{\partial}\cdot \bld{E} = 0$ shold
+hold, these variables are restricted in a space projected by
 an operator in Eq. (\ref{eqn:CoulmbProjection}). Therefore we write
 the equal-time commutation relation among them as
 \begin{eqnarray}
@@ -736,16 +736,17 @@ we find
 [a_\lambda(\bld{k}), a_{\lambda '}(\bld{k}')]
 =
 [a^\dagger_\lambda(\bld{k}), a^\dagger_{\lambda '}(\bld{k}')]
-=0
-\vspace{2mm}
+=0 \,,
+\vspace{3mm}
 \\
 {[}a_\lambda (\bld{k}), a_{\lambda '} (\bld{k}'){]}
 =
-2 \omega \delta^3(\bld{k} - \bld{k}') \delta_{\lambda \lambda'}
+2 \omega \delta^3(\bld{k} - \bld{k}') \delta_{\lambda \lambda'} \,,
 \end{array}
 \end{eqnarray}
+for $\lambda = 1, 2$.
 Now we can interpret $a^\dagger_\lambda (\bld{k})$ and $a_\lambda (\bld{k})$
-as creation and annihilation operators for photons of definite polarization.
+as creation and annihilation operators for dynamical photons of definite polarization represented by $\lambda$.
 
 The Hamiltonian corresponding to Eq. (\ref{eqn:HdensCoul}) 
 before taking normal product reads
@@ -920,7 +921,7 @@ e^{-2i\omega t}
 \bld{a} \cdot \bld{a}^\dagger
 \right)
 \end{eqnarray*}
-Thus lead to Eq. (\ref{eqn:HamiltCoul}).
+This leads to Eq. (\ref{eqn:HamiltCoul}).
 }%------------------------------- footnote //
 \begin{eqnarray}
 H 
@@ -938,10 +939,9 @@ d^3 \bld{x}
 \label{eqn:HamiltCoul}
 \end{eqnarray}
 
-In this gauge, the propagator is given as
-\footnote{%------------------------------- footnote >>
-We make use of an expression
-\begin{eqnarray*}
+To obtain the Feynman propagator in this gauge, we first derive the following
+expression:
+\begin{eqnarray}
 D^{ij}(x-y)
 &\leftdef&
 \bra 0 \braend A^i(x) A^j(y) \ketend 0 \ket
@@ -970,23 +970,32 @@ e^{-ik(x -y)}
 \int
 \frac{d^3 \bld{k}}{(2\pi)^3 2 \omega} 
 (\delta^{ij} - \frac{k^i k^j}{\bld{k}^2})
-e^{-ik(x -y)}
-\end{eqnarray*}
-Performing the contour integration in Eq. (\ref{eqn:FeynPropCoulgauge}),
-we find
+e^{-ik(x -y)} \,.
+\end{eqnarray}
+The Feynman propagator is then obtained as
+\footnote{%------------------------------- footnote >>
+The derivation goes similar way as that for scalar fields.
+Performing the contour integration of the variable $k_0$ in Eq. (\ref{eqn:FeynPropCoulgauge}),
+it is straightforward to obtain
 \begin{eqnarray*}
 D_T^{ij}(x-y) = \theta(x^0 > y^0) D^{ij}(x-y) +\theta(y^0 > x^0) D^{ij}(y - x)
 \end{eqnarray*}
 }%------------------------------- footnote //
 \begin{eqnarray}
 D^{ij}_T(x - y)
-=
+&\leftdef&
 \bra 0 \braend 
 T\left[
 A^i(x) A^j(y)
 \right]
 \ketend 0 \ket
-=
+%\nonumber\\
+%&=&
+%\theta(x^0 - y^0) D^{ij}(x-y)
+%+
+%\theta(y^0 - x^0) D^{ji}(y-x)
+\nonumber\\
+&=&
 \int
 \frac{d^4 k}{(2\pi)^4}
 \frac{i}{k^2 + i\epsilon}
@@ -995,17 +1004,22 @@ A^i(x) A^j(y)
 -
 \frac{k^i k^j}{\bld{k}^2}
 \right)
-e^{-ik \cdot (x- y)}
+e^{-ik \cdot (x- y)} \,,
 \nonumber\\
 \label{eqn:FeynPropCoulgauge}
 \end{eqnarray}
+where we have distinguished this propagator with a subscript $T$
+to indicate this one is for transverse photons.
+
+\bigskip
 
 \bigskip
 
 %------------------------------------------------------------------------------------- Lorentz quantization
 \noindent
 \underline{Lorentz gauge}\\
-In this prescription, we start with the Lagrangian density in Eq. (\ref{eqn:LorentzLagmultip})
+
+We consider a  prescription where we start with the Lagrangian density in Eq. (\ref{eqn:LorentzLagmultip})
 with $\eta = 1/ \alpha = 1$ (Feynman gauge). Thus, our Lagrangian density is written as
 \begin{eqnarray}
 {\cal L}
@@ -1049,6 +1063,7 @@ a^\dagger_\lambda (\bld{k})
 \right]
 \label{eqn:photonFieldExpansionLorentz}
 \end{eqnarray}
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 As the field $A_\mu$ is not constrained, the polarization four vectors $e_\mu^{(\lambda)}(\bld{k})$ 
 can be chosen as 4 linearly independent basis:
 \begin{comment}
