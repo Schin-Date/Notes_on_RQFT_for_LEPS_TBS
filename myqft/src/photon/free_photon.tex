@@ -1,0 +1,1412 @@
+\noindent
+\subsection{Classical Theory}
+Maxwell's equations,
+a set of classical field equations of the electromagnetism,
+in a vacuum, 
+are written 
+\footnote{%------------------------------- footnote >>
+We use the Heaviside-Lorentz Gauss unit system of the electrodynamics and
+write the light speed $c$ explicitly for a while.
+}%------------------------------------------ footnote //
+in a Lorentz covariant form as
+\begin{eqnarray}
+\partial_\nu F^{\nu \mu}(x) = \frac{1}{c} j^{\mu}(x)\,,
+\label{eqn:inhomMxwF}
+\\
+\frac{1}{2}\epsilon^{\mu \rho \sigma \tau}
+\partial_\rho F_{\sigma \tau}(x) = 0
+\,,
+\label{eqn:homMxwF}
+\end{eqnarray}
+where
+$j^\mu(x) = (c \rho, \bld{j})$ is the four charge current density
+and
+$\epsilon^{\mu \rho \sigma \tau}$ is the Levi-Civita tensor in the 4 dimension.
+%with a choice of signature $\epsilon^{0123}$ = 1.
+The field strength tensor $F^{\mu \nu}$ is defined in terms of
+the four electromagnetic potential
+$A^\mu(x) = (\phi, \bld{A})$ as
+\begin{eqnarray}
+F^{\mu \nu} = \partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu}\,,
+\label{eqn:FdefinedbyA}
+\end{eqnarray}
+which is apparently an antisymmetric tensor.
+The field strength tensor is related with
+the electric and magnetic fields
+as
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+F^{\uparrow 0} = \bld{E}\,,
+\vspace{2mm}
+\\
+F^{ij} =  \epsilon^{ijk} B_k
+\hspace{2mm}
+( \Leftrightarrow 
+\hspace{1mm}\bld{B} = -\frac{1}{2}\epsilon^{\uparrow ij}F^{ij}  )
+\,,
+\end{array}
+\right.
+\label{eqn:FbyEB}
+\end{eqnarray}
+or explicitly in a matrix form as
+\begin{equation}
+F^{\mu\nu}
+=
+\left(
+\begin{array}{cccc}
+0 & -E^1& -E^2& -E^3 \\
+E^1 &0&-B^3& B^2\\
+E^2  &B^3&0&-B^1 \\
+E^3 &-B^2&B^1& 0
+\end{array}
+\right)\,.
+\label{eqn:FcontentbyEandB} 
+\end{equation}
+In the first equation in Eq. (\ref{eqn:FbyEB}), an upper arrow as a
+superscript represents cartesian components of a spatial vector
+in the right hand side.
+\footnote{%------------------------------------------ footnote 
+This notation is convenient in dealing with
+calculus among spatial vectors.
+}
+With these correspondences, we may easily reproduce
+the familiar form of Maxwell's equations in a vacuum:
+\[
+\left\{
+\begin{array}{l}
+\bld{\partial}\cdot \bld{E} =  \rho 
+\hspace{30mm}\mbox{Coulomb}
+\\
+\bld{\partial} \times \bld{B}  - \partial_0 \bld{E} = \frac{1}{c}\bld{j}
+\hspace{13.5mm}\mbox{Amp\`ere-Maxwell}
+\\
+\bld{\partial} \times \bld{E}  +  \partial_0 \bld{B} = \bld{0}
+\hspace{15.5mm}\mbox{Faraday}
+\\
+\bld{\partial}\cdot \bld{B} = 0
+\hspace{30mm}\mbox{Coulomb (magnetic)}
+\\
+\end{array}
+\right.
+\]
+
+It follows from the definition (\ref{eqn:FdefinedbyA}) that
+the set of
+homogeneous Maxwell's equations (\ref{eqn:homMxwF})
+is satisfied automatically and becomes an identity.
+This identity  is called the Bianchi identity.
+Now, problems of electromagnetism reduce themselves to solving inhomogeneous
+equations (\ref{eqn:inhomMxwF}). Substituting Eq. (\ref{eqn:FdefinedbyA}) into
+Eq. (\ref{eqn:inhomMxwF}), we have
+\begin{eqnarray}
+(\partial^2 g^{\mu \nu} - \partial^\mu \partial^\nu) A_\nu = j^\mu
+%(\partial^2 g^\mu_\nu - \partial_\nu \partial^\mu) A^\nu = j^\mu
+\label{eqn:MxwA}
+\end{eqnarray}
+Here and hereafter, we set $c = 1$ as usual.
+A famous problem (and the sake) of the electromagnetism is that
+the operator acting on $A_\nu$ in the left hand side
+is not invertible.
+\footnote{%------------------------------------------ footnote >>
+It is equivalent to say Green's function satisfying 
+\[(\partial^2 g^\mu_\nu
+ - \partial_\nu \partial^\mu) G^\nu_\lambda (x-x')=
+ g^\mu_\lambda \delta(x -x')
+\]
+does not exist. If it does, one get
+$\partial_\lambda \delta(x - x') = \partial_\nu 
+(\partial^2 g^\mu_\nu - \partial_\nu \partial^\mu) G^\nu_\lambda
+= 0$,
+which is mathematically contradicting.}%------------------------------------------ footnote //
+This is due to a symmetry of Eq. (\ref{eqn:MxwA}) under the gauge transformation
+of the second kind:
+\begin{eqnarray}
+A^\mu \mapsto A'{}^{\mu} = A^\mu + \partial^\mu \Lambda\,,
+\end{eqnarray}
+where $\Lambda$ is an arbitrary second order differentiable function.
+\begin{comment}
+\end{comment}
+One can confirm that the physically observable fields $F^{\mu \nu}$ in Eq. (\ref{eqn:FdefinedbyA}) 
+are certainly invariant under this transformation. 
+This is why we are insisted (and allowed) to pick a representative of the field $A^\mu$
+among those connected by gauge transformations
+and, as a result, obtain two degrees of freedom corresponding to photon polarizations
+from the  four of the Lorentz vector $A^\mu$.
+
+The Lagrangian density which
+ reproduces Maxwell's equations (\ref{eqn:MxwA}) may be written as
+%for $j^\mu = 0$ is written as
+\begin{eqnarray}
+%{\cal L} = -\frac{1}{4}F_{\mu \nu} F^{\mu \nu}
+{\cal L} = -\frac{1}{4}F_{\mu \nu} F^{\mu \nu} - j^\mu A_\mu
+\,.
+\label{eqn:LagdenMx}
+\end{eqnarray}
+The first term is manifestly gauge invariant.
+The second term is not manifest but
+the gauge invariance is guarantied in the level of action
+through the current conservation law
+%of the action is guarantied by the current conservation law 
+$\partial \cdot j = 0$, which is a consistency condition of the Maxwell equation
+(\ref{eqn:MxwA}).
+To fix a gauge, we impose condition(s) on the field $A_\mu$ and
+modify the first term of the Lagrangian density (\ref{eqn:LagdenMx})
+accordingly. This modification is not accounted for as a change by
+a total derivative, which does not change the field equation.
+We need to modify the field equation itself to make it solvable.
+In the classical theory, this can be achieved as described below.
+In the quantum theory, however, 
+an special care is required to set condition(s) on the field.
+% should be treated carefully.
+
+Before discussing particular choices of a gauge, 
+we make notes on the Lagrangian density (\ref{eqn:LagdenMx}).
+The first term has a few different expressions as follows:
+\begin{eqnarray}
+{\cal L}_{F^2} 
+&\equiv&
+ - \frac{1}{4} F^2
+\nonumber\\
+&=&
+- \frac{1}{2} \partial_\mu A_\nu F^{\mu \nu}
+=
+- \frac{1}{2}
+\left[
+(\partial_\mu A_\nu)^2 
+- \partial_\mu A_\nu \partial^\nu A^\mu
+\right] \,,
+\label{eqn:LF2expressbyA}
+\\
+&=&
+\frac{1}{2}
+( \bld{E}^2 - \bld{B}^2 ) \,,
+\label{eqn:LF2expressbyEB}
+\\
+&=&
+\frac{1}{2}
+\left[
+%A_\nu \partial_\mu F^{\mu \nu}
+A_\mu 
+(\partial^2 g^{\mu \nu} - \partial^\mu \partial^\nu) A_\nu
+-
+\partial_\mu (A_\nu F^{\mu \nu})
+\right] \,.
+\label{eqn:LF2expressMx}
+\end{eqnarray}
+The equivalence among these expressions
+can be checked in a straightforward manner.
+ \footnote{%------------------------------- footnote >>
+It may help for doing so to write
+\begin{eqnarray}
+\bld{B}^2 = \frac{1}{2} (F^{ij})^2 = \partial_i A_j F^{ij} \,.
+\end{eqnarray}
+}%------------------------------- footnote //
+In these expressions, $F^{\mu \nu}$ abbreviates its expression in terms of the field $A$.
+Eq. (\ref{eqn:LF2expressbyEB})
+shows through Eq. (\ref{eqn:FbyEB})
+that ${\cal L}_{F^2}$
+has no kinetic term proportional with $\dot{A}_0$ 
+so that canonical conjugate
+momontum $\Pi_0$ associated with $A_0$ is identically zero.
+This may cause a problem when one apply canonical quantization method.
+The canonical conjugate momentum $\Pi^{\uparrow}$ associated with $A_{\uparrow} = -\bld{A}$ is 
+immediately obtained
+from Eq. (\ref{eqn:LF2expressbyEB}) as
+\begin{eqnarray}
+\bld{\Pi} = 
+- \frac{\partial {\cal L}}{\partial \dot{\bld{A}}}
+=
+\bld{E} \,.
+\end{eqnarray}
+Finally, Eq. (\ref{eqn:LF2expressMx}) shows explicitly that Maxwell's equations are
+deduced from ${\cal L}_{F^2}$ by requiring action to be unchanged by
+varying $A_\nu$.
+\footnote{%------------------------------- footnote >>
+In such a treatment, we adopt the variational principle considering ${\cal L}$ is 
+a functional of the field $A$ solely and its derivatives are not independent variables.
+We must take variation of both of $A$ in places before and after differential operators. 
+For the form of Eq. (\ref{eqn:LF2expressMx}), we make use of partial integrations twice.
+}%------------------------------- footnote //
+
+Hamiltonian density is written in a variety of expressions as
+\begin{eqnarray}
+{\cal H}_{F^2} 
+&=&
+ \Pi^i \dot{A}_i - {\cal L}_{F^2}
+\nonumber\\
+&=&
+(F^{i0})^2 - \partial^i A^0 F^{i0} - \frac{1}{2}(\bld{E}^2 - \bld{B}^2) \,,
+\nonumber\\
+&=&
+\frac{1}{2} (\bld{E}^2 + \bld{B}^2) 
+- A^0 \bld{\partial}\cdot \bld{E}
++ \partial_i
+\left\{
+A^0 E^i
+\right\} \,,
+\label{eqn:F2HamiltDensEB}
+\\
+&=&
+-\frac{1}{2}
+\left[
+(\partial^i A^0)^2 - (\partial^0 A^i)^2
+\right]
++
+\frac{1}{2}
+\partial_i A_j F^{ij} \,.
+\label{eqn:F2HamiltDensA}
+\end{eqnarray}
+
+\bigskip
+%------------------------------------------------------------------------------------- Lorentz
+\noindent
+\underline{Lorentz gauge}\\
+The gauge condition is written as
+\begin{eqnarray}
+\partial_\mu A^\mu = 0 \,.
+\label{eqn:LorentzCond}
+\end{eqnarray}
+Since
+\begin{eqnarray}
+\partial_\mu F^{\mu \nu} = \partial^2 A^\nu - \partial_\nu (\partial_\mu A^\mu)
+\,,
+\end{eqnarray}
+the field equation (\ref{eqn:MxwA}) reduces to the massless Klein-Gordon equation
+$\partial^2 A^\nu~=~j^\nu$ under this condition.
+Making use of an expression Eq. (\ref{eqn:LF2expressbyA}), Lagrangian density under 
+the Lorentz condition reads
+\begin{eqnarray}
+{\cal L}_{F^2}
+&=&
+- \frac{1}{2}
+\left[
+(\partial_\mu A_\nu)^2 + 
+%\slashed
+\cancel
+{
+A_\nu \partial^\nu 
+\partial_\mu A^\mu
+}
+- \partial_\mu (A_\nu \partial^\nu A^\mu)
+\right]
+\nonumber\\
+&=&
+{\cal L}_{(\partial A)^2} + \mbox{total derivative}
+\,,
+\label{eqn:LagF2Lorentz}
+\end{eqnarray}
+where we have defined a new Lagrangian density
+\begin{eqnarray}
+{\cal L}_{(\partial A)^2}
+=
+- \frac{1}{2}
+(\partial_\mu A_\nu)^2 \,,
+\label{eqn:LagdenDA2}
+\end{eqnarray}
+that leads to the massless Klein-Gordon equation.
+Appart from the explicit way to modify ${\cal L}$ as in the above, 
+the Lorentz gauge condition can be imposed in terms of Lagrangian
+multiplier $\eta$ as follows:
+\begin{eqnarray}
+{\cal L}_{Lor}
+&=&
+{\cal L}_{F^2}
+-
+\frac{\eta}{2} (\partial \cdot A)^2
+\nonumber\\
+&=&
+\frac{1}{2}
+\left[
+A_\nu \partial_\mu F^{\mu \nu}
++
+\eta A_\nu \partial^\nu \partial^\mu A_\mu
+\right]
++ \mbox{total derivative} \,,
+\nonumber\\
+&=&
+\frac{1}{2}
+\left[
+A_\nu \partial^2 A^\nu - (1 - \eta) A_\nu \partial^\mu \partial^\nu A_\mu
+\right]
++ \mbox{total derivative} \,,
+\label{eqn:LorentzLagmultip}
+\end{eqnarray}
+that induces
+\begin{eqnarray}
+0
+&=&
+\partial_\mu F^{\mu \nu}
++ \eta \partial^\nu \partial^\mu A_\mu
+- j^\nu
+\nonumber\\
+&=&
+\partial^2 A^\nu
+- (1 - \eta)
+\partial^\nu \partial^\mu A_\mu
+- j^\nu
+\label{eqn:EOMwitheta}
+\end{eqnarray}
+for the full Lagrangian density ${\cal L} = {\cal L}_{Lor} - j^\mu A_\mu$.
+Euler-Lagrange equation for $\eta$ results in the Lorentz condition and
+field equations of the system is composed of that and the massless Klein-Gordon equation.
+
+With the Lorentz condition, the gauge is not completely fixed. We still have freedom of
+making gauge transformation for an arbitrary function $\Lambda$ satisfying 
+$\partial^2 \Lambda = 0$.
+
+\bigskip
+%------------------------------------------------------------------------------------- Coulomb
+\noindent
+\underline{Coulomb gauge}\\
+\begin{eqnarray}
+\bld{\partial} \cdot \bld{A} = 0
+\label{eqn:CoulmbGaugeCond}
+\end{eqnarray}
+Inhomogeneous Maxwell's equations read
+\begin{eqnarray}
+%\left\{
+%\begin{array}{l}
+\partial_\mu F^{\mu 0} 
+&=&
+- \bld{\partial}^2 A^0 - \partial_0 
+\cancel{
+\bld{\partial}\cdot \bld{A}
+}
+= \rho
+\label{eqn:CoulmbEOMrho}
+\\
+\partial_\mu F^{\mu \uparrow} 
+&=&
+\partial^2 \bld{A} + \bld{\partial}\partial_0 A^0 +
+\bld{\partial}
+\cancel{
+ (\bld{\partial}\cdot \bld{A})
+}
+= \bld{j}
+%\end{array}
+%\right.
+\label{eqn:CoulmbEOMj}
+\end{eqnarray}
+\begin{comment}
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+\partial_\mu F^{\mu 0} =
+- \bld{\partial}^2 A^0 - \partial_0 
+\cancel{
+\bld{\partial}\cdot \bld{A}
+}
+= \rho
+\\
+\partial_\mu F^{\mu \uparrow} =
+\partial^2 \bld{A} + \bld{\partial}\partial_0 A^0 +
+\bld{\partial}
+\cancel{
+ (\bld{\partial}\cdot \bld{A})
+}
+= \bld{j}
+\end{array}
+\right.
+\label{eqn:CoulmbEOMj}
+\end{eqnarray}
+\end{comment}
+The solution of the first (nondynamical) equation for $A^0$ is given as
+\begin{eqnarray}
+A^0 (x) = \frac{1}{4\pi} \int d^3 \bld{x}' 
+\frac{\rho(\bld{x}', t)}{| \bld{x} - \bld{x}' |}
+\label{eqn:CoulmbA0}
+\end{eqnarray}
+The solution is unique under the boundary condition that $A^0$ and $\rho$ vanish at
+spatial infinity.
+Cancelling out terms with $\partial_0 A_0$ in the Lagrangian density ${\cal L}_{F^2}$,  
+we read from Eq. (\ref{eqn:LF2expressbyA}) that
+\begin{eqnarray}
+{\cal L}_{F^2}
+&=&
+-\frac{1}{2}
+\left[
+(\partial_\mu A_0)^2
+- (\partial_\mu  A_i)^2 
+- \partial_0 A_\nu \partial^\nu A_0
+- \partial_i A_\nu \partial^\nu A^i
+\right]
+\nonumber
+\\
+&=&
+-\frac{1}{2}
+\left[
+-(\partial_i A_0)^2
+- (\partial_\mu  A_i)^2 
+- \partial_0 A^i \partial_i A_0
+- \partial_i A_\nu \partial^\nu A^i
+\right]
+\nonumber
+\\
+&=&
+-\frac{1}{2}
+\left[
+\left\{A_0 \bld{\partial}^2 A_0  - \partial_i (A_0 \partial_i A_0)\right\}
+-\left\{ A_i \partial^2 A^i + \partial_\mu(A_i \partial^\mu A_i)\right\}
+\right.
+\nonumber\\
+&&
+\hspace{5mm}
+\left.
++2\left\{
+A^i \partial_i \partial_0 A_0 - \partial_0(A^i \partial_i A_0)
+\right\}
++ \left\{
+A^i \partial_i \partial_j A^j - \partial_i (A^j \partial_j A^i)
+\right\}
+\right]\,.
+\nonumber
+\label{eqn:CoulmbLinA}
+\end{eqnarray}
+where we have used abbreviations  $(a_i)^2 = a_i a_i = \bld{a}^2$ while
+$(a_\mu)^2 = a_\mu a^\mu = a^2$.
+The last expression in the above equation has a form easy to take 
+variations in $A$. 
+In the Hamiltonian density of a form equivalent to Eq. (\ref{eqn:F2HamiltDensA}),
+\begin{eqnarray*}
+{\cal H}_{F^2} 
+&=&
+\frac{1}{2}
+(\partial^0 A^i)^2
++
+\frac{1}{2}
+\partial_i A_j F^{ij}
++
+\frac{1}{2}
+A^0 \bld{\partial}^2 A^0
+-
+\frac{1}{2}
+\partial_i \left( A^0 \partial_i A^0 \right)\,,
+\end{eqnarray*}
+we may substitute the solution (\ref{eqn:CoulmbA0}) of 
+non-dynamical variable $A^0$ in the third term to write
+\begin{eqnarray}
+{\cal H}_{F^2,\mbox{\scriptsize Coul}} 
+&=&
+\frac{1}{2}
+(\partial^0 A^i)^2
++
+\frac{1}{2}
+\partial_i A_j F^{ij}
+-
+\frac{1}{2}
+A^0 \rho
+-
+\frac{1}{2}
+\partial_i \left( A^0 \partial_i A^0 \right) \,.
+\nonumber
+\end{eqnarray}
+Adding the source term $j \cdot A = \rho A^0 - \bld{j} \cdot \bld{A}$, we obtain the
+full Hamiltonian density in the Coulomb gauge as
+\begin{eqnarray}
+{\cal H} 
+&=&
+\frac{1}{2}
+(\partial^0 A^i)^2
++
+\frac{1}{2}
+\partial_i A_j F^{ij}
++
+{\cal H}_{\mbox{\scriptsize Coul}}
+- \bld{j} \cdot \bld{A}
+-
+\frac{1}{2}
+\partial_i \left( A^0 \partial_i A^0 \right)\,,
+\label{eqn:HdensCoul}
+\end{eqnarray}
+where 
+\begin{eqnarray}
+{\cal H}_{\mbox{\scriptsize Coul}}
+=
+\frac{1}{2} A^0 \rho
+=
+\frac{1}{8\pi} \int
+d^3 \bld{x}' 
+\frac{\rho(\bld{x}, t) \rho(\bld{x}', t)}{|\bld{x} - \bld{x}'|}\,.
+\end{eqnarray}
+The last term in Eq. (\ref{eqn:HdensCoul}) is a total derivative
+and will not contribute to the Hamiltonian.
+
+
+The gauge condition (\ref{eqn:CoulmbGaugeCond}) is
+equivalent with writing
+\begin{eqnarray}
+\bld{A} =
+\left(
+1
+-
+\frac{\bld{\partial} \bld{\partial} \cdot}
+{\bld{\partial}^2}
+\right)
+\bld{A}\,.
+\label{eqn:CoulmbProjection}
+\end{eqnarray}
+From the current conservation law 
+%$\partial_0 j^0 + \bld{\partial}\cdot \bld{j}$ 
+and Eq. (\ref{eqn:CoulmbEOMj}), we have
+\begin{eqnarray}
+\bld{\partial}\cdot \bld{j}
+= -\partial_0 \rho
+= \bld{\partial}^2 \partial_0 A^0
+\end{eqnarray}
+and
+\begin{eqnarray}
+\bld{j}_T
+&\leftdef&
+\left(
+1 -
+\frac{\bld{\partial} \bld{\partial} \cdot}
+{\bld{\partial}^2}
+\right)
+\bld{j}
+=
+\bld{j} -
+\bld{\partial} \partial_0 A^0
+\end{eqnarray}
+so that Eq. (\ref{eqn:CoulmbEOMj}) 
+%(\ref{eqn:CoulmbEOMrho}) 
+can be written
+\footnote{%------------------------------- footnote >>
+An expression of $\bld{j}_T$ and $\bld{j}_L = \bld{j} -\bld{j}_T$ in terms of integration is given in
+\cite{ref:Jackson}.
+We note that $A^0 = 0$ when $\rho = 0$ for our boundary condition at spatial infinity and
+thus $\bld{j}_T = \bld{0}$ for the case of no source $j^\mu = 0$.
+}%------------------------------- footnote \\
+ as
+\begin{eqnarray}
+\partial^2 \bld{A}
+=
+\bld{j}_T \,.
+\end{eqnarray}
+
+When there is no source current, we have $A^0 = 0$ from Eq. (\ref{eqn:CoulmbA0}) and
+as the dynamical field equation $\partial^2 \bld{A}  = \bld{0}$.
+In this case the Coulomb gauge condition (\ref{eqn:CoulmbGaugeCond}) can be
+realized as a further restriction $\bld{\partial}^2 \Lambda = \bld{\partial} \cdot \bld{A}$ for a
+given $A$ in the Lorentz condition case.
+Now $A^0$ and longitudinal component of $\bld{A}$ are dropped from dynamical degree of
+freedom and we have 2 degree of freedom remaining. They will be identified as the two
+polarization states of the photon.
+
+%=====================================================================
+\subsection{Quantization of Free Field}
+%------------------------------------------------------------------------------------- Coulomb
+\noindent
+\underline{Coulomb gauge}\\
+
+The dynamical field equation for free field is
+\begin{eqnarray}
+\partial^2 \bld{A} = \bld{0}\,,
+\end{eqnarray}
+for which we may write the solution as
+\begin{eqnarray}
+\bld{A}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2\omega} 
+\left[
+%\bld{A}^{(+)}(\bld{k}) e^{-i k x} + \bld{A}^{(-)}(\bld{k}) e^{i k x} 
+\bld{a}^{}(\bld{k}) e^{-i k x} + \bld{a}^{\dagger}(\bld{k}) e^{i k x} 
+\right] \,,
+\label{eqn:CoulPhoAA}
+\end{eqnarray}
+where $\omega = k^0 = |\bld{k}|$ and $\bld{a}^{\dagger}$ is
+complex (hermite) conjugate of $\bld{a}$ in the classical (quantum) level.
+\footnote{%------------------------------- footnote >>>>>>>>>>>>>>>
+Expressions below follow:
+\begin{eqnarray}
+\begin{array}{l}
+\dot{\bld{A}} =
+\int
+\frac{d^3 \bld{k}}{\sqrt{(2\pi)^3} 2\omega}
+(-i\omega)
+\left[
+\bld{a} e^{-ikx} - \bld{a}^\dagger e^{ikx}
+\right]
+\vspace{2mm}
+\\
+F^{ij} = 
+\int
+\frac{d^3 \bld{k}}{\sqrt{(2\pi)^3} 2\omega}
+\left[
+(-ik^i a^j + ik^j a^i )  e^{-ikx}
++
+(ik^i a^{j \dagger} - ik^j a^{i \dagger} )  e^{ikx}
+\right]
+\vspace{2mm}
+\\
+\bld{B} = 
+\int
+\frac{d^3 \bld{k}}{\sqrt{(2\pi)^3} 2\omega}
+i \bld{k} \times
+\left[
+\bld{a} e^{-ikx} - \bld{a}^\dagger e^{ikx}
+\right]
+\end{array}
+\end{eqnarray}
+}%------------------------------- footnote //
+The gauge condition (\ref{eqn:CoulmbGaugeCond}) reads
+\begin{eqnarray}
+\bld{k} \cdot \bld{a}^{} (\bld{k}) = 0 \,.
+\label{eqn:CoulmbGCondMom}
+\end{eqnarray}
+Considering there are two independent dynamical degrees of freedom, we introduce
+polarization 3 vectors $\bld{e}^{(\lambda)}$, $\lambda = 1, 2$ which satisfy
+the following three conditions:
+\begin{eqnarray}
+\begin{array}{l}
+\bld{k} \cdot \bld{e}^{(\lambda)} = 0\,,
+\vspace{1mm}
+\\
+{\bld{e}^{(\lambda)}}^* \cdot \bld{e}^{(\lambda')} = \delta^{\lambda \lambda'} \,,
+\vspace{1mm}
+\\
+\sum_\lambda \bld{e}^{(\lambda)} {\bld{e}^{(\lambda)}}^* \cdot = 1 - \hat{\bld{k}} \hat{\bld{k}} \cdot \,.
+\end{array}
+\end{eqnarray}
+where we wrote $\bld{k} / |\bld{k}| = \hat{\bld{k}}$.
+Decomposing $\bld{a}$ with these basis, we write
+\begin{eqnarray}
+\bld{A}(x) = \int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}2\omega} 
+\sum_{\lambda = 1, 2}
+\left[
+a_\lambda (\bld{k}) \bld{e}^{(\lambda)} e^{-i k x} 
++ 
+a_\lambda^{\dagger}(\bld{k}) {\bld{e}^{(\lambda)}}^* e^{i k x} 
+\right] \,.
+\label{eqn:CoulPhoAApol}
+\end{eqnarray}
+In a coordinate system where the wave vector $\bld{k}$ lays in the direction of the
+3rd axix,
+one may choose $\bld{e}^{(1)}$ and $\bld{e}^{(2)}$ as unit vectors in directions of
+the 1st and 2nd axes, respectively. One may also choose two polarization vectors
+$\bld{e}^{(\pm)} =  (1, \pm i , 0)/\sqrt{2}$  for right- and left- hanaded circular
+polarizations.
+\footnote{%------------------------------- footnote >>
+\cite{ref:Lifshitz} takes
+$\bld{e}^{(\pm)} = \mp i (1, \pm i , 0)/\sqrt{2}$.
+}%------------------------------- footnote \\
+
+On applying the canonical quantization method,
+one needs to take constraints of the gauge condition on canonical
+variables $\bld{A}$ and $\bld{\Pi} = \bld{E}$ into account.
+Since $\bld{\partial}\cdot \bld{A} = \bld{\partial}\cdot \bld{E} = 0$ shold
+hold, these variables are restricted in a space projected by
+an operator in Eq. (\ref{eqn:CoulmbProjection}). Therefore we write
+the equal-time commutation relation among them as
+\begin{eqnarray}
+[ A^i (\bld{x}, t), \Pi^j (\bld{y}, t) ]
+&=&
+\left(
+\delta^{ij}
+-
+\frac{\partial^i \partial^j}
+{\bld{\partial}^2}
+\right)
+i \delta^3 (\bld{x} - \bld{y})
+\nonumber\\
+&=&
+i \int \frac{d^3 \bld{k}}{(2\pi)^3}
+\left(
+\delta^{ij}
+-
+\frac{k^i k^j}{\bld{k}^2}
+\right)
+e^{i \bld{k} \cdot (\bld{x} - \bld{y})}
+\label{eqn:CoulmbCanonicalAPi}
+\end{eqnarray}
+One may check the consistency with the constraints by taking 
+divergences of the both hand sides.
+Other commutation relations are not altered since the right hand sides are
+proportional to 0:
+\begin{eqnarray}
+[ A^i (\bld{x}, t), A^j (\bld{y}, t) ]
+=
+[ \Pi^i (\bld{x}, t), \Pi^j (\bld{y}, t) ]
+=
+0
+\label{eqn:CoulmbCanonicalAA}
+\end{eqnarray}
+Substituting Eq. (\ref{eqn:CoulPhoAApol}) in an expression
+$\bld{\Pi} = - \partial_0 \bld{A}$ and Eqs. (\ref{eqn:CoulmbCanonicalAPi}, \ref{eqn:CoulmbCanonicalAA}),
+we find
+\begin{eqnarray}
+\begin{array}{l}
+[a_\lambda(\bld{k}), a_{\lambda '}(\bld{k}')]
+=
+[a^\dagger_\lambda(\bld{k}), a^\dagger_{\lambda '}(\bld{k}')]
+=0 \,,
+\vspace{3mm}
+\\
+{[}a_\lambda (\bld{k}), a_{\lambda '} (\bld{k}'){]}
+=
+2 \omega \delta^3(\bld{k} - \bld{k}') \delta_{\lambda \lambda'} \,,
+\end{array}
+\end{eqnarray}
+for $\lambda = 1, 2$.
+Now we can interpret $a^\dagger_\lambda (\bld{k})$ and $a_\lambda (\bld{k})$
+as creation and annihilation operators for dynamical photons of definite polarization represented by $\lambda$.
+
+The Hamiltonian corresponding to Eq. (\ref{eqn:HdensCoul}) 
+before taking normal product reads
+\footnote{%------------------------------- footnote >>
+Denoting $d^3 \tilde{\bld{k}} =  d^3\bld{k}/\{ \sqrt{(2\pi)^3} 2\omega\}$, 
+$\bld{a}' = \bld{a}(\bld{k}')$ and $\omega' = {k'}^0 = |\bld{k}'|$,
+we write
+\begin{eqnarray*}
+(\partial_0 A_i)^2
+&=&
+\int
+d^3 \tilde{\bld{k}} d^3 \tilde{\bld{k}}'
+(-i \omega)(-i \omega')
+\left[
+\bld{a} e^{-ikx} - \bld{a}^\dagger e^{ikx}
+\right]
+\cdot
+\left[
+\bld{a}' e^{-ik'x} - {\bld{a}'}^\dagger e^{ik'x}
+\right]
+\end{eqnarray*}
+%--------------------------------------------------- inside a footnote 
+\begin{eqnarray*}
+\int d^3 \bld{x}
+\bld{B}^2
+&=&
+\int
+d^3 \tilde{\bld{k}} d^3 \tilde{\bld{k}}'
+\int d^3 \bld{x}\,
+i \bld{k} \times
+\left[
+\bld{a} e^{-ikx} - \bld{a}^\dagger e^{ikx}
+\right]
+\cdot
+i \bld{k}' \times
+\left[
+\bld{a}' e^{-ik'x} - {\bld{a}'}^\dagger e^{ik'x}
+\right]
+\\
+&=&
+-\int
+d^3 \tilde{\bld{k}} d^3 \tilde{\bld{k}}'
+\int d^3 \bld{x}\,
+\left[
+\{
+(\bld{k}\cdot \bld{k}')
+(\bld{a}\cdot \bld{a}')
+-
+(\bld{k}'\cdot \bld{a})
+(\bld{k}\cdot \bld{a}')
+\}
+e^{-i(k+ k')x}
+\right.
+\\
+&&
+\hspace{25mm}
++
+\{
+(\bld{k}\cdot \bld{k}')
+(\bld{a}^\dagger\cdot {\bld{a}'}^\dagger)
+-
+(\bld{k}'\cdot \bld{a}^\dagger)
+(\bld{k}\cdot {\bld{a}'}^\dagger)
+\}
+e^{i(k+ k')x}
+\\&&
+\hspace{25mm}
+-
+\{
+(\bld{k}\cdot \bld{k}')
+(\bld{a}\cdot {\bld{a}'}^\dagger)
+-
+(\bld{k}'\cdot \bld{a})
+(\bld{k}\cdot {\bld{a}'}^\dagger)
+\}
+e^{-i(k- k')x}
+\\
+&&
+\left.
+\hspace{25mm}
+-
+\{
+(\bld{k}\cdot \bld{k}')
+(\bld{a}^\dagger\cdot {\bld{a}'})
+-
+(\bld{k}'\cdot \bld{a}^\dagger)
+(\bld{k}\cdot {\bld{a}'})
+\}
+e^{i(k- k')x}
+\right]
+\end{eqnarray*}
+Adding the above two reads
+\begin{eqnarray*}
+&&\int d^3 \bld{x} \left\{(\partial_0 A_i)^2 + \bld{B}^2\right\}
+\\
+&&
+=
+-\int
+d^3 \tilde{\bld{k}} d^3 \tilde{\bld{k}}'
+\int d^3 \bld{x}\,
+\left[
+\{
+(\omega \omega' +
+\bld{k}\cdot \bld{k}')
+(\bld{a}\cdot\bld{a}')
+-
+(\bld{k}'\cdot \bld{a})
+(\bld{k}\cdot \bld{a}')
+\}
+e^{-i(k+ k')x}
++ \cdots
+\right.
+\\
+&&
+\hspace{25mm}
+\left.
+-
+\{
+(\omega \omega' +
+\bld{k}\cdot \bld{k}')
+(\bld{a}\cdot {\bld{a}'}^\dagger)
+-
+(\bld{k}'\cdot \bld{a})
+(\bld{k}\cdot {\bld{a}'}^\dagger)
+\}
+e^{-i(k- k')x}
++ \cdots
+\right]
+\\
+&&
+=
+- \int
+\frac{d^3 \bld{k}} 
+{4 \omega^2}
+\left[
+\{
+(\omega^2 
+-
+\bld{k}^2)
+(\bld{a}(\bld{k})\cdot\bld{a}(-\bld{k}))
+-
+(\bld{k}\cdot \bld{a}(\bld{k}))
+(-\bld{k}\cdot \bld{a}(-\bld{k}))
+\}
+e^{-2i\omega t}
++ \cdots
+\right.
+\\
+&&
+\hspace{25mm}
+\left.
+-
+\{
+(\omega^2 +
+\bld{k}^2)
+(\bld{a}\cdot {\bld{a}}^\dagger)
+-
+(\bld{k}\cdot \bld{a})
+(\bld{k}\cdot {\bld{a}}^\dagger)
+\}
++ \cdots
+\right]
+\\
+&&
+=
+\int
+\frac{d^3 \bld{k}}{2 \omega}
+\omega
+\left(
+\bld{a}^\dagger \cdot \bld{a}
++
+\bld{a} \cdot \bld{a}^\dagger
+\right)
+\end{eqnarray*}
+This leads to Eq. (\ref{eqn:HamiltCoul}).
+}%------------------------------- footnote //
+\begin{eqnarray}
+H 
+&=&
+\int
+\frac{d^3 \bld{k}}{2 \omega} 
+\frac{\omega}{2}
+(\bld{a}^\dagger\cdot \bld{a} + \bld{a}\cdot \bld{a}^\dagger)
++
+H_{\mbox{\scriptsize Coul}}
+- 
+\int
+d^3 \bld{x}
+\bld{j} \cdot \bld{A}
+\label{eqn:HamiltCoul}
+\end{eqnarray}
+
+To obtain the Feynman propagator in this gauge, we first derive the following
+expression:
+\begin{eqnarray}
+D^{ij}(x-y)
+&\leftdef&
+\bra 0 \braend A^i(x) A^j(y) \ketend 0 \ket
+\nonumber\\
+&=&
+\int
+d^3 \tilde{\bld{k}} d^3 \tilde{\bld{k}}'
+\bra 0 \braend \left[ a^i (\bld{k}), {a^j}^\dagger (\bld{k}') \right] \ketend 0 \ket
+e^{-ikx + ik'y}
+\nonumber\\
+&=&
+\int
+d^3 \tilde{\bld{k}} d^3 \tilde{\bld{k}}'
+\bra 0 \braend \left[ a_{\lambda} (\bld{k}), {a_{\lambda'}}^\dagger (\bld{k}') \right] \ketend 0 \ket
+e^{(\lambda)i} {e^{(\lambda') j}}^*
+e^{-ikx + ik'y}
+\nonumber\\
+&=&
+\int
+\frac{d^3 \bld{k}}{(2\pi)^3 4 \omega^2} 2\omega
+\sum_\lambda 
+e^{(\lambda)i} {e^{(\lambda) j}}^*
+e^{-ik(x -y)}
+\\
+&=&
+\int
+\frac{d^3 \bld{k}}{(2\pi)^3 2 \omega} 
+(\delta^{ij} - \frac{k^i k^j}{\bld{k}^2})
+e^{-ik(x -y)} \,.
+\end{eqnarray}
+The Feynman propagator is then obtained as
+\footnote{%------------------------------- footnote >>
+The derivation goes similar way as that for scalar fields.
+For checking the result, it is straightforward to obtain
+\begin{eqnarray*}
+D_T^{ij}(x-y) = \theta(x^0 > y^0) D^{ij}(x-y) +\theta(y^0 > x^0) D^{ij}(y - x)
+\end{eqnarray*}
+by
+performing the contour integration of the variable $k_0$ in Eq. (\ref{eqn:FeynPropCoulgauge}),
+}%------------------------------- footnote //
+\begin{eqnarray}
+D^{ij}_T(x - y)
+&\leftdef&
+\bra 0 \braend 
+T\left[
+A^i(x) A^j(y)
+\right]
+\ketend 0 \ket
+%\nonumber\\
+%&=&
+%\theta(x^0 - y^0) D^{ij}(x-y)
+%+
+%\theta(y^0 - x^0) D^{ji}(y-x)
+\nonumber\\
+&=&
+\int
+\frac{d^4 k}{(2\pi)^4}
+\frac{i}{k^2 + i\epsilon}
+\left(
+\delta^{ij}
+-
+\frac{k^i k^j}{\bld{k}^2}
+\right)
+e^{-ik \cdot (x- y)} \,,
+\nonumber\\
+\label{eqn:FeynPropCoulgauge}
+\end{eqnarray}
+where we have distinguished this propagator with a subscript $T$
+to indicate this one is for transverse photons.
+
+\bigskip
+
+\bigskip
+
+%------------------------------------------------------------------------------------- Lorentz quantization
+\noindent
+\underline{Lorentz gauge}\\
+
+We consider a  prescription where we start with the Lagrangian density in Eq. (\ref{eqn:LorentzLagmultip})
+with $\eta = 1/ \alpha = 1$ (Feynman gauge). Thus, our Lagrangian density is written as
+\begin{eqnarray}
+{\cal L}
+&=&
+{\cal L}_{F^2} - \frac{1}{2}(\partial_\mu A^\mu)^2
+\nonumber\\
+&=&
+{\cal L}_{(\partial A)^2} 
++ \frac{1}{2}
+\partial_\nu (
+A_\mu \partial^\mu A^\nu
+-
+A_\nu \partial_\mu A^\mu
+) \,.
+\label{eqn:LorQFermiLag}
+\end{eqnarray}
+This Lagrangian density is equivalent with ${\cal L}_{F^2}$ provided
+the Lorentz gauge condition is imposed. That means we modify the 
+Lagrangian density explicitly so that the EOM is solvable.
+We quantize the field first without constraints and later impose
+the gauge condition.
+Since the field equation is the massless Klein-Goldon equation
+\begin{eqnarray}
+\partial^2 A^\mu = j^\mu
+\,,
+\end{eqnarray}
+we write the solution for the free field as
+\begin{eqnarray}
+A_\mu (x)
+=
+\int
+\frac{d^3 \bld{k}}
+{\sqrt{(2\pi)^3} 2\omega}
+\sum_{\lambda = 0}^3
+\left[
+a_\lambda (\bld{k})
+e_\mu^{(\lambda)} e^{-ikx}
++
+a^\dagger_\lambda (\bld{k})
+{e_\mu^{(\lambda)}}^* e^{ikx}
+\right] \,.
+\label{eqn:photonFieldExpansionLorentz}
+\end{eqnarray}
+As the field $A_\mu$ is not constrained, the polarization four vectors $e_\mu^{(\lambda)}(\bld{k})$ 
+can be chosen as 4 linearly independent basis:
+\begin{comment}
+%--------------------------------------------------------------------comment >>
+\begin{eqnarray}
+\begin{array}{l}
+\sum_{\mu = 0}^3 e_\mu^{(\lambda)} e_\mu^{(\lambda')} 
+=
+\delta^{\lambda \lambda'}
+\vspace{2mm}
+\\
+\sum_{\lambda=0}^3
+e_\mu^{(\lambda)} e_\nu^{(\lambda)} 
+=
+\delta_{\mu \nu}
+\hspace{5mm}
+\mbox{completeness}
+\vspace{2mm}
+\\
+e_\mu^{(\lambda)} e^{(\lambda')\mu}
+= g^{\lambda \lambda'} 
+\hspace{5mm}
+\mbox{orthonormality}
+\end{array}
+\end{eqnarray}
+\begin{eqnarray}
+\sum_{\lambda=0}^3
+\frac{ e_\mu^{(\lambda)} {e_\nu^{(\lambda)}}^* }
+{e^{(\lambda)} \cdot {e^{(\lambda)}}^* }
+= g_{\mu \nu}
+\,,
+\hspace{5mm}
+e^{(\lambda)} \cdot {e^{(\lambda')}}^* 
+=
+g^{\lambda \lambda'}
+\end{eqnarray}
+\end{comment}
+%--------------------------------------------------------------------comment //
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+g^{\mu \nu }{e_\mu^{(\lambda)}}^*   e_\nu^{(\lambda')}
+=
+g^{\lambda \lambda'}
+\hspace{5mm}
+\mbox{(orthonormal)}
+\vspace{2mm}
+\\
+g_{\lambda \lambda'} e_\mu^{(\lambda)} {e_\nu^{(\lambda')}}^* 
+= g_{\mu \nu}
+\hspace{5mm}
+\mbox{(complete)}
+\end{array}
+\right.
+\end{eqnarray}
+In a standard choice of the polarization vectors,
+$e^{(3)}$ is taken along the spacial momentum vector $\bld{k}$ 
+and other two are in the plane orthogonal to $k$:
+\begin{eqnarray}
+e^{(0)} =
+\left(
+\begin{array}{c}
+1\\ \bld{0}
+\end{array}
+\right)
+\hspace{2mm}
+e^{(1)} =
+\left(
+\begin{array}{c}
+0\\ \bld{e}_1
+\end{array}
+\right)
+\hspace{2mm}
+e^{(2)} =
+\left(
+\begin{array}{c}
+0\\ \bld{e}_2
+\end{array}
+\right)
+\hspace{2mm}
+e^{(3)} =
+\left(
+\begin{array}{c}
+0\\ \hat{\bld{k}}
+\end{array}
+\right)
+\label{eqn:phopolvecstandardchoice}
+\end{eqnarray}
+where $k = (k^0, \bld{k}) = \omega (1, \hat{\bld{k}})$ and
+$\bld{e}_2 = \hat{\bld{k}} \times \bld{e}_1$ with
+$\bld{e}_1$ being an arbitrary chosen spacial unit vector perpendicular 
+to $\hat{\bld{k}}$.
+In these expressions, we have to notice that
+spatial components of $e_\mu^{(\lambda)}$ have opposite
+signatures from ones indicated in the above which are ones for
+ contravariant vectors $e^{(\lambda)\mu}$ in our notation.
+Another standard choice of the polarization vector basis is to take
+the transverse ones as
+\begin{eqnarray}
+e^{(\pm)} = \frac{1}{\sqrt{2}} 
+\left(
+e^{(1)} \pm i e^{(2)}
+\right)
+\end{eqnarray}
+to represent the two helicities of the photon.
+
+For our Lagrangian density (\ref{eqn:LorQFermiLag}), we have
+components of the momentum canonically conjugate to $A_\mu$ as
+\begin{eqnarray}
+\begin{array}{l}
+\displaystyle
+\pi^0 
+= 
+\frac{\partial L_{}}{\partial \dot{A_0}}
+= 
+- \partial_\mu A^\mu \,,
+\vspace{2mm}
+\\
+\displaystyle
+\pi^i =
+\frac{\partial L_{}}
+{\partial \dot{A_i}}
+=
+\partial^i A^0 - \partial^0 A^i
+= 
+E^i \,.
+\end{array}
+\end{eqnarray}
+Since the free field $A$ is not constrained, we write canonical quantization conditions 
+as usual
+\footnote{%------------------------------- footnote >>
+Since $A_\mu$ and $\pi^\mu$ are canonically conjugate to each other,
+we write
+\begin{eqnarray*}
+\left[
+A_\mu(\bld{x}, t),  \pi^\nu(\bld{y}, t)
+\right]
+=
+i \delta_\mu^{\nu} \delta^3( \bld{x} - \bld{y}) \,.
+\end{eqnarray*}
+Uprising the subscript of $A_\mu$, one obtain
+Eq. (\ref{eqn:LortzCanonQcond}).
+}%------------------------------- footnote \\
+ as
+\begin{eqnarray}
+\begin{array}{l}
+\left[
+A^\mu(\bld{x}, t),  A^\nu(\bld{y}, t)
+\right]
+=
+\left[
+\pi^\mu(\bld{x}, t),  \pi^\nu(\bld{y}, t)
+\right]
+= 0 \,,
+\vspace{2mm}
+\\
+\left[
+A^\mu(\bld{x}, t),  \pi^\nu(\bld{y}, t)
+\right]
+=
+i g^{\mu \nu} \delta^3( \bld{x} - \bld{y}) \,.
+\label{eqn:LortzCanonQcond}
+\end{array}
+\end{eqnarray}
+In terms of creation and annihilation operators in Eq. (\ref{eqn:photonFieldExpansionLorentz}), 
+these relationships are equivalent with
+\begin{eqnarray}
+\begin{array}{l}
+\left[
+a_\lambda(\bld{k}), a_{\lambda'}(\bld{k}')
+\right]
+=
+\left[
+a^\dagger_\lambda(\bld{k}), a^\dagger_{\lambda'}(\bld{k}')
+\right]
+= 0 \,,
+\vspace{2mm}
+\\
+\left[
+a_\lambda(\bld{k}), a^\dagger_{\lambda'}(\bld{k}')
+\right]
+=
+- g_{\lambda \lambda'} 2\omega \delta^3(\bld{k} - \bld{k}') \,.
+\end{array}
+\label{eqn:creanncommLorGauge}
+\end{eqnarray}
+The signature of the $r.h.s.$ in the second equation for $\lambda = \lambda' = 0$
+is quite twisted for it makes the norm of a timelike polarized photon state negative.
+Here is the place where we need to impose constraints on the field 
+by virtue of the gauge freedom to surpress such an oscillation.
+However the Lorentz gauge condition in Eq. (\ref{eqn:LorentzCond}) 
+as an operator equation is not consistent with the second equation in
+Eq. (\ref{eqn:LortzCanonQcond}) as a derivative of the delta function
+in the $r.h.s.$ is not vanishing.
+
+Gupta and Bleuler solved this problem by imposing the Lorentz condition 
+(\ref{eqn:LorentzCond}) not as an operator equation but
+as a restriction on the physical Hilbert space;
+\begin{eqnarray}
+\bra \Psi_{Phys}' \braend
+\partial_\mu A^\mu
+\ketend \Psi_{Phys} \ket
+=
+0 \,.
+\label{eqn:GuptaBleulerCond}
+\end{eqnarray}
+We may decompose any state $\ketend \Psi \ket$ of the Hilbert space {\cal H}
+into a direct product of states $\ketend \psi_T \ket$ containing transverse photons and 
+states $\ketend \phi \ket$ containing the timelike and longitudinal photons.
+Since
+\begin{eqnarray*}
+\partial \cdot A
+\sim
+(a_3 - a_0)  e^{-ikx} + h.c.\,,
+\end{eqnarray*}
+for our choice (\ref{eqn:phopolvecstandardchoice}) of basis,
+the condition (\ref{eqn:GuptaBleulerCond}) reduces to
+\begin{eqnarray}
+(a_3 - a_0) \ketend \phi \ket = 0
+\label{eqn:GuptaBlCondonannopbase}
+\end{eqnarray}
+Regarding the signature in Eq. (\ref{eqn:creanncommLorGauge}), the number operator
+in the Fock space of $\ketend \phi \ket$ may be defined as
+\begin{eqnarray}
+N' = \int
+\frac{d^3 \bld{k}}{2\omega}
+\left[
+a^\dagger_3(\bld{k}) a_3(\bld{k}) 
+- 
+a^\dagger_0(\bld{k}) a_0(\bld{k})
+\right]
+\end{eqnarray}
+and the condition (\ref{eqn:GuptaBlCondonannopbase})
+requires
+\begin{eqnarray}
+\bra \phi' \braend
+N' \ketend \phi \ket
+&=&
+\bra \phi' \braend
+\left\{
+\int
+\frac{d^3 \bld{k}}{2\omega}
+\left[
+a^\dagger_3(\bld{k}) 
+- 
+a^\dagger_0(\bld{k}) 
+\right]
+a_3(\bld{k}) 
+\ketend \phi \ket
+\right\}
+\nonumber\\
+&=&
+\int
+\frac{d^3 \bld{k}}{2\omega}
+\left\{
+\bra \phi' \braend
+\left[
+a^\dagger_3(\bld{k}) 
+- 
+a^\dagger_0(\bld{k}) 
+\right]
+\right\}
+a_3(\bld{k}) 
+\ketend \phi \ket
+\nonumber\\
+&=&
+0
+\end{eqnarray}
+Thus, $\bra \phi' \braend \phi \ket = 0$
+unless both of $\ketend \phi \ket$ and $\ketend \phi' \ket$ are
+eigenstates of  $N'$ belonging to the eigenvalue 0, namely,
+the vacuum state $\ketend 0 \ket_L$ of timelike and longitudinal photons.
+This also mean $||\ketend \phi \ket \!\!|| = 0$ when the state
+$\ketend \phi \ket$ involves more than one timelike or longitudinal photon.
+Such states will never contribute to expectation values of 
+gauge invariant physical observables
+\footnote{%------------------------------- footnote >>
+Such a quantity ${\cal O}$ will behave as
+\begin{eqnarray*}
+{\cal O} \sim \sum_{i = 1}^3 a^\dagger_i(\bld{k}) a_i(\bld{k})
+-
+a^\dagger_0(\bld{k}) a_0(\bld{k})
+\end{eqnarray*}
+and the longitudinal and timelike photons cancel among themselves
+for 
+%\[\bra \Psi_{Phys} \braend a_3^\dagger a_3 \ketend \Psi_{Phys} \ket
+\[\bra \phi \braend a_3^\dagger a_3 \ketend \phi \ket
+=\bra \phi \braend a_0^\dagger a_0 \ketend \phi \ket
+\]
+is ensured by the condition (\ref{eqn:GuptaBlCondonannopbase}).
+}%------------------------------- footnote \\
+ and we may just disregard
+them by imposing $\ketend \phi \ket \equiv \ketend 0 \ket_L$.
+
+The propagator in the Feynman gauge is evaluated from
+Eqs. (\ref{eqn:photonFieldExpansionLorentz}) and (\ref{eqn:creanncommLorGauge})
+with a help of Eq. (\ref{eqn:creanncommLorGauge}) as
+\begin{eqnarray}
+\bra 0 \braend
+T[
+A_\mu (x) A_\nu (y)
+\ketend 0 \ket
+=
+\int
+\frac{d^4 k}{(2\pi)^4}
+\frac{-i g_{\mu \nu}}
+{k^2 + \i\epsilon}
+e^{-ik \cdot (x - y)}
+\label{eqn:photonProp}
+\end{eqnarray}
+In the course of our discussion, we could deal $\eta = 1/\alpha$ 
+in Eq. (\ref{eqn:EOMwitheta}) more generally as an arbitrary fixed number.
+Such a way of fixing a gauge is called the covariant  $\alpha$ gauge.
+In this gauge, the photon propagator is written as
+\footnote{%------------------------------- footnote >>
+It is straightforward to observe
+\begin{eqnarray}
+\left[
+\partial^2 g^{\mu \nu} - \left(
+1 - 1/\alpha \right)
+\partial^\mu \partial^\nu
+\right]
+D_{F\nu \rho}(x)
+= i g^\nu_{\!\rho} \delta^4(x) 
+\end{eqnarray}
+showing $D_F^{\mu \nu}$ is certainly the Green's function of 
+Eq. (\ref{eqn:EOMwitheta}) .
+}%------------------------------- footnote \\
+\begin{eqnarray}
+D_F^{\mu \nu}(x - y)
+=
+\int
+\frac{d^4 k}{(2\pi)^4}
+\frac{-i}
+{k^2 + \i\epsilon}
+\left(
+g^{\mu \nu} + (\alpha - 1)
+\frac{k^\mu k^\nu}{k^2+ i\epsilon}
+\right)
+e^{-ik \cdot (x - y)}
+\label{eqn:photonPropalpha}
+\end{eqnarray}
+Physical results should not depend on the choice of the value of $\alpha$
+and one may choose it so that computations get simple
+,or, leave it arbitrary so that  one can check the correctness of computations.

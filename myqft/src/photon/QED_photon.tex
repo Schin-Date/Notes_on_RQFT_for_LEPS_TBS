@@ -1,0 +1,121 @@
+\subsection{Interacting Photon Field}
+Let us consider QED, namely the photon field interacting with the massive Dirac field.
+We write the Lagrangian density as
+\begin{eqnarray}
+{\cal L}_{\mbox{\scriptsize QED}}
+ = 
+{\cal L}_{{\scriptsize F^2}}
++ 
+{\cal L}_{\mbox{\scriptsize Dirac}}
++ 
+{\cal L}_{\mbox{\scriptsize int}}\,,
+\label{eqn:QEDLagr.symbolic}
+\end{eqnarray}
+where
+\begin{eqnarray}
+{\cal L}_{{\scriptsize F^2}}
+=
+- \frac{1}{4}F^2\,,
+\hspace{4mm}
+{\cal L}_{\mbox{\scriptsize Dirac}}
+= 
+ \overline{\psi}(i \slashed{\partial} - m) \psi \,.
+\end{eqnarray}
+To determine ${\cal L}_{\mbox{\scriptsize int}}$,
+we require that ${\cal L}_{\mbox{\scriptsize QED}}$
+is invariant under the following gauge transformations:
+%\begin{eqnarray}
+\begin{gather}
+\psi (x) \mapsto \psi' (x) = e^{-ie \lambda(x)} \psi(x)
+\,,
+\hspace{3mm}
+\psi^\dagger  (x) \mapsto  \psi^{\dagger}{}' (x)
+=
+\psi^\dagger  (x) e^{ie \lambda(x)}\,,
+\\
+%\vspace{6mm}
+A^\mu \mapsto A'{}^{\mu} = A^\mu + \partial^\mu \lambda(x)\,,
+\end{gather}
+%\end{eqnarray}
+Due to the locality of the transformation, ${\cal L}_{\mbox{\scriptsize Dirac}}$ is
+not invariant since,
+\begin{eqnarray}
+ \overline{\psi} \partial_\mu  \psi 
+ \mapsto
+ \overline{\psi}' \partial_\mu  \psi'
+ =
+ \overline{\psi} \left(\partial_\mu  - ie (\partial_\mu \lambda) \right)\psi
+ \neq
+  \overline{\psi} \left(\partial_\mu ) \right)\psi
+\end{eqnarray}
+We may make this differential bilinear form invariant by replacing 
+the derivative by a covariant derivative, which is defined as
+\begin{eqnarray}
+D_\mu \equiv \partial_\mu + ie A_\mu\,.
+\end{eqnarray}
+We surely find
+\begin{eqnarray*}
+ \overline{\psi} D_\mu  \psi 
+ \mapsto
+ \overline{\psi}' D_\mu'  \psi'
+ =
+ \overline{\psi} D_\mu  \psi \,,
+\end{eqnarray*}
+for
+\begin{eqnarray}
+D_\mu' = D_\mu + ie \partial_\mu \lambda(x) \,.
+\end{eqnarray}
+This substitution of a partial derivative by the covariant derivative
+is called minimum substitution.
+Applying the substitution in ${\cal L}_{\mbox{\scriptsize Dirac}}$,
+we obtain
+\begin{eqnarray}
+ \overline{\psi}(i \slashed{D} - m) \psi 
+= 
+ \overline{\psi}(i \slashed{\partial} - m) \psi 
+- e  \overline{\psi} \slashed{A} \psi \,.
+\end{eqnarray}
+Thus, in Eq. (\ref{eqn:QEDLagr.symbolic}),
+\begin{eqnarray}
+{\cal L}_{\mbox{\scriptsize int}}
+= 
+- e  \overline{\psi} \slashed{A} \psi
+\label{eqn:LintQED}
+\end{eqnarray}
+gives a gauge invariant ${\cal L}_{\mbox{\scriptsize QED}}$
+which we were seeking for.
+This form of ${\cal L}_{\mbox{\scriptsize int}}$ is called
+the minimal coupling.
+Now we have an explicit form of the full Lagrangian density.
+However, we already know it is not solvable because
+of the lack of the photon propagator.
+Therefore we introduce a gauge fixing term which
+violates the gauge invariance but it will be recovered 
+for all physically meaningful quantities.
+We write our Lagrangian density as
+\begin{eqnarray}
+{\cal L}_{\mbox{\scriptsize QED, GF}}
+ &=& 
+{\cal L}_{{\scriptsize F^2}}
++ 
+{\cal L}_{{\scriptsize GF}}
++ 
+{\cal L}_{\mbox{\scriptsize Dirac}}
++ 
+{\cal L}_{\mbox{\scriptsize int}}\,,
+\nonumber\\
+ &=& 
+-\frac{1}{4} F^2
+-\frac{1}{2\alpha} (\partial_\mu A^\mu)^2
++ \overline{\psi}(i \slashed{\partial} - m) \psi
+- e \overline{\psi} \slashed{A} \psi \,.
+\label{eqn:QEDLagr.w.GF}
+\end{eqnarray}
+Identifying ${\cal L}_{int}$ as in Eq. (\ref{eqn:LintQED}),
+the photon and Dirac fields in the interaction picture obey 
+free field equations for which Feynman propagators are
+given by
+Eq. (\ref{eqn:DiracPropagator}) and Eq. (\ref{eqn:photonPropalpha}),
+respectively.
+
+

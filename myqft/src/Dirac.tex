@@ -807,4 +807,61 @@ u(\bld{0})
 \frac{\slashed{p}\gamma^0 + m}{\sqrt{2m(E+m)}}
 \end{eqnarray}
 
+\newpage 
+\begin{equation}
+{\cal L} = i \bar{\psi}(x) \slashed{\partial} \psi(x) - m \bar{\psi}(x) \psi(x)
+\end{equation}
+where $\slashed{\partial} = \gamma^\mu \partial_\mu$ and
+$\bar{\psi}(x) = \psi^\dagger (x) \gamma^0$.\\
+(Comment on independent $\psi$ and $\overline{\psi}$ treatment.)
+\begin{equation}
+%\slashed{\partial} = 0
+\left(i \slashed{\partial} + m \right) \psi(x) = 0\,,
+\hspace{3mm}
+\bar{\psi}(x) \left(i \stackrel{\leftarrow}{\slashed{\partial}} + m \right)  = 0
+\end{equation}
+\subsection{Quantized Free Field}
+\begin{equation}
+\psi(x) 
+=
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{s = \pm 1}
+\left[
+c(\bld{p}, s) u(\bld{p}, s) e^{-ipx}
++
+d^\dagger(\bld{p}, s) v(\bld{p}, s) e^{ipx}
+\right]
+\end{equation}
+\begin{equation}
+\{ c(\bld{p}, s), c^\dagger(\bld{p}', s') \}
+=
+\{ d(\bld{p}, s), d^\dagger(\bld{p}', s') \}
+=
+2p^0 \delta_{ss'}
+\delta^3(\bld{p} - \bld{p}')
+\end{equation}
+\begin{equation}
+\begin{array}{l}
+(\slashed{p} - m) u(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{u}(\bld{p}, s)(\slashed{p} - m)  = 0\,,
+\\
+(\slashed{p} + m) v(\bld{p}, s) = 0\,,
+\hspace{3mm}
+\bar{v}(\bld{p}, s)(\slashed{p} + m)  = 0\,,
+\end{array}
+\end{equation}
+
+Propagetor
+\begin{eqnarray}
+S_F(q) &=& i \int d^4x e^{iqx}
+\bra 0 \braend T[\psi(x) \bar{\psi}(0)]
+\ketend 0 \ket
+\nonumber\\
+&=&
+\frac{-1}{\slashed{q} - m + i \epsilon}
+=
+- \frac{\slashed{q} + m}{ q^2 - m^2 + i \epsilon}
+\label{eqn:DiracPropagator}
+\end{eqnarray}
 
