@@ -345,6 +345,7 @@ that induces
 - (1 - \eta)
 \partial^\nu \partial^\mu A_\mu
 - j^\nu
+\label{eqn:EOMwitheta}
 \end{eqnarray}
 for the full Lagrangian density ${\cal L} = {\cal L}_{Lor} - j^\mu A_\mu$.
 Euler-Lagrange equation for $\eta$ results in the Lorentz condition and
@@ -975,11 +976,12 @@ e^{-ik(x -y)} \,.
 The Feynman propagator is then obtained as
 \footnote{%------------------------------- footnote >>
 The derivation goes similar way as that for scalar fields.
-Performing the contour integration of the variable $k_0$ in Eq. (\ref{eqn:FeynPropCoulgauge}),
-it is straightforward to obtain
+For checking the result, it is straightforward to obtain
 \begin{eqnarray*}
 D_T^{ij}(x-y) = \theta(x^0 > y^0) D^{ij}(x-y) +\theta(y^0 > x^0) D^{ij}(y - x)
 \end{eqnarray*}
+by
+performing the contour integration of the variable $k_0$ in Eq. (\ref{eqn:FeynPropCoulgauge}),
 }%------------------------------- footnote //
 \begin{eqnarray}
 D^{ij}_T(x - y)
@@ -1033,7 +1035,7 @@ with $\eta = 1/ \alpha = 1$ (Feynman gauge). Thus, our Lagrangian density is wri
 A_\mu \partial^\mu A^\nu
 -
 A_\nu \partial_\mu A^\mu
-)
+) \,.
 \label{eqn:LorQFermiLag}
 \end{eqnarray}
 This Lagrangian density is equivalent with ${\cal L}_{F^2}$ provided
@@ -1060,10 +1062,9 @@ e_\mu^{(\lambda)} e^{-ikx}
 +
 a^\dagger_\lambda (\bld{k})
 {e_\mu^{(\lambda)}}^* e^{ikx}
-\right]
+\right] \,.
 \label{eqn:photonFieldExpansionLorentz}
 \end{eqnarray}
-%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 As the field $A_\mu$ is not constrained, the polarization four vectors $e_\mu^{(\lambda)}(\bld{k})$ 
 can be chosen as 4 linearly independent basis:
 \begin{comment}
@@ -1159,7 +1160,7 @@ to $\hat{\bld{k}}$.
 In these expressions, we have to notice that
 spatial components of $e_\mu^{(\lambda)}$ have opposite
 signatures from ones indicated in the above which are ones for
- contravariant vectors $e^{(\lambda)}$.
+ contravariant vectors $e^{(\lambda)\mu}$ in our notation.
 Another standard choice of the polarization vector basis is to take
 the transverse ones as
 \begin{eqnarray}
@@ -1179,7 +1180,7 @@ components of the momentum canonically conjugate to $A_\mu$ as
 = 
 \frac{\partial L_{}}{\partial \dot{A_0}}
 = 
-- \partial_\mu A^\mu
+- \partial_\mu A^\mu \,,
 \vspace{2mm}
 \\
 \displaystyle
@@ -1189,7 +1190,7 @@ components of the momentum canonically conjugate to $A_\mu$ as
 =
 \partial^i A^0 - \partial^0 A^i
 = 
-E^i
+E^i \,.
 \end{array}
 \end{eqnarray}
 Since the free field $A$ is not constrained, we write canonical quantization conditions 
@@ -1202,7 +1203,7 @@ we write
 A_\mu(\bld{x}, t),  \pi^\nu(\bld{y}, t)
 \right]
 =
-i \delta_\mu^{\nu} \delta^3( \bld{x} - \bld{y})
+i \delta_\mu^{\nu} \delta^3( \bld{x} - \bld{y}) \,.
 \end{eqnarray*}
 Uprising the subscript of $A_\mu$, one obtain
 Eq. (\ref{eqn:LortzCanonQcond}).
@@ -1217,18 +1218,19 @@ A^\mu(\bld{x}, t),  A^\nu(\bld{y}, t)
 \left[
 \pi^\mu(\bld{x}, t),  \pi^\nu(\bld{y}, t)
 \right]
-= 0
+= 0 \,,
 \vspace{2mm}
 \\
 \left[
 A^\mu(\bld{x}, t),  \pi^\nu(\bld{y}, t)
 \right]
 =
-i g^{\mu \nu} \delta^3( \bld{x} - \bld{y})
+i g^{\mu \nu} \delta^3( \bld{x} - \bld{y}) \,.
 \label{eqn:LortzCanonQcond}
 \end{array}
 \end{eqnarray}
-In terms of creation and annihilation operators, they are equivalent with
+In terms of creation and annihilation operators in Eq. (\ref{eqn:photonFieldExpansionLorentz}), 
+these relationships are equivalent with
 \begin{eqnarray}
 \begin{array}{l}
 \left[
@@ -1238,14 +1240,14 @@ a_\lambda(\bld{k}), a_{\lambda'}(\bld{k}')
 \left[
 a^\dagger_\lambda(\bld{k}), a^\dagger_{\lambda'}(\bld{k}')
 \right]
-= 0
+= 0 \,,
 \vspace{2mm}
 \\
 \left[
 a_\lambda(\bld{k}), a^\dagger_{\lambda'}(\bld{k}')
 \right]
 =
-- g^{\lambda \lambda'} 2\omega \delta^3(\bld{k} - \bld{k}')
+- g_{\lambda \lambda'} 2\omega \delta^3(\bld{k} - \bld{k}') \,.
 \end{array}
 \label{eqn:creanncommLorGauge}
 \end{eqnarray}
@@ -1260,13 +1262,13 @@ in the $r.h.s.$ is not vanishing.
 
 Gupta and Bleuler solved this problem by imposing the Lorentz condition 
 (\ref{eqn:LorentzCond}) not as an operator equation but
-as a restriction on the physical Hilbert space:
+as a restriction on the physical Hilbert space;
 \begin{eqnarray}
 \bra \Psi_{Phys}' \braend
 \partial_\mu A^\mu
 \ketend \Psi_{Phys} \ket
 =
-0
+0 \,.
 \label{eqn:GuptaBleulerCond}
 \end{eqnarray}
 We may decompose any state $\ketend \Psi \ket$ of the Hilbert space {\cal H}
@@ -1359,7 +1361,7 @@ them by imposing $\ketend \phi \ket \equiv \ketend 0 \ket_L$.
 
 The propagator in Lorentz, Feynman gauge is evaluated from
 Eqs. (\ref{eqn:photonFieldExpansionLorentz}) and (\ref{eqn:creanncommLorGauge})
-as
+with a help of Eq. (\ref{eqn:creanncommLorGauge}) as
 \begin{eqnarray}
 \bra 0 \braend
 T[
@@ -1374,6 +1376,20 @@ e^{-ik \cdot (x - y)}
 \label{eqn:photonProp}
 \end{eqnarray}
 Without fixing the gauge parameter $\alpha$, we would obtain
+\footnote{%------------------------------- footnote >>
+It is straightforward to observe
+\begin{eqnarray}
+\left[
+\partial^2 g^{\mu \nu} - \left(
+1 - 1/\alpha \right)
+\partial^\mu \partial^\nu
+\right]
+D_{F\nu \rho}(x)
+= i g^\nu_{\!\rho} \delta^4(x) 
+\end{eqnarray}
+showing $D_F^{\mu \nu}$ is certainly the Green's function of 
+Eq. (\ref{eqn:EOMwitheta}) .
+}%------------------------------- footnote \\
 \begin{eqnarray}
 D_F^{\mu \nu}(x - y)
 =
