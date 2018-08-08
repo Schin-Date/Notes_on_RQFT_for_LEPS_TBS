@@ -1,0 +1,116 @@
+2,4c2,4
+< massive, charged, spin 1/2\\
+< Spinors belong to the fundamental representation of the Poincar\'e Group SL(2,C).
+< \subsubsection{Classical Free Field}
+---
+> These fields describe massive, charged, spin 1/2 particles.\\
+> ((Put the following line somewhere: Spinors belong to the fundamental representation of the Poincar\'e Group SL(2,C))).
+> \subsection{Classical Free Field}
+12c12,13
+< \frac{1}{i} \bld{\alpha} \cdot \bld{\partial} + \beta m \right) \psi(x)
+---
+> \frac{1}{i} \bld{\alpha} \cdot \bld{\partial} + \beta m \right) \psi(x) \,.
+> \label{eqn:TheDiracEq}
+16,18c17,19
+< The Dirac equation is not the unique form which is
+< the first order in time derivative and the solution satisfies the K-G eq.
+< The Duffin-Kemmer equation satisfies these requirements
+---
+> The Dirac equation is not the unique equation that
+> is the  first order in time derivative and whose solution satisfies the K-G eq.
+> The Duffin-Kemmer equation  also satisfies these requirements
+21c22
+< if and only if
+---
+> if and only if coefficients $\bld{\alpha}$ and $\beta$ satisfy
+27c28
+< \beta^2 = 1
+---
+> \beta^2 = 1\,,
+30c31,32
+< They must be traceless:
+---
+> as one may confirm it by taking time derivative of the both hand sides of Eq. (\ref{eqn:TheDiracEq}).
+> It follows that they must be traceless:
+32c34
+< \tr \alpha_i &=& \tr \beta^2 \alpha_i = \tr \beta \alpha_i \beta = - \tr \alpha_i = 0
+---
+> \tr \alpha_i &=& \tr \beta^2 \alpha_i = \tr \beta \alpha_i \beta = - \tr \alpha_i = 0 \,,
+34c36
+< \tr \beta &=& \tr \alpha_i^2 \beta  = \tr \alpha_i \beta \alpha_i  = - \tr \beta = 0
+---
+> \tr \beta &=& \tr \alpha_i^2 \beta  = \tr \alpha_i \beta \alpha_i  = - \tr \beta = 0 \,.
+38c40
+< (\ref{eqn:Dialphbetacond}) is 4. 
+---
+> (\ref{eqn:Dialphbetacond}) is found to be 4. 
+43c45
+< \gamma^i = \beta \alpha_i\
+---
+> \gamma^i = \beta \alpha_i\ \,.
+47c49
+< \{ \gamma^\mu, \gamma^\nu \}_+ = 2 g^{\mu \nu}
+---
+> \{ \gamma^\mu, \gamma^\nu \}_+ = 2 g^{\mu \nu}\,.
+49c51
+< This is the Clifford algebra. This means $(\gamma^0)^2 = 1$ and $(\gamma^i)^2 = -1$ for $i = 1,2,3$.
+---
+> This is called the Clifford algebra. This relationship means $(\gamma^0)^2 = 1$ and $(\gamma^i)^2 = -1$ for $i = 1,2,3$.
+807a810,866
+> \newpage 
+> \begin{equation}
+> {\cal L} = i \bar{\psi}(x) \slashed{\partial} \psi(x) - m \bar{\psi}(x) \psi(x)
+> \end{equation}
+> where $\slashed{\partial} = \gamma^\mu \partial_\mu$ and
+> $\bar{\psi}(x) = \psi^\dagger (x) \gamma^0$.\\
+> (Comment on independent $\psi$ and $\overline{\psi}$ treatment.)
+> \begin{equation}
+> %\slashed{\partial} = 0
+> \left(i \slashed{\partial} + m \right) \psi(x) = 0\,,
+> \hspace{3mm}
+> \bar{\psi}(x) \left(i \stackrel{\leftarrow}{\slashed{\partial}} + m \right)  = 0
+> \end{equation}
+> \subsection{Quantized Free Field}
+> \begin{equation}
+> \psi(x) 
+> =
+> \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+> \sum_{s = \pm 1}
+> \left[
+> c(\bld{p}, s) u(\bld{p}, s) e^{-ipx}
+> +
+> d^\dagger(\bld{p}, s) v(\bld{p}, s) e^{ipx}
+> \right]
+> \end{equation}
+> \begin{equation}
+> \{ c(\bld{p}, s), c^\dagger(\bld{p}', s') \}
+> =
+> \{ d(\bld{p}, s), d^\dagger(\bld{p}', s') \}
+> =
+> 2p^0 \delta_{ss'}
+> \delta^3(\bld{p} - \bld{p}')
+> \end{equation}
+> \begin{equation}
+> \begin{array}{l}
+> (\slashed{p} - m) u(\bld{p}, s) = 0\,,
+> \hspace{3mm}
+> \bar{u}(\bld{p}, s)(\slashed{p} - m)  = 0\,,
+> \\
+> (\slashed{p} + m) v(\bld{p}, s) = 0\,,
+> \hspace{3mm}
+> \bar{v}(\bld{p}, s)(\slashed{p} + m)  = 0\,,
+> \end{array}
+> \end{equation}
+> 
+> Propagetor
+> \begin{eqnarray}
+> S_F(q) &=& i \int d^4x e^{iqx}
+> \bra 0 \braend T[\psi(x) \bar{\psi}(0)]
+> \ketend 0 \ket
+> \nonumber\\
+> &=&
+> \frac{-1}{\slashed{q} - m + i \epsilon}
+> =
+> - \frac{\slashed{q} + m}{ q^2 - m^2 + i \epsilon}
+> \label{eqn:DiracPropagator}
+> \end{eqnarray}
