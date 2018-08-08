@@ -28,15 +28,16 @@ if and only if coefficients $\bld{\alpha}$ and $\beta$ satisfy
 \beta^2 = 1\,,
 \label{eqn:Dialphbetacond}
 \end{eqnarray}
-as one may confirm it by taking time derivative of the both hand sides of Eq. (\ref{eqn:TheDiracEq}).
-It follows that they must be traceless:
+as one may confirm it by taking time derivative of the both hand sides of Eq. (\ref{eqn:TheDiracEq})
+and use the equation again in the $r.h.s.$
+It follows from Eq. (\ref{eqn:Dialphbetacond}) that they must be traceless:
 \begin{eqnarray}
 \tr \alpha_i &=& \tr \beta^2 \alpha_i = \tr \beta \alpha_i \beta = - \tr \alpha_i = 0 \,,
 \nonumber\\
 \tr \beta &=& \tr \alpha_i^2 \beta  = \tr \alpha_i \beta \alpha_i  = - \tr \beta = 0 \,.
 \nonumber
 \end{eqnarray}
-The minimum dimension of $\alpha$'s and $\beta$ as matrices to satisfy the conditions 
+The minimum rank of $\alpha$'s and $\beta$ as matrices to satisfy the conditions 
 (\ref{eqn:Dialphbetacond}) is found to be 4. 
 Introduce $\gamma$ matrices by
 \begin{eqnarray}
@@ -44,7 +45,7 @@ Introduce $\gamma$ matrices by
 \hspace{3mm}
 \gamma^i = \beta \alpha_i\ \,.
 \end{eqnarray}
-In terms of $\gamma$ matrices, Eq. (\ref{eqn:Dialphbetacond}) reads
+In terms of these matrices, Eq. (\ref{eqn:Dialphbetacond}) reads
 \begin{equation}
 \{ \gamma^\mu, \gamma^\nu \}_+ = 2 g^{\mu \nu}\,.
 \end{equation}
@@ -55,7 +56,7 @@ $\gamma^0$ is obviously traceless and $\gamma^i$'s are also for
 \end{eqnarray}
 The Dirac equation is then written as
 \begin{eqnarray}
-\left( i\slashed{\partial} - m \right) \psi(x) = 0
+\left( i\slashed{\partial} - m \right) \psi(x) = 0\,,
 \label{eqn:DiracEqstandard}
 \end{eqnarray}
 where $\slashed{a} \leftdef \gamma_\mu a^\mu = \gamma \cdot a$ and
@@ -70,14 +71,20 @@ In that case we have
 \hspace{3mm}
 \Longleftrightarrow
 \hspace{3mm}
-{\gamma^\mu}^\dagger = \gamma^0 \gamma^\mu \gamma^0
+{\gamma^\mu}^\dagger = \gamma^0 \gamma^\mu \gamma^0 \,.
 \label{eqn:hermitealphabeta}
 \end{eqnarray}
 Define the conjugate Dirac field by
 \begin{equation}
-\overline{\psi} = \psi^{*t} \gamma^0
+\overline{\psi} = \psi^{*t} \gamma^0\,
 \label{eqn:DefConjDiracField}
 \end{equation}
+where the superscript $t$ denotes transpose
+\footnote{%------------------------------- footnote >>
+We keep the dagger field notation
+for the hermite conjugate of quntized fields.
+}%------------------------------- footnote >>
+.
 Taking complex conjugate and transpose of Eq. (\ref{eqn:DiracEqstandard}), we obtain
 \begin{eqnarray}
 0 &=&  
@@ -94,17 +101,89 @@ Taking complex conjugate and transpose of Eq. (\ref{eqn:DiracEqstandard}), we ob
 \nonumber\\
 &=&
 - \overline{\psi}(x)
-\left( i \stackrel{\leftarrow}{\partial} \cdot \gamma  + m \right) \gamma^0
+\left( i \stackrel{\leftarrow}{\partial} \cdot \gamma  + m \right) \gamma^0 \,.
 \nonumber
 \end{eqnarray}
 Thus, the conjugate Dirac field satisfies
 \begin{eqnarray}
 \overline{\psi}(x)
 \left( i \stackrel{\leftarrow}{\slashed{\partial}}  + m \right)
-= 0
+= 0 \,.
+\label{eqn:DiracEqBarstandard}
 \end{eqnarray}
 This equation is equivalent with Eq. (\ref{eqn:DiracEqstandard}) in the classical level
+\footnote{%------------------------------- footnote >>
+In the quantum level, this equation should be satisfied by the Heisenberg operator 
+$\overline{\psi}(x)$ which is independent of the field ${\psi}(x)$.
+}%------------------------------- footnote \\
 provided we choose $\gamma$'s in such a way that Eq. (\ref{eqn:hermitealphabeta}) holds.
+
+\bigskip
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\noindent
+{\bf Lagrangian density}
+
+Lagrangian density that leads Eqs. (\ref{eqn:DiracEqstandard}) and (\ref{eqn:DiracEqBarstandard})
+is written as
+\begin{eqnarray}
+{\cal L}_{Dirac}
+=
+\overline{\psi}(x)
+\left(i \slashed{\partial} - m \right)
+\psi(x) \,.
+\label{eqn:DiracLagrangean}
+\end{eqnarray}
+Canonical momentum conjugate to the field $\psi$ is given as
+\begin{eqnarray}
+\pi_{\psi}(x) = \frac{\partial {\cal L}_{Dirac}}{\partial \dot{\psi}}
+=
+i \psi^{*t} (x) 
+\end{eqnarray}
+and Hamiltonian density yields
+\begin{eqnarray}
+{\cal H}_{Dirac}
+&=&
+i \psi^{*t}  \dot {\psi} - {\cal L}_{Dirac}
+= 
+i \overline{\psi}(x) \gamma^0 \dot {\psi}
+- 
+\overline{\psi}(x)
+\left(i \slashed{\partial} - m \right)
+\psi(x)
+\nonumber\\
+&=&
+\overline{\psi}(x)
+\left(
+ \bld{ \frac{1}{i}\gamma}\cdot\bld{\partial} + m 
+ \right)
+ \psi(x)\,,
+ \\
+ &=&
+\psi^{*t}(x)
+\left(
+ \bld{ \frac{1}{i}\alpha}\cdot\bld{\partial} + \beta m 
+ \right)
+ \psi(x)\,.
+\end{eqnarray}
+One may feel uneasy for Eq. (\ref{eqn:DiracLagrangean})
+does not involve kinetic term of $\overline{\psi}$ field and
+conjugate momentum $\pi_{\overline{\psi}}$ of this field disappears. It turns out
+that this does not cause any serious problem. In practice,
+Eq. (\ref{eqn:DiracLagrangean}) may be rewritten by means
+of a surface integration in the action as \cite{ref:Itzykson-Zuber}
+\begin{eqnarray}
+{\cal L}_{Dirac}
+=
+\overline{\psi}(x)
+\left(
+\frac{i}{2} \slashed{\partial}
+- \frac{i}{2}  \stackrel{\leftarrow}{\slashed{\partial}}
+ - m \right)
+\psi(x) \,,
+\label{eqn:DiracLagrangeanIZ}
+\end{eqnarray}
+which yields $\pi_{\overline{\psi}}$ ($= -i \gamma^0 \psi / 2$)
+that is certainly not identically zero.
 
 \bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
@@ -808,18 +887,6 @@ u(\bld{0})
 \end{eqnarray}
 
 \newpage 
-\begin{equation}
-{\cal L} = i \bar{\psi}(x) \slashed{\partial} \psi(x) - m \bar{\psi}(x) \psi(x)
-\end{equation}
-where $\slashed{\partial} = \gamma^\mu \partial_\mu$ and
-$\bar{\psi}(x) = \psi^\dagger (x) \gamma^0$.\\
-(Comment on independent $\psi$ and $\overline{\psi}$ treatment.)
-\begin{equation}
-%\slashed{\partial} = 0
-\left(i \slashed{\partial} + m \right) \psi(x) = 0\,,
-\hspace{3mm}
-\bar{\psi}(x) \left(i \stackrel{\leftarrow}{\slashed{\partial}} + m \right)  = 0
-\end{equation}
 \subsection{Quantized Free Field}
 \begin{equation}
 \psi(x) 
