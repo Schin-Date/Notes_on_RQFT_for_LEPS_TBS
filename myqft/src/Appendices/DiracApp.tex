@@ -384,9 +384,26 @@ U =
 \bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \noindent
-%{\bf Lorentz transformation property}
 \subsection{Lorentz transformation property}
 \label{sec:AppDirac_LorentzTransf}
+
+For a Lorentz transformation $L: p^{(0)} = (m, \bld{0}) \mapsto p$, we write
+$\psi^{(\pm)}(\bld{p}) = S(L) \psi^{(\pm)}(\bld{0})$.
+Eq. (\ref{eqn:LorentzTransfgamma}) reads
+\begin{eqnarray*}
+S^{-1}(L) \slashed{p} S(L)
+=
+p_\mu L^\mu_{\;\;\nu} \gamma^\nu
+=
+L_\mu^{\;\;\rho} L^\mu_{\;\;\nu} p^{(0)}_\rho \gamma^\nu
+=
+g^\rho_\nu p^{(0)}_\rho \gamma^\nu
+=
+m \gamma^0
+\end{eqnarray*}
+and we have
+
+\bigskip
 
 Under a proper homogeneous Lorentz transformation
 \footnote{%--------------------------------------------------------
@@ -457,7 +474,7 @@ The covariance of the Dirac equation (\ref{eqn:DiracEqstandard}) is guaranteed b
 a relationship
 \begin{eqnarray}
 S^{-1}(L) \gamma^\mu S(L) = L^\mu_{\;\;\nu} \gamma^\nu
-\label{eqn:LorentzTransfgamma}
+\label{eqn:LorentzTransfgammaApp}
 \end{eqnarray}
 $S(L)$ has a property
 \begin{eqnarray}

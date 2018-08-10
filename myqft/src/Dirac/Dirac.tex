@@ -194,8 +194,38 @@ Requiring ${\cal L}_{Dirac}$ to be invariant under proper Lorentz transformation
 one may find the transformation property of the field $\psi$.
 It turns out that $\psi$ transforms as a Lorentz spinor, which 
 belongs to the fundamental representation of the Lorentz group.
-$\psi$ has four components and it is called the Dirac spinor.
-We refer Appendix \ref{sec:AppDirac_LorentzTransf} for details.
+Leaving details to Appendix \ref{sec:AppDirac_LorentzTransf},
+we merely mention here that, under a (proper homogeneous) Lorentz transformation 
+\begin{equation}
+x^\mu \mapsto x^{\mu'} = L^\mu_{\;\;\nu}\; x^\nu\,,
+\end{equation}
+the four component filed $\psi(x)$ is transformed linearly 
+with a matrix $S(L)$ as
+\begin{eqnarray}
+\psi(x)
+\mapsto
+\psi'(x') 
+= 
+S(L) \psi(x)\,.
+\end{eqnarray}
+It turns out that the conjugate field $\overline{\psi}$
+is transformed as
+\begin{eqnarray}
+\overline{\psi}(x)
+\mapsto
+\overline{\psi}'(x')
+= 
+\overline{\psi}(x) S(L)^{-1}\,,
+\end{eqnarray}
+so that a bilinear quantity $\overline{\psi} \psi$ is a Lorentz scalar.
+It is also shown in Appendix \ref{sec:AppDirac_LorentzTransf} that
+\begin{eqnarray}
+S^{-1}(L) \gamma^\mu S(L) = L^\mu_{\;\;\nu} \gamma^\nu \,,
+\label{eqn:LorentzTransfgamma}
+\end{eqnarray}
+so that a quantity $\overline{\psi} \gamma^\mu \psi$ is a Lorentz vector.
+It is straightforward with these properties to confirm the Lorentz invariance of ${\cal L}_{Dirac}$.
+
 
 \bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
@@ -300,7 +330,6 @@ which satisfy the following relationships
 \end{eqnarray}
 %----------------------------------------------------------------------------
 
-
 \bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \noindent
@@ -312,6 +341,7 @@ We write solutions of the Dirac equation (\ref{eqn:DiracEqstandard}) as
  \left[
 \psi^{(+)}(\bld{p}) e^{-ipx} + \psi^{(-)}(\bld{p}) e^{ipx}
 \right]\,,
+\label{eqn:Diracfieldbypsipm}
 \end{eqnarray}
 where $p^0 = \sqrt{\bld{p}^2 + m^2}$.
 The Dirac equation demands
@@ -348,57 +378,37 @@ from which Eq. (\ref{eqn:DiracEqMomentumamp}) follows.
 \begin{eqnarray}
 (\slashed{p} - m) \psi^{(+)}(\bld{p}) = 0\,,
 \hspace{5mm}
-(\slashed{p} + m) \psi^{(-)}(\bld{p}) = 0
+(\slashed{p} + m) \psi^{(-)}(\bld{p}) = 0 \,.
 \label{eqn:DiracEqMomentumamp}
 \end{eqnarray}
-For a Lorentz transformation $L: p^{(0)} = (m, \bld{0}) \mapsto p$, we write
-$\psi^{(\pm)}(\bld{p}) = S(L) \psi^{(\pm)}(\bld{0})$.
-Eq. (\ref{eqn:LorentzTransfgamma}) reads
-\begin{eqnarray*}
-S^{-1}(L) \slashed{p} S(L)
-=
-p_\mu L^\mu_{\;\;\nu} \gamma^\nu
-=
-L_\mu^{\;\;\rho} L^\mu_{\;\;\nu} p^{(0)}_\rho \gamma^\nu
-=
-g^\rho_\nu p^{(0)}_\rho \gamma^\nu
-=
-m \gamma^0
-\end{eqnarray*}
-and we have
-\begin{eqnarray*}
+Setting $p = (m, \bld{0})$, we have 
+\begin{eqnarray}
 (\gamma^0 - 1) \psi^{(+)}(\bld{0}) = 0\,,
 \hspace{5mm}
-(\gamma^0 + 1) \psi^{(-)}(\bld{0}) = 0
-\end{eqnarray*}
-\bigskip
-Each of these equations have two linearly independent solutions
-for $\gamma_0^2 =1$, $\tr \gamma_0 = 0$ and rank$(\gamma_0) = 4$.
-Denoting normalized solutions as $u^{(\alpha)}(\bld{p})$ and $v^{(\alpha)}(\bld{p})$,
-$\alpha = 1, 2$ respectively for $\psi^{(+)}(\bld{p})$ and  $\psi^{(-)}(\bld{p})$,
-we write
-\begin{eqnarray}
-\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
-\sum_{\alpha = 1, 2} \left[
-b_\alpha(\bld{p}) u^{(\alpha)}(\bld{p}) e^{-ipx} + d_\alpha^*(\bld{p}) v^{(\alpha)}(\bld{p}) e^{ipx}
-\right]
+(\gamma^0 + 1) \psi^{(-)}(\bld{0}) = 0 \,.
+\label{eqn:DiracEqMomentumampatzeromomentum}
 \end{eqnarray}
-Eq. (\ref{eqn:DiracEqMomentumamp}) reads
+Solutions of Eqs. (\ref{eqn:DiracEqMomentumamp}) and
+(\ref{eqn:DiracEqMomentumampatzeromomentum})
+are related by a Lorentz transformation $L$
+connecting Lorentz frames where
+spacial momenta of a particle with the mass $m$ are
+$\bld{p}$ and $\bld{0}$, respectively,
+as
 \begin{eqnarray}
-(\slashed{p} - m) u^{(\alpha)}(\bld{p}) = 0\,,
-\hspace{5mm}
-(\slashed{p} + m) v^{(\alpha)}(\bld{p}) = 0
-\label{eqn:DiracEqDiracspinors}
+\psi^{(\pm)}(\bld{p}) = S(L) \psi^{(\pm)}(\bld{0}) \,.
 \end{eqnarray}
-For conjugate (adjoint) spinors defined in Eq. (\ref{eqn:DefConjDiracField}) we have
-\begin{eqnarray}
-\overline{u}^{(\alpha)}(\bld{p}) (\slashed{p} - m) = 0\,,
-\hspace{5mm}
-\overline{v}^{(\alpha)}(\bld{p}) (\slashed{p} + m) = 0
-\label{eqn:DiracEqConjspinors}
-\end{eqnarray}
-We choose their normalization
+Considering that $\gamma_0^2 =1$, $\tr \gamma_0 = 0$ and rank$(\gamma_0) = 4$,
+we recognize that each of equations in Eq. (\ref{eqn:DiracEqMomentumampatzeromomentum})
+has  two  linearly independent solutions.
+By acting $S(L)$ on 
+these solutions, we obtain linearly independent solutions of Eq. (\ref{eqn:DiracEqMomentumamp})
+which we write $u^{(1, 2)}(\bld{p})$ for $\psi^{(+)}(\bld{p})$ and $v^{(1,2)}(\bld{p})$
+ for $\psi^{(-)}(\bld{p})$, respectively. 
+We may choose them as to be orthonormal basis in a sense that
 \footnote{%------------------------------------------------- footnote >>
+This footnote should be rewritten later.\\
+Choices of normalizations by different authors:\\
 Izykson: $\{ b(\bld{p}),b^\dagger(\bld{p}') \}_+ = \frac{2E}{2m}\delta^3(\bld{p}-\bld{p}')$,
 $\bar{u}^\alpha u^\beta = \delta^{\alpha \beta}$,\\
 \hspace{20mm}$\psi(x) \sim \int d^3\bld{p}\frac{2m}{2E}[ b u e^{-ipx} \dots]$\\
@@ -407,7 +417,6 @@ $\bar{u}^\alpha u^\beta = 2m \delta^{\alpha \beta}$,\\
 \hspace{20mm}$\psi(x) = \int \frac{d^3\bld{p}}{(2\pi)^32E}[ b u e^{-ipx} \dots]$\\
 dim $\psi = E^{3/2}$
 }%-------------------------------------------end of footnote //
- as
 \begin{eqnarray}
 \begin{array}{c}
 \overline{u}^{(\alpha)}(\bld{p})
@@ -417,6 +426,7 @@ u^{(\beta)}(\bld{p})
 \overline{v}^{(\alpha)}(\bld{p})
 v^{(\beta)}(\bld{p})
 = -2m \delta^{\alpha \beta}\,,
+\vspace{2mm}
 \\
 \overline{u}^{(\alpha)}(\bld{p})
 v^{(\beta)}(\bld{p})
@@ -424,139 +434,43 @@ v^{(\beta)}(\bld{p})
 \hspace{5mm}
 \overline{v}^{(\alpha)}(\bld{p})
 u^{(\beta)}(\bld{p})
-= 0
+= 0 \,,
 \end{array}
+\label{eqn:DiracspinorNormalization}
 \end{eqnarray}
-%------------------------------------------------------------------------------
-\underline{Energy state projection}
-\begin{eqnarray}
-\hat{\Omega}_+(\bld{p})
-=
-\frac{\slashed{p} + m}{2m}
-\,, \hspace{5mm}
-\hat{\Omega}_-(\bld{p})
-=
-\frac{- \slashed{p} + m}{2m}
-\end{eqnarray}
-%------------------------------------------------------------------------------
-\underline{Spin state projection}\\
-The spin states are defined in the rest frame of particle.
-Consider the generator of spatial rotation given in Eq. (\ref{eqn:DiGenRotation}).
-For $s^{(0)}= (0, \bld{s})$ with a spatial 3 vector $\bld{s}$, 
-with helps of Eq. (\ref{eqn:LorentzTransfgamma}) and a relation
-\begin{eqnarray}
-S^{-1}(L) \gamma_5 S^{}(L) = \det (L) \gamma_5\,,
-\end{eqnarray}
-we have 
-\begin{eqnarray}
-S^{-1}(L) \bld{\sigma} \cdot \bld{s} S^{}(L) 
-&=&
-S^{-1}(L) \gamma_5 \gamma^0 \bld{\gamma} \cdot \bld{s} S^{}(L) 
-\nonumber\\
-&=&
-\det (L) \gamma_5 L^0_{\;\;\mu} \gamma^\mu L^{i}_{\;\;\nu} \gamma^\nu s^i
-\nonumber\\
-&=&
-\det (L) \gamma_5 (p^{(0)}_\rho / m) L^\rho_{\;\;\mu} \gamma^\mu (- s^{(0)}_\sigma) L^{\sigma}_{\;\;\nu} \gamma^\nu 
-\nonumber\\
-&=&
-\det (L) \gamma_5  (L^{-1})^{\;\;\rho}_{\mu} (p^{(0)}_\rho / m) \gamma^\mu  
-(L^{-1})^{\;\;\sigma}_{\nu} \gamma^\nu (- s^{(0)}_\sigma)\,,
-\nonumber
-\end{eqnarray}
-where $p^{(0)}= (m, \bld{0})$.
-Then, for $L= L(\bld{\beta}): p = (E, \bld{p}) \mapsto p^{(0)}$,
-we have
-\begin{eqnarray}
-S^{-1}(L) \bld{\sigma} \cdot \bld{s} S^{}(L) 
-&=&
-- (1/m) \det (L) \gamma_5  p^{}_\mu  \gamma^\mu   \gamma^\nu  s^{}_\nu\,,
-\nonumber\\
-&=&
-\det (L) \frac{\gamma_5 \slashed{s} \slashed{p}}{m}\,,
-\end{eqnarray}
-where we have used a fact $\slashed{p} \slashed{s} = - \slashed{s} \slashed{p} $
-for $p\cdot s = 0$.
-Thus, we have for a proper Lorentz transformation that
-\begin{eqnarray}
-\frac{\gamma_5 \slashed{s} \slashed{p}}{m}
-u(\bld{p})
-=
-S^{-1}(L) \bld{\sigma} \cdot \bld{s} S^{}(L) S^{-1}(L) u(\bld{0})
-=
-S^{-1}(L) \bld{\sigma} \cdot \bld{s} u(\bld{0})
-\end{eqnarray}
-and similar relationship for $v$. We set two linearly independent spinors 
-in the rest frame as eigenstates of $\bld{\sigma}\cdot \bld{s}$ 
-for $\bld{s}^2 = 1$
-and write
+where $\alpha = 1, 2$ and
+$\overline{u}^{(\alpha)}$  and $\overline{v}^{(\alpha)}$ 
+are conjugate fields defined in a same manner as Eq. (\ref{eqn:DefConjDiracField}).
+To be indubitable, we write Dirac equations satisfied by these basis below.
 \begin{eqnarray}
 \begin{array}{l}
-\bld{\sigma}\cdot \bld{s}\; u(\bld{0}, \bld{s} ) = u(\bld{0}, \bld{s} )
+(\slashed{p} - m) u^{(\alpha)}(\bld{p}) = 0\,,
+\hspace{5mm}
+(\slashed{p} + m) v^{(\alpha)}(\bld{p}) = 0\,,
+\vspace{3mm}
 \\
-\bld{\sigma}\cdot \bld{s}\; u(\bld{0}, -\bld{s} ) = -u(\bld{0}, -\bld{s} )
-\\
-- \bld{\sigma}\cdot \bld{s}\; v(\bld{0}, \bld{s} ) =  v(\bld{0}, \bld{s} )
-\\
-- \bld{\sigma}\cdot \bld{s}\; v(\bld{0}, -\bld{s} ) =  - v(\bld{0}, -\bld{s} )
+\overline{u}^{(\alpha)}(\bld{p}) (\slashed{p} - m) = 0\,,
+\hspace{5mm}
+\overline{v}^{(\alpha)}(\bld{p}) (\slashed{p} + m) = 0\,,
 \end{array}
+\label{eqn:DiracEqDiracspinors}
 \end{eqnarray}
-Since $S^{-1}(L) u(\bld{0},\bld{s}) = u(\bld{p},\bld{s})$ and so on, we have
-a set of similar relations by replacing $\bld{0}$ by $\bld{p}$ and
-$\bld{\sigma}\cdot \bld{s}$ by $\gamma_5 \slashed{s} \slashed{p} / m$.
-Considering relationships $(\slashed{p}/m)u(\bld{p}) = u(\bld{p})$
-and $(-\slashed{p}/m)v(\bld{p}) = v(\bld{p})$, an operator matirx
+where $\alpha = 1, 2$.
+The physical contents of each of these basis 
+in particular representations of Dirac matrices
+are examined by
+constructing energy and spin state projections.
+We refer to Appendix \ref{sec:App_Dirac} for detailes.
+
+Finally, we may write Eq. (\ref{eqn:Diracfieldbypsipm})  in a form with these basis as
 \begin{eqnarray}
-\hat{\Sigma}(s)
- = 
-\frac{1 + \gamma_5 \slashed{s}}{2}
-%\,,\hspace{5mm}
-%s = L s^{(0)}\,,
-%\hspace{2mm}
-%s^{(0)} = (0, \bld{s})\,,
- \end{eqnarray}
-projects out 
-spinstates along $\bld{s}$ as
-\begin{eqnarray}
-\begin{array}{l}
-\hat{\Sigma}(s) u(\bld{p}, \bld{s}) = u(\bld{p}, \bld{s})
-\\
-\hat{\Sigma}(s) u(\bld{p}, -\bld{s}) = 0
-\\
-\hat{\Sigma}(s) v(\bld{p}, \bld{s}) = v(\bld{p}, \bld{s})
-\\
-\hat{\Sigma}(s) v(\bld{p}, -\bld{s}) = 0
-\end{array}
-\end{eqnarray}
-In the Dirac representation,
-\begin{eqnarray}
-\bld{\sigma}
-&=&
-1 \otimes \bld{\sigma}_{Pauli}
-=
-\left[
-\begin{array}{cc}
-\bld{\sigma}_{Pauli} & 0 \\
-0 & \bld{\sigma}_{Pauli}
-\end{array}
-\right]
+\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{\alpha = 1, 2} \left[
+c_\alpha(\bld{p}) u^{(\alpha)}(\bld{p}) e^{-ipx} + d_\alpha^*(\bld{p}) v^{(\alpha)}(\bld{p}) e^{ipx}
+\right] \,.
 \end{eqnarray}
 
-
-\bigskip
-
-For $p = Lp^{(0)}$, $p^{(0)} = (m, \bld{0})$,
-\begin{eqnarray}
-\hat{\Sigma}(s) u(\bld{p})
-=
-\hat{\Sigma}(s)
-S_{boost}(L)
-u(\bld{0})
-=
-\frac{1 + \gamma_5 \slashed{s}}{2}
-\frac{\slashed{p}\gamma^0 + m}{\sqrt{2m(E+m)}}
-\end{eqnarray}
-
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 \newpage 
 \subsection{Quantized Free Field}
 \begin{equation}
