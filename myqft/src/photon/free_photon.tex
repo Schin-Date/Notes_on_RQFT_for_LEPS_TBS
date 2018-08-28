@@ -63,9 +63,8 @@ E^3 &-B^2&B^1& 0
 \right)\,.
 \label{eqn:FcontentbyEandB} 
 \end{equation}
-In the first equation in Eq. (\ref{eqn:FbyEB}), an upper arrow as a
-superscript represents cartesian components of a spatial vector
-in the right hand side.
+In Eq. (\ref{eqn:FbyEB}), an upper arrow
+superscript represents cartesian components of the corresponding spatial vector.
 \footnote{%------------------------------------------ footnote 
 This notation is convenient in dealing with
 calculus among spatial vectors.
@@ -123,10 +122,9 @@ This is due to a symmetry of Eq. (\ref{eqn:MxwA}) under the gauge transformation
 of the second kind:
 \begin{eqnarray}
 A^\mu \mapsto A'{}^{\mu} = A^\mu + \partial^\mu \Lambda\,,
+\label{eqn:SecondOrderGaugeTransf}
 \end{eqnarray}
 where $\Lambda$ is an arbitrary second order differentiable function.
-\begin{comment}
-\end{comment}
 One can confirm that the physically observable fields $F^{\mu \nu}$ in Eq. (\ref{eqn:FdefinedbyA}) 
 are certainly invariant under this transformation. 
 This is why we are insisted (and allowed) to pick a representative of the field $A^\mu$
@@ -148,7 +146,14 @@ The second term is not manifest but
 the gauge invariance is guarantied in the level of action
 through the current conservation law
 %of the action is guarantied by the current conservation law 
-$\partial \cdot j = 0$, which is a consistency condition of the Maxwell equation
+$\partial \cdot j = 0$
+\footnote{%------------------------------------------ footnote >>
+The change in the last term in Eq. (\ref{eqn:LagdenMx}) 
+due to the transformation (\ref{eqn:SecondOrderGaugeTransf}) reads
+$\Delta(j^\mu A_\mu) = j^\mu \partial_\mu \Lambda$
+and the partial integration of this term yields $\partial \cdot j$.
+}%------------------------------------------ footnote //
+, which is a consistency condition of the Maxwell equation
 (\ref{eqn:MxwA}).
 To fix a gauge, we impose condition(s) on the field $A_\mu$ and
 modify the first term of the Lagrangian density (\ref{eqn:LagdenMx})
@@ -740,7 +745,7 @@ we find
 =0 \,,
 \vspace{3mm}
 \\
-{[}a_\lambda (\bld{k}), a_{\lambda '} (\bld{k}'){]}
+{[}a_\lambda (\bld{k}), a^\dagger_{\lambda '} (\bld{k}'){]}
 =
 2 \omega \delta^3(\bld{k} - \bld{k}') \delta_{\lambda \lambda'} \,,
 \end{array}
@@ -1119,6 +1124,7 @@ g_{\lambda \lambda'} e_\mu^{(\lambda)} {e_\nu^{(\lambda')}}^*
 \mbox{(complete)}
 \end{array}
 \right.
+\label{eqn:photonPolbasisLorentz}
 \end{eqnarray}
 In a standard choice of the polarization vectors,
 $e^{(3)}$ is taken along the spacial momentum vector $\bld{k}$ 
@@ -1361,7 +1367,7 @@ them by imposing $\ketend \phi \ket \equiv \ketend 0 \ket_L$.
 
 The propagator in the Feynman gauge is evaluated from
 Eqs. (\ref{eqn:photonFieldExpansionLorentz}) and (\ref{eqn:creanncommLorGauge})
-with a help of Eq. (\ref{eqn:creanncommLorGauge}) as
+with a help of Eq. (\ref{eqn:photonPolbasisLorentz}) as
 \begin{eqnarray}
 \bra 0 \braend
 T[
@@ -1371,7 +1377,7 @@ A_\mu (x) A_\nu (y)
 \int
 \frac{d^4 k}{(2\pi)^4}
 \frac{-i g_{\mu \nu}}
-{k^2 + \i\epsilon}
+{k^2 + i\epsilon}
 e^{-ik \cdot (x - y)}
 \label{eqn:photonProp}
 \end{eqnarray}
