@@ -419,43 +419,62 @@ dim $\psi = E^{3/2}$
 }%-------------------------------------------end of footnote //
 \begin{eqnarray}
 \begin{array}{c}
-\overline{u}^{(\alpha)}(\bld{p})
-u^{(\beta)}(\bld{p})
-= 2m \delta^{\alpha \beta}\,,
+\overline{u}^{(r)}(\bld{p})
+u^{(s)}(\bld{p})
+= 2m \delta^{rs}\,,
 \hspace{5mm}
-\overline{v}^{(\alpha)}(\bld{p})
-v^{(\beta)}(\bld{p})
-= -2m \delta^{\alpha \beta}\,,
+\overline{v}^{(r)}(\bld{p})
+v^{(s)}(\bld{p})
+= -2m \delta^{rs}\,,
 \vspace{2mm}
 \\
-\overline{u}^{(\alpha)}(\bld{p})
-v^{(\beta)}(\bld{p})
+\overline{u}^{(r)}(\bld{p})
+v^{(s)}(\bld{p})
 = 0\,,
 \hspace{5mm}
-\overline{v}^{(\alpha)}(\bld{p})
-u^{(\beta)}(\bld{p})
+\overline{v}^{(r)}(\bld{p})
+u^{(s)}(\bld{p})
 = 0 \,,
 \end{array}
 \label{eqn:DiracspinorNormalization}
 \end{eqnarray}
-where $\alpha = 1, 2$ and
-$\overline{u}^{(\alpha)}$  and $\overline{v}^{(\alpha)}$ 
+where $r$ and $s$ take values $1, 2$ and
+$\overline{u}^{(r)}$  and $\overline{v}^{(r)}$ 
 are conjugate fields defined in a same manner as Eq. (\ref{eqn:DefConjDiracField}).
 To be indubitable, we write Dirac equations satisfied by these basis below.
 \begin{eqnarray}
 \begin{array}{l}
-(\slashed{p} - m) u^{(\alpha)}(\bld{p}) = 0\,,
+(\slashed{p} - m) u^{(r)}(\bld{p}) = 0\,,
 \hspace{5mm}
-(\slashed{p} + m) v^{(\alpha)}(\bld{p}) = 0\,,
+(\slashed{p} + m) v^{(r)}(\bld{p}) = 0\,,
 \vspace{3mm}
 \\
-\overline{u}^{(\alpha)}(\bld{p}) (\slashed{p} - m) = 0\,,
+\overline{u}^{(r)}(\bld{p}) (\slashed{p} - m) = 0\,,
 \hspace{5mm}
-\overline{v}^{(\alpha)}(\bld{p}) (\slashed{p} + m) = 0\,,
+\overline{v}^{(r)}(\bld{p}) (\slashed{p} + m) = 0\,.
 \end{array}
 \label{eqn:DiracEqDiracspinors}
 \end{eqnarray}
-where $\alpha = 1, 2$.
+They also satisfy identities
+\begin{eqnarray}
+\begin{array}{l}
+\displaystyle
+\sum_{r=1}^2 u^{(r)}(\bld{p}) 
+\overline{u}^{(r)}(\bld{p})
+=
+\slashed{p} + m\,,
+\vspace{2mm}
+%\\
+%\hspace{-40mm}\mbox{and}
+\\
+\displaystyle
+\sum_{r=1}^2 v^{(r)}(\bld{p}) 
+\overline{v}^{(r)}(\bld{p})
+=
+\slashed{p} - m\,.
+\end{array}
+\label{eqn:DiracspinorPolSum}
+\end{eqnarray}
 The physical contents of each of these basis 
 in particular representations of Dirac matrices
 are examined by
@@ -465,8 +484,8 @@ We refer to Appendix \ref{sec:App_Dirac} for detailes.
 Finally, we may write Eq. (\ref{eqn:Diracfieldbypsipm})  in a form with these basis as
 \begin{eqnarray}
 \psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
-\sum_{\alpha = 1, 2} \left[
-c_\alpha(\bld{p}) u^{(\alpha)}(\bld{p}) e^{-ipx} + d_\alpha^*(\bld{p}) v^{(\alpha)}(\bld{p}) e^{ipx}
+\sum_{r = 1, 2} \left[
+c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ipx} + d_r^*(\bld{p}) v^{(r)}(\bld{p}) e^{ipx}
 \right] \,.
 \end{eqnarray}
 
@@ -477,32 +496,23 @@ c_\alpha(\bld{p}) u^{(\alpha)}(\bld{p}) e^{-ipx} + d_\alpha^*(\bld{p}) v^{(\alph
 \psi(x) 
 =
 \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
-\sum_{s = \pm 1}
+\sum_{r = 1}^2
 \left[
-c(\bld{p}, s) u(\bld{p}, s) e^{-ipx}
+c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ipx}
 +
-d^\dagger(\bld{p}, s) v(\bld{p}, s) e^{ipx}
+d_r^\dagger(\bld{p}) v^{(r)}(\bld{p}) e^{ipx}
 \right]
 \end{equation}
 \begin{equation}
-\{ c(\bld{p}, s), c^\dagger(\bld{p}', s') \}
+\{ c_{r}(\bld{p}), c_{s}^\dagger(\bld{p}') \}
 =
-\{ d(\bld{p}, s), d^\dagger(\bld{p}', s') \}
+\{ d_{r}(\bld{p}), d_{s}^\dagger(\bld{p}') \}
 =
-2p^0 \delta_{ss'}
-\delta^3(\bld{p} - \bld{p}')
+\delta_{rs} 2p^0 
+\delta^3(\bld{p} - \bld{p}')\,,
+\label{eqn:Dirc_creann}
 \end{equation}
-\begin{equation}
-\begin{array}{l}
-(\slashed{p} - m) u(\bld{p}, s) = 0\,,
-\hspace{3mm}
-\bar{u}(\bld{p}, s)(\slashed{p} - m)  = 0\,,
-\\
-(\slashed{p} + m) v(\bld{p}, s) = 0\,,
-\hspace{3mm}
-\bar{v}(\bld{p}, s)(\slashed{p} + m)  = 0\,,
-\end{array}
-\end{equation}
+and other anticommutators are equal to zero.
 
 Propagetor
 \begin{eqnarray}
