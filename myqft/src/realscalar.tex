@@ -1,3 +1,10 @@
+Irreducible representations of the Loerentz group solely 
+determines forms of free field equations.
+Irreducible representations are classified by
+spins of particles.
+\subsection{Real Scalar Free Field}
+Spinless and neutral.
+\subsubsection{Lagrangian Formalism}
 \begin{eqnarray}
 {\cal L} &=& \frac{1}{2} 
 \left( \underline{\partial} \varphi(\underline{x}) \right)^2
@@ -27,6 +34,7 @@ Here and hereafter, we omitt underlines on Lorentz vectors.
 %\int \frac{d^3 \bld{k}}{\sqrt{(2\pi)^3}} (- i k^0 ) \left[
 %a(\bld{k}) e^{-i k \cdot x} - b^\dagger(\bld{k})e^{i k \cdot x} \right]
 \end{array}
+\label{eqn:conjmomentumRscalar}
 \end{equation}
 Euler-Lagrange equation
 \begin{equation}
@@ -116,7 +124,8 @@ Hamiltonian density in the classical level is evaluated from Eq. (\ref{eqn:Hamil
 \right\}
 \label{eqn:KGHamiltoniandens}
 \end{eqnarray}
-Canonical quantization
+%===============================================================
+\subsubsection{Canonical quantization}
 \begin{equation}
 \begin{array}{c}
 [ \varphi(t,\bld{x}), \pi(t, \bld{y})] = i \delta^3 (\bld{x} - \bld{y} )\,,
@@ -185,6 +194,8 @@ Notice that $dim [\varphi] = E^1$ as can be seen from Eq. (\ref{eqn:RSCLagrangia
 and $dim [\pi] = E^2$. Thus they are physical quantities  quite different from
 those in the case of the Schr\"odinger field theory.\\
 
+%===============================================================
+\subsubsection{Particle states and wave functions}
 We are now making use of a fact that operators in Eq. (\ref{eqn:cancomm_RS}) satisfiy
 the condition of the bosonic creation-annihilation operators, (\ref{eqn:Nbodycreanncomm}), 
 for the case of continuous eigenvalues.
@@ -425,7 +436,7 @@ When the number of particles is fixed, normalization of the state  is written as
 \end{eqnarray*}
 The most general state 
 in the Fock space
-%>>>>>>>>>>>>>>>>>>>>>>>>>comment
+%============================= comment >>
 %\begin{comment}
 may be written as
 \begin{equation*}
@@ -438,13 +449,13 @@ In this case, $\| \ketend \Psi^{(N)} \ket \|^2$
 gives the probability to find the system 
 with $n$ particles.
 %\end{comment}
-%<<<<<<<<<<<<<<<<<<<<<<<<<< comment //
+%============================= comment //
 
 Particle states composed like this are these in the Heisenberg picture.
 If we choose $e^{-i k^0 t_0} \hat{a}(\bld{k})$ and $e^{i k^0 t_0} \hat{a}^\dagger(\bld{k})$
 as initial values of Heisenberg operators $\hat{a}_H(\bld{k}, t)$ and $\hat{a}_H^\dagger(\bld{k}, t)$
 respectively at $t = t_0$, we have from Eq. (\ref{eqn:Heisenbergformalsol}) that
-\footnote{
+\footnote{%----------------------------------------------footnote >>
 From Eq. (\ref{eqn:KGcommHanda}), we have
 \begin{equation*}
 H a^\dagger (\bld{k}) = a^\dagger (H + k^0)
@@ -463,7 +474,7 @@ a^\dagger (\bld{k}) \sum_n^\infty \frac{i^n}{n!} (t-t_0)^n (H + k^0)^n
 &=&
 a^\dagger (\bld{k})  e^{i (H + k^0) (t-t_0)}
 \end{eqnarray*}
-} % footnote end
+} %----------------------------------------------footnote //
 \begin{equation}
 a_H(\bld{k}, t) = e^{-i k^0 t} a (\bld{k})\,,
 \hspace{3mm}
@@ -480,39 +491,252 @@ State vector in the Schr\"odinger picture obeys
 i \partial_t \ketend \Psi(t) \ket_S = \hat{H} \ketend \Psi(t) \ket_S
 \end{equation}
 
-\bigskip
-
-%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-\noindent
-%\begin{equation}
-%\left( \Box + m^2 \right) \varphi(x) = 0
-%\end{equation}
-Propagator
-\begin{equation}
-\left( \Box + m^2 \right) \Delta_F(x) = \delta^4(x) 
-\end{equation}
+\newpage
+%================================================== 
+\subsubsection{Quadratic forms and the propagator}
+Let us consider a vacuum expectation value (VEV) of 
+a quadratic of the field in Eq. (\ref{eqn:RS_fieldexpansion}).
+Eq. (\ref{eqn:cancomm_RS}) gives
 \begin{eqnarray}
-\Delta_F(q) 
+\bra 0 \braend \varphi(x) \varphi(y) \ketend 0 \ket
+=
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+e^{-ik(x - y)}
+\,\rightdef\,
+D(x-y)\,,
+\label{eqn:InvDfuncRscalar}
+\end{eqnarray}
+where we have defined the invariant $D$ function by the last equation.
+Though it is straightforward to derive the  first equation above, 
+it will be instructive to illustrate a convenient abbreviation for later,
+more complicated calculations. Corresponding to the structure in Eq. (\ref{eqn:RS_fieldexpansion})
+that the field can be divided into a positive frequency part which contain an annihilation operator
+$a$ and a negative frequency part containing a creation operator $a^\dagger$,
+we introduce abbreviations by writing
+% Eq. (\ref{eqn:RS_fieldexpansion}) as 
+\begin{eqnarray}
+\varphi_{}(x) = 
+\varphi^{(+)}(x) + \varphi^{(-)}(x)
+=
+a(x) + a^\dagger (x) \,.
+\label{eqn:RscalarFiledAbbrev}
+\end{eqnarray}
+The first expression by positive and negative frequency parts is after Pauli and Villars
+and employed by many authors. The second expression is not commonly used
+and sometimes dangerous but is quite convenient in many cases. We shall use
+the both expressions depending on the situations. 
+Using these expressions, a derivation of the first equation in Eq. (\ref{eqn:InvDfuncRscalar}) goes as follows:
+\begin{eqnarray}
+\bra 0 \braend \varphi(x) \varphi(y) \ketend 0 \ket
 &=&
-i \int d^4x e^{iqx} 
-\bra 0 \braend \mbox{T}\varphi(x) \varphi(0) 
-\ketend 0 \ket
+\bra 0 \braend (a(x) + a^\dagger(x) )( a(y) + a^\dagger(y) ) \ketend 0 \ket
 \nonumber\\
 &=&
-\frac{-1}{q^2 - m^2 + i\epsilon}\,,
+\bra 0 \braend a(x) a^\dagger(y) \ketend 0 \ket
+=
+\bra 0 \braend \left[ a(x), a^\dagger(y) \right] \ketend 0 \ket
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\bra 0 \braend \left[ a(\bld{k}), a^\dagger(\bld{k}') \right] \ketend 0 \ket
+e^{-i(kx - k'y)}
+\nonumber\\
+&=&
+r.h.s\mbox{ of the 1st equation in Eq. (\ref{eqn:InvDfuncRscalar})}.
 \end{eqnarray}
-where $\epsilon$ is infinitesimal positive number.
-T-product
+As another example of evaluating quadratic forms of the field, let us
+compute a commutator of the field:
+\begin{eqnarray}
+[\varphi(x), \varphi(y)]
+&=&
+[a(x) + a^\dagger(x),  a(y) + a^\dagger(y) ]
+\nonumber\\
+&=&
+[a(x),  a^\dagger(y) ] + [a^\dagger(x),  a(y) ]
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
+\left(
+[a(\bld{k}), a^\dagger(\bld{k}')]e^{-i(kx - k'y)}
+\right.
+\nonumber\\
+&&
+\left.
+\hspace{35mm}
++
+[a^\dagger(\bld{k}), a(\bld{k}')]e^{i(kx - k'y)}
+\right)
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
+\left(
+e^{-ik(x - y)} - e^{ik(x - y)}
+\right)
+\nonumber\\
+&=&
+D(x-y) - D(y-x)
+\label{eqn:scfieldcommrel}
+\end{eqnarray}
+Now comes a comment on this result and the invariant D function.
+When $x-y$ is spacelike, there exists a Lorentz frame where $x^0 = y^0$.
+Then an expression in the second from the last line shows 
+this commutator vanishes in that frame.
+The whole expression is Lorentz invariant and it must vanish for all $(x-y)^2 < 0$.
+Nevertheless, $D(x-y)$ itself does not vanish even $x-y$ is spacelike.
+
+
+The Feynman propagator of the scalar field is defined as 
+\footnote{%----------------------------------------------footnote >>
+$\Delta_F[$Ref.\cite{ref:Mandl-Shaw}$] = -i\Delta_F[ours]$,
+$G_F[$Ref.\cite{ref:Itzykson-Zuber}$] = i \Delta_F[ours]$.
+}%----------------------------------------------footnote //
+%the VEV of time ordering product of field operators:
+\begin{eqnarray}
+\Delta_F(x-y)
+&\leftdef&
+\bra 0 \braend T[\varphi(x) \varphi(y)] \ketend 0 \ket
+\nonumber\\
+&=&
+\theta(x^0 - y^0) D(x-y)
++
+\theta(y^0 - x^0) D(y-x)\,,
+\label{eqn:DefFeynmanPropRscalar}
+\end{eqnarray}
+where $T[\dots]$ stands for time ordering product and it is written for
+bosonic field operators as
 \begin{equation}
 T[\varphi(x) \varphi(y)] =
 \theta(x^0 - y^0)\varphi(x) \varphi(y)
 +
-\theta(y^0 - x^0)\varphi(y) \varphi(x)
+\theta(y^0 - x^0)\varphi(y) \varphi(x)\,.
+\label{eqn:definitionTprodBoson}
 \end{equation}
-One will find
-\[
-\left( \Box + m^2 \right) T[\varphi(x) \varphi(0)] = -i \delta^4(x)
-\]
-\begin{equation}
-\Delta_F(x) = \int \frac{d^4 q}{(2\pi)^4} e^{-iqx} \Delta_F(q)
-\end{equation}
+Since we have the following relationship
+deduced by contour integrations
+\footnote{%----------------------------------------------footnote >>
+Contour of the integration should go through the real axis from $- \infty$ to $\infty$ and
+turn lower (upper) half plane (anti) clockwise when $x^0  > (<)\, 0$ in the 
+middle expression in Eq. (\ref{eqn:FeynmanPropContourInteg}).
+Opposite signatures of a factor $2k^0$ at poles in the two terms are absorbed
+in opposite signatures of their residues.
+}%----------------------------------------------footnote //
+,
+\begin{eqnarray}
+\int d k^0 \frac{e^{-ik^0x^0}}{k^2 - m^2 + i\epsilon}
+&=&
+\int \frac{dk^0}{2k^0}
+\left(
+\frac{1}{k^0 - E_{\bld{k}} + i\epsilon
+}
++
+\frac{1}{k^0 + E_{\bld{k}} - i\epsilon}
+\right)
+e^{-ik^0x^0}
+\nonumber\\
+&=&
+\frac{-2\pi i}{2E_{\bld{k}}}
+\left(
+\theta(x^0 > 0) e^{-iE_{\bld{k}}x^0}
++
+\theta(x^0 < 0) e^{iE_{\bld{k}}x^0}
+\right)\,,
+\nonumber\\
+\label{eqn:FeynmanPropContourInteg}
+\end{eqnarray}
+for an infinitesimal positive $\epsilon$ and $E_{\bld{k}} = \sqrt{\bld{k}^2 + m^2}$,
+a substitution of Eq. (\ref{eqn:InvDfuncRscalar}) in Eq. (\ref{eqn:DefFeynmanPropRscalar})
+yields
+\begin{eqnarray}
+\Delta_F(x)
+&=&
+\int \frac{d^3\bld{k}}{(2\pi)^3 2k^0}
+\left(
+\theta(x^0 > 0) e^{-i k\cdot x}
++
+\theta(x^0 < 0) e^{i k\cdot x}
+\right)
+\nonumber\\
+&=&
+i \int \frac{d^4 k}{(2\pi)^4 2 k^0}
+\left(
+\frac{1}{k^0 - E_{\bld{k}} + i\epsilon
+}
++
+\frac{1}{k^0 + E_{\bld{k}} - i\epsilon}
+\right)
+e^{-ik \cdot x}
+\nonumber\\
+&=&
+i \int \frac{d^4 k}{(2\pi)^4}
+\frac{e^{-ik \cdot x}}{k^2 - m^2 + i\epsilon}\,.
+\end{eqnarray}
+We observe $\Delta_F$ is an even function
+as it should be from a fact $T[\varphi(y)\varphi(x)] = T[\varphi(x)\varphi(y)]$
+for bosonic fields.
+%\begin{proof}
+%\begin{eqnarray}
+%\hspace{65mm}
+%\blacksquare
+%\end{eqnarray}
+%\end{proof}
+Fourier transform of $\Delta_F(x)$,
+\begin{eqnarray}
+\tilde{\Delta}_F(q) 
+=
+\int d^4x e^{iqx} \Delta_F(x)
+=
+\frac{i}{q^2 - m^2 + i\epsilon}\,
+\end{eqnarray}
+is frequently referred as $\Delta_F(q)$ without a symbol to distinguish
+from the original function
+when there is no possibility of confusion. 
+
+Being a propagator should mean that is a Green's function of 
+field equation. To convince ourselves that $\Delta_F(x)$ is certainly a propagator,
+let us operate the Klein-Gordon operator,
+which involves a second order differentiation with respect to time,
+ to the T-product in Eq. (\ref{eqn:definitionTprodBoson}).
+When one differentiates the T-product with respect to $x^0$, there appear terms 
+not only from differentiations of fields but also from that of theta functions, which read
+$\delta(x^0 - y^0)(\varphi(x)\varphi(y) - \varphi(y)\varphi(x)$).
+This contribution vanishes however because the field operators commutes to each other
+according to Eq. (\ref{eqn:cancomm_eqtime_RS}).
+We may therefore write
+\begin{eqnarray}
+\partial_{x^0} T[\varphi(x) \varphi(y)]
+&=&
+\theta(x^0 - y^0)\partial_{x^0} \varphi(x) \varphi(y)
++
+\theta(y^0 - x^0)\varphi(y) \partial_{x^0} \varphi(x)
+\nonumber\\
+&=&
+\theta(x^0 - y^0) \pi(x) \varphi(y)
++
+\theta(y^0 - x^0)\varphi(y) \pi(x)\,,
+\nonumber
+\end{eqnarray}
+where we have adopted Eq. (\ref{eqn:conjmomentumRscalar}) in the  last equation.
+Further differentiation with respect to $x^0$ generates a contribution from
+differentiations of theta functions, 
+$\delta(x^0 - y^0)(\pi(x)\varphi(y) - \varphi(y)\pi(x)) = - i \delta^4(x -y)$,
+where we have adopted Eq.(\ref{eqn:cancomm_eqtime_RS}).
+Thus, the contribution does not vanish this time but gives
+a factor of delta function.
+Considering that 
+spatial differential operators 
+%other than one with respect to time
+commute with the theta functions and 
+that $\varphi(x)$ obays the field equation (\ref{eqn:Klein-Gordon}), 
+we finally obtain a relationship
+\begin{eqnarray}
+\left( \Box_x + m^2 \right) T[\varphi(x) \varphi(y)]
+=
+-i \delta^4(x - y)\,,
+\end{eqnarray}
+which means $\Delta_F(x-y)$ is a inhomogeneous Green's function
+of the Klein-Gordon equation and it is surely a propagator.
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+

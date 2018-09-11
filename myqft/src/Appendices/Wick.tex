@@ -290,45 +290,6 @@ s_f
 \newpage
 
 \subsubsection{Propagator}
-Let's take a real scalar field.
-\begin{eqnarray}
-\bra 0 \braend \varphi(x) \varphi(y) \ketend 0 \ket
-&=&
-\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
-\bra 0 \braend a(\bld{k}) a^\dagger(\bld{k}') \ketend 0 \ket
-e^{-i(kx - k'y)}
-\nonumber\\
-&=&
-\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
-e^{-ik(x - y)}
-\rightdef
-D(x-y)
-\end{eqnarray}
-\begin{eqnarray}
-[\varphi(x), \varphi(y)]
-&=&
-\int \frac{d^3 \bld{k} d^3 \bld{k}'}{(2\pi)^3 4 k^0 {k^0}'} 
-\left(
-[a(\bld{k}), a^\dagger(\bld{k}')]e^{-i(kx - k'y)}
-\right.
-\nonumber\\
-&&
-\left.
-\hspace{35mm}
-+
-[a\dagger(\bld{k}), a(\bld{k}')]e^{i(kx - k'y)}
-\right)
-\nonumber\\
-&=&
-\int \frac{d^3 \bld{k} }{(2\pi)^3 2 k^0} 
-\left(
-e^{-ik(x - y)} - e^{ik(x - y)}
-\right)
-\nonumber\\
-&=&
-D(x-y) - D(y-x)
-\label{eqn:scfieldcommrel}
-\end{eqnarray}
 When $x-y$ is spacelike, there exists a Lorentz frame where $x^0 - y^0$.
 Then the $r.h.s.$ of Eq. (\ref{eqn:scfieldcommrel}) vanishes. 
 The whole expression is Lorentz invariant and it must vanish for all $(x-y)^2 < 0$.
