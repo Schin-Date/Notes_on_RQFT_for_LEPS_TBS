@@ -1,3 +1,5 @@
+Spinless and charged.
+\subsubsection{Lagrangian formalizm}
 \begin{equation}
 {\cal L} = \partial_\mu \varphi^\dagger(x)\cdot \partial^\mu \varphi(x)
 - m^2 \varphi^\dagger(x)\varphi(x)
@@ -53,7 +55,8 @@ b(\bld{k})e^{- i k \cdot x}  + a^\dagger (\bld{k}) e^{i k \cdot x} \right]
 \end{array}
 \label{eqn:CompScFourier}
 \end{equation}
-Canonical quantization
+%==============================================================
+\subsubsection{Canonical quantization}
 \begin{equation}
 \begin{array}{c}
 [ a(\bld{k}), a^\dagger(\bld{k}')] = 
@@ -65,6 +68,8 @@ Canonical quantization
 \label{eqn:complscalarcancomm}
 \end{array}
 \end{equation}
+%==============================================================
+\subsubsection{Particle states}
 Four momentum
 \begin{equation}
 \hat{P}^\mu = \int \frac{d^3 \bld{k}}{2k^0} k^\mu \left(
@@ -86,6 +91,8 @@ a^\dagger(\bld{k}) a(\bld{k}) - b^\dagger(\bld{k}) b(\bld{k})
 \label{eqn:KGcomplex_Charge}
 \end{equation}
 Thus they carry opposite electric charges.
+%==============================================================
+\subsubsection{Discrete symmetries}
 
 We consider now inversion symmetries $U = P, C, T$. 
 The vacuum is invariant under these inversions.
@@ -127,25 +134,43 @@ $-$ for pseudoscalar.
 
 %================================================== 
 \subsubsection{Propagator}
-For the complex scalar field prescribed in Eqs. (\ref{eqn:CompScFourier}, \ref{eqn:complscalarcancomm}),
-we find 
+Writing
+\begin{eqnarray}
+\varphi(x) = a(x) + b^\dagger(x)
+\end{eqnarray}
+for the field  in Eq. (\ref{eqn:CompScFourier}),
+we can easily find from Eq. (\ref{eqn:complscalarcancomm}) that
 \begin{eqnarray}
 \begin{array}{l}
 \bra 0 \braend \varphi(x) \varphi(y) \ketend 0 \ket = 
-\bra 0 \braend \varphi^\dagger(x) \varphi^\dagger(y) \ketend 0 \ket = 0\,,
+\bra 0 \braend a(x) b^\dagger(y) \ketend 0 \ket = 0\,,
 \vspace{2mm}
 \\
-\bra 0 \braend T[\varphi^\dagger(x) \varphi(y)] \ketend 0 \ket 
-= 
-\bra 0 \braend T[\varphi(x) \varphi^\dagger(y)] \ketend 0 \ket 
-= 
-\Delta_F(x-y)
+\bra 0 \braend \varphi^\dagger(x) \varphi^\dagger(y) \ketend 0 \ket = 
+\bra 0 \braend b(x) a^\dagger(y) \ketend 0 \ket = 0\,,
+\vspace{2mm}
+\\
+\bra 0 \braend \varphi(x) \varphi^\dagger(y) \ketend 0 \ket = 
+\bra 0 \braend a(x) a^\dagger(y) \ketend 0 \ket = D(x-y)\,,
+\vspace{2mm}
+\\
+\bra 0 \braend \varphi^\dagger(x) \varphi(y) \ketend 0 \ket = 
+\bra 0 \braend b(x) b^\dagger(y) \ketend 0 \ket = D(x-y)\,.
 \end{array}
+\label{eqn:CplxSc2ndOrdVEV}
+\end{eqnarray}
+It is now straightforward to find that the Feynman propagator is
+the same as one for the real scalar field:
+\begin{eqnarray}
+\bra 0 \braend T[\varphi^\dagger(x) \varphi(y)] \ketend 0 \ket 
+&=& 
+\theta(x^0 > y^0) D(x-y) + \theta(y^0 > x^0) D(y - x)
+\nonumber\\
+&=&
+\bra 0 \braend T[\varphi(x) \varphi^\dagger(y)] \ketend 0 \ket 
+\nonumber\\
+&=&
+\Delta_F(x-y)
 \label{eqn:CplxScProp}
 \end{eqnarray}
-
-
-
-
-%Propagator $ = \Delta_F(q)$
 
