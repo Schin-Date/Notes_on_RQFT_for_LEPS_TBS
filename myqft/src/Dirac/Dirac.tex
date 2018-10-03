@@ -2,8 +2,10 @@
 These fields describe massive, charged, spin 1/2 particles.\\
 ((Put the following line somewhere: Spinors belong to the fundamental representation of the Poincar\'e Group SL(2,C))).
 \subsection{Classical Free Field}
-\noindent
-{\bf Dirac equation}
+%\noindent
+%{\bf Dirac equation}
+
+\subsubsection{Dirac equation}
 
 The Dirac equation is written as
 \begin{eqnarray}
@@ -120,8 +122,9 @@ provided we choose $\gamma$'s in such a way that Eq. (\ref{eqn:hermitealphabeta}
 
 \bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
-\noindent
-{\bf Lagrangian density}
+%\noindent
+%{\bf Lagrangian density}
+\subsubsection{Lagrangian formalism}
 
 Lagrangian density that leads Eqs. (\ref{eqn:DiracEqstandard}) and (\ref{eqn:DiracEqBarstandard})
 is written as
@@ -187,8 +190,9 @@ that is certainly not identically zero.
 
 \bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
-\noindent
-{\bf Lorentz transformation property}
+%\noindent
+%{\bf Lorentz transformation property}
+\subsubsection{Lorentz transformation property}
 
 Requiring ${\cal L}_{Dirac}$ to be invariant under proper Lorentz transformations,
 one may find the transformation property of the field $\psi$.
@@ -227,10 +231,11 @@ so that a quantity $\overline{\psi} \gamma^\mu \psi$ is a Lorentz vector.
 It is straightforward with these properties to confirm the Lorentz invariance of ${\cal L}_{Dirac}$.
 
 
-\bigskip
+%\bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
-\noindent
-{\bf Dirac matrices}
+%\noindent
+\subsubsection{Dirac matrices}
+%{\bf Dirac matrices}
 
 Since one needs calculus of $\gamma$ matrices to deal with Dirac spinors,
 we summarize a few basic points leaving further details to Appendix \ref{sec:App_Dirac}.
@@ -330,10 +335,11 @@ which satisfy the following relationships
 \end{eqnarray}
 %----------------------------------------------------------------------------
 
-\bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
-\noindent
-{\bf Dirac spinors}
+\subsubsection{Dirac spinors}
+%\bigskip
+%\noindent
+%{\bf Dirac spinors}
 
 We write solutions of the Dirac equation (\ref{eqn:DiracEqstandard}) as
 \begin{eqnarray}
@@ -485,45 +491,236 @@ Finally, we may write Eq. (\ref{eqn:Diracfieldbypsipm})  in a form with these ba
 \begin{eqnarray}
 \psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
 \sum_{r = 1, 2} \left[
-c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ipx} + d_r^*(\bld{p}) v^{(r)}(\bld{p}) e^{ipx}
+c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ip\cdot x} + d_r^*(\bld{p}) v^{(r)}(\bld{p}) e^{ip\cdot x}
 \right] \,.
 \end{eqnarray}
 
-%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
-\newpage 
+%\newpage 
+%======================================================================
 \subsection{Quantized Free Field}
 \begin{equation}
 \psi(x) 
 =
 \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
-\sum_{r = 1}^2
+\sum_{r = 1,2}
 \left[
-c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ipx}
+c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ip \cdot x}
 +
-d_r^\dagger(\bld{p}) v^{(r)}(\bld{p}) e^{ipx}
+d_r^\dagger(\bld{p}) v^{(r)}(\bld{p}) e^{ip \cdot x}
 \right]
 \end{equation}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\subsubsection{Canonical quantization}
+
 \begin{equation}
-\{ c_{r}(\bld{p}), c_{s}^\dagger(\bld{p}') \}
+\{ c_{r}(\bld{p}), c_{r'}^\dagger(\bld{p}') \}
 =
-\{ d_{r}(\bld{p}), d_{s}^\dagger(\bld{p}') \}
+\{ d_{r}(\bld{p}), d_{r'}^\dagger(\bld{p}') \}
 =
-\delta_{rs} 2p^0 
+\delta_{rr'} 2p^0 
 \delta^3(\bld{p} - \bld{p}')\,,
 \label{eqn:Dirc_creann}
 \end{equation}
 and other anticommutators are equal to zero.
 
-Propagetor
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\subsubsection{Particle states and statistics}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\subsubsection{Discrete symmetries}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\subsubsection{Propagetor}
+We write 
+%Eq. (\ref{eqn:Dirc_creann})
 \begin{eqnarray}
-S_F(q) &=& i \int d^4x e^{iqx}
-\bra 0 \braend T[\psi(x) \bar{\psi}(0)]
-\ketend 0 \ket
+\psi_{\alpha}(x) = c_{\alpha}(x) + d_{\alpha}^\dagger(x)\,.
+\hspace{5mm}
+\overline{\psi}_{\alpha}(x) = \overline{c}_{\alpha}(x) + \overline{d_{\alpha}^\dagger}(x)\,,
+\end{eqnarray}
+%-----------------------------
+VEV of quadratic expressions.
+\begin{eqnarray}
+\begin{array}{l}
+\bra 0 \braend \psi(x) \psi(y) \ketend 0 \ket
+=
+\bra 0 \braend c(x) d^\dagger(y) \ketend 0 \ket
+= 0 \,,
+%---------------------------------------------------------
+\vspace{2mm}
+\\
+\bra 0 \braend \overline{\psi}(x) \overline{\psi}(y) \ketend 0 \ket
+=
+\bra 0 \braend \overline{d^\dagger}(x) \overline{c}(y) \ketend 0 \ket
+= 0 \,.
+\end{array}
+\end{eqnarray}
+%---------------------------------------------------------
+
+\begin{eqnarray}
+%\begin{array}{l}
+&&
+\vspace{2mm}
+%\\
+ \bra 0 \braend \psi(x) \overline{\psi}(y) \ketend 0 \ket 
+=
+\bra 0 \braend c(x) \overline{c}(y) \ketend 0 \ket =
+\nonumber\\
+&&
+%\displaystyle
+\hspace{5mm} 
+%= 
+ \int \frac{d^3 \bld{p}}{(2\pi)^3 2 p^0} \frac{d^3 \bld{p}'}{2 {p^0}'}
+\sum_{r, r'} 
+\{ c_r(\bld{p}), c^\dagger_{r'}(\bld{p}) \}
+u^{(r)}(\bld{p}) \overline{u}^{(r')}(\bld{p}') e^{-ip \cdot x + ip' \cdot y} =
+\nonumber\\
+&&
+%\displaystyle
+\hspace{9mm} 
+ \int \frac{d^3 \bld{p}}{(2\pi)^3 2 p^0} 
+\sum_{r} 
+u^{(r)}(\bld{p}) \overline{u}^{(r)}(\bld{p}) e^{-ip \cdot ( x - y)} =
+\nonumber\\
+&&
+%\displaystyle
+\hspace{13mm} 
+ \int \frac{d^3 \bld{p}}{(2\pi)^3 2 p^0} 
+(\slashed{p} + m)  e^{-ip \cdot ( x - y)} =
+(i \slashed{\partial} + m) D(x - y)
+%\end{array}
+\end{eqnarray}
+%---------------------------------------------------------
+Spinor suffices should be specified to avoid confusions in the following one
+\footnote{%------------------------------- footnote >>
+Suppressing these suffices, the result may be written as
+\begin{eqnarray}
+\bra 0 \braend \overline{\psi}(x)  \psi(y) \ketend 0 \ket
+=
+(i \slashed{\partial}^T - m) D(x - y)\,,
+\end{eqnarray}
+of which the $l.h.s.$ may lead a confusion.
+We may use this expression though when there is no possibility of confusions.
+}%------------------------------- footnote //
+;
+\begin{eqnarray}
+%\begin{array}{l}
+%\vspace{2mm}
+%\\
+&&\bra 0 \braend \overline{\psi}_\alpha(x)  \psi_\beta(y) \ketend 0 \ket
+=
+\bra 0 \braend \overline{d^\dagger}_\alpha(x)  d_\beta^\dagger(y) \ketend 0 \ket =
+\nonumber\\
+&&
+%\displaystyle
+\hspace{5mm} 
+%= 
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 p^0} \frac{d^3 \bld{p}'}{2 {p^0}'}
+\sum_{r, r'} 
+\{ d_r(\bld{p}), d^\dagger_{r'}(\bld{p}) \}
+\overline{v}_\alpha^{(r)}(\bld{p}) v_\beta^{(r')}(\bld{p}')
+ e^{-ip \cdot x + ip' \cdot y} =
+\nonumber\\
+&&
+%\displaystyle
+\hspace{9mm} 
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 p^0} 
+\sum_{r} 
+ v_\beta^{(r)}(\bld{p}) \overline{v}_\alpha^{(r)}(\bld{p})
+e^{-ip \cdot ( x - y)} =
+\nonumber\\
+&&
+%\displaystyle
+\hspace{13mm} 
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 p^0} 
+(\slashed{p} - m)_{\beta \alpha}  e^{-ip \cdot ( x - y)} =
+(i \slashed{\partial} - m)_{\beta \alpha} D(x - y)
+%\end{array}
+\end{eqnarray}
+T-product of fermionic operators involves a minus sign 
+when operators are exchanged:
+\begin{eqnarray}
+T[\psi_\alpha(x) \overline{\psi}_\beta(y)] =
+\theta(x^0 > y^0) \psi_\alpha(x) \overline{\psi}_\beta(y)
+-
+\theta(y^0 > x^0)  \overline{\psi}_\beta(y) \psi_\alpha(x)
+\label{eqn:TprodDiracFields}
+\end{eqnarray}
+The Feynman propagator of the Dirac field is given as
+\footnote{%----------------------------------------------footnote >>
+Our definition of $S_F$ is the same as one in Ref. \cite{ref:Tong}.
+$S_F[$Ref.\cite{ref:Itzykson-Zuber}$] = -i S_F[ours]$,
+$S_F[$Ref.\cite{ref:Mandl-Shaw}$] = -iS_F[ours]$.
+}%----------------------------------------------footnote //
+\begin{eqnarray}
+S_F(x-y) &\leftdef&
+\bra 0 \braend T[\psi(x) \bar{\psi}(y)] \ketend 0 \ket
 \nonumber\\
 &=&
-\frac{-1}{\slashed{q} - m + i \epsilon}
-=
-- \frac{\slashed{q} + m}{ q^2 - m^2 + i \epsilon}
-\label{eqn:DiracPropagator}
+\left[ \theta(x^0 - y^0) (i \slashed{\partial} + m) D(x-y)
+-
+\theta(y^0 - x^0) (-i \slashed{\partial} - m) D(y-x)
+\right]
+\nonumber\\
+&=&
+\int \frac{d^3 \bld{p}}{(2\pi)^3 2 p^0} 
+\left[
+\theta(x^0 - y^0) (\slashed{p} + m)  e^{-ip \cdot ( x - y)}  -
+\theta(y^0 - x^0) (\slashed{p} - m) e^{ip \cdot ( x - y)} 
+\right]  
+\nonumber\\
+&=&
+i \int \frac{d^4 p}{(2\pi)^4} \frac{\slashed{p} + m}{2 p^0}
+\left[
+\frac{1}{p^0 - E_{\bld{p}} + i\epsilon}  +
+\frac{1}{p^0 + E_{\bld{p}} - i\epsilon} 
+\right]  e^{-ip \cdot ( x - y)} 
+\nonumber\\
+&=&
+i \int \frac{d^4 p}{(2\pi)^4} \frac{\slashed{p} + m}{p^2 - m^2 + i\epsilon}
+e^{-ip \cdot ( x - y)} 
+%\nonumber\\
+\;\rightdef\;
+i \int \frac{d^4 p}{(2\pi)^4} \frac{ e^{-ip \cdot ( x - y)}  }{\slashed{p} - m + i\epsilon}\,,
+\label{eqn:DefFeynmanPropDirac}
 \end{eqnarray}
+where the last expression is a convention regarding 
+a relationship\\ 
+$(\slashed{p}~+~m)(\slashed{p}~-~m)~=~p^2~-~m^2$.
+Fourier transform of $S_F(x)$,
+\begin{eqnarray}
+\tilde{S}_F(q) 
+=
+\int d^4x e^{iqx} S_F(x)
+=
+\frac{i}{\slashed{q} - m + i\epsilon}\,
+\label{eqn:DiracPropMomRep}
+\end{eqnarray}
+is frequently referred as $S_F(q)$ without a symbol to distinguish
+from the original function
+when there is no possibility of confusion. 
+
+To find the field equation of which  $S_F(x)$ is a solution, let us
+operate the Dirac operator to the T-product in Eq. (\ref{eqn:TprodDiracFields}).
+Since the field $\psi(x)$ itself satisfies the Dirac equation (\ref{eqn:TheDiracEq}),
+non vanishing contributions arise from differentiation of theta functions:
+\begin{eqnarray}
+(i \slashed{\partial} - m)_{\alpha \xi} T[\psi_\xi(x) \overline{\psi}_\beta(y)] 
+&=&
+i (\gamma^0)_{\alpha \xi} \delta(x^0 - y^0)
+\left[
+\psi_\xi(x) \overline{\psi}_\beta(y)
++
+\overline{\psi}_\beta(y) \psi_\xi(x) 
+\right]
+\nonumber\\
+&=&
+\end{eqnarray}
+
+
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
 

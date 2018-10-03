@@ -23,6 +23,9 @@ pythontex-files-*/
 # xmpincl
 *.xmpi
 
+#backup direcotry
+backup/
+
 
 # auto folder when using emacs and auctex
 ./auto/*
