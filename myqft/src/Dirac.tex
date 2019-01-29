@@ -46,6 +46,7 @@ Introduce $\gamma$ matrices by
 \gamma^0 = \beta\,,
 \hspace{3mm}
 \gamma^i = \beta \alpha_i\ \,.
+\label{eqn:gammabyalphabeta}
 \end{eqnarray}
 In terms of these matrices, Eq. (\ref{eqn:Dialphbetacond}) reads
 \begin{equation}
@@ -241,102 +242,13 @@ It is straightforward with these properties to confirm the Lorentz invariance of
 %{\bf Dirac matrices}
 
 Since one needs calculus of $\gamma$ matrices to deal with Dirac spinors,
-we summarize a few basic points leaving further details to Appendix \ref{sec:App_Dirac}.
-First, we define
-\begin{eqnarray}
-\gamma_5 \equiv \gamma^5 \leftdef
-i \gamma^0 \gamma^1 \gamma^2 \gamma^3
-=
-- \frac{i}{4!}
-\epsilon_{\mu \nu \rho \sigma}
-\gamma^\mu \gamma^\nu \gamma^\rho \gamma^\sigma
-\end{eqnarray}
-The $\gamma_5$ satisfies
-\begin{eqnarray}
-\{
-\gamma_5, \gamma_\mu 
-\}_+ = 0\,,
-\hspace{3mm}
-(\gamma_5)^2 = 1\,,
-\hspace{3mm}
-\gamma_5^\dagger = \gamma_5
-\end{eqnarray}
-We also define
-\begin{eqnarray}
-\sigma_{\mu \nu} \equiv
-\frac{i}{2}
-[ \gamma_\mu, \gamma_\nu]\,,
-\end{eqnarray}
-which has a property $\sigma_{\mu \nu}^\dagger = \gamma^0 \sigma_{\mu \nu} \gamma^0$.
-The reason why we are defining these quantities lays in the follwing fact:
-When $d$ is the rank of an irreducible matrix representation of an algebra composed of hypercomplex numbers,
-the number of linearly independent elements of the algebra is $n = d^2$. Therefore, the minimal algebra composed
-of $\gamma$'s has $4^2 = 16$ linearly independent elements. They are given as
-\begin{eqnarray}
-\left\{
-\begin{array}{l}
-\Gamma^S
-=
-1
-\\
-\Gamma^V_\mu
-=
-\gamma_\mu
-\\
-\Gamma^T_{\mu \nu}
-=
-\sigma_{\mu \nu} \leftdef
-\frac{i}{2}
-[ \gamma_\mu, \gamma_\nu]
-\\
-\Gamma^A_{\mu}
-=
-\gamma_5 \gamma_\mu
-\\
-\Gamma^P
-=
-\gamma_5
-\end{array}
-\right.
-\end{eqnarray}
+we summarize a few basic points leaving 
+definitions of  $\gamma^5$ and $\sigma^{\mu \nu}$ and
+properties of  Dirac matrices including them
+ to Appendix \ref{sec:App_Dirac}.
 
 For particular representations of  $\alpha_i$'s, $\beta$ and $\gamma$'s as
-explicit numeric matrices, we refer again to Appendix \ref{sec:App_Dirac}
-and confine ourselves to mention that all such representations are based upon
-a notation of the Pauli matrices written as
-\footnote{%------------------------------- footnote >>
-It was already given in Eq. (\ref{eqn:SU2GenFundamental}).
-}%------------------------------- footnote //
-\begin{eqnarray}
-\sigma_1 =
-\left(
-\begin{array}{cc}
-0 & 1 \\ 1 & 0
-\end{array}
-\right)\,,
-\hspace{3mm}
-\sigma_2 =
-\left(
-\begin{array}{cc}
-0 & -i \\ i & 0
-\end{array}
-\right)\,,
-\hspace{3mm}
-\sigma_3 =
-\left(
-\begin{array}{cc}
-1 &  0\\ 0 & -1
-\end{array}
-\right)\,,
-\end{eqnarray}
-which satisfy the following relationships
-\begin{eqnarray}
-\{
-\sigma_i, \sigma_j \}_+ = 2 \delta_{ij}\,,
-\hspace{3mm}
-\sigma_i \sigma_j = i\epsilon_{ijk} \sigma_k + \delta_{ij}
-\end{eqnarray}
-%----------------------------------------------------------------------------
+explicit numeric matrices, we refer again to Appendix \ref{sec:App_Dirac}.
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Dirac spinors}
