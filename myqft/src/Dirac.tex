@@ -107,7 +107,7 @@ Taking complex conjugate and transpose of Eq. (\ref{eqn:DiracEqstandard}), we ob
 \left( i \stackrel{\leftarrow}{\partial} \cdot \gamma  + m \right) \gamma^0 \,.
 \nonumber
 \end{eqnarray}
-Thus, the conjugate Dirac field satisfies
+Thus, the conjugated Dirac field satisfies
 \begin{eqnarray}
 \overline{\psi}(x)
 \left( i \stackrel{\leftarrow}{\slashed{\partial}}  + m \right)
@@ -120,6 +120,247 @@ In the quantum level, this equation should be satisfied by the Heisenberg operat
 $\overline{\psi}(x)$ which is independent of the field ${\psi}(x)$.
 }%------------------------------- footnote \\
 provided we choose $\gamma$'s in such a way that Eq. (\ref{eqn:hermitealphabeta}) holds.
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\bigskip 
+
+%\noindent
+%{\bf Lorentz transformation property}
+\subsubsection{Lorentz Covariance of the Dirac Eqluation}
+Consider a Lorentz transformation
+\begin{equation}
+x^\mu \mapsto x^{\mu'} = L^\mu_{\;\;\nu}\; x^\nu\,,
+\end{equation}
+and assume the Dirac field transforms by a regular matrix $S(L)$ as
+\begin{eqnarray}
+\psi(x)
+\mapsto
+\psi'(x') 
+= 
+S(L) \psi(x)\,.
+\end{eqnarray}
+We then demand the Dirac equation (\ref{eqn:DiracEqstandard})
+to be Lorentz covariant:
+\begin{eqnarray}
+0 &=& \left( i\slashed{\partial}' - m \right) \psi'(x') 
+\nonumber\\
+&=&
+\left( i \gamma_\mu  \partial'^\mu - m \right) S(L) \psi(x) 
+\nonumber\\
+&=&
+S(L)\left( i S^{-1}(L) \gamma_\sigma S(L)  L^\sigma_{\;\;\mu}\; \partial^\mu - m \right) \psi(x) 
+\end{eqnarray}
+For this equation to be equivalent with Eq. (\ref{eqn:DiracEqstandard}),
+we have a condition
+\begin{eqnarray}
+S^{-1}(L) \gamma_\sigma S(L)  L^\sigma_{\;\;\mu} = \gamma_\mu
+\label{eqn:DIracCovariance1}
+\end{eqnarray}
+Once we show there exists  a regular matrix $S(L)$ satisfying the above equation for each $L$,
+we establish that the Dirac equation  (\ref{eqn:DiracEqstandard}) is Lorentz covariant.
+With Eq. (\ref{eqn:DIracCovariance1})  and a relationship (\ref{eqn:hermitealphabeta}),
+we conclude the conjugated Dirac equation (\ref{eqn:DiracEqBarstandard})
+is also Lorentz covariant. 
+
+Relationships $S(L^{-1}) = S^{-1}(L)$ and 
+$L_\mu^{\;\;\nu} = (L^{-1})^\nu_{\;\;\mu}$
+yield another expression of Eq. (\ref{eqn:DIracCovariance1}):
+\begin{eqnarray}
+S^{-1}(L) \gamma_\mu S(L)  = L_\mu^{\;\;\sigma}  \gamma_\sigma
+\,.
+\label{eqn:DiracCovariance2}
+\end{eqnarray}
+
+An additional condition
+\begin{eqnarray}
+\gamma^0 S^\dagger(L) \gamma^0 = S^{-1}(L)
+\label{eqn:DIracLorentzConjProperty}
+\end{eqnarray}
+is equivalent with a requirement 
+that the Lorentz transformation of 
+the conjugated Dirac field is given as
+\begin{eqnarray}
+\overline{\psi}(x)
+\mapsto
+\overline{\psi}'(x')
+=
+\overline{\psi}(x) S^{-1}(L)
+\label{eqn:DIracConjugateLorentzTransf}
+\,.
+\end{eqnarray}
+This makes a bilinear form $\overline{\psi}(x) \psi(x)$ apparent Lorentz scalar.
+We immediately read relationsips (\ref{eqn:DiracCovariance2}) and
+ (\ref{eqn:DIracLorentzConjProperty}) 
+ make a quantity $\overline{\psi}(x) \gamma^\mu \psi(x)$ a Lorentz vector.
+Explicit construction of the solution of Eq. (\ref{eqn:DiracCovariance2})
+shows the condition (\ref{eqn:DIracLorentzConjProperty}) holds.
+
+\bigskip
+
+\bigskip
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\subsubsection{Plane wave}
+%\bigskip
+%\noindent
+%{\bf Dirac spinors}
+
+We may write solutions of the Dirac equation (\ref{eqn:DiracEqstandard}) as
+\footnote{%------------------------------- footnote >>
+As  a solution of the K-G eq., we can write
+\begin{eqnarray*}
+\psi(x) &=& \int \frac{d^4 p}{\sqrt{(2\pi)^3}}
+\delta(p^2 - m^2) 
+ \left[
+ \theta(p^0) +  \theta(-p^0) \right]
+ \psi(p) e^{-ipx}
+\\
+&=&
+\int \frac{d^4 p}{\sqrt{(2\pi)^3}}
+\delta(p^2 - m^2)  
+{\large \mbox{[}}
+\underbrace{\psi(p)\theta(p^0)}_{\psi^{+}}  e^{-ipx} + 
+\underbrace{\psi(-p)\theta(p^0)}_{\psi^{-}}  e^{ipx}
+{\large \mbox{]}}
+\\
+&=&
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}2p^0}
+\left[
+\psi^{+}(\bld{p})  e^{-ipx} + \psi^{-}(\bld{p})  e^{ipx}
+\right]
+\end{eqnarray*}
+}%---------------------------------- end of footnote //
+\begin{eqnarray}
+\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+ \left[
+\psi^{(+)}(\bld{p}) e^{-ipx} + \psi^{(-)}(\bld{p}) e^{ipx}
+\right]\,,
+\label{eqn:Diracfieldbypsipm}
+\end{eqnarray}
+where $p^0 = \sqrt{\bld{p}^2 + m^2}$.
+The Dirac equation demands
+\footnote{%------------------------------- footnote >>
+With the notation in the last footnote, we read
+the Dirac eq. (\ref{eqn:DiracEqstandard}) requires
+\begin{eqnarray*}
+\left. (\slashed{p} - m) \psi(p) \right|_{p^2 = m^2} = 0\,
+\end{eqnarray*}
+and Eq. (\ref{eqn:DiracEqMomentumamp}) follows.
+}%---------------------------------- end of footnote //
+\begin{eqnarray}
+(\slashed{p} - m) \psi^{(+)}(\bld{p}) = 0\,,
+\hspace{5mm}
+(\slashed{p} + m) \psi^{(-)}(\bld{p}) = 0 \,.
+\label{eqn:DiracEqMomentumamp}
+\end{eqnarray}
+Setting $p = (m, \bld{0})$, we have 
+\begin{eqnarray}
+(\gamma^0 - 1) \psi^{(+)}(\bld{0}) = 0\,,
+\hspace{5mm}
+(\gamma^0 + 1) \psi^{(-)}(\bld{0}) = 0 \,.
+\label{eqn:DiracEqMomentumampatzeromomentum}
+\end{eqnarray}
+Solutions of Eqs. (\ref{eqn:DiracEqMomentumamp}) and
+(\ref{eqn:DiracEqMomentumampatzeromomentum})
+are related by a Lorentz transformation $L$
+connecting Lorentz frames where
+spacial momenta of a particle with the mass $m$ are
+$\bld{p}$ and $\bld{0}$, respectively,
+as
+\begin{eqnarray}
+\psi^{(\pm)}(\bld{p}) = S(L) \psi^{(\pm)}(\bld{0}) \,.
+\end{eqnarray}
+Considering that $\gamma_0^2 =1$, $\tr \gamma_0 = 0$ and rank$(\gamma_0) = 4$,
+we recognize that each of equations in Eq. (\ref{eqn:DiracEqMomentumampatzeromomentum})
+has  two  linearly independent solutions.
+By acting $S(L)$ on 
+these solutions, we obtain linearly independent solutions of Eq. (\ref{eqn:DiracEqMomentumamp})
+which we write $u^{(1, 2)}(\bld{p})$ for $\psi^{(+)}(\bld{p})$ and $v^{(1,2)}(\bld{p})$
+ for $\psi^{(-)}(\bld{p})$, respectively. 
+We may choose them as to be orthonormal basis in a sense that
+\footnote{%------------------------------------------------- footnote >>
+This footnote should be rewritten later.\\
+Choices of normalizations by different authors:\\
+Izykson: $\{ b(\bld{p}),b^\dagger(\bld{p}') \}_+ = \frac{2E}{2m}\delta^3(\bld{p}-\bld{p}')$,
+$\bar{u}^\alpha u^\beta = \delta^{\alpha \beta}$,\\
+\hspace{20mm}$\psi(x) \sim \int d^3\bld{p}\frac{2m}{2E}[ b u e^{-ipx} \dots]$\\
+Hioki, Tong: $\{ b(\bld{p}),b^\dagger(\bld{p}') \}_+ = (2\pi)^3 2E\delta^3(\bld{p}-\bld{p}')$,
+$\bar{u}^\alpha u^\beta = 2m \delta^{\alpha \beta}$,\\
+\hspace{20mm}$\psi(x) = \int \frac{d^3\bld{p}}{(2\pi)^32E}[ b u e^{-ipx} \dots]$\\
+dim $\psi = E^{3/2}$
+}%-------------------------------------------end of footnote //
+\begin{eqnarray}
+\begin{array}{c}
+\overline{u}^{(r)}(\bld{p})
+u^{(s)}(\bld{p})
+= 2m \delta^{rs}\,,
+\hspace{5mm}
+\overline{v}^{(r)}(\bld{p})
+v^{(s)}(\bld{p})
+= -2m \delta^{rs}\,,
+\vspace{2mm}
+\\
+\overline{u}^{(r)}(\bld{p})
+v^{(s)}(\bld{p})
+= 0\,,
+\hspace{5mm}
+\overline{v}^{(r)}(\bld{p})
+u^{(s)}(\bld{p})
+= 0 \,,
+\end{array}
+\label{eqn:DiracspinorNormalization}
+\end{eqnarray}
+where $r$ and $s$ take values $1, 2$ and
+$\overline{u}^{(r)}$  and $\overline{v}^{(r)}$ 
+are conjugate fields defined in a same manner as Eq. (\ref{eqn:DefConjDiracField}).
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+To be indubitable, we write Dirac equations satisfied by these basis below.
+\begin{eqnarray}
+\begin{array}{l}
+(\slashed{p} - m) u^{(r)}(\bld{p}) = 0\,,
+\hspace{5mm}
+(\slashed{p} + m) v^{(r)}(\bld{p}) = 0\,,
+\vspace{3mm}
+\\
+\overline{u}^{(r)}(\bld{p}) (\slashed{p} - m) = 0\,,
+\hspace{5mm}
+\overline{v}^{(r)}(\bld{p}) (\slashed{p} + m) = 0\,.
+\end{array}
+\label{eqn:DiracEqDiracspinors}
+\end{eqnarray}
+They also satisfy identities
+\begin{eqnarray}
+\begin{array}{l}
+\displaystyle
+\sum_{r=1}^2 u^{(r)}(\bld{p}) 
+\overline{u}^{(r)}(\bld{p})
+=
+\slashed{p} + m\,,
+\vspace{2mm}
+%\\
+%\hspace{-40mm}\mbox{and}
+\\
+\displaystyle
+\sum_{r=1}^2 v^{(r)}(\bld{p}) 
+\overline{v}^{(r)}(\bld{p})
+=
+\slashed{p} - m\,.
+\end{array}
+\label{eqn:DiracspinorPolSum}
+\end{eqnarray}
+The physical contents of each of these basis 
+in particular representations of Dirac matrices
+are examined by
+constructing energy and spin state projections.
+We refer to Appendix \ref{sec:App_Dirac} for detailes.
+
+Finally, we may write Eq. (\ref{eqn:Diracfieldbypsipm})  in a form with these basis as
+\begin{eqnarray}
+\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{r = 1, 2} \left[
+c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ip\cdot x} + d_r^*(\bld{p}) v^{(r)}(\bld{p}) e^{ip\cdot x}
+\right] \,.
+\end{eqnarray}
+
 
 \bigskip
 %------------------------------------------------------------------------------------------------------------------------------------------------
@@ -192,223 +433,6 @@ which yields $\pi_{\overline{\psi}}$ ($= -i \gamma^0 \psi / 2$)
 that is certainly not identically zero.
 }%------------------------------- footnote \\
 .
-\bigskip
-%------------------------------------------------------------------------------------------------------------------------------------------------
-%\noindent
-%{\bf Lorentz transformation property}
-\subsubsection{Lorentz transformation property}
-
-Requiring ${\cal L}_{Dirac}$ to be invariant under proper Lorentz transformations,
-one may find the transformation property of the field $\psi$.
-It turns out that $\psi$ transforms as a Lorentz spinor, which 
-belongs to the fundamental representation of the Lorentz group.
-Leaving details to Appendix \ref{sec:AppDirac_LorentzTransf},
-we merely mention here that, under a (proper homogeneous) Lorentz transformation 
-\begin{equation}
-x^\mu \mapsto x^{\mu'} = L^\mu_{\;\;\nu}\; x^\nu\,,
-\end{equation}
-the four component filed $\psi(x)$ is transformed linearly 
-with a matrix $S(L)$ as
-\begin{eqnarray}
-\psi(x)
-\mapsto
-\psi'(x') 
-= 
-S(L) \psi(x)\,.
-\end{eqnarray}
-It turns out that the conjugate field $\overline{\psi}$
-is transformed as
-\begin{eqnarray}
-\overline{\psi}(x)
-\mapsto
-\overline{\psi}'(x')
-= 
-\overline{\psi}(x) S(L)^{-1}\,,
-\end{eqnarray}
-so that a bilinear quantity $\overline{\psi} \psi$ is a Lorentz scalar.
-It is also shown in Appendix \ref{sec:AppDirac_LorentzTransf} that
-\begin{eqnarray}
-S^{-1}(L) \gamma^\mu S(L) = L^\mu_{\;\;\nu} \gamma^\nu \,,
-\label{eqn:LorentzTransfgamma}
-\end{eqnarray}
-so that a quantity $\overline{\psi} \gamma^\mu \psi$ is a Lorentz vector.
-It is straightforward with these properties to confirm the Lorentz invariance of ${\cal L}_{Dirac}$.
-
-
-%\bigskip
-%------------------------------------------------------------------------------------------------------------------------------------------------
-%\noindent
-\subsubsection{Dirac matrices}
-%{\bf Dirac matrices}
-
-Since one needs calculus of $\gamma$ matrices to deal with Dirac spinors,
-we summarize a few basic points leaving 
-definitions of  $\gamma^5$ and $\sigma^{\mu \nu}$ and
-properties of  Dirac matrices including them
- to Appendix \ref{sec:App_Dirac}.
-
-For particular representations of  $\alpha_i$'s, $\beta$ and $\gamma$'s as
-explicit numeric matrices, we refer again to Appendix \ref{sec:App_Dirac}.
-
-%------------------------------------------------------------------------------------------------------------------------------------------------
-\subsubsection{Dirac spinors}
-%\bigskip
-%\noindent
-%{\bf Dirac spinors}
-
-We write solutions of the Dirac equation (\ref{eqn:DiracEqstandard}) as
-\begin{eqnarray}
-\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
- \left[
-\psi^{(+)}(\bld{p}) e^{-ipx} + \psi^{(-)}(\bld{p}) e^{ipx}
-\right]\,,
-\label{eqn:Diracfieldbypsipm}
-\end{eqnarray}
-where $p^0 = \sqrt{\bld{p}^2 + m^2}$.
-The Dirac equation demands
-\footnote{%------------------------------- footnote >>
-%------------------------------------------------
-As  a solution of the K-G eq., we can write
-\begin{eqnarray*}
-\psi(x) &=& \int \frac{d^4 p}{\sqrt{(2\pi)^3}}
-\delta(p^2 - m^2) 
- \left[
- \theta(p^0) +  \theta(-p^0) \right]
- \psi(p) e^{-ipx}
-\\
-&=&
-\int \frac{d^4 p}{\sqrt{(2\pi)^3}}
-\delta(p^2 - m^2)  
-{\large \mbox{[}}
-\underbrace{\psi(p)\theta(p^0)}_{\psi^{+}}  e^{-ipx} + 
-\underbrace{\psi(-p)\theta(p^0)}_{\psi^{-}}  e^{ipx}
-{\large \mbox{]}}
-\\
-&=&
-\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3}2p^0}
-\left[
-\psi^{+}(\bld{p})  e^{-ipx} + \psi^{-}(\bld{p})  e^{ipx}
-\right]
-\end{eqnarray*}
-The Dirac eq. (\ref{eqn:DiracEqstandard}) requires
-\begin{eqnarray*}
-\left. (\slashed{p} - m) \psi(p) \right|_{p^2 = m^2} = 0\,,
-\end{eqnarray*}
-from which Eq. (\ref{eqn:DiracEqMomentumamp}) follows.
-}%---------------------------------- end of footnote //
-\begin{eqnarray}
-(\slashed{p} - m) \psi^{(+)}(\bld{p}) = 0\,,
-\hspace{5mm}
-(\slashed{p} + m) \psi^{(-)}(\bld{p}) = 0 \,.
-\label{eqn:DiracEqMomentumamp}
-\end{eqnarray}
-Setting $p = (m, \bld{0})$, we have 
-\begin{eqnarray}
-(\gamma^0 - 1) \psi^{(+)}(\bld{0}) = 0\,,
-\hspace{5mm}
-(\gamma^0 + 1) \psi^{(-)}(\bld{0}) = 0 \,.
-\label{eqn:DiracEqMomentumampatzeromomentum}
-\end{eqnarray}
-Solutions of Eqs. (\ref{eqn:DiracEqMomentumamp}) and
-(\ref{eqn:DiracEqMomentumampatzeromomentum})
-are related by a Lorentz transformation $L$
-connecting Lorentz frames where
-spacial momenta of a particle with the mass $m$ are
-$\bld{p}$ and $\bld{0}$, respectively,
-as
-\begin{eqnarray}
-\psi^{(\pm)}(\bld{p}) = S(L) \psi^{(\pm)}(\bld{0}) \,.
-\end{eqnarray}
-Considering that $\gamma_0^2 =1$, $\tr \gamma_0 = 0$ and rank$(\gamma_0) = 4$,
-we recognize that each of equations in Eq. (\ref{eqn:DiracEqMomentumampatzeromomentum})
-has  two  linearly independent solutions.
-By acting $S(L)$ on 
-these solutions, we obtain linearly independent solutions of Eq. (\ref{eqn:DiracEqMomentumamp})
-which we write $u^{(1, 2)}(\bld{p})$ for $\psi^{(+)}(\bld{p})$ and $v^{(1,2)}(\bld{p})$
- for $\psi^{(-)}(\bld{p})$, respectively. 
-We may choose them as to be orthonormal basis in a sense that
-\footnote{%------------------------------------------------- footnote >>
-This footnote should be rewritten later.\\
-Choices of normalizations by different authors:\\
-Izykson: $\{ b(\bld{p}),b^\dagger(\bld{p}') \}_+ = \frac{2E}{2m}\delta^3(\bld{p}-\bld{p}')$,
-$\bar{u}^\alpha u^\beta = \delta^{\alpha \beta}$,\\
-\hspace{20mm}$\psi(x) \sim \int d^3\bld{p}\frac{2m}{2E}[ b u e^{-ipx} \dots]$\\
-Hioki, Tong: $\{ b(\bld{p}),b^\dagger(\bld{p}') \}_+ = (2\pi)^3 2E\delta^3(\bld{p}-\bld{p}')$,
-$\bar{u}^\alpha u^\beta = 2m \delta^{\alpha \beta}$,\\
-\hspace{20mm}$\psi(x) = \int \frac{d^3\bld{p}}{(2\pi)^32E}[ b u e^{-ipx} \dots]$\\
-dim $\psi = E^{3/2}$
-}%-------------------------------------------end of footnote //
-\begin{eqnarray}
-\begin{array}{c}
-\overline{u}^{(r)}(\bld{p})
-u^{(s)}(\bld{p})
-= 2m \delta^{rs}\,,
-\hspace{5mm}
-\overline{v}^{(r)}(\bld{p})
-v^{(s)}(\bld{p})
-= -2m \delta^{rs}\,,
-\vspace{2mm}
-\\
-\overline{u}^{(r)}(\bld{p})
-v^{(s)}(\bld{p})
-= 0\,,
-\hspace{5mm}
-\overline{v}^{(r)}(\bld{p})
-u^{(s)}(\bld{p})
-= 0 \,,
-\end{array}
-\label{eqn:DiracspinorNormalization}
-\end{eqnarray}
-where $r$ and $s$ take values $1, 2$ and
-$\overline{u}^{(r)}$  and $\overline{v}^{(r)}$ 
-are conjugate fields defined in a same manner as Eq. (\ref{eqn:DefConjDiracField}).
-To be indubitable, we write Dirac equations satisfied by these basis below.
-\begin{eqnarray}
-\begin{array}{l}
-(\slashed{p} - m) u^{(r)}(\bld{p}) = 0\,,
-\hspace{5mm}
-(\slashed{p} + m) v^{(r)}(\bld{p}) = 0\,,
-\vspace{3mm}
-\\
-\overline{u}^{(r)}(\bld{p}) (\slashed{p} - m) = 0\,,
-\hspace{5mm}
-\overline{v}^{(r)}(\bld{p}) (\slashed{p} + m) = 0\,.
-\end{array}
-\label{eqn:DiracEqDiracspinors}
-\end{eqnarray}
-They also satisfy identities
-\begin{eqnarray}
-\begin{array}{l}
-\displaystyle
-\sum_{r=1}^2 u^{(r)}(\bld{p}) 
-\overline{u}^{(r)}(\bld{p})
-=
-\slashed{p} + m\,,
-\vspace{2mm}
-%\\
-%\hspace{-40mm}\mbox{and}
-\\
-\displaystyle
-\sum_{r=1}^2 v^{(r)}(\bld{p}) 
-\overline{v}^{(r)}(\bld{p})
-=
-\slashed{p} - m\,.
-\end{array}
-\label{eqn:DiracspinorPolSum}
-\end{eqnarray}
-The physical contents of each of these basis 
-in particular representations of Dirac matrices
-are examined by
-constructing energy and spin state projections.
-We refer to Appendix \ref{sec:App_Dirac} for detailes.
-
-Finally, we may write Eq. (\ref{eqn:Diracfieldbypsipm})  in a form with these basis as
-\begin{eqnarray}
-\psi(x) = \int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
-\sum_{r = 1, 2} \left[
-c_r(\bld{p}) u^{(r)}(\bld{p}) e^{-ip\cdot x} + d_r^*(\bld{p}) v^{(r)}(\bld{p}) e^{ip\cdot x}
-\right] \,.
-\end{eqnarray}
 
 %\newpage 
 %======================================================================
@@ -425,8 +449,59 @@ d_r^\dagger(\bld{p}) v^{(r)}(\bld{p}) e^{ip \cdot x}
 \right]
 \end{equation}
 
+%------------------------------------------------------------- comment out
+\begin{comment}
+Writing a quantized free Dirac field
+corresponding to Eq. (\ref{eqn:DiracFieldClExpand}) as
+\begin{equation}
+\psi(x) 
+=
+\int \frac{d^3 \bld{p}}{\sqrt{(2\pi)^3} 2 p^0}
+\sum_{s = \pm 1}
+\left[
+c(\bld{p}, s) u(\bld{p}, s) e^{-ipx}
++
+d^\dagger(\bld{p}, s) v(\bld{p}, s) e^{ipx}
+\right]
+\end{equation}
+creation and annihilation operators satisfy
+\footnote{ %------------------------------------footnote
+\begin{eqnarray}
+\{ \psi_\xi(t, \bld{x}), \psi_\eta^\dagger(t, \bld{y}) \}_+
+&=&
+\int \frac{d^3 \bld{p} d^3 \bld{p}'}{(2\pi)^3 4 E E'}
+\sum_{\alpha, \beta} \left(
+\{ c_\alpha(\bld{p}), c^\dagger_\beta(\bld{p}') \}
+u^{(\alpha)}_\xi (\bld{p}) u^{(\beta) \dagger}_\eta (\bld{p}')
+\right.
+\nonumber\\
+&&
+\left.
++
+\{ d^\dagger_\alpha(\bld{p}), d_\beta(\bld{p}') \}
+v^{(\alpha)}_\xi (\bld{p}) v^{(\beta) \dagger}_\eta (\bld{p}')
+\right)
+\nonumber\\
+&=& \dots
+\nonumber\\
+&=& 
+\delta_{\xi \eta} \delta^3(\bld{x} - \bld{y})
+\end{eqnarray}
+}%------------------------------------footnote ends
+
+
+\end{comment}
+%------------------------------------------------------------- comment out end
+
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Canonical quantization}
+
+\begin{eqnarray}
+\{ \psi_\alpha(\bld{x},t), \psi_\beta^\dagger(\bld{x}', t) \}
+= \delta_{\alpha \beta} \delta^3(\bld{x} - \bld{x}')
+\label{eqn:canonicalQ_psi}
+\end{eqnarray}
+
 
 \begin{equation}
 \{ c_{r}(\bld{p}), c_{r'}^\dagger(\bld{p}') \}
@@ -635,7 +710,6 @@ i (\gamma^0)_{\alpha \xi} \delta(x^0 - y^0)
 
 
 
-%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 
 
 
