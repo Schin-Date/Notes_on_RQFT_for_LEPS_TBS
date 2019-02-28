@@ -793,6 +793,7 @@ as a consequence of the Dirac equations satisfied by these spinor basis.
 If we denote the measure of momentum space as
 \begin{eqnarray}
 [ d^3 \bld{p} ] = F d^3 \bld{p}\,,
+\label{eqn:MeasureMomSp}
 \end{eqnarray}
 where $F$ may depends on $p_0$, so that the Fourier expansion of a Dirac field is written as
 \begin{equation}
@@ -844,7 +845,7 @@ ItzZub\cite{ref:Itzykson-Zuber} & $\frac{2m}{ (2\pi)^3 2p_0}$ &  1 & $ (2\pi)^3\
 Weinb\cite{ref:Weinberg} & $\frac{1}{(2\pi)^3}$ & &  
 \\
 \hline
-Mandl\cite{ref:Mandl-Shaw} & & &
+Mandl\cite{ref:Mandl-Shaw} & $\frac{\sqrt{V}}{(2\pi)^3} \sqrt{\frac{2m}{2p_0}}$ & 1 & $\frac{(2\pi)^3}{V}$
 \\
 \hline
 Hioki\cite{ref:Hioki} & $\frac{1}{(2\pi)^3 2p_0}$ & $2m$ &  $(2\pi)^3 2p_0$
@@ -865,9 +866,22 @@ This & $\frac{1}{ \sqrt{(2\pi)^3} 2p_0}$ & $2m$ &  $2 p_0$
 \label{tbl:SpinorNormChoicesTBL}
 \end{table}
 We list some typical choices of these constants in Table \ref{tbl:SpinorNormChoicesTBL}.
-
-
-
+Among these cases, Mandl\cite{ref:Mandl-Shaw} introduces a finite spatial volume $V$
+and uses a discrete momentum space with a unit volume $\Delta^3 \bld{p} = (2\pi)^3/V$. 
+To reproduce that case, one needs to perform replacements
+\begin{eqnarray}
+\int d^3 \bld{p}
+\longrightarrow
+\sum_{\bld{p}} \Delta^3 \bld{p}
+\end{eqnarray}
+in Eq. (\ref{eqn:DiracFourierArbMeasure})
+and 
+\begin{eqnarray}
+\delta^3(\bld{p} - \bld{p}')
+\longrightarrow
+\delta_{\bld{p}\bld{p}'} / \Delta^3 \bld{p}
+\end{eqnarray}
+in Eq. (\ref{eqn:Dirc_creann_with_C}).
 %<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
